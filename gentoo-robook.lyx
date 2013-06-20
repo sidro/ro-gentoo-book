@@ -12899,7 +12899,7 @@ Pentru optimizarea Gentoo, puteţi seta unele variabile ce vor determina
  Toate aceste variabile pot fi setate ca şi variabile de mediu (folosind
  export), dar acest lucru nu este permanent.
  Pentru a vă menţine setările, Portage conţine un fişier de configurare
- /etc/make.conf.
+ /etc/portage/make.conf.
  Acest fişier îl vom edita acum.
  
 \end_layout
@@ -12917,6 +12917,711 @@ Deschideţi editorul de text favorit (în acest ghid noi folosim nano) astfel
  încât să modificăm variabilele de optimizare, pe care le vom explica în
  continuare.
  
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea /etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /mnt/gentoo/etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aşa cum probabil aţi observat, fişierul make.conf.example este structurat
+ într-un mod generic: liniile comentate încep cu "#", iar celelalte definesc
+ variabile folosind sintaxa : VARIABLE="conţinut".
+ Fişierul make.conf utilizează aceeaşi sintaxă.
+ Multe dintre acele variabile sunt discutate in continuare.
+ 
+\end_layout
+
+\begin_layout Subsection*
+CFLAGS şi CXXFLAGS
+\end_layout
+
+\begin_layout Standard
+Variabilele 
+\series bold
+CFLAGS
+\series default
+ şi 
+\series bold
+CXXFLAGS
+\series default
+ definesc opţiunile de optimizare pentru compilatorul gcc de C respectiv
+ C++.
+ Deşi, în general, le definim aici, veţi obţine maximul de performanţă dacă
+ optimizaţi flag-urile pentru fiecare program, în parte.
+ Motivul pentru această afirmaţie este că fiecare program este diferit.
+ 
+\end_layout
+
+\begin_layout Standard
+În make.conf ar trebui să definiţi opţiunile de optimizare care credeţi că
+ vor face sistemul cât mai rapid în general.
+ Nu puneţi valori experimentale în această variabilă; o optimizare prea
+ mare poate duce la un comportament ciudat al programelor (oprirea funcţionării,
+ sau chiar mai rău, funcţionarea incorectă).
+ 
+\end_layout
+
+\begin_layout Standard
+Nu vom explica toate opţiunile de optimizare.
+ Dacă vreţi să le aflaţi pe toate, citiţi Manualul(ele) Online GNU sau gcc
+ pagina info(info gcc -- funcţionează doar pe un sistem Linux funcţional).
+ Fişierul make.conf.example însuşi conţine, de asemenea, multe exemple şi
+ informaţii; nu uitaţi să-l citiţi.
+ 
+\end_layout
+
+\begin_layout Standard
+O primă opţiune este indicatorul -march= sau -mtune, care specifică numele
+ arhitecturii ţintă.
+ Opţiunile posibile sunt descrise în fişierul make.conf.example (ca şi comentarii).
+ De obicei se folosește valoarea 
+\series bold
+native
+\series default
+ care spune compilatorului să selecteze arhitectura sistemului ținta (cel
+ pe care se face instalarea).
+\end_layout
+
+\begin_layout Standard
+Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
+ care specifică clasa de optimizare gcc.
+ Clasele posibile sunt s (pentru optimizarea marimii), 0 (zero - pentru
+ nici o optimizare), 1, 2 sau 3 pentru mai multe optimizări de viteză (fiecare
+ clasă are aceiaşi indicatori ca cea dinainte, plus altele).
+ -O2 este recomandat ca implicit.
+ -O3 poate produce instabilitate, de aceea este recomandat -O2.
+\end_layout
+
+\begin_layout Standard
+O altă setare comună de optimizare este -pipe (utilizează canale pipe în
+ locul fişierelor temporare pentru comunicaţia între diversele etape ale
+ compilării).
+ El nu are impact asupra codului generat, dar folosește mai multă memorie.
+ Pe sisteme cu memorie puțină este recomandat a nu se folosi acest parametru.
+\end_layout
+
+\begin_layout Standard
+Luaţi aminte faptul că utilizarea -fomit-frame-pointer (ce nu păstrează
+ indicatorul frame într-un registru pentru funcţiile ce nu necesită acest
+ lucru) poate avea repercursiuni serioase asupra aplicaţiilor de depanare!
+\end_layout
+
+\begin_layout Standard
+Când definiţi 
+\series bold
+CFLAGS
+\series default
+ şi 
+\series bold
+CXXFLAGS
+\series default
+, ar trebui să combinaţi mai multe opţiuni de optimizare.
+\end_layout
+
+\begin_layout Standard
+Valorile iniţiale ce fac referire la 
+\series bold
+CFLAGS
+\series default
+ si 
+\series bold
+CXXFLAGS
+\series default
+, conţinute de arhiva stage3 pe care ați despachetat-o ar trebui să fie
+ de ajuns.
+ Iată un exemplu ce conține astfel de variabile.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Definirea variabilelor CFLAGS şi CXXFLAGS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+CFLAGS="-march=k8 -O2 -pipe" # Intel EM64T users should use -march=core2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# Use the same settings for both variables
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+CXXFLAGS="${CFLAGS}"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Pentru mai multe informații cu privire la diferite variabile pentru
+ optimizare vizitați 
+\series bold
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Compilation Optimization Guide"
+target "http://www.gentoo.org/doc/en/gcc-optimization.xml?style=printable"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+MAKEOPTS
+\end_layout
+
+\begin_layout Standard
+Cu ajutorul MAKEOPTS definiţi câte compilări paralele vor apărea când instalaţi
+ un pachet.
+ O alegere bună este numărul procesoarelor din sistem plus încă unul, dar
+ această sugestie nu este întotdeauna perfectă.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fiţi gata, Pregătiţi-vă, Porniţi!
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Actualizaţi fişierul /mnt/gentoo/etc/portage/make.conf, cu preferinţele dumneavoa
+stră şi salvaţi (utilizatorii nano tastează Ctrl-X).
+ Acum sunteţi gata să continuaţi cu Instalarea Sistemului de Bază al Gentoo.
+ 
+\end_layout
+
+\begin_layout Chapter
+Instalarea Sistemului de Bază al Gentoo
+\end_layout
+
+\begin_layout Section
+Utilizarea mediului Chroot
+\end_layout
+
+\begin_layout Subsection*
+Opţional: Alegerea Mirror-urilor
+\end_layout
+
+\begin_layout Standard
+Pentru a descărca sursele mai rapid, este recomandat să selectaţi un server
+ mirror rapid.
+ Portage va căuta în fişierul dvs.
+ make.conf definiţia variabilei GENTOO_MIRRORS şi va utiliza server-ele mirror
+ afişate acolo.
+ Puteţi naviga în documentul nostru ce conţine 
+\series bold
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "lista cu servere mirror"
+target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
+
+\end_inset
+
+
+\series default
+\color inherit
+ şi va căuta un server mirror (sau mai multe) mai apropiate de dvs.
+ (deoarece, în cele mai multe cazuri, acestea sunt şi cele mai rapide),
+ sau puteţi utiliza utilitarul mirrorselect oferit de noi, cu care puteţi
+ printr-o interfaţă prietenoasă, să selectaţi server-ele mirror pe care
+ le doriţi.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Utilizarea mirrorselect pentru variabila GENTOO_MIRRORS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O altă setare importantă este variabila SYNC din make.conf.
+ Această variabilă conţine server-ul rsync pe care doriţi să-l utilizaţi
+ când vă actualizaţi structura Portage (colecţia de fişiere ebuild, script-urile
+ ce conţin toate informaţiile de care Portage are nevoie pentru a descărca
+ şi a instala aplicaţiile).
+ Deşi puteţi introduce manual un server SYNC, mirrorselect vă poate uşura
+ această operaţie: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Selectarea unui server mirror rsync utilizând mirrorselect
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+După rularea mirrorselect este recomandat să verificaţi încă o dată setările
+ din /mnt/gentoo/etc/portage/make.conf ! 
+\end_layout
+
+\begin_layout Description
+Notă: Dacă doriți să setați un server de SYNC manual în make.conf, ar trebui
+ să încercați lista cu servere mirror și să alegeți un mirror cât mai apropiat
+ de dumneavoastră ca și locație.
+ Noi vă recomandam să alegeți o listă de mirror-uri pe care sa o salvati
+ in make.conf și nu doar un mirror.
+ Deoarece în cazul în care un mirror este indisponibil să se utilizeze următorul
+ mirror ce se află în fișierul make.conf.
+\end_layout
+
+\begin_layout Subsubsection
+Precizarea Informaţiilor despre DNS
+\end_layout
+
+\begin_layout Standard
+A rămas un singur lucru de făcut, înainte să putem intra noul mediu şi anume
+ trebuie să copiem informaţiile despre DNS în /etc/resolv.conf.
+ Trebuie să facem asta, pentru a fi siguri că reţeaua funcţionează, chiar
+ şi după ce intrăm în noul mediu.
+ /etc/resolv.conf conţine serverele DNS pentru reţeaua noastră.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Copierea informaţiilor despre DNS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Opţiunea "-L" ne asigură că nu copiem un link simbolic)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Mount-area Sistemelor de Fişiere
+\end_layout
+
+\begin_layout Standard
+În câteva momente v-om schimba root-ul Linuxului către noua locație.
+ Ca să ne asigurăm că noul mediu este funcțional trebuie să face câteva
+ sisteme de fișiere disponibile.
+\end_layout
+
+\begin_layout Standard
+Mount-aţi sistemul de fişiere /proc în /mnt/gentoo/proc pentru a permite
+ instalării să utilizeze informaţia oferită de kernel, chiar şi în mediul
+ chroot, şi apoi mount-aţi prin legătură sistemele de fişiere /dev și /sys.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Mount-area sistemului de fișiere
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mount -t proc none /mnt/gentoo/proc
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mount --rbind /sys /mnt/gentoo/sys
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mount --rbind /dev /mnt/gentoo/dev
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Intrarea în noul Mediu
+\end_layout
+
+\begin_layout Standard
+Acum, că toate partiţiile sunt iniţializate şi mediul de bază instalat,
+ a venit momentul să intrăm în noul mediu prin acţiunea de chrooting în
+ acesta.
+ Aceasta înseamnă că ne mutăm din mediul în care a decurs instalarea (Installati
+on CD sau alt mediu de instalare), în sistemul instalat (adică în partiţia
+ iniţializată).
+\end_layout
+
+\begin_layout Standard
+Acţiunea de chrooting, se face în trei etape.
+ Mai întâi, vom muta rădăcina, din / (de pe discul de instalare), către
+ /mnt/gentoo (de pe partiţia aleasa pentru instalare), folosind comanda
+ chroot.
+ Apoi, variabilele distribuite de /etc/profile le încărcăm în memorie, folosind
+ comanda source.
+ Iar în ultimul pas redefinim promptul pentru a ne ajuta să ne reamintim
+ că suntem într-un mediu chrootat (mediul unde se realizează instalarea).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Chroot în noul mediu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# chroot /mnt/gentoo /bin/bash
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# export PS1="(chroot) $PS1"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Felicitări! Sunteţi acum în propriul mediu Gentoo Linux.
+ Desigur, suntem departe de a fi terminat, motiv pentru care procesul de
+ instalare mai are câteva secţiuni de parcurs :-) 
+\end_layout
+
+\begin_layout Standard
+Dacă vreodată aveți nevoie de un alt terminal sau consolă ca să accesați
+ un mediu chrootat, tot ceea ce trebuie să faceți este să executați pașii
+ de mai sus.
+\end_layout
+
+\begin_layout Section
+Configurarea Portage
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
