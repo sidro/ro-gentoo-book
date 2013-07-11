@@ -565,7 +565,7 @@ target "http://bugs.gentoo.org"
 
  și verificați dacă eroarea descoperită de către dumneavoastră este cunoscută.
  Dacă nu a fost semnalată creați un bugraport pentru a permite corectarea
- erorilor într-un timp cat mai scurt.
+ erorilor într-un timp cât mai scurt.
  Nu vă temeți de dezvoltatorii cărora le atribuiți bug-urile (semnalate
  de dvs) -- în general ei nu mănâncă oameni.
 \end_layout
@@ -3440,7 +3440,7 @@ net-setup vă va interoga despre câteva lucruri despre rețea.
 \end_layout
 
 \begin_layout Standard
-Dacă rețeua dumneavoastră tot nu este funcțională, continuați cu Configurarea
+Dacă rețeaua dumneavoastră tot nu este funcțională, continuați cu Configurarea
  Manuală a Rețelei.
  
 \end_layout
@@ -6714,7 +6714,7 @@ Dacă este necesar, verificările sistemului de fișiere sunt reduse ca timp,
 \end_layout
 
 \begin_layout Itemize
-Securitatea poate fi îmbunătățită prin mount-area unor partiții sau volume
+Securitatea poate fi îmbunătățită prin montarea unor partiții sau volume
  doar pentru citire, în mod nosuid (biții setuid sunt ignorați), noexec
  (biții pentru execuție sunt ignorați), etc.
 \end_layout
@@ -8879,7 +8879,7 @@ Mai întâi vom șterge toate partițiile existente de pe disc.
 \begin_layout Plain Layout
 
 \color magenta
-Ştergerea unei partiții
+ștergerea unei partiții
 \end_layout
 
 \end_inset
@@ -11741,6 +11741,25 @@ ext3 este versiunea jurnalizată a sistemului de fișiere ext2, oferind informa�
 \end_layout
 
 \begin_layout Description
+ext4 este un tip de fișier de sistem creat ca un branșament al tipului ext3
+ aducând noi opțiuni, îmbunătățiri ale performanței și reducând limitele
+ de dimensiuni cu schimbări moderate la formatul pe disk.
+ Poate deschide volume până la 1 EB și cu o dimensiune maximă de 16 TB.
+ Spre deosebire de clasicul ext2/3 în alocarea blocului bitmap, ext4 folosește
+ extents, care îmbunătățește performața fișierelor de dimensiuni mari și
+ reduce fragmentarea.
+ Ext4 folosește de asemenea o metodă mai sofisticată de algoritmi pentru
+ alocarea block-urilor (alocare întârziată și alocare multiblock) dând dispoziti
+vului de sistem mai multe opțiuni de optimizare a configurării datelor pe
+ disc.
+ Tipul ext4 este un compromis între nivelele de producție, stabilitatea
+ codului și dorința de a introduce extensii unui tip de sistem de fișiere
+ vechi de aproape o decadă.
+ Ext4 este genul de tip de fișier de sistem ”pentru orice scop” și ”pentru
+ orice platformă”.
+\end_layout
+
+\begin_layout Description
 ReiserFS este un sistem de fișiere B*-tree ce oferă în general o performanță
  foarte bună și depășește mult atât ext2 cât și ext3 în cazul fișierelor
  mici (mai mici de 4K), în cele mai multe cazuri cu un coeficient de 10-15
@@ -12287,7 +12306,7 @@ Continuați cu Instalarea Fișierelor de Instalare Gentoo.
 \end_layout
 
 \begin_layout Chapter
-Instalarea Fişierelor Gentoo necesare Instalării
+Instalarea Fișierelor Gentoo necesare Instalării
 \end_layout
 
 \begin_layout Section
@@ -12299,12 +12318,12 @@ Instalarea unei Arhive Tar Stage
 \end_layout
 
 \begin_layout Standard
-Înainte de a continua, trebuie să verificaţi data/ora şi să o actualizaţi.
- Un ceas configurat greşit ar putea duce la rezultate ciudate pe viitor.
+Înainte de a continua, trebuie să verificați data/ora și să o actualizați.
+ Un ceas configurat greșit ar putea duce la rezultate ciudate pe viitor.
 \end_layout
 
 \begin_layout Standard
-Pentru a verifica data/ora curentă, executaţi date.
+Pentru a verifica data/ora curentă, executați date.
 \begin_inset Newline newline
 \end_inset
 
@@ -12367,11 +12386,11 @@ Fri Mar 29 16:21:18 UTC 2005
 \end_layout
 
 \begin_layout Standard
-Dacă data/ora sunt afişate greşit, actualizaţi-le folosind sintaxa date
- MMDDhhmmYYYY (Month - Lună, Day - Zi, hour - Oră, minute - Minut şi Year
+Dacă data/ora sunt afișate greșit, actualizați-le folosind sintaxa date
+ MMDDhhmmYYYY (Month - Lună, Day - Zi, hour - Oră, minute - Minut și Year
  - An).
- La acest pas, trebuie să utilizaţi zona de fus orar UTC.
- Veţi putea să vă definiţi zona de fus orar, ulterior.
+ La acest pas, trebuie să utilizați zona de fus orar UTC.
+ Veți putea să vă definiți zona de fus orar, ulterior.
  De exemplu, pentru a seta data de 29 Martie, 16:21, a anului 2005: 
 \begin_inset Newline newline
 \end_inset
@@ -12426,10 +12445,10 @@ Alegerea Dumneavoastră
 \end_layout
 
 \begin_layout Standard
-Următorul pas pe care trebuie să îl urmaţi este să instalaţi arhiva tar
+Următorul pas pe care trebuie să îl urmați este să instalați arhiva tar
  stage3 pe sistemul dumneavoastră.
- Comanda uname -m poate fi utilizată pentru a vă ajuta să decideţi ce arhivă
- tar stage să descărcaţi.
+ Comanda uname -m poate fi utilizată pentru a vă ajuta să decideți ce arhivă
+ tar stage să descărcați.
 \end_layout
 
 \begin_layout Section
@@ -12441,7 +12460,7 @@ Descărcarea Arhivei Stage
 \end_layout
 
 \begin_layout Standard
-Mergeţi în directorul în care aţi mount-at sistemul de fişiere Gentoo (cel
+Mergeți în directorul în care ați mount-at sistemul de fișiere Gentoo (cel
  mai probabil în /mnt/gentoo): 
 \begin_inset Newline newline
 \end_inset
@@ -12492,15 +12511,15 @@ Intrăm în directorul în care am mount-at Gentoo
 \end_layout
 
 \begin_layout Standard
-În funcţie de mediul de instalare, aveţi câteva unelte disponibile pentru
+În funcție de mediul de instalare, aveți câteva unelte disponibile pentru
  a descărca un Stage.
- Dacă aveţi links disponibil, atunci puteţi naviga cu uşurinţă către lista
- de servere mirror Gentoo şi să alegeţi unul cât mai apropiat de dumneavoastră.
+ Dacă aveți links disponibil, atunci puteți naviga cu ușurință către lista
+ de servere mirror Gentoo și să alegeți unul cât mai apropiat de dumneavoastră.
  Tastați 
 \color green
 links http://www.gentoo.org/main/en/mirrors.xml
 \color inherit
- și apasati 
+ și apăsați 
 \series bold
 ENTER
 \series default
@@ -12508,10 +12527,10 @@ ENTER
 \end_layout
 
 \begin_layout Standard
-Dacă nu aveţi disponibilă aplicaţia links, ar trebui să aveţi aplicaţia
- lynx la dispoziţie.
- Dacă trebuie să utilizaţi un server proxy, exportaţi variabilele http_proxy
- şi ftp_proxy: 
+Dacă nu aveți disponibilă aplicația links, ar trebui să aveți aplicația
+ lynx la dispoziție.
+ Dacă trebuie să utilizați un server proxy, exportați variabilele http_proxy
+ și ftp_proxy: 
 \begin_inset Newline newline
 \end_inset
 
@@ -12530,7 +12549,7 @@ Dacă nu aveţi disponibilă aplicaţia links, ar trebui să aveţi aplicaţia
 \begin_layout Plain Layout
 
 \color magenta
-Setarea informaţiilor despre proxy pentru lynx
+Setarea informațiilor despre proxy pentru lynx
 \end_layout
 
 \end_inset
@@ -12574,7 +12593,7 @@ Setarea informaţiilor despre proxy pentru lynx
 \end_layout
 
 \begin_layout Standard
-Vom presupune, de acum, că aveţi la dispoziţie links.
+Vom presupune, de acum, că aveți la dispoziție links.
  
 \end_layout
 
@@ -12584,13 +12603,17 @@ Selectați un mirror apropiat.
 \end_layout
 
 \begin_layout Standard
-Selectaţi directorul releases/, urmat de cel al arhitecturii folosite (de
+Selectați directorul releases/, urmat de cel al arhitecturii folosite (de
  exemplu amd64/autobuilds/).
- Acolo ar trebui să găsiţi toate arhivele tar stage disponibile pentru arhitectu
+ Acolo ar trebui să găsiți toate arhivele tar stage disponibile pentru arhitectu
 ra dumneavoastră (este posibil să fie stocate în directoare având numele
  subarhitecturilor individuale).
- Selectaţi una şi apasaţi D pentru a o descărca.
- Când aţi terminat, apăsaţi Q pentru a ieşi din browser.
+ Selectați una și apăsați 
+\series bold
+D
+\series default
+ pentru a o descărca.
+ Când ați terminat, apăsați Q pentru a ieși din browser.
  
 \begin_inset Newline newline
 \end_inset
@@ -12647,7 +12670,7 @@ Navigarea cu links a listelor de mirror-uri
 \begin_layout Plain Layout
 
 \color green
-(Dacă aveţi nevoie de suport pentru proxy cu links:)
+(Dacă aveți nevoie de suport pentru proxy cu links:)
 \end_layout
 
 \end_inset
@@ -12678,14 +12701,14 @@ Navigarea cu links a listelor de mirror-uri
 \end_layout
 
 \begin_layout Standard
-Asiguraţi-vă că aţi descărcat o arhivă tar stage3 - instalările utilizând
- un fişier stage1 sau stage2 nu mai sunt suportate.
+Asigurați-vă că ați descărcat o arhivă tar stage3 - instalările utilizând
+ un fișier stage1 sau stage2 nu mai sunt suportate.
 \end_layout
 
 \begin_layout Standard
-Dacă doriţi să verificaţi integritatea arhivei descărcate, folosiţi openssl
- şi comparaţi ceea ce este afişat cu suma aflată pe mirror.
- Fișierul digest va furnizeaza cateva sume de control fiecare avand un algoritm
+Dacă doriți să verificați integritatea arhivei descărcate, folosiți openssl
+ și comparați ceea ce este afișat cu suma aflată pe mirror.
+ Fișierul digest va furnizează câteva sume de control fiecare având un algoritm
  propriu.
  Cele recomandate sunt SHA512 si Whirlpool.
  Spre exemplu, pentru a verifica integritatea arhivei tar stage pentru amd64:
@@ -12707,7 +12730,7 @@ Dacă doriţi să verificaţi integritatea arhivei descărcate, folosiţi openss
 \begin_layout Plain Layout
 
 \color magenta
-Verificarea integrităţii arhivei
+Verificarea integrității arhivei
 \end_layout
 
 \end_inset
@@ -12796,12 +12819,12 @@ Despachetarea arhivei
 \end_layout
 
 \begin_layout Standard
-Acum despachetaţi arhiva descărcată pe sistemul dumneavoastră.
+Acum despachetați arhiva descărcată pe sistemul dumneavoastră.
  Noi utilizăm 
 \series bold
 tar
 \series default
- pentru această operaţie, fiind cea mai simplă metodă: 
+ pentru această operație, fiind cea mai simplă metodă: 
 \begin_inset Newline newline
 \end_inset
 
@@ -12851,8 +12874,8 @@ Despachetarea arhivei stage
 \end_layout
 
 \begin_layout Standard
-Asiguraţi-vă că folosiţi aceleaşi opţiuni (xvjpf).
- Opţiunea 
+Asigurați-vă că folosiți aceleași opțiuni (xvjpf).
+ Opțiunea 
 \series bold
 x
 \series default
@@ -12861,7 +12884,7 @@ x
 v
 \series default
  vine de la Verbose pentru a observa ceea ce se întâmplă în timpul procesului
- de extracţie (această opţiune este facultativă), 
+ de extracție (această opțiune este facultativă), 
 \series bold
 j
 \series default
@@ -12877,7 +12900,7 @@ p
 \series bold
 f
 \series default
- denotă că vrem să dezarhivăm un fişier şi nu datele de la standard input.
+ denotă că vrem să dezarhivăm un fișier și nu datele de la standard input.
 \end_layout
 
 \begin_layout Standard
@@ -12886,7 +12909,7 @@ Acum că avem Stage-ul instalat, continuăm cu Instalarea Portage.
 \end_layout
 
 \begin_layout Section
-Configurarea Opţiunilor de Compilare
+Configurarea Opțiunilor de Compilare
 \end_layout
 
 \begin_layout Subsection*
@@ -12894,26 +12917,26 @@ Introducere
 \end_layout
 
 \begin_layout Standard
-Pentru optimizarea Gentoo, puteţi seta unele variabile ce vor determina
+Pentru optimizarea Gentoo, puteți seta unele variabile ce vor determina
  comportamentul Portage.
- Toate aceste variabile pot fi setate ca şi variabile de mediu (folosind
+ Toate aceste variabile pot fi setate ca și variabile de mediu (folosind
  export), dar acest lucru nu este permanent.
- Pentru a vă menţine setările, Portage conţine un fişier de configurare
+ Pentru a vă menține setările, Portage conține un fișier de configurare
  /etc/portage/make.conf.
- Acest fişier îl vom edita acum.
+ Acest fișier îl vom edita acum.
  
 \end_layout
 
 \begin_layout Description
 Notă: O listă comentată a tuturor variabilelor, poate fi găsită în /mnt/gentoo/u
 sr/share/portage/make.conf.example.
- Pentru o instalare reuşită Gentoo va trebui doar să setaţi aceste variabile
- menţionate mai sus.
+ Pentru o instalare reușită Gentoo va trebui doar să setați aceste variabile
+ menționate mai sus.
  
 \end_layout
 
 \begin_layout Standard
-Deschideţi editorul de text favorit (în acest ghid noi folosim nano) astfel
+Deschideți editorul de text favorit (în acest ghid noi folosim nano) astfel
  încât să modificăm variabilele de optimizare, pe care le vom explica în
  continuare.
  
@@ -12966,16 +12989,16 @@ Deschiderea /etc/portage/make.conf
 \end_layout
 
 \begin_layout Standard
-Aşa cum probabil aţi observat, fişierul make.conf.example este structurat
+Așa cum probabil ați observat, fișierul make.conf.example este structurat
  într-un mod generic: liniile comentate încep cu "#", iar celelalte definesc
- variabile folosind sintaxa : VARIABLE="conţinut".
- Fişierul make.conf utilizează aceeaşi sintaxă.
+ variabile folosind sintaxa : VARIABLE="conținut".
+ Fișierul make.conf utilizează aceeași sintaxă.
  Multe dintre acele variabile sunt discutate in continuare.
  
 \end_layout
 
 \begin_layout Subsection*
-CFLAGS şi CXXFLAGS
+CFLAGS și CXXFLAGS
 \end_layout
 
 \begin_layout Standard
@@ -12983,40 +13006,40 @@ Variabilele
 \series bold
 CFLAGS
 \series default
- şi 
+ și 
 \series bold
 CXXFLAGS
 \series default
- definesc opţiunile de optimizare pentru compilatorul gcc de C respectiv
+ definesc opțiunile de optimizare pentru compilatorul gcc de C respectiv
  C++.
- Deşi, în general, le definim aici, veţi obţine maximul de performanţă dacă
- optimizaţi flag-urile pentru fiecare program, în parte.
- Motivul pentru această afirmaţie este că fiecare program este diferit.
+ Deși, în general, le definim aici, veți obține maximul de performanță dacă
+ optimizați flag-urile pentru fiecare program, în parte.
+ Motivul pentru această afirmație este că fiecare program este diferit.
  
 \end_layout
 
 \begin_layout Standard
-În make.conf ar trebui să definiţi opţiunile de optimizare care credeţi că
+În make.conf ar trebui să definiți opțiunile de optimizare care credeți că
  vor face sistemul cât mai rapid în general.
- Nu puneţi valori experimentale în această variabilă; o optimizare prea
- mare poate duce la un comportament ciudat al programelor (oprirea funcţionării,
- sau chiar mai rău, funcţionarea incorectă).
+ Nu puneți valori experimentale în această variabilă; o optimizare prea
+ mare poate duce la un comportament ciudat al programelor (oprirea funcționării,
+ sau chiar mai rău, funcționarea incorectă).
  
 \end_layout
 
 \begin_layout Standard
-Nu vom explica toate opţiunile de optimizare.
- Dacă vreţi să le aflaţi pe toate, citiţi Manualul(ele) Online GNU sau gcc
- pagina info(info gcc -- funcţionează doar pe un sistem Linux funcţional).
- Fişierul make.conf.example însuşi conţine, de asemenea, multe exemple şi
- informaţii; nu uitaţi să-l citiţi.
+Nu vom explica toate opțiunile de optimizare.
+ Dacă vreți să le aflați pe toate, citiți Manualul(ele) Online GNU sau gcc
+ pagina info(info gcc -- funcționează doar pe un sistem Linux funcțional).
+ Fișierul make.conf.example însuși conține, de asemenea, multe exemple și
+ informații; nu uitați să-l citiți.
  
 \end_layout
 
 \begin_layout Standard
-O primă opţiune este indicatorul -march= sau -mtune, care specifică numele
- arhitecturii ţintă.
- Opţiunile posibile sunt descrise în fişierul make.conf.example (ca şi comentarii).
+O primă opțiune este indicatorul -march= sau -mtune, care specifică numele
+ arhitecturii țintă.
+ Opțiunile posibile sunt descrise în fișierul make.conf.example (ca și comentarii).
  De obicei se folosește valoarea 
 \series bold
 native
@@ -13030,39 +13053,39 @@ Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
  care specifică clasa de optimizare gcc.
  Clasele posibile sunt s (pentru optimizarea marimii), 0 (zero - pentru
  nici o optimizare), 1, 2 sau 3 pentru mai multe optimizări de viteză (fiecare
- clasă are aceiaşi indicatori ca cea dinainte, plus altele).
+ clasă are aceiași indicatori ca cea dinainte, plus altele).
  -O2 este recomandat ca implicit.
  -O3 poate produce instabilitate, de aceea este recomandat -O2.
 \end_layout
 
 \begin_layout Standard
 O altă setare comună de optimizare este -pipe (utilizează canale pipe în
- locul fişierelor temporare pentru comunicaţia între diversele etape ale
+ locul fișierelor temporare pentru comunicația între diversele etape ale
  compilării).
  El nu are impact asupra codului generat, dar folosește mai multă memorie.
  Pe sisteme cu memorie puțină este recomandat a nu se folosi acest parametru.
 \end_layout
 
 \begin_layout Standard
-Luaţi aminte faptul că utilizarea -fomit-frame-pointer (ce nu păstrează
- indicatorul frame într-un registru pentru funcţiile ce nu necesită acest
- lucru) poate avea repercursiuni serioase asupra aplicaţiilor de depanare!
+Luați aminte faptul că utilizarea -fomit-frame-pointer (ce nu păstrează
+ indicatorul frame într-un registru pentru funcțiile ce nu necesită acest
+ lucru) poate avea repercursiuni serioase asupra aplicațiilor de depanare!
 \end_layout
 
 \begin_layout Standard
-Când definiţi 
+Când definiți 
 \series bold
 CFLAGS
 \series default
- şi 
+ și 
 \series bold
 CXXFLAGS
 \series default
-, ar trebui să combinaţi mai multe opţiuni de optimizare.
+, ar trebui să combinați mai multe opțiuni de optimizare.
 \end_layout
 
 \begin_layout Standard
-Valorile iniţiale ce fac referire la 
+Valorile inițiale ce fac referire la 
 \series bold
 CFLAGS
 \series default
@@ -13070,7 +13093,7 @@ CFLAGS
 \series bold
 CXXFLAGS
 \series default
-, conţinute de arhiva stage3 pe care ați despachetat-o ar trebui să fie
+, conținute de arhiva stage3 pe care ați despachetat-o ar trebui să fie
  de ajuns.
  Iată un exemplu ce conține astfel de variabile.
 \begin_inset Newline newline
@@ -13091,7 +13114,7 @@ CXXFLAGS
 \begin_layout Plain Layout
 
 \color magenta
-Definirea variabilelor CFLAGS şi CXXFLAGS
+Definirea variabilelor CFLAGS și CXXFLAGS
 \end_layout
 
 \end_inset
@@ -13168,7 +13191,7 @@ MAKEOPTS
 \end_layout
 
 \begin_layout Standard
-Cu ajutorul MAKEOPTS definiţi câte compilări paralele vor apărea când instalaţi
+Cu ajutorul MAKEOPTS definiți câte compilări paralele vor apărea când instalați
  un pachet.
  O alegere bună este numărul procesoarelor din sistem plus încă unul, dar
  această sugestie nu este întotdeauna perfectă.
@@ -13179,7 +13202,7 @@ Cu ajutorul MAKEOPTS definiţi câte compilări paralele vor apărea când insta
 \end_layout
 
 \begin_layout Standard
-Fiţi gata, Pregătiţi-vă, Porniţi!
+Fiți gata, Pregătiți-vă, Porniți!
 \begin_inset Newline newline
 \end_inset
 
@@ -13187,9 +13210,9 @@ Fiţi gata, Pregătiţi-vă, Porniţi!
 \end_layout
 
 \begin_layout Standard
-Actualizaţi fişierul /mnt/gentoo/etc/portage/make.conf, cu preferinţele dumneavoa
-stră şi salvaţi (utilizatorii nano tastează Ctrl-X).
- Acum sunteţi gata să continuaţi cu Instalarea Sistemului de Bază al Gentoo.
+Actualizați fișierul /mnt/gentoo/etc/portage/make.conf, cu preferințele dumneavoa
+stră și salvați (utilizatorii nano tastează Ctrl-X).
+ Acum sunteți gata să continuați cu Instalarea Sistemului de Bază al Gentoo.
  
 \end_layout
 
@@ -13202,16 +13225,16 @@ Utilizarea mediului Chroot
 \end_layout
 
 \begin_layout Subsection*
-Opţional: Alegerea Mirror-urilor
+Opțional: Alegerea Mirror-urilor
 \end_layout
 
 \begin_layout Standard
-Pentru a descărca sursele mai rapid, este recomandat să selectaţi un server
+Pentru a descărca sursele mai rapid, este recomandat să selectați un server
  mirror rapid.
- Portage va căuta în fişierul dvs.
- make.conf definiţia variabilei GENTOO_MIRRORS şi va utiliza server-ele mirror
- afişate acolo.
- Puteţi naviga în documentul nostru ce conţine 
+ Portage va căuta în fișierul dvs.
+ make.conf definiția variabilei GENTOO_MIRRORS și va utiliza server-ele mirror
+ afișate acolo.
+ Puteți naviga în documentul nostru ce conține 
 \series bold
 \color blue
 
@@ -13225,11 +13248,11 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 
 \series default
 \color inherit
- şi va căuta un server mirror (sau mai multe) mai apropiate de dvs.
- (deoarece, în cele mai multe cazuri, acestea sunt şi cele mai rapide),
- sau puteţi utiliza utilitarul mirrorselect oferit de noi, cu care puteţi
- printr-o interfaţă prietenoasă, să selectaţi server-ele mirror pe care
- le doriţi.
+ și va căuta un server mirror (sau mai multe) mai apropiate de dvs.
+ (deoarece, în cele mai multe cazuri, acestea sunt și cele mai rapide),
+ sau puteți utiliza utilitarul mirrorselect oferit de noi, cu care puteți
+ printr-o interfață prietenoasă, să selectați server-ele mirror pe care
+ le doriți.
 \begin_inset Newline newline
 \end_inset
 
@@ -13280,12 +13303,12 @@ Utilizarea mirrorselect pentru variabila GENTOO_MIRRORS
 
 \begin_layout Standard
 O altă setare importantă este variabila SYNC din make.conf.
- Această variabilă conţine server-ul rsync pe care doriţi să-l utilizaţi
- când vă actualizaţi structura Portage (colecţia de fişiere ebuild, script-urile
- ce conţin toate informaţiile de care Portage are nevoie pentru a descărca
- şi a instala aplicaţiile).
- Deşi puteţi introduce manual un server SYNC, mirrorselect vă poate uşura
- această operaţie: 
+ Această variabilă conține server-ul rsync pe care doriți să-l utilizați
+ când vă actualizați structura Portage (colecția de fișiere ebuild, script-urile
+ ce conțin toate informațiile de care Portage are nevoie pentru a descărca
+ și a instala aplicațiile).
+ Deși puteți introduce manual un server SYNC, mirrorselect vă poate ușura
+ această operație: 
 \begin_inset Newline newline
 \end_inset
 
@@ -13335,7 +13358,7 @@ Selectarea unui server mirror rsync utilizând mirrorselect
 \end_layout
 
 \begin_layout Standard
-După rularea mirrorselect este recomandat să verificaţi încă o dată setările
+După rularea mirrorselect este recomandat să verificați încă o dată setările
  din /mnt/gentoo/etc/portage/make.conf ! 
 \end_layout
 
@@ -13350,15 +13373,15 @@ Notă: Dacă doriți să setați un server de SYNC manual în make.conf, ar treb
 \end_layout
 
 \begin_layout Subsubsection
-Precizarea Informaţiilor despre DNS
+Precizarea Informațiilor despre DNS
 \end_layout
 
 \begin_layout Standard
-A rămas un singur lucru de făcut, înainte să putem intra noul mediu şi anume
- trebuie să copiem informaţiile despre DNS în /etc/resolv.conf.
- Trebuie să facem asta, pentru a fi siguri că reţeaua funcţionează, chiar
- şi după ce intrăm în noul mediu.
- /etc/resolv.conf conţine serverele DNS pentru reţeaua noastră.
+A rămas un singur lucru de făcut, înainte să putem intra noul mediu și anume
+ trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
+ Trebuie să facem asta, pentru a fi siguri că rețeaua funcționează, chiar
+ și după ce intrăm în noul mediu.
+ /etc/resolv.conf conține serverele DNS pentru rețeaua noastră.
  
 \begin_inset Newline newline
 \end_inset
@@ -13378,7 +13401,7 @@ A rămas un singur lucru de făcut, înainte să putem intra noul mediu şi anum
 \begin_layout Plain Layout
 
 \color magenta
-Copierea informaţiilor despre DNS
+Copierea informațiilor despre DNS
 \end_layout
 
 \end_inset
@@ -13389,7 +13412,7 @@ Copierea informaţiilor despre DNS
 \begin_inset Text
 
 \begin_layout Plain Layout
-(Opţiunea "-L" ne asigură că nu copiem un link simbolic)
+(Opțiunea "-L" ne asigură că nu copiem un link simbolic)
 \end_layout
 
 \end_inset
@@ -13420,7 +13443,7 @@ Copierea informaţiilor despre DNS
 \end_layout
 
 \begin_layout Subsection*
-Mount-area Sistemelor de Fişiere
+Mountarea Sistemelor de Fișiere
 \end_layout
 
 \begin_layout Standard
@@ -13430,9 +13453,9 @@ Mount-area Sistemelor de Fişiere
 \end_layout
 
 \begin_layout Standard
-Mount-aţi sistemul de fişiere /proc în /mnt/gentoo/proc pentru a permite
- instalării să utilizeze informaţia oferită de kernel, chiar şi în mediul
- chroot, şi apoi mount-aţi prin legătură sistemele de fişiere /dev și /sys.
+Mount-ați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite
+ instalării să utilizeze informația oferită de kernel, chiar și în mediul
+ chroot, și apoi mount-ați prin legătură sistemele de fișiere /dev și /sys.
  
 \begin_inset Newline newline
 \end_inset
@@ -13513,18 +13536,18 @@ Intrarea în noul Mediu
 \end_layout
 
 \begin_layout Standard
-Acum, că toate partiţiile sunt iniţializate şi mediul de bază instalat,
- a venit momentul să intrăm în noul mediu prin acţiunea de chrooting în
+Acum, că toate partițiile sunt inițializate și mediul de bază instalat,
+ a venit momentul să intrăm în noul mediu prin acțiunea de chrooting în
  acesta.
  Aceasta înseamnă că ne mutăm din mediul în care a decurs instalarea (Installati
-on CD sau alt mediu de instalare), în sistemul instalat (adică în partiţia
- iniţializată).
+on CD sau alt mediu de instalare), în sistemul instalat (adică în partiția
+ inițializată).
 \end_layout
 
 \begin_layout Standard
-Acţiunea de chrooting, se face în trei etape.
+Acțiunea de chrooting, se face în trei etape.
  Mai întâi, vom muta rădăcina, din / (de pe discul de instalare), către
- /mnt/gentoo (de pe partiţia aleasa pentru instalare), folosind comanda
+ /mnt/gentoo (de pe partiția aleasa pentru instalare), folosind comanda
  chroot.
  Apoi, variabilele distribuite de /etc/profile le încărcăm în memorie, folosind
  comanda source.
@@ -13605,9 +13628,9 @@ Chroot în noul mediu
 \end_layout
 
 \begin_layout Standard
-Felicitări! Sunteţi acum în propriul mediu Gentoo Linux.
+Felicitări! Sunteți acum în propriul mediu Gentoo Linux.
  Desigur, suntem departe de a fi terminat, motiv pentru care procesul de
- instalare mai are câteva secţiuni de parcurs :-) 
+ instalare mai are câteva secțiuni de parcurs :-) 
 \end_layout
 
 \begin_layout Standard
@@ -13620,8 +13643,3339 @@ Dacă vreodată aveți nevoie de un alt terminal sau consolă ca să accesați
 Configurarea Portage
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
+Despachetarea structurii Portage
+\end_layout
 
+\begin_layout Standard
+Acum trebuie să instalați structura Portage, o colecție de fișiere ce informează
+ Portage ce software poți instala, ce profile sunt disponibile etc.
+ Conținutul structurii Portage va fi extras în /usr/portage.
+\end_layout
+
+\begin_layout Standard
+Noi va recomandăm să folosiți 
+\series bold
+emerge-webrsync.
+ 
+\series default
+Acesta vă va descărca ultima structură Portage (pe care Gentoo o pune la
+ dispoziție zilnic) de pe un mirror (oglindă) al comunității ca apoi să
+ vi-l instaleze în sistem.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Rularea lui emerge--webrsync pentru a instala o structură Portage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# mkdir /usr/portage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge-webrsync
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Opțional: Actualizarea structurii Portage
+\end_layout
+
+\begin_layout Standard
+Acum, trebuie să vă actualizați structura Portage la ultima versiune.
+ emerge --sync efectuează această acțiune pentru dvs.
+ El va folosi protocolul rsync pentru a face update (a aduce ultima versiune,
+ a actualiza) structurii Portage pe care ați descarcat-o mai devreme folosind
+ 
+\series bold
+emerge-webrsync
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Actualizarea structurii Portage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge --sync
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dacă utilizați un terminal lent, cum ar fi unele terminale framebuffer sau
+ console seriale,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+puteți adăuga opțiunea --quiet pentru a mări viteza acestui proces:)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge --sync --quiet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă vă aflați în spatele unui firewall ce blochează traficul rsync, puteți
+ ignora această etapă din moment ce aveți deja o structură Portage actualizată.
+\end_layout
+
+\begin_layout Standard
+Dacă sunteți atenționat că o noua versiune Portage este disponibila ar fi
+ bine să actualizați Portage.
+ Aceasta fiind posibilă după rularea comenzii 
+\color blue
+emerge --oneshot portage
+\color inherit
+.
+ De asemenea veți fi notificați despre noutățile/știrile ce trebui citite
+ (news items need reading).
+ 
+\end_layout
+
+\begin_layout Subsection*
+Citirea știrilor
+\end_layout
+
+\begin_layout Standard
+Când structura Portage este sincronizata/actualizată, Portage vă poate atenționa
+/avertiza cu urmatorul mesaj:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Portage vă va informa că noi stiri sunt disponibile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+* IMPORTANT: 2 news items need reading for repository 'gentoo'.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+* Use eselect news to read news items.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
+ utilizatorii cărora le sunt trimise mesaje importante prin protocolul rsync.
+ Pentru a le administra trebuie sa folosiți 
+\color blue
+eselect news
+\color inherit
+.
+ Cu subcomanda 
+\series bold
+read 
+\series default
+veți putea citi toate articolele.
+ Cu 
+\series bold
+list 
+\series default
+veți putea vedea toate articolele cu știri disponibile, iar cu 
+\series bold
+purge
+\series default
+ puteți șterge articolele cu știri citite de care nu mai aveți nevoie.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Manipularea articolelor din Portage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect news list 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect news read
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mai multe informații despre cititorul de știri sunt disponibile prin accesarea
+ informațiilor din manualul comenzii: 
+\color blue
+man news.eselect
+\color inherit
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Alegerea Profilului Corect
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series medium
+Mai înainte de toate, o mică definiție.
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series medium
+Un profil este un bloc ce stă la baza construirii oricărui sistem Gentoo.
+ Nu numai că specifică valorile implicite pentru CHOST, CFLAGS și alte variabile
+ importante, dar și blochează sistemul într-o anumită plajă de versiuni
+ ale pachetelor.
+ Mentenanța tuturor acestora este asigurată de dezvoltatorii Gentoo.
+ 
+\end_layout
+
+\begin_layout Standard
+Anterior, un asemenea profil era neatins de către utilizator.
+ În orice caz, sunt situații când poți decide dacă o modificare de profil
+ este necesară.
+\end_layout
+
+\begin_layout Standard
+Puteți vedea ce profil utilizați în mod curent, prin execuția următoarei
+ comenzi: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Verificarea profilului de sistem
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile list 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Available profile symlink targets:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[1] default/linux/amd64/13.0 * 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[2] default/linux/amd64/13.0/desktop 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[3] default/linux/amd64/13.0/server
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+După cum puteți vedea, sunt disponibile atât subprofile desktop cât și server
+ pentru ceva arhitecturi.
+\end_layout
+
+\begin_layout Standard
+Rularea lui 
+\color blue
+eselect profile list
+\color inherit
+ ne va afișa toate profilele disponibile.
+\end_layout
+
+\begin_layout Standard
+După ce ați văzut profilele disponibile pentru arhitectura dumneavoastră,
+ puteți folosi unu dintre cele listate dacă doriți.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Schimbarea profilelor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile set 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă doriți un sistem pe 64 de biți pur, fără biblioteci sau aplicații pe
+ 32 de biți, ar trebui sa folosiți profilul 
+\series bold
+non-multilib
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Schimarea profilului pe non-multilib
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile list 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Available profile symlink targets:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[1] default/linux/amd64/13.0 * 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[2] default/linux/amd64/13.0/desktop 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[3] default/linux/amd64/13.0/no-multilib 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[4] default/linux/amd64/13.0/server
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Choose the no-multilib profile) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile set 3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Verify the change)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile list 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Available profile symlink targets:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[1] default/linux/amd64/13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[2] default/linux/amd64/13.0/desktop 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[3] default/linux/amd64/13.0/no-multilib * 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[4] default/linux/amd64/13.0/server
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Profilul developer este specific dezvoltării de task-uri în Gentoo
+ Linux.
+ Acesta nu este conceput să ajute setarea unui mediu de dezvoltare general.
+\end_layout
+
+\begin_layout Subsection*
+Configurarea variabilei USE
+\end_layout
+
+\begin_layout Standard
+USE este una dintre cele mai puternice variabile, pe care Gentoo o pune
+ la dispoziția utilizatorilor.
+ Multe dintre programe pot fi compilate, cu sau fără suport opțional pentru
+ diferite pachete.
+ De exemplu, unele programe pot fi compilate cu suport GTK sau cu suport
+ QT.
+ Altele pot fi compilate cu sau fără suport SSL.
+ Unele programe pot fi chiar compilate cu suport framebuffer (svgalib),
+ în loc de suport X11 (X-server).
+\end_layout
+
+\begin_layout Standard
+Majoritatea distribuțiilor își compilează propriile pachete, folosind suport
+ pentru cât mai multe lucruri posibile, crescând astfel dimensiunea programelor
+ și totodată a timpului de pornire, fără a menționa enorma cantitate de
+ dependențe.
+ Folosind Gentoo, puteți defini cu ce opțiuni să fie compilat un pachet.
+ Aici intră în joc, variabila USE.
+\end_layout
+
+\begin_layout Standard
+În cadrul variabilei USE, definiți cuvinte cheie care sunt folosite în opțiunile
+ compilării.
+ De exemplu, opțiunea ssl va compila suportul pentru ssl, în cadrul programelor
+ care îl suportă.
+ -X va elimina suportul pentru X-server (observați semnul minus din față).
+ gnome gtk -kde -qt va compila programele cu suport gnome (gtk) dar fără
+ suport kde (și qt), făcându-vă sistemul, pe deplin optimizat pentru GNOME.
+ 
+\end_layout
+
+\begin_layout Standard
+Setările USE implicite se află în fișierele make.defaults din profilul dvs.
+ Veți putea regăsi fișierele make.defaults în directorul spre care indică
+ /etc/portage/make.profile și în toate directoarele ascendente.
+ Setarea USE reprezintă suma tuturor setărilor USE din toate fișierele make.defau
+lts.
+ Ceea ce adăugați în /etc/portage/make.conf este calculat în concordanță
+ cu aceste setări implicite.
+ Dacă adăugați ceva setărilor USE, este adăugat listei implicite.
+ Dacă ștergeți ceva din setările USE (prin scrierea semnului minus în fața
+ sa), atunci este șters din lista implicită (în cazul în care ar fi fost
+ în listă).
+ Niciodată nu faceți schimbări în interiorul directorului /etc/portage/make.profi
+le; va fi rescris când actualizați Portage! 
+\end_layout
+
+\begin_layout Standard
+O descriere completă, a variabilei USE, poate fi găsită în cea de a doua
+ parte a Gentoo Handbook, 
+\begin_inset CommandInset href
+LatexCommand href
+name "Indicatori USE"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part2_chap2"
+
+\end_inset
+
+.
+ O descriere completă a variabilelor USE existente, poate fi găsită în /usr/port
+age/profiles/use.desc.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Vizualizarea indicatorilor USE existenți
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# less /usr/portage/profiles/use.desc 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color black
+(Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea 'q')
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Drept exemplu, vă prezentăm setările unui sistem bazat pe KDE, cu suport
+ DVD, ALSA și CD-Recording:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschidem /etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setările USE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+USE="-gtk -gnome qt4 kde dvd alsa cdr"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Localizarea
+\end_layout
+
+\begin_layout Standard
+În cele din urmă selectați-vă localizarea ca sistemul dumneavoastră să știe
+ unde sunteți localizat fizic.
+ Pentru localizare (timezone) uitați-vă în 
+\series bold
+/usr/share/zoneinfo
+\series default
+, apoi copiați în 
+\series bold
+/etc/localtime
+\series default
+.
+ Zonele de timp din /usr/share/zoneinfo/Etc/GMT* după cum sugerează și denumirea
+, nu indică exact zonele așteptate.
+ De exemplu, GMT-8 este de fapt GMT+8.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea localizării
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# ls /usr/share/zoneinfo 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Suppose you want to use Europe/Brussels) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+\color inherit
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Next set the timezone) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# echo "Europe/Brussels" > /etc/timezone
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Configurarea Kernel-ului
+\end_layout
+
+\begin_layout Section
+Instalarea surselor
+\end_layout
+
+\begin_layout Subsection*
+Alegerea unui kernel
+\end_layout
+
+\begin_layout Standard
+Nucleul în jurul căruia sunt construite toate distribuțiile, este kernel-ul
+ Linux.
+ Este nivelul dintre programe și componentele hardware ale sistemului dumneavoas
+tră.
+ Gentoo pune la dispoziția utilizatorilor, mai multe surse de kernel.
+ O listă completă alături de descrierea lor, este accesibilă la 
+\begin_inset CommandInset href
+LatexCommand href
+name "Ghidul Gentoo pentru Kernel"
+target "http://www.gentoo.org/doc/en/gentoo-kernel.xml?style=printable"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pentru sistemele bazate pe arhitectura amd64 vă oferim, alături de alte
+ surse de kernel, vanilla-sources (sursele de kernel implicite dezvoltate
+ de programatorii de kernel linux), gentoo-sources (sursele de kernel ce
+ conțin patch-uri pentru îmbunătățirea performanței).
+\end_layout
+
+\begin_layout Standard
+Alegeți sursele de kernel și instalați-le utilizând emerge.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea unor surse de kernel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge gentoo-sources
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Când vă veți uita în /usr/src ar trebui să vedeți un symlink numit linux,
+ ce indică spre sursa kernel-ului dvs.În acest caz, sursele de kernel instalate
+ indică către gentoo-sources-3.4.9.
+ Versiunea dvs.
+ ar putea fi diferită, deci rețineți acest aspect.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Vizualizare symlink sursă kernel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# ls -l /usr/src/linux
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -> linux-3.4.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum este timpul să configurăm și să compilăm sursa kernel.
+ Toate arhitecturile pot folosi genkernel pentru asta, care vă va construi
+ un kernel generic așa cum este folosit pe mediul Installation CD.
+ Vom explica configurarea manuală, totuși, fiind cea mai bună cale de a
+ vă optimiza sistemul.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă doriți să vă configurați manual kernel-ul, continuați acum cu Implicit:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Configurarea Manuală"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#manual"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă doriți să utilizați genkernel, ar trebui să citiți Alternativ: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Utilizarea genkernel"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#genkernel"
+
+\end_inset
+
+, în loc.
+ 
+\end_layout
+
+\begin_layout Section
+Implicit: Configurarea Manuală
+\end_layout
+
+\begin_layout Subsection*
+Introducere
+\end_layout
+
+\begin_layout Standard
+Configurarea manuală a kernel-ului este des percepută ca cea mai grea încercare,
+ pe care fiecare user Linux trebuie să o treacă.
+ Nimic mai fals -- după ce veți configura câteva kernel-uri, nici nu vă
+ veți mai aminti că a fost greu.
+ ;)
+\end_layout
+
+\begin_layout Standard
+Totuși, un lucru este adevărat: trebuie să vă cunoașteți sistemul înainte
+ de a începe configurarea manuală a kernel-ului.
+ Cele mai multe informații le puteți obține prin instalarea pciutils (emerge
+ pciutils) ce conține lspci.
+ Acum veți putea să utilizați comanda lspci în interiorul mediului chroot.
+ Puteți ignora cu încredere orice avertismente pcilib (cum ar fi: pcilib:
+ cannot open /sys/bus/pci/devices) afișate de lspci.
+ Alternativ, puteți rula lspci dintr-un mediu non-chroot.
+ Rezultatele sunt aceleași.
+ De asemenea, puteți rula lsmod pentru a vizualiza modulele kernel-ului
+ folosit de mediul Installation CD (ar putea să vă formeze o idee despre
+ ce anume să activați).
+ 
+\end_layout
+
+\begin_layout Standard
+Acum mergeți în directorul ce conține sursa kernel-ului și executați make
+ menuconfig.
+ Aceasta va porni un meniu de configurare bazat pe ncurses.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Invocarea menuconfig
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cd /usr/src/linux 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# make menuconfig
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veți fi întâmpinat cu mai multe secțiuni de configurare.
+ Mai întâi vom enumera câteva opțiuni pe care trebuie să le activați (altfel
+ Gentoo nu va funcționa deloc sau nu va funcționa corect fără anumite trucuri
+ suplimentare).
+ 
+\end_layout
+
+\begin_layout Subsection*
+Activarea Opțiunilor Necesare
+\end_layout
+
+\begin_layout Standard
+Asigurați-vă că fiecare driver ce este vital pentru procesul de boot al
+ sistemului dvs.
+ (cum ar fi controller-ul SCSI, ...) este compilat în kernel, și nu ca modul,
+ altfel sistemul dvs.
+ nu va putea completa procesul de boot.
+ 
+\end_layout
+
+\begin_layout Standard
+O să alegem apoi tipul exact al procesorului.
+ Pentru tipul de instalare amd64 recomandăm utilizatorilor să activeze funcția
+ MCE, astfel încât să poată fi notificați în cazul unor probleme hardware.
+ Pe arhitectura amd64, aceste erori nu sunt listate de 
+\series bold
+dmesg 
+\series default
+așa cum listate pe alte arhitecturi, dar sunt listate în 
+\series bold
+/dev/mcelog.
+
+\series default
+ Acesta necesită pachetul
+\series bold
+ app-admin/mcelog
+\series default
+.
+ Asigurați-vă că aveți selectat 
+\series bold
+IA32 Emulation 
+\series default
+dacă doriți să rulați și aplicații pe 32 de biți.
+ Această opțiune este necesară deoarece Gentoo vă instalează un sistem multilib
+ (computatie mixtă pe 32 de biți si 64 de biți).
+\end_layout
+
+\begin_layout Description
+Notă: Dacă aveți în plan să utilizați profilul non-multilib (pentru un sistem
+ 64 biti pur), atunci nu selectați suportul IA32 Emulation.
+ Totuși va trebui să urmați următoarele instrucțiuni pentru a va comuta
+ sistemul pe profilul non-multilib, precum și alegerea corectă a bootloader-ului.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Selectarea procesorului după tip și caracteristici
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Processor type and features ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ ] Machine Check / overheating reporting 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ ] Intel MCE Features 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ ] AMD MCE Features 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Processor family (AMD-Opteron/Athlon64) ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+( ) Opteron/Athlon64/Hammer/K8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+( ) Intel P4 / older Netburst based Xeon 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+( ) Core 2/newer Xeon 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+( ) Intel Atom 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+( ) Generic-x86-64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Executable file formats / Emulations ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] IA32 Emulation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La pasul următor selectați fișierele de sistem Maintain și devtmpfs să fie
+ montate pe locația /dev pentru ca fișierele de dispozitiv criticale să
+ fie disponibile în modul de boot inițial.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Activare suport devtmpfs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Device Drivers ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Generic Driver Options ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] Maintain a devtmpfs filesystem to mount at /dev 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ ] Automount devtmpfs at /dev, after the kernel mounted the rootfs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum duceți-vă la 
+\series bold
+File Systems 
+\series default
+și selectați sistemul de fișiere folosit.
+ Nu compilați sistemul de fișiere folosit pentru partiția root ca modul,
+ altfel sistemul nu va putea să vă monteze partiția.
+ De asemenea selectați memoria virtuala și /proc.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="21" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Selectarea sistemului de fișiere necesar
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+File systems ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Select one or more of the following options as needed by your system) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> Second extended fs support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> Ext3 journalling file system support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> The Extended 4 (ext4) filesystem 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> Reiserfs support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> JFS filesystem support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> XFS filesystem support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Pseudo Filesystems ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] /proc file system support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] Virtual memory file system support (former shm fs)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Enable GPT partition label support if you used that previously) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+-*- Enable the block layer ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partition Types ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] Advanced partition selection 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+...
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] EFI GUID Partition support
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă folosiți PPPoE ca să va conectați la internet sau folosiți un modem
+ dial-up, va trebui să activați următoarele opțiuni în kernel.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Selectarea driverelor necesare pentru PPPoE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Device Drivers ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Network device support ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> PPP (point-to-point protocol) support 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> PPP support for async serial ports 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> PPP support for sync tty ports
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cele două forme de compresie sunt bune dar nu sunt neapărat necesare, la
+ fel cum și opțunea PPP peste Ethernet, care poate fi folosită de 
+\series bold
+ppp
+\series default
+ când este configurat modul kernel PPPoE.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă aveți nevoie de aceasta, nu uitați să includeți și suportul în kernel
+ pentru placa de rețea.
+\end_layout
+
+\begin_layout Standard
+Dacă aveți un sistem multi-CPU Opteron sau unul multi-core (e.g.
+ AMD64 X2), va trebui să activați "Symmetric multi-processing support":
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Activare suport SMP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Processor type and features ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] Symmetric multi-processing support
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: În sistemele multi-core fiecare nucleu este interpretat ca un procesor.
+\end_layout
+
+\begin_layout Standard
+Dacă folosiți dispozitive USB (precum tastatura sau/și mouse) nu uitați
+ să activați și aceste opțiuni:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Activare suport USB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Device Drivers ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[*] HID Devices ---> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<*> USB Human Interface Device (full HID) support
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Compilarea și Instalarea
+\end_layout
+
+\begin_layout Standard
+Acum, că kernel-ul este configurat, este timpul să îl compilați și să-l
+ instalați.
+ Ieșiți din meniul de configurare și să începeți procesul de compilare:
+ 
 \end_layout
 
 \end_body
