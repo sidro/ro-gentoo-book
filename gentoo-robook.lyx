@@ -95,7 +95,7 @@ pentru arhitectura amd64 Instalarea Gentoo
 \end_layout
 
 \begin_layout Date
-Publicată în data de: 24.05.2013
+Publicată în data de: 19.07.2013
 \end_layout
 
 \begin_layout Paragraph
@@ -3474,7 +3474,7 @@ Presupunând că aveți nevoie de PPPoE pentru a vă conecta la internet, mediul
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3802,7 +3802,7 @@ Dacă ați găsit driver-ul necesar plăcii de rețea, folosiți modprobe pentru
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="12cm">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4066,7 +4066,7 @@ Dacă totuși primiți următoarea eroare, placa de rețea nu a fost detectată:
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="12cm">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6307,7 +6307,7 @@ Acum completați cu adresele serverelor de nume folosind următoarea machetă.
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7499,7 +7499,7 @@ swap
 \end_layout
 
 \begin_layout Standard
-/usr este destul de plin (83% utilizat), dar odata ce toate aplicațiile
+/usr este destul de plin (83% utilizat), dar odată ce toate aplicațiile
  software sunt instalate /usr nu va tinde să mai crească prea mult.
  Deși alocarea unor câțiva gigaocteți de spațiu de disc pentru /var ar putea
  părea excesiv, amintiți-vă că Portage utilizează această partiție implicit
@@ -7755,7 +7755,7 @@ Tastați p pentru a afișa configurația curentă a partițiilor discului dvs.:
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8886,7 +8886,7 @@ Mai întâi vom șterge toate partițiile existente de pe disc.
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9430,7 +9430,7 @@ Crearea partiției pentru boot
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9757,7 +9757,7 @@ Partiția de boot creată
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10349,7 +10349,7 @@ Afișarea partițiilor după crearea partiției pentru swap
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10997,7 +10997,7 @@ Afișarea partițiilor după crearea partiției rădăcină
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12006,7 +12006,7 @@ Aplicarea unui sistem de fișiere pe o partiție
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12017,7 +12017,7 @@ Aplicarea unui sistem de fișiere pe o partiție
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12224,7 +12224,7 @@ Acum ca partițiile dvs.
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12417,7 +12417,7 @@ Setarea datei/orei UTC
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12487,7 +12487,7 @@ Intrăm în directorul în care am mount-at Gentoo
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12710,7 +12710,7 @@ Dacă doriți să verificați integritatea arhivei descărcate, folosiți openss
  și comparați ceea ce este afișat cu suma aflată pe mirror.
  Fișierul digest va furnizează câteva sume de control fiecare având un algoritm
  propriu.
- Cele recomandate sunt SHA512 si Whirlpool.
+ Cele recomandate sunt SHA512 și Whirlpool.
  Spre exemplu, pentru a verifica integritatea arhivei tar stage pentru amd64:
 \begin_inset Newline newline
 \end_inset
@@ -12810,7 +12810,7 @@ sau
 
 \begin_layout Standard
 Apoi comparați ceea ce au returnat comenzile de mai sus cu valorile din
- fișierul .DIGESTS pe care îl gasiți pe mirror.
+ fișierul .DIGESTS pe care îl găsiți pe mirror.
  Valorile trebuie sa coincidă, altfel fișierul descarcat ar putea fi corupt.
 \end_layout
 
@@ -12850,7 +12850,7 @@ Despachetarea arhivei stage
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12965,7 +12965,7 @@ Deschiderea /etc/portage/make.conf
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12991,7 +12991,7 @@ Deschiderea /etc/portage/make.conf
 \begin_layout Standard
 Așa cum probabil ați observat, fișierul make.conf.example este structurat
  într-un mod generic: liniile comentate încep cu "#", iar celelalte definesc
- variabile folosind sintaxa : VARIABLE="conținut".
+ variabile folosind sintaxa: VARIABLE="conținut".
  Fișierul make.conf utilizează aceeași sintaxă.
  Multe dintre acele variabile sunt discutate in continuare.
  
@@ -13051,7 +13051,7 @@ native
 \begin_layout Standard
 Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
  care specifică clasa de optimizare gcc.
- Clasele posibile sunt s (pentru optimizarea marimii), 0 (zero - pentru
+ Clasele posibile sunt s (pentru optimizarea mărimii), 0 (zero - pentru
  nici o optimizare), 1, 2 sau 3 pentru mai multe optimizări de viteză (fiecare
  clasă are aceiași indicatori ca cea dinainte, plus altele).
  -O2 este recomandat ca implicit.
@@ -13278,7 +13278,7 @@ Utilizarea mirrorselect pentru variabila GENTOO_MIRRORS
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13334,7 +13334,7 @@ Selectarea unui server mirror rsync utilizând mirrorselect
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13366,8 +13366,8 @@ După rularea mirrorselect este recomandat să verificați încă o dată setăr
 Notă: Dacă doriți să setați un server de SYNC manual în make.conf, ar trebui
  să încercați lista cu servere mirror și să alegeți un mirror cât mai apropiat
  de dumneavoastră ca și locație.
- Noi vă recomandam să alegeți o listă de mirror-uri pe care sa o salvati
- in make.conf și nu doar un mirror.
+ Noi vă recomandam să alegeți o listă de mirror-uri pe care sa o salvați
+ în make.conf și nu doar un mirror.
  Deoarece în cazul în care un mirror este indisponibil să se utilizeze următorul
  mirror ce se află în fișierul make.conf.
 \end_layout
@@ -13845,7 +13845,7 @@ Citirea știrilor
 
 \begin_layout Standard
 Când structura Portage este sincronizata/actualizată, Portage vă poate atenționa
-/avertiza cu urmatorul mesaj:
+/avertiza cu următorul mesaj:
 \begin_inset Newline newline
 \end_inset
 
@@ -14836,7 +14836,7 @@ Instalarea unor surse de kernel
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -15106,12 +15106,12 @@ IA32 Emulation
 \series default
 dacă doriți să rulați și aplicații pe 32 de biți.
  Această opțiune este necesară deoarece Gentoo vă instalează un sistem multilib
- (computatie mixtă pe 32 de biți si 64 de biți).
+ (computație mixtă pe 32 de biți si 64 de biți).
 \end_layout
 
 \begin_layout Description
 Notă: Dacă aveți în plan să utilizați profilul non-multilib (pentru un sistem
- 64 biti pur), atunci nu selectați suportul IA32 Emulation.
+ 64 biți), atunci nu selectați suportul IA32 Emulation.
  Totuși va trebui să urmați următoarele instrucțiuni pentru a va comuta
  sistemul pe profilul non-multilib, precum și alegerea corectă a bootloader-ului.
 \end_layout
@@ -15676,9 +15676,20 @@ Executable file formats / Emulations --->
 \end_layout
 
 \begin_layout Standard
-La pasul următor selectați fișierele de sistem Maintain și devtmpfs să fie
- montate pe locația /dev pentru ca fișierele de dispozitiv criticale să
- fie disponibile în modul de boot inițial.
+La pasul următor selectați fișierele de sistem 
+\series bold
+maintain
+\series default
+ și 
+\series bold
+devtmpfs
+\series default
+ să fie montate pe locația 
+\series bold
+/dev
+\series default
+ pentru ca fișierele de dispozitiv criticale să fie disponibile în modul
+ de boot inițial.
 \begin_inset Newline newline
 \end_inset
 
@@ -15875,7 +15886,11 @@ File Systems
 și selectați sistemul de fișiere folosit.
  Nu compilați sistemul de fișiere folosit pentru partiția root ca modul,
  altfel sistemul nu va putea să vă monteze partiția.
- De asemenea selectați memoria virtuala și /proc.
+ De asemenea selectați memoria virtuala și 
+\series bold
+/proc
+\series default
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -16748,7 +16763,7 @@ Network device support --->
 
 \begin_layout Standard
 Cele două forme de compresie sunt bune dar nu sunt neapărat necesare, la
- fel cum și opțunea PPP peste Ethernet, care poate fi folosită de 
+ fel cum și opțiunea PPP peste Ethernet, care poate fi folosită de 
 \series bold
 ppp
 \series default
@@ -16975,6 +16990,4109 @@ Compilarea și Instalarea
 Acum, că kernel-ul este configurat, este timpul să îl compilați și să-l
  instalați.
  Ieșiți din meniul de configurare și să începeți procesul de compilare:
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Compilarea kernel-ului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# make && make modules_install
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Când compilarea s-a terminat, copiați imaginea de kernel în directorul /boot.
+ Utilizați orice nume considerați că este potrivit pentru kernel-ul dvs.
+ și amintiți-vă acest nume deoarece veți avea nevoie de el ulterior când
+ vă veți configura aplicația bootloader.
+ Amintiți-vă să înlocuiți kernel-3.4.9-gentoo cu numele și versiunea kernel-ului
+ dumneavoastră.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea kernel-ului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cp arch/x86_64/boot/bzImage /boot/kernel-3.4.9-gentoo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+(Opțional) Construirea initramfs
+\end_layout
+
+\begin_layout Standard
+Dacă folosiți o schemă de partiționare unde 
+\series bold
+/usr
+\series default
+ și/sau 
+\series bold
+/var
+\series default
+ sunt partiții separate, atunci aveți nevoie să setați 
+\series bold
+initramfs
+\series default
+ pentru ca partițiile să fie montate înainte de a fi folosite.
+\end_layout
+
+\begin_layout Standard
+Fară 
+\series bold
+initramfs
+\series default
+, riscați ca sistemul dumneavoastră să nu booteze deoarece acest utilitar
+ este responsabil cu montarea acestor partiții.
+ Acest utilitar 
+\series bold
+initramfs
+\series default
+ pune fișierele necesare într-o arhivă, arhivă ce este folosită imediat
+ după ce kernelul este pornit (bootează), dar înainte ca controlul să fie
+ dirijat spre utilitarul de inițializare.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Initramfs
+\series default
+ va avea grija ca partițiile sa fie montate înainte ca sistemul să își continue
+ bootarea.
+\end_layout
+
+\begin_layout Standard
+Pentru a instala 
+\series bold
+initramfs
+\series default
+ mai întâi aveți nevoie de 
+\series bold
+genkernel
+\series default
+, acesta vă va genera un 
+\series bold
+initramfs
+\series default
+ pentru dumneavoastră.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Generare initramfs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge genkernel 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# genkernel --install initramfs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă aveți nevoie de suport specific în 
+\series bold
+initramfs,
+\series default
+ ca LVM sau raid, adăugați aceste opțiuni genkernel-ului.
+ Pentru mai multe informații 
+\color blue
+genkernel --help
+\color inherit
+, în următorul exemplu o să activăm suportul pentru LVM și raid (mdadm):
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Crearea lui initramfs cu suport LVM și raid
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# genkernel --lvm --mdadm --install initramfs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fișierul 
+\series bold
+initramfs
+\series default
+ va fii stocat în directorul 
+\series bold
+/boot
+\series default
+.
+ Veți găsi fișierul cu un simplu listing ce conține cuvântul initramfs.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Listarea fisierului initramfs 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# ls /boot/initramfs*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum, continuați cu 
+\begin_inset CommandInset href
+LatexCommand href
+name "Module de Kernel"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#kernel_modules"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Alternativ: Utilizarea genkernel
+\end_layout
+
+\begin_layout Standard
+Dacă citiți această secțiune, înseamnă că ați ales script-ul nostru genkernel
+ pentru a vă configura kernel-ul.
+\end_layout
+
+\begin_layout Standard
+Acum că sursele kernel-ului sunt instalate, este timpul să compilăm kernel-ul
+ folosind scriptul 
+\series bold
+genkernel
+\series default
+, pentru o compilarea automată a kernel-ului.
+ 
+\series bold
+genkernel
+\series default
+ funcționează prin a configura un kernel aproape identic cu cel al mediului
+ Installation CD.
+ Asta înseamnă că atunci când folosiți 
+\series bold
+genkernel
+\series default
+ pentru a vă construi un kernel, sistemul vă va detecta, la modul general,
+ toate componentele hardware, în timpul procesului de boot, așa cum o face
+ mediul Installation CD.
+ Deoarece genkernel nu necesită vreo configurare manuală a kernel-ului,
+ este ideal pentru cei cărora nu le este la îndemână să-și compileze propriile
+ kernel-uri.
+ Acum să vedem cum se folosește genkernel.
+ Mai întâi, instalați pachetul 
+\series bold
+genkernel
+\series default
+: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea genkernel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge genkernel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum, compilați sursa kernel-ului rulând 
+\color blue
+genkernel all
+\color inherit
+.
+ Fiți atenți, totuși, că genkernel compilează un kernel care suportă aproape
+ toate componentele hardware, compilarea durând ceva timp pentru a se termina.
+ 
+\end_layout
+
+\begin_layout Standard
+Trebuie să știți că dacă partiția de boot nu folosește ext2 sau ext3 ca
+ sistem de fișiere, va trebui să configurați manual kernel-ul, folosind
+ 
+\color blue
+genkernel --menuconfig all
+\color inherit
+ și să adăugați suport pentru sistemul respectiv de fișiere în kernel (nu
+ ca modul).
+ Utilizatorii de LVM2 vor trebui probabil să adauge --lvm2 ca argumente,
+ de asemenea.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Rularea genkernel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# genkernel all
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Odată ce genkernel își încheie execuția, vor fi create un set întreg de
+ module și inițial ram disk (initramfs).
+\end_layout
+
+\begin_layout Standard
+O să folosi kernel-ul și initrd când vom configura boot-loader-ul.
+ Notați undeva numele imaginii de kernel și al fișierului initrd pentru
+ că vă va trebui când veți configura aplicația bootloader.
+ Initrd-ul va porni imediat după boot, pentru a iniția autodetecția hardware
+ (la fel ca și la mediul Installation CD) înainte ca "adevăratul" sistem
+ să pornească.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Verificarea numelor imaginii de kernel creată și a initrd-ului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# ls /boot/kernel* /boot/initramfs*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Module de Kernel
+\end_layout
+
+\begin_layout Subsection*
+Configurarea Modulelor
+\end_layout
+
+\begin_layout Standard
+Va trebui să enumerați toate modulele, pe care vreți să le încărcați automat,
+ în 
+\series bold
+/etc/conf.d/modules
+\series default
+.
+ Puteți, de asemenea, să adaugați extra opțiuni modulelor dacă doriți.
+ 
+\end_layout
+
+\begin_layout Standard
+Pentru a vizualiza toate modulele disponibile, folosiți următoarea comandă
+ find.
+ Nu uitați să înlocuiți "<versiune kernel>" cu versiunea efectivă de kernel
+ pe care tocmai ați compilat-o:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Vizualizarea tuturor modulelor disponibile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# find /lib/modules/<kernel version>/ -type f -iname '*.o' -or -iname '*.ko'
+ | less
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De exemplu, pentru încărcarea automata a modulului 
+\series bold
+3c59x.ko
+\series default
+ (ce este un driver pentru plăcile de rețea 3Com), editați fișierul 
+\series bold
+/etc/conf.d/modules
+\series default
+ și scrieți numele modulului în el.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Inserare module in /etc/conf.d/modules
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/modules 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+modules_3_4="3c59x" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color black
+(unde 3_4 este versiunea majora a kernelului instalat)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Continuați instalarea cu 
+\begin_inset CommandInset href
+LatexCommand href
+name "Configurarea Sistemului"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part1_chap8"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Chapter
+Configurarea Sistemului
+\end_layout
+
+\begin_layout Section
+Informații despre Sistemul de Fișiere
+\end_layout
+
+\begin_layout Subsection*
+Ce este fstab?
+\end_layout
+
+\begin_layout Standard
+Sub Linux, toate partițiile folosite de sistem trebuie scrise în /etc/fstab.
+ Fișierul conține punctele de montare a partițiilor (unde apar în structura
+ sistemului de fișiere), cum trebuie montate și cu ce opțiuni speciale (montare
+ automată sau nu, dacă user-ii normali pot monta sau nu partiția, etc.).
+ 
+\end_layout
+
+\begin_layout Subsection*
+Crearea /etc/fstab
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+/etc/fstab
+\series default
+ folosește o sintaxă specială.
+ Fiecare linie conține șase câmpuri, separate de spațiu/spații, taburi,
+ sau o combinație între cele două.
+ Fiecare câmp își are propria semnificație: 
+\end_layout
+
+\begin_layout Itemize
+Primul câmp prezintă partiția respectivă (calea către fișierul dispozitiv).
+\end_layout
+
+\begin_layout Itemize
+Al doilea câmp arată directorul de montare, unde partiția trebuie să fie
+ montată.
+\end_layout
+
+\begin_layout Itemize
+Al treilea câmp arată sistemul de fișiere folosit pe partiție.
+ 
+\end_layout
+
+\begin_layout Itemize
+Al patrulea câmp arată opțiunile folosite la montarea partițiilor.
+ Deoarece fiecare sistem de fișiere are opțiuni de mount-are specifice,
+ sunteți încurajați să citiți manualul comenzii mount (man mount) pentru
+ o listare completă.
+ Punctele de mount-are separate sunt separate prin virgule.
+ 
+\end_layout
+
+\begin_layout Itemize
+Al cincilea câmp este folosit de 
+\series bold
+dump
+\series default
+ pentru a determina dacă pentru partiția respectivă trebuie efectuat 
+\series bold
+dump
+\series default
+ sau nu.
+ În general, se poate lăsa valoarea standard 0 (zero).
+ 
+\end_layout
+
+\begin_layout Itemize
+Al șaselea câmp este utilizat de fsck pentru a determina ordinea în care
+ sistemele de fișiere trebuie verificate, în cazul în care PC-ul nu a fost
+ oprit în mod normal.
+ Sistemul de fișiere root ar trebui să aibă valoarea 1, în timp ce restul
+ partițiilor ar trebui să aibă 2 (sau 0, dacă verificarea nu este necesară).
+ 
+\end_layout
+
+\begin_layout Description
+Atenție: Fișierul /etc/fstab implicit prezent în Gentoo nu este un fișier
+ valid, așadar, porniți nano (sau editorul favorit) pentru a crea /etc/fstab:
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea /etc/fstab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/fstab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Să vedem cum scriem opțiunile pentru partiția /boot.
+ Acesta este doar un exemplu, astfel, dacă arhitectura folosită nu necesită
+ /boot (cum sunt mașinile PPC de la Apple), nu o copiați.
+\end_layout
+
+\begin_layout Standard
+În exemplul nostru implicită pentru AMD64, /boot este partiția /dev/sda1,
+ cu ext2 ca sistem de fișiere.
+ Trebuie verificat în timpul procesului de boot, așadar vom scrie: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Un exemplu de linie /boot pentru /etc/fstab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+/dev/sda1 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+/boot 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ext2 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+defaults 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unii utilizatori nu doresc ca partiția lor /boot să fie montată automat,
+ pentru a îmbunătăți securitatea sistemului.
+ Aceștia trebuie să înlocuiască 
+\series bold
+defaults
+\series default
+ cu 
+\series bold
+noauto
+\series default
+.
+ Aceasta înseamnă că trebuie să montați manual partiția de câte ori doriți
+ să o folosiți.
+ 
+\end_layout
+
+\begin_layout Standard
+Adăugați regulile corespunzătoare schemei de partiționare și atașați regulile
+ pentru dispozitivele CD-ROM și adăugați de asemenea orice alte partiții
+ și dispozitive aferente.
+\end_layout
+
+\begin_layout Standard
+Acum folosiți exemplul de mai jos pentru a vă crea fișierul 
+\series bold
+/etc/fstab
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Un exemplu de fișier 
+\series bold
+/etc/fstab
+\series default
+ complet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+/dev/sda1 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+/boot 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ext2 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+defaults,noatime 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+/dev/sda2 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+none 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+swap 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+sw 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0 0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+/dev/sda3 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+/ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ext4 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+noatime 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0 1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+/dev/cdrom 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+/mnt/cdrom 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+auto 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+noauto,user 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a îmbunătăți performanța, cei mai mulți utilizatori ar trebui să
+ adauge opțiunea noatime, opțiune ce va duce la o mărire a vitezei sistemului,
+ fiindcă timpii de acces nu sunt înregistrați (în general nu sunt necesari).
+\end_layout
+
+\begin_layout Standard
+Opțiunea 
+\series bold
+auto
+\series default
+ face ca 
+\series bold
+mount
+\series default
+ să ghicească ce sistem de fișiere (recomandat pentru componente detașabile)
+ să folosească, iar opțiunea user oferă posibilitatea ca utilizatorii obișnuiți
+ să poată unitatea optică (CD/DVD-ROM).
+\end_layout
+
+\begin_layout Standard
+Verificați de două ori fișierul 
+\series bold
+/etc/fstab
+\series default
+, apoi salvați și ieșiți înainte de a continua.
+\end_layout
+
+\begin_layout Section
+Informații rețea
+\end_layout
+
+\begin_layout Subsection*
+Hostname, Domainname etc.
+\end_layout
+
+\begin_layout Standard
+O decizie ce trebuie făcută de user este numele PC-ului.
+ Aceasta pare a fi ușoară, dar mulți utilizatori au dificultăți alegând
+ un nume potrivit pentru PC-ul cu Linux.
+ Pentru a grăbi puțin lucrurile, trebuie să știți că, orice nume alegeți,
+ acesta poate fi modificat ulterior.
+ Puteți pur și simplu să vă numiți sistemul tux și domeniul homenetwork.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea numelui
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/hostname 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+(Setați variabila HOSTNAME pentru numele sistemului) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+hostname="tux"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A doua decizie este legată de 
+\series bold
+domainname
+\series default
+, dacă aveți nevoie de 
+\series bold
+domaninname
+\series default
+ setați-l prin editarea fișierului 
+\series bold
+/etc/conf.d/net
+\series default
+.
+ Aveți nevoie de domeniu doar dacă ISP-ul sau administratorul dumneavoastră
+ de rețea o cere, sau dacă aveți un server DNS dar nu și unul de DHCP.
+ Dacă folosiți DHCP nu aveți de ce să vă îngrijorați cu privire la 
+\series bold
+domainnames
+\series default
+ sau DNS.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea numelui domeniului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/net 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+dns_domain_lo="homenetwork"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă aveți un domeniu NIS (dacă nu știți ce este acesta, sigur nu utilizați
+ așa ceva), aveți nevoie să-l definiți și pe acesta: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea numelui de domeniu NIS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/net 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+nis_domain_lo="my-nisdomain"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Dacă doriți mai multe informații despre 
+\series bold
+DNS
+\series default
+ și 
+\series bold
+NIS
+\series default
+ vă rugam să citiți exemplele aflate în 
+\series bold
+/usr/share/doc/openrc-*/net.example.bz2
+\series default
+ ce pot fi citite folosind 
+\series bold
+bzless
+\series default
+.
+ De asemenea poate doriți să vă instalați 
+\series bold
+openresolv
+\series default
+ (emerge openresolv) pentru a vă ajuta la administrarea DNS/NIS.
+\end_layout
+
+\begin_layout Subsection*
+Configurarea rețelei
+\end_layout
+
+\begin_layout Standard
+Înainte de a avea acea stare "Hei, am mai făcut asta o dată", trebuie să
+ știți că setările făcute la începutul instalării au fost DOAR pentru instalare.
+ Acum, vom face configurările permanente pentru noul sistem Gentoo.
+ 
+\end_layout
+
+\begin_layout Description
+Notă: Informații mai detaliate despre rețea, incluzând subiecte avansate
+ ca sistemele bonding, bridging, rețele VLAN 802.1Q sau rețelistica wireless,
+ sunt incluse în secțiunea despre 
+\begin_inset CommandInset href
+LatexCommand href
+name "Configurarea Reţelei"
+target " http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part4"
+
+\end_inset
+
+ în Gentoo.
+ 
+\end_layout
+
+\begin_layout Standard
+Toate setările rețelei sunt ținute în 
+\series bold
+/etc/conf.d/net
+\series default
+.
+ Acesta folosește o sintaxă simplă, dar care nu poate fi folosită intuitiv,
+ dacă nu știți să setați rețeaua manual.
+ Dar nu vă temeți, vă vom explica totul.
+ Un exemplu de fișier comentat ce acoperă diverse configurații este disponibil
+ în 
+\series bold
+/usr/share/doc/openrc-*/net.example.bz2
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+DHCP este utilizat implicit.
+ Pentru a utiliza DHCP trebuie să instalați un client DHCP.
+ Aceasta este descrisa în 
+\begin_inset CommandInset href
+LatexCommand href
+name "Instalarea utilitarelor necesare de sistem "
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#networking-tools"
+
+\end_inset
+
+.
+ Nu uitați să instalați un client pentru DHCP.
+\end_layout
+
+\begin_layout Standard
+Dacă trebuie să vă configurați conexiunea la rețea, fie pentru că aveți
+ nevoie să specificați anumite opțiuni DHCP sau pentru că nu utilizați deloc
+ DHCP, deschideți
+\series bold
+ /etc/conf.d/net
+\series default
+ cu editorul favorit (în acest exemplu este folosit nano ): 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea /etc/conf.d/net pentru editare
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/net
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veți observa următorul fișier: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Fișierul implicit /etc/conf.d/net
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# This blank configuration will automatically use DHCP for any net.* 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# scripts in /etc/init.d.
+ To create a more complete configuration, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# please review /usr/share/doc/openrc-*/net.example.bz2 and save 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# your configuration in /etc/conf.d/net (this file :]!).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a introduce propriile dvs.
+ adrese IP, netmask și gateway, trebuie să setați atât 
+\series bold
+config_eth0
+\series default
+ cât și 
+\series bold
+routes_eth0
+\series default
+: 
+\end_layout
+
+\begin_layout Standard
+Notă: Asta presupune ca interfața rețelei dumneavoastră sa fie 
+\series bold
+eth0
+\series default
+.
+ în orice caz asta depinde de sistem.
+ Dacă imaginea de pe care instalați sistemul este suficient de recenta când
+ butați (porniți sistemul) presupunem că interfața de rețea are același
+ nume ca și înainte de boot.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea manuală a informațiilor despre IP pentru eth0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+config_eth0="192.168.0.2 netmask 255.255.255.0 brd 192.168.0.255" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+routes_eth0="default via 192.168.0.1"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a utiliza DHCP, definiți 
+\series bold
+config_eth0
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Obținerea unei adrese IP pentru eth0 în mod automat
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+config_eth0="dhcp"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vă rugăm să consultați fișierul 
+\series bold
+/usr/share/doc/openrc-*/net.example.bz2
+\series default
+ pentru o listă cu toate opțiunile disponibile.
+ Dacă vreți setări specifice citiți manualele clientului dumneavoastră DHCP.
+\end_layout
+
+\begin_layout Standard
+Dacă aveți mai multe interfețe de rețea atunci repetați pașii de mai sus
+ pentru 
+\series bold
+config_eth1
+\series default
+, 
+\series bold
+config_eth2
+\series default
+ etc.
+\end_layout
+
+\begin_layout Standard
+Salvați configurația și ieșiți pentru a continua.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Pornirea Automată a Rețelei la Boot
+\end_layout
+
+\begin_layout Standard
+Pentru a activa interfețele de rețea la boot, acestea trebuie adăugate la
+ nivelul de execuție default.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Adăugarea net.eth0 la nivelul de execuție default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cd /etc/init.d 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# ln -s net.lo net.eth0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add net.eth0 default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă aveți mai multe interfețe de rețea, trebuie să creați scripturi apropiate
+ de genul 
+\series bold
+net.*
+\series default
+, exact cum ați făcut cu 
+\series bold
+net.eth0
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Dacă mai târziu găsiți că numele interfețelor de rețea sunt greșite (pe
+ care momentan le-am numit eth0 ...
+ ), atunci:
+\end_layout
+
+\begin_layout Enumerate
+modificați fișierul 
+\series bold
+/etc/conf.d/net
+\series default
+ cu numele interfeței corecte (ca enp3s0 în loc de eth0),
+\end_layout
+
+\begin_layout Enumerate
+creați noi link-uri simbolice (ca /etc/init.d/net.enp3s0),
+\end_layout
+
+\begin_layout Enumerate
+ștergeți vechile link-uri simbolice (
+\series bold
+\color blue
+rm /etc/init.d/net.eth0
+\series default
+\color inherit
+),
+\end_layout
+
+\begin_layout Enumerate
+adaugați-le pe cele noi în nivelul de execuție inițial, și
+\end_layout
+
+\begin_layout Enumerate
+ștergeți-le pe cele vechi utilizând 
+\series bold
+\color blue
+rc-update del net.eth0 default
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Subsection*
+Scrierea Informațiilor despre Rețea
+\end_layout
+
+\begin_layout Standard
+Trebuie să informați Linux-ul despre rețea.
+ Acesta este definită în 
+\series bold
+/etc/hosts
+\series default
+ și permite rezolvarea numelor corespondente adreselor IP pentru host-urile
+ ce nu sunt rezolvate de serverul DNS.
+ Trebuie să va definiți sistemul.
+ De asemenea, ați putea să definiți și alte sisteme din rețeaua dumneavoastră
+ dacă nu doriți să vă setați propriul server intern de DNS.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea /etc/hosts
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/hosts
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="12cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Completarea cu informații privind rețeaua
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Aceasta definește sistemul curent)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+127.0.0.1 tux.homenetwork tux localhost
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Definiți alte sisteme din rețeaua locală.
+ Acestea au nevoie de o adresă IP statică pentru a fi definite în acest
+ mod.)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+192.168.0.5 jenny.homenetwork jenny 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+192.168.0.6 benny.homenetwork benny
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Salvați și ieșiți din editor pentru a continua.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă nu aveți PCMCIA, puteți continua cu 
+\begin_inset CommandInset href
+LatexCommand href
+name "Informaţiile despre Sistem "
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#sysinfo"
+
+\end_inset
+
+.
+ Utilizatorii PCMCIA ar trebui să citească următoarea parte despre PCMCIA.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Opțional: Activarea PCMCIA în scopul Funcționării
+\end_layout
+
+\begin_layout Standard
+Utilizatorii PCMCIA ar trebui să instaleze mai întâi pachetul 
+\series bold
+pcmciautils
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea pcmciautils
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge pcmciautils
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Informații Despre Sistem
+\end_layout
+
+\begin_layout Subsection*
+Parola pentru Root
+\end_layout
+
+\begin_layout Standard
+Mai întâi setăm parola pentru root, tastând: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea parolei pentru root
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# passwd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Informații Despre Sistem
+\end_layout
+
+\begin_layout Standard
+Gentoo folosește 
+\series bold
+/etc/rc.conf
+\series default
+ pentru configurații generale, care afectează tot sistemul.
+ Deschideți 
+\series bold
+/etc/rc.conf
+\series default
+ și savurați toate comentariile din acest fișier.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea /etc/rc.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/rc.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Când ați terminat configurarea în fișierul 
+\series bold
+/etc/rc.conf
+\series default
+, salvați și ieșiți.
+ 
+\end_layout
+
+\begin_layout Standard
+După cum se poate observa, fișierul are multe comentarii pentru a vă ajuta
+ în setarea corectă a variabilelor de configurare necesare.
+ Vă puteți configura fonturile pentru consolă, editorul implicit și managerul
+ de login (ca 
+\series bold
+gdm
+\series default
+ sau 
+\series bold
+kdm
+\series default
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Gentoo utilizează 
+\series bold
+/etc/conf.d/keymaps
+\series default
+ pentru a manipula configurarea tastaturii.
+ Editați-l pentru a vă configura tastatura.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea fișierului /etc/conf.d/keymaps
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/keymaps
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acordați mai multă atenție variabilei KEYMAP.
+ Dacă selectați în mod greșit KEYMAP, veți obține rezultate ciudate când
+ tastați.
+ 
+\end_layout
+
+\begin_layout Standard
+Când ați terminat configurarea 
+\series bold
+/etc/conf.d/keymaps
+\series default
+, salvați și ieșiți.
+\end_layout
+
+\begin_layout Standard
+Gentoo utilizează 
+\series bold
+/etc/conf.d/hwclock
+\series default
+ pentru a seta opțiunile de ceas.
+ Editați-l conform nevoilor dumneavoastră.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea fișierului /etc/conf.d/hwclock
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/conf.d/hwclock
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă ceasul hardware nu este setat la UTC, trebuie sa adăugați CLOCK="local"
+ în acest fișier.
+ Altfel, veți observa mesaje despre "clock skew" (ceas desincronizat).
+ În plus, Windows presupune că ceasul hardware este setat ca local, deci
+ dacă doriți dualboot ar trebui să setați această variabilă corespunzător,
+ altfel vor apărea probleme.
+ 
+\end_layout
+
+\begin_layout Standard
+Când ați terminat configurarea 
+\series bold
+/etc/conf.d/hwclock
+\series default
+, salvați și ieșiți.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Configurarea localizării
+\end_layout
+
+\begin_layout Standard
+Probabil pe sistemul dumneavoastră folosiți doar una sau două localizări.
+ Va trebui să specificați localizările dorite în 
+\series bold
+/etc/locale.gen
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschiderea fișierului /etc/locale.gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/locale.gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Următoarele localizări sunt specifice pentru limba engleză (Statele Unite)
+ și germană (Germania), localizări ce sunt acompaniate și de suportul UTF-8.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Specificarea localizărilor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+en_US ISO-8859-1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+en_US.UTF-8 UTF-8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+de_DE ISO-8859-1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+de_DE@euro ISO-8859-15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Puteți să vă selectați localizările dorite dintr-o lista rulând comanda
+ 
+\series bold
+\color blue
+locale -a
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Description
+Atenție: Unele aplicații au nevoie de 
+\series bold
+UTF-8
+\series default
+ de aceea vă recomandam să folosiți cel puțin o localizare cu suport 
+\series bold
+UTF-8
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+După rulați 
+\series bold
+locale-gen
+\series default
+.
+ Acesta vă va genera toate localizările pe care le-ați specificat în 
+\series bold
+/etc/locale.gen
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Generarea localizărilor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# locale-gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Imediat după ce ați setat localizarea aveți posibilitatea să setați localizări
+ la nivel de sistem în fișierul 
+\series bold
+/etc/env.d/02locale
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setarea localizării implicite în /etc/env.d/02locale
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+LANG="de_DE.UTF-8" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+LC_COLLATE="C"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Și reîncărcați mediul:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Reîncărcarea shelului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# env-update && source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a vă ajuta cu localizarea am creat un 
+\begin_inset CommandInset href
+LatexCommand href
+name "ghid "
+target "http://www.gentoo.org/doc/en/guide-localization.xml?style=printable#doc_chap3"
+
+\end_inset
+
+ complet.
+ Dacă aveți nevoie de informații specifice cu privire la UTF-8 puteți de
+ asemenea să citiți 
+\begin_inset CommandInset href
+LatexCommand href
+name "Ghidul UTF-8"
+target "http://www.gentoo.org/doc/en/utf-8.xml?style=printable#doc_chap2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vă rugam să continuați cu 
+\series bold
+Instalarea Utilitarelor de Sistem Necesare
+\series default
+.
+\end_layout
+
+\begin_layout Chapter
+Instalarea Utilitarelor de Sistem Necesare
+\end_layout
+
+\begin_layout Section
+Sistemul de Log
+\end_layout
+
+\begin_layout Standard
+Unele utilitare lipsesc din arhiva stage3 pentru că există mai multe pachete
+ care oferă aceeași funcționalitate.
+ Depinde de dvs., acum, să le alegeți pe cele care le doriți instalate.
+ 
+\end_layout
+
+\begin_layout Standard
+Primul instrument pentru care trebuie să te decizi, trebuie să asigure facilităț
+i de logare pentru sistemul tău.
+ Unix si Linux au istorie excelentă în acest domeniu -- dacă doriți puteți
+ sa log-ați tot ce se întâmplă în sistemul dvs.
+ în fișierele log.
+ Aceasta se întâmplă prin system logger.
+ 
+\end_layout
+
+\begin_layout Standard
+Gentoo oferă mai multe sisteme de logare dintre care puteți alege.
+ Printre altele se numără 
+\series bold
+sysklogd
+\series default
+, care este un set tradițional de sisteme de logare, 
+\series bold
+syslog-ng
+\series default
+ și 
+\series bold
+metalog
+\series default
+ un sistem avansat de logare care este cel mai configurabil.
+ Alte sisteme de logare sunt disponibile prin Portage - numărul nostru de
+ pachete disponibile crește zilnic.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă doriți să utilizați 
+\series bold
+sysklogd
+\series default
+ sau 
+\series bold
+syslog-ng
+\series default
+, este recomandat să instalați și 
+\series bold
+logrotate
+\series default
+, apoi, deoarece aceste sisteme de logare nu oferă nici un mecanism de rotire
+ pentru fișierele log.
+ 
+\end_layout
+
+\begin_layout Standard
+Pentru a instala un sistem de log la alegerea dvs., utilizați emerge pentru
+ a-l instala și adăugați-l în nivelul de execuție default utilizând rc-update.
+ Următorul exemplu instalează 
+\series bold
+syslog-ng
+\series default
+.
+ Bineînțeles, înlocuiți cu sistemul dumneavoastră de log: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea unui sistem de log
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge syslog-ng 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add syslog-ng default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Opțional: Cron Daemon
+\end_layout
+
+\begin_layout Standard
+Următorul este cron daemon.
+ Este opțional și nu este cerut de sistem dar este înțelept să instalați
+ unul.
+ Ce este un cron daemon? Un cron daemon execută comenzile programate.
+ Este foarte util dacă aveți nevoie să executați regulat anumite comenzi
+ (de exemplu zilnic, săptămânal sau lunar).
+ 
+\end_layout
+
+\begin_layout Standard
+Gentoo oferă trei posibili cron daemons: 
+\series bold
+dcron
+\series default
+, 
+\series bold
+fcron
+\series default
+ și 
+\series bold
+vixie-cron
+\series default
+.
+ Instalarea unuia dintre ei este identică cu instalarea sistemului de logare.
+ Totuși, 
+\series bold
+dcron
+\series default
+ și 
+\series bold
+fcron
+\series default
+ cer o configurare specială, numită 
+\series bold
+crontab
+\series default
+ 
+\series bold
+/etc/crontab
+\series default
+.
+ Dacă nu știți ce să alegeți folosiți 
+\series bold
+vixie-cron
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Noi vă oferim 
+\series bold
+vixie-cron
+\series default
+ pentru instalările fără rețea.
+ Dacă doriți altă aplicație cron puteți aștepta și îl puteți instala ulterior.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare cron daemon
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge vixie-cron 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add vixie-cron default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(Numai dacă ai ales dcron sau fcron) # crontab /etc/crontab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Opțional: Indexare de Fișiere
+\end_layout
+
+\begin_layout Standard
+Dacă doriți să vă indexați fișierele din sistemul dumneavoastră pentru a
+ le localiza rapid folosiți utilitarul 
+\series bold
+locate
+\series default
+, pentru a putea folosi acest utilitar trebuie să instalați 
+\series bold
+sys-apps/mlocate
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea mlocate
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge mlocate
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Opțional: Accesul de la distanță
+\end_layout
+
+\begin_layout Standard
+Dacă aveți nevoie să va accesați sistemul de la distanță după instalare
+ nu uitați sa adaugați și 
+\series bold
+sshd
+\series default
+ la sistemul de execuție initial:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Adaugarea lui sshd la sistemul de initializare initial
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add sshd default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă aveți nevoie de consola serială (ce poate fi folosită în caz de acces
+ de la distanță), va trebui să decomentați secțiune ce face referire la
+ consola serială, puteți face asta deschizând fișierul 
+\series bold
+/etc/inittab
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Deschidere pentru editare /etc/inittab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /etc/inittab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce ar trebui decomentat pentru consola serială.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Decomentarea consolei seriale din /etc/inittab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# CONSOLA SERIALĂ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+s0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+s1:12345:respawn:/sbin/agetty 9600 ttyS1 vt100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Utilitare pentru Sistemul de Fișiere
+\end_layout
+
+\begin_layout Standard
+În funcție de ce sistem de fișiere folosiți, trebuie să instalați utilitarele
+ necesare sistemului dvs.
+ (pentru a verifica integritatea sistemului de fișiere, a crea unele în
+ plus etc.).
+ Vă rugăm să notați că aveți deja instalate instrumentele de lucru cu sistemele
+ de fișiere 
+\series bold
+ext2
+\series default
+, 
+\series bold
+ext3
+\series default
+ sau 
+\series bold
+ext4 
+\series default
+(e2fsprogs) ca parte din sistem.
+\end_layout
+
+\begin_layout Standard
+Următorul tabel afișează instrumentele pe care trebuie să le instalați dacă
+ folosiți un anumit tip de sistem de fișiere: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Sistem de Fișiere
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Utilitar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Comanda pentru Instalare
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+XFS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+xfsprogs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+emerge xfsprogs 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ReiserFS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+reiserfsprogs 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+emerge reiserfsprogs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+JFS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+jfsutils
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+emerge jfsutils
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Utilitare pentru Rețea
+\end_layout
+
+\begin_layout Standard
+Dacă nu aveți nevoie de alte utilitare pentru rețea adiționale (cum ar fi
+ ppp sau un client dhcp), continuați cu Configurarea Bootloader-ului.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Opțional: Instalarea unui Client DHCP
+\end_layout
+
+\begin_layout Standard
+Dacă doriți ca Gentoo să obțină automat o adresă IP pentru interfețele de
+ rețea, trebuie să instalați dhcpcd (sau orice alt client DHCP -- pentru
+ o listă cu clienți DHCP disponibili consultați 
+\begin_inset CommandInset href
+LatexCommand href
+name "Retea Modulară"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part4_chap3"
+
+\end_inset
+
+) pe sistemul dvs.
+ Dacă nu faceți acest lucru acum, este posibil să nu vă mai puteți conecta
+ la internet după instalare! 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea dhcpcd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge dhcpcd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Opțional: Instalarea unui Client PPPoE
+\end_layout
+
+\begin_layout Standard
+Dacă aveți nevoie de ppp pentru a vă conecta la rețea, trebuie să-l instalați.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea ppp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge ppp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum continuați cu 
+\series bold
+Configurarea Bootloader-ului
+\series default
+.
  
 \end_layout
 
