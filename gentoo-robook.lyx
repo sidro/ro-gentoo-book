@@ -21096,5 +21096,1046 @@ Configurarea Bootloader-ului
  
 \end_layout
 
+\begin_layout Chapter
+Configurarea Aplicaţiei Bootloader
+\end_layout
+
+\begin_layout Section
+Alegerea
+\end_layout
+
+\begin_layout Subsection*
+Introducere
+\end_layout
+
+\begin_layout Standard
+Acum, că kernel-ul este configurat şi compilat şi fişierele de configurare
+ a sistemului sunt completate corect, este timpul să instalăm un program
+ ce va încărca kernel-ul când porniţi sistemul.
+ Un astfel de program se numeşte bootloader.
+ 
+\end_layout
+
+\begin_layout Standard
+Pentru arhitectura amd64, Gentoo Linux oferă GRUB Legacy şi GRUB2.
+ 
+\end_layout
+
+\begin_layout Standard
+Dar, înainte de a instala unul dintre aceste aplicaţii bootloader, vă vom
+ informa cum să configuraţi framebuffer-ul (presupunând că doriţi acest
+ lucru, bineînţeles).
+ Cu framebuffer puteţi rula linia de comandă Linux beneficiind de unele
+ caracteristici (limitate) grafice (cum ar fi utilizarea imaginii bootsplash
+ pe care Gentoo o oferă).
+ 
+\end_layout
+
+\begin_layout Subsection*
+Opţional: Framebuffer
+\end_layout
+
+\begin_layout Standard
+Dacă v-aţi configurat kernel-ul cu suport pentru framebuffer (sau aţi utilizat
+ configuraţia implicită din genkernel), puteţi activa framebuffer prin adăugarea
+ parametrului vga sau video în configuraţia aplicaţiei bootloader.
+ 
+\end_layout
+
+\begin_layout Standard
+Mai întâi de toate, trebuie să ştiţi ce device utilizaţi pentru framebuffer.
+ Va trebui să utilizați uvesafb ca driver VESA.
+\end_layout
+
+\begin_layout Standard
+Parametrul video controlează rezoluţia şi adâncimea de culoare pentru ecranul
+ framebuffer pentru uvesafb.
+ Aşa cum este menţionat şi în 
+\series bold
+/usr/src/linux/Documentation/fb/uvesafb.txt
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Cele mai folosite opțiuni sunt:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="left" valignment="middle" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Control
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Descriere
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ywrap
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none" width="12cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Presupune că placa grafică îşi poate realoca memoria consecutiv (spre ex.
+ să continue de la început când a ajuns la sfârşit) 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mtrr:n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Setează regiştrii MTRR.
+ n poate fi: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 - dezactivat 
+\end_layout
+
+\begin_layout Plain Layout
+1 - necache-uit 
+\end_layout
+
+\begin_layout Plain Layout
+2 - modul write-back 
+\end_layout
+
+\begin_layout Plain Layout
+3 - modul write-combining 
+\end_layout
+
+\begin_layout Plain Layout
+4 - modul write-through 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mod
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="12cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Setează rezoluţia, adâncimea de culoare şi rata de reîmprospătare.
+ Spre exemplu, 1024x768-32@85 pentru o rezoluţie de 1024x768, 32 biţi adâncimea
+ de culoare şi o rata de reîmprospătare de 85 Hz.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rezultatul poate fi ceva de genul 
+\series bold
+video=uvesafb:mtrr:3,ywrap,1024x768-32@85
+\series default
+.
+ Reţineţi (sau notaţi-vă) aceste setări; veţi avea nevoie de ele în scurt
+ timp.
+ 
+\end_layout
+
+\begin_layout Standard
+Acum, continuaţi cu instalarea 
+\begin_inset CommandInset href
+LatexCommand href
+name "GRUB Legacy"
+target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#grub"
+
+\end_inset
+
+ sau GRUB2.
+\end_layout
+
+\begin_layout Section
+Implicit: Utilizarea GRUB Legacy
+\end_layout
+
+\begin_layout Subsection*
+Înţelegerea terminologiei implementată în GRUB Legacy
+\end_layout
+
+\begin_layout Standard
+Cea mai critică parte în procesul de înţelegere a aplicaţiei GRUB este familiari
+zarea cu modul cum acesta se referă la harddisk-uri şi partiţii.
+ Partiţia dvs.
+ de Linux 
+\series bold
+/dev/hda1
+\series default
+ va fi aproape sigur referită în GRUB ca (hd0,0).
+ Atenţie la parantezele din jurul hd0,0 sunt necesare.
+ 
+\end_layout
+
+\begin_layout Standard
+Drive-urile de harddisk sunt numerotate de la zero în loc de "a" şi partiţiile
+ încep de la zero în loc de unu.
+ Atenţie, din nou, cu faptul că doar drive-urile de harddisk-uri sunt numerotate
+, nu şi dispozitivele non-atapi cum ar fi dispozitivele cdrom şi cele de
+ înregistrat cd-uri.
+ De asemenea, aceeaşi referire există şi pentru drive-urile SCSI.
+ (Normal, ele sunt numerotate până la numere mai mari decât drive-urile
+ IDE, exceptând cazul când BIOS-ul este configurat să boot-eze de pe dispozitive
+le SCSI).
+ Când configuraţi în BIOS să boot-eze de pe un disc diferit (spre ex.
+ discul dvs.
+ primary slave), acel disc va fi detectat ca hd0.
+ 
+\end_layout
+
+\begin_layout Standard
+Presupunând că aveţi un hard-disk pe 
+\series bold
+/dev/sda
+\series default
+, un cdrom pe 
+\series bold
+/dev/sdb
+\series default
+, un cdwriter pe 
+\series bold
+/dev/sdc
+\series default
+, un al doilea hard-disk pe 
+\series bold
+/dev/sdd
+\series default
+ şi nici un hard-disk SCSI, atunci 
+\series bold
+/dev/sdd7
+\series default
+ devine pentru GRUB (hd1,6).
+ Ar putea părea înşelător şi chiar este, dar aşa cum vom vedea, GRUB-ul
+ oferă un mecanism de completare cu tab la îndemâna celor care au multe
+ hard-disk-uri şi partiţii şi din acastă cauză s-au pierdut în schema de
+ numerotare a GRUB-ului.
+ 
+\end_layout
+
+\begin_layout Standard
+Obişnuindu-ne cu ideea, este timpul să începem instalarea GRUB-ului.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Instalarea GRUB Legacy
+\end_layout
+
+\begin_layout Standard
+Pentru a instala GRUB-ul, trebuie mai întâi sa daţi comanda 
+\color blue
+emerge
+\color inherit
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea GRUB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge grub
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Deşi GRUB este acum instalat, tot mai trebuie să îi scriem un fişier de
+ configurare şi să-l instalăm în zona MBR pentru ca GRUB să boot-eze automat
+ în noul kernel creat.
+ Creaţi 
+\series bold
+/boot/grub/grub.conf
+\series default
+ cu 
+\series bold
+nano
+\series default
+ (sau, dacă este cazul, cu alt editor): 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Crearea /boot/grub/grub.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano -w /boot/grub/grub.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum vom scrie un fişier 
+\series bold
+grub.conf
+\series default
+.
+ Aveţi grijă să utilizaţi imaginea dumneavoastră de 
+\series bold
+kernel
+\series default
+ şi, dacă este cazul, imaginea dvs.
+ 
+\series bold
+initrd
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Description
+Notă: Grub alocă din BIOS destinația dispozitivului.
+ Dacă schimbați setările BIOS-ului dumneavoastră, modul de notare al dispozitivu
+lui (hardisk-ului) se va schimba și el.
+ De exemplu, dacă veți schimba ordinea de boot-are a dispozitivului, veți
+ fi nevoit să reconfigurați GRUB-ul.
+\end_layout
+
+\begin_layout Description
+Notă: Dacă sistemul de fişiere al partiţiei dvs.
+ rădăcină este JFS, trebuie să adăugaţi " ro" în linia de kernel, deoarece
+ JFS trebuie să-şi restaureze log-ul înainte de a permite mount-area în
+ modul read-write (citire-scriere).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="24" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Exemplu de grub.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# Which listing to boot as default.
+ 0 is the first, 1 the second etc.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+default 0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# How many seconds to wait before the default listing is booted.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+timeout 30 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# Nice, fat splash-image to spice things up :) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# Comment out if you don't have a graphics card installed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+splashimage=(hd0,0)/boot/grub/splash.xpm.gz 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+title Gentoo Linux 3.4.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# Partition where the kernel image (or operating system) is located
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+root (hd0,0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+kernel /boot/kernel-3.4.9-gentoo root=/dev/sda3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+title Gentoo Linux 3.4.9 (rescue) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# Partition where the kernel image (or operating system) is located 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+root (hd0,0) kernel /boot/kernel-3.4.9-gentoo root=/dev/sda3 init=/bin/bb
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# The next four lines are only if you dualboot with a Windows system.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+# In this case, Windows is hosted on /dev/sda6.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+title Windows XP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+rootnoverify (hd0,5) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+makeactive 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+chainloader +1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+În cazul în care ați optat pentru 
+\series bold
+initramfs
+\series default
+ la compilarea kernelului linux, atunci trebuie să specificați prin 
+\series bold
+initramfs
+\series default
+ rădacina reala a dispozitivului dumneavoastră.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Exemplu grub.conf cu initramfs activat
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+title Gentoo Linux 3.4.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+root (hd0,0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+kernel /boot/3.4.9 real_root=/dev/sda3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+initrd /boot/initramfs-genkernel-amd64-3.4.9-gentoo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă utilizaţi o schemă de partiţionare şi/sau imagine de kernel diferită,
+ modificaţi în consecinţă.
+ Oricum, asiguraţi-vă că orice precedă un device GRUB (cum ar fi (hd0,0))
+ este relativ la mount point nu la rădăcină.
+ Cu alte cuvinte, 
+\series bold
+(hd0,0)/grub/splash.xpm.gz
+\series default
+ este în realitate 
+\series bold
+/boot/grub/splash.xpm.gz
+\series default
+ deoarece (hd0,0) este 
+\series bold
+/boot
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+În plus, dacă alegeţi să utilizaţi o altă schemă de partiţionare şi nu aţi
+ pus /boot pe o partiţie separată, prefixul /boot utilizat în exemplele
+ de cod de mai sus este chiar necesar.
+ Dacă aţi urmat planul de partiţionare sugerat de noi, prefixul /boot nu
+ este necesar, însă link-ul simbolic boot îl face să funcţioneze.
+ Pe scurt, exemplele de mai sus ar trebuie să funcţioneze, indiferent dacă
+ aţi utilizat o partiţie separată pentru /boot sau nu.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă doriţi să introduceţi opţiuni adiţionale pentru kernel, adăugaţi-le
+ la sfârşitul comenzii kernel.
+ Deja avem o opţiune (
+\series bold
+root=/dev/sda3
+\series default
+ sau 
+\series bold
+real_root=/dev/sda3
+\series default
+), dar puteţi introduce şi altele, cum ar fi parametrii video şi/sau video
+ pentru framebuffer, aşa cum am specificat anterior.
+\end_layout
+
+\begin_layout Standard
+Dacă utilizaţi o versiune de kernel 2.6.7 sau mai nouă şi aţi modificat contactele
+ pe hard-disk pentru că BIOS-ul dumneavoastră nu poate manipula discuri
+ mari, va trebui să adăugaţi opţiunea 
+\series bold
+sdx=stroke
+\series default
+.
+ Înlocuiți 
+\series bold
+sda
+\series default
+ cu dispozitivul care necesită această opțiune.
+\end_layout
+
+\begin_layout Standard
+Utilizatorii 
+\series bold
+genkernel
+\series default
+ ar trebui să ştie că kernel-urile lor utilizează aceleaşi opţiuni folosite
+ pentru mediul Installation CD.
+ Spre exemplu, dacă aveţi dispozitive 
+\series bold
+SCSI
+\series default
+, ar trebui să adăugaţi 
+\series bold
+doscsi
+\series default
+ ca opţiune de kernel.
+ 
+\end_layout
+
+\begin_layout Standard
+Acum salvaţi fişierul grub.conf şi ieşiţi.
+ Tot mai trebuie să instalăm GRUB în zona MBR (Master Boot Record) pentru
+ ca acesta să fie încărcat automat la pornirea sistemului.
+ 
+\end_layout
+
+\begin_layout Standard
+Dezvoltatorii GRUB ne recomandă să utilizăm 
+\series bold
+grub-install
+\series default
+.
+ Totuşi, dacă dintr-un motiv 
+\series bold
+grub-install
+\series default
+ nu funcţionează corect, tot mai aveţi soluţia să instalaţi GRUB manual.
+ 
+\end_layout
+
+\begin_layout Standard
+Continuaţi cu Implicit: 
+\series bold
+Setarea GRUB utilizând grub-install
+\series default
+ sau Alternativ: 
+\series bold
+Setarea GRUB Utilizând Instrucţiuni Manuale
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Implicit: Setarea GRUB utilizând grub-install
+\end_layout
+
+\begin_layout Standard
+Pentru a instala GRUB trebuie să rulaţi comanda 
+\series bold
+grub-install
+\series default
+.
+ Totuşi, 
+\series bold
+grub-install
+\series default
+ nu va funcţiona ca la carte pentru că ne aflăm într-un mediu chroot.
+ Trebuie să creăm 
+\series bold
+/etc/mtab
+\series default
+ ce conţine toate sistemele de fişiere mountate.
+ Din fericire, există o soluţie simplă pentru a realiza acest pas - trebuie
+ doar să copiaţi 
+\series bold
+/proc/mounts
+\series default
+ ca 
+\series bold
+/etc/mtab
+\series default
+, excluzând linia 
+\series bold
+rootfs
+\series default
+, în cazul în care nu aţi creat o partiţie separată de boot.
+ Următoarea comandă va funcţiona în ambele cazuri: 
+\end_layout
+
 \end_body
 \end_document
