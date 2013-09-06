@@ -14,6 +14,7 @@
 %\renewcommand\thesubsection{\thechapter*\thesection.\alph{subsection}}
 %\setcounter{chapter*}{}
 \let\cleardoublepage\clearpage
+\usepackage{indentfirst}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -36,7 +37,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize a4paper
@@ -986,7 +987,7 @@ Puteți utiliza acest mediu Installation DVD pentru a instala Gentoo, și
  DVD a sistemului de operare Gentoo ce poate fi instalata și ea pe hard
  disk.
  Instrucțiunile de instalare pot fi puțin diferite deoarece acest manual
- are ca scop instalarea de pe mediul Gentoo Instalation CD Minimal.
+ are ca scop instalarea de pe mediul Gentoo Installation CD Minimal.
  În orice caz puteți să ajungeți în contul root invocând sudo su sau sudo
  -i în terminal.
 \end_layout
@@ -1953,8 +1954,8 @@ nosmp
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dezactivează SMP, sau Symmetric Multiprocessing, pentru kernelurile cu suport
- SMP.
+Dezactivează SMP, sau Symmetric Multi-processing, pentru kernelurile cu
+ suport SMP.
 \end_layout
 
 \end_inset
@@ -5502,7 +5503,7 @@ Cu alte cuvinte, 192.168.0.14 este încă, în exemplu nostru, în rețea, dar 1
 Adresa broadcast este adresa IP cu aceeași parte network ca și rețeaua noastră,
  dar cu partea host formată numai din unu.
  Fiecare stație din rețea ascultă pe această adresă IP.
- Și este folosită pentru transmisii de pachete broadcast.
+ și este folosită pentru transmisii de pachete broadcast.
  
 \begin_inset Newline newline
 \end_inset
@@ -7553,9 +7554,9 @@ swap
 \begin_layout Standard
 /usr este destul de plin (83% utilizat), dar odată ce toate aplicațiile
  software sunt instalate /usr nu va tinde să mai crească prea mult.
- Deși alocarea unor câțiva gigaocteți de spațiu de disc pentru /var ar putea
- părea excesiv, amintiți-vă că Portage utilizează această partiție implicit
- pentru compilarea pachetelor.
+ Deși alocarea unor câțiva giga-octeți de spațiu de disc pentru /var ar
+ putea părea excesiv, amintiți-vă că Portage utilizează această partiție
+ implicit pentru compilarea pachetelor.
  Dacă doriți să vă păstrați /var la o mărime mai rezonabilă, cum ar fi 1
  GO, va trebui să modificați variabila dvs.
  PORTAGE_TMPDIR din /etc/make.conf să indice către partiția cu spațiu liber
@@ -8906,7 +8907,7 @@ Acest disc este configurat să găzduiască șapte sisteme de fișiere Linux
 \end_layout
 
 \begin_layout Subsection*
-Ștergerea tuturor Partițiilor
+ștergerea tuturor Partițiilor
 \end_layout
 
 \begin_layout Standard
@@ -9446,7 +9447,7 @@ Mai întâi trebuie creată o partiție pentru boot mică.
  primară, urmat de 1 pentru a selecta prima partiție primară.
  Când vi se va cere primul cilindru, apăsați enter.
  Când vi se va cere ultimul cilindru, tastați +32M pentru a crea o partiție
- de 32 Mocteți ca mărime: 
+ de 32 MOcteți ca mărime: 
 \begin_inset Newline newline
 \end_inset
 
@@ -13045,7 +13046,7 @@ Așa cum probabil ați observat, fișierul make.conf.example este structurat
  într-un mod generic: liniile comentate încep cu "#", iar celelalte definesc
  variabile folosind sintaxa: VARIABLE="conținut".
  Fișierul make.conf utilizează aceeași sintaxă.
- Multe dintre acele variabile sunt discutate in continuare.
+ Multe dintre acele variabile sunt discutate în continuare.
  
 \end_layout
 
@@ -13960,14 +13961,14 @@ Portage vă va informa că noi stiri sunt disponibile
 \end_layout
 
 \begin_layout Standard
-Știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
+știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
  utilizatorii cărora le sunt trimise mesaje importante prin protocolul rsync.
  Pentru a le administra trebuie sa folosiți 
 \color blue
 eselect news
 \color inherit
 .
- Cu subcomanda 
+ Cu sub-comanda 
 \series bold
 read 
 \series default
@@ -15740,8 +15741,8 @@ devtmpfs
 \series bold
 /dev
 \series default
- pentru ca fișierele de dispozitiv criticale să fie disponibile în modul
- de boot inițial.
+ pentru ca fișierele de dispozitiv critice să fie disponibile în modul de
+ boot inițial.
 \begin_inset Newline newline
 \end_inset
 
@@ -17561,7 +17562,7 @@ Odată ce genkernel își încheie execuția, vor fi create un set întreg de
 \end_layout
 
 \begin_layout Standard
-O să folosi kernel-ul și initrd când vom configura boot-loader-ul.
+O să folosi kernel-ul și initrd când vom configura bootloader-ul.
  Notați undeva numele imaginii de kernel și al fișierului initrd pentru
  că vă va trebui când veți configura aplicația bootloader.
  Initrd-ul va porni imediat după boot, pentru a iniția autodetecția hardware
@@ -20216,7 +20217,7 @@ LC_COLLATE="C"
 \end_layout
 
 \begin_layout Standard
-Și reîncărcați mediul:
+și reîncărcați mediul:
 \begin_inset Newline newline
 \end_inset
 
@@ -20635,7 +20636,7 @@ Dacă aveți nevoie să va accesați sistemul de la distanță după instalare
 \series bold
 sshd
 \series default
- la sistemul de execuție initial:
+ la sistemul de execuție inițial:
 \begin_inset Newline newline
 \end_inset
 
@@ -21612,7 +21613,7 @@ initrd
 \begin_layout Description
 Notă: Grub alocă din BIOS destinația dispozitivului.
  Dacă schimbați setările BIOS-ului dumneavoastră, modul de notare al dispozitivu
-lui (hardisk-ului) se va schimba și el.
+lui (harddisk-ului) se va schimba și el.
  De exemplu, dacă veți schimba ordinea de boot-are a dispozitivului, veți
  fi nevoit să reconfigurați GRUB-ul.
 \end_layout
@@ -21949,7 +21950,7 @@ initramfs
 \series bold
 initramfs
 \series default
- rădacina reala a dispozitivului dumneavoastră.
+ rădăcina reală a dispozitivului dumneavoastră.
 \begin_inset Newline newline
 \end_inset
 
@@ -23132,7 +23133,7 @@ grub2-mkconfig
 /etc/grub.d
 \series default
 .
- Șabloanele implicite ar trebui să acopere cele mai frecvente setări de
+ șabloanele implicite ar trebui să acopere cele mai frecvente setări de
  boot.
 \end_layout
 
@@ -23868,7 +23869,7 @@ target "https://wiki.gentoo.org/wiki/GRUB2"
 \end_layout
 
 \begin_layout Standard
-Continuați cu Finalizarea Instalarii Gentoo.
+Continuați cu Finalizarea Instalării Gentoo.
 \end_layout
 
 \begin_layout Chapter
@@ -24252,14 +24253,14 @@ su -
 \end_layout
 
 \begin_layout Section
-Ștergerea arhivei stage3 din sistem
+ștergerea arhivei stage3 din sistem
 \end_layout
 
 \begin_layout Standard
 Acum ca ați finalizat instalarea Gentoo-lui, dacă totul a decurs normal
- după repornirea sistemului, puteți sterge arhiva stage3 descărcată pe hardul
+ după repornirea sistemului, puteți șterge arhiva stage3 descărcată pe hardul
  dumneavoastră.
- Țineți minte, ea a fost descărcată in directorul / (radacina).
+ Țineți minte, ea a fost descărcată în directorul / (rădăcina).
 \begin_inset Newline newline
 \end_inset
 
@@ -24278,7 +24279,7 @@ Acum ca ați finalizat instalarea Gentoo-lui, dacă totul a decurs normal
 \begin_layout Plain Layout
 
 \color magenta
-Ștergerea arhivei stage3 din sistem
+ștergerea arhivei stage3 din sistem
 \end_layout
 
 \end_inset
@@ -24323,10 +24324,17 @@ Continuați cu Ghid de configurare pentru Xorg.
 
 \begin_layout Chapter
 Ghid de configurare pentru Xorg
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Ghid-de-configurare"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Ce este serverul X Window?
+Ce este serverul X Window
 \end_layout
 
 \begin_layout Subsection*
@@ -24682,7 +24690,7 @@ Generarea fișierului xorg.conf
 \end_layout
 
 \begin_layout Standard
-Citiți ultimile linii afișate pe ecran după ce Xorg a terminat de analizat
+Citiți ultimele linii afișate pe ecran după ce Xorg a terminat de analizat
  componentele hardware.
  Dacă acolo scrie că Xorg a eșuat în timpul verificării, veți fi forțat
  să editați în mod manual fișierul 
@@ -27427,8 +27435,8 @@ target "http://wiki.gentoo.org/wiki/KDE/KDEPIM-4.7_upgrade"
 
 \end_inset
 
- mai întâi (încă se aplică la versiunea 4.10)! Dacă însă doriți să rămâneți
- la KDE PIM 4.4 puteți masca 
+ mai întâi (încă se aplică la versiunea 4.10).
+ Dacă însă doriți să rămâneți la KDE PIM 4.4 puteți masca 
 \begin_inset CommandInset href
 LatexCommand href
 name "KDE PIM 4.10"
@@ -27452,7 +27460,7 @@ Profil
 \end_layout
 
 \begin_layout Standard
-Profilul Desktop a fost împărțit în subprofilelele KDE și GNOME .
+Profilul Desktop a fost împărțit în subprofilele KDE și GNOME .
  Acest lucru reprezintă eliminarea KDE și GNOME USE flags din profilul de
  baza desktop și punerea lor în subprofiluri.
  Alegerea unui profil nu vă limitează la folosirea doar a unui Mediu Grafic.
@@ -28107,6 +28115,854 @@ emerge --ask kdeplasma-addons
 
 \begin_layout Section
 Mediul grafic XFCE
+\end_layout
+
+\begin_layout Subsection*
+Introducere
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Xfce"
+target "http://www.xfce.org/"
+
+\end_inset
+
+ este un mediu grafic rapid și ușor pentru sistemele de operare asemănătoare
+ Unix.
+ Este creat pentru productivitate, este foarte configurabil și în același
+ timp urmează specificațiile 
+\begin_inset CommandInset href
+LatexCommand href
+name "Freedesktop"
+target "http://www.freedesktop.org/"
+
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+Spre deosebire de mediile grafice mai ”greoaie”, cum ar fi 
+\begin_inset CommandInset href
+LatexCommand href
+name "Gnome"
+target "http://www.gnome.org/"
+
+\end_inset
+
+ sau 
+\begin_inset CommandInset href
+LatexCommand href
+name "KDE"
+target "http://www.kde.org/"
+
+\end_inset
+
+, Xfce folosește foarte puține resurse.
+ În plus, oferă modularitate excepțională și mai puține cerințe; folosește
+ mai puțin spațiu pe hard disk și se instalează mai rapid.
+ 
+\end_layout
+
+\begin_layout Standard
+Acest ghid nu doar că vă va arăta cum să instalați un mediu grafic minimal
+ XFCE, dar vă va oferii opțiunea de a vă crea un mediu desktop complet având
+ în prim plan filosofia Xfce: ușor, rapid și modular.
+ 
+\end_layout
+
+\begin_layout Standard
+Ultima parte a acestui ghid afișează câteva comenzi care trebuiesc rulate
+ după ce am făcut actualizare la ultima versiune XFCE, așadar folosiți aceste
+ comenzi dacă faceți update de la o versiune mai veche la cea curentă.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Instalare Xfce
+\end_layout
+
+\begin_layout Standard
+Asigurați-vă că aveți configurat xorg corect conform documentației: 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:Ghid-de-configurare"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Apoi verificați USE flags în 
+\series bold
+/etc/portage/make.conf
+\series default
+; probabil va trebui să aveți setat cel puțin următoarele: 
+\series bold
+USE="-gnome -kde -minimal -qt4 dbus jpeg lock session startup-notification
+ thunar udev X"
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Acum că am setat variabilele în 
+\series bold
+/etc/portage/make.conf
+\series default
+, este timpul să instalăm Xfce.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare Xfce
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge -avt xfce4-meta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Următorul pas, adăugați numele de utilizator la grupurile cdrom, cdrw, și
+ usb , ca să monteze dispozitive precum camera, dispozitive virtuale și
+ dispozitive USB.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Atribuirea utilizatorului unui grup hardware 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(înlocuiți username cu numele dvs de utilizator)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# for x in cdrom cdrw usb ; do gpasswd -a username $x ; done
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apoi actualizați variabilele de mediu: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Actualizarea variabilelor de mediu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# env-update && source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veți avea de asemenea nevoie de un terminal grafic ca să lucrați în noul
+ dvs mediu grafic.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+x11-terms/xfce4-terminal
+\series default
+ este o alegere bună, și este conceput special pentru mediul Xfce.
+ Instalați terminalul folosind comanda: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare terminal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge x11-terms/xfce4-terminal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Configurare Xfce
+\end_layout
+
+\begin_layout Standard
+Acum că Xfce este instalat, va trebui să îl setăm ca sistem grafic primar
+ pentru a porni când dăm comanda startx.
+ Ieșiți din root shell și logați-vă ca utilizator.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setare xfce ca sistem grafic implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+$ echo "exec startxfce4" > ~/.xinitrc
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Dacă aveți ConsoleKit instalat, 
+\series bold
+~/.xinitrc
+\series default
+ ar trebui să conțină 
+\color blue
+exec startxfce4 --with-ck-launch
+\color inherit
+.
+ În mod contrar, anumite aplicații ar putea să nu funcționeze.
+ Posibil să trebuiască să adăugați 
+\series bold
+consolekit
+\series default
+ la nivelul de rulare implicit prin rularea următoarei comenzi ca root:
+\color blue
+ rc-update add consolekit default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Acum puteți intra în noul mediu grafic prin comanda startx.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Pornire Xfce
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+$ startx
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Felicitări, bine ați venit în noul dvs mediu grafic XFCE.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Sesiune și pornire la încărcarea sistemului
+\end_layout
+
+\begin_layout Standard
+Dacă a-ți instalat (sau plănuiți să instalați) aplicații Gnome sau KDE precum
+ k3b, nautilus, kmail, evolution, etc.
+ Ar trebuii să vă asigurați că Xfce pornește serviciile necesare ca aceste
+ aplicații să pornească.
+ 
+\series bold
+Navigați la Menu --> Settings --> Sessions & Startup
+\series default
+.
+ Pe opțiunea "Advanced", select căsuța implicită.
+ Acest lucru ar putea să îmbunătățească timpul de pornire al mediului Xfce,
+ dar crește timpul de încărcare pentru aplicațiile KDE și Gnome.
+ 
+\end_layout
+
+\begin_layout Standard
+Xfce poate să vă salveze setările sesiunii și programele care rulează din
+ Tab-ul General în meniul Sessions & Startup.
+ Pot fi salvate automat când dați logout, sau Xfce vă poate întreba de fiecare
+ dată când ieșiți din mediul grafic.Această opțiune este foarte folositoare
+ atunci când configurați greșit ceva în mediul Xfce.
+ A-și șters un panou din greșeală? Selectați "No" când sunteți întrebat
+ să salvați setările din sesiunea curentă, și data viitoare când porniți
+ Xfce, vechile setări vor fi restaurate.
+ Vreți ca aplicațiile preferate precum webbrowser, terminal și email să
+ fie lansate în mod automat când vă logați? Salvați sesiunea înainte de
+ a vă de loga.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Logare în modul grafic
+\end_layout
+
+\begin_layout Standard
+Vă amintiți când am adăugat startxfce4 la 
+\series bold
+~/.xinitrc
+\series default
+? Tot ceea ce trebuia să faceți ca să intrați în mediul grafic era să dați
+ comanda 
+\color blue
+startx
+\color inherit
+.
+ Acest lucru este în regulă dacă preferați încărcarea sistemului și logarea
+ în mod text, dar haide-ți să folosim un manager grafic care să încarce
+ în mod automat XFCE la încărcarea sistemului (ca să vă puteți loga în modul
+ grafic).
+\end_layout
+
+\begin_layout Standard
+Mai întâi, haideți să ne asigurăm că Xfce se încarcă la boot.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Adăugare xdm la nivelul de execuție implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add xdm default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nu am terminat încă.
+ Trebuie să alegem un manager pentru mediul grafic (Display Manager) și
+ să setăm variabilele corespunzătoare.
+ Deși sunt câteva opțiuni în Portage, pentru acest ghid, folosim 
+\series bold
+LXDM
+\series default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare LXDM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge –av lxdm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a edita variabila DISPLAYMANAGER mergem în 
+\series bold
+/etc/conf.d/xdm
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Editare /etc/conf.d/xdm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+DISPLAYMANAGER="lxdm"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+LXDM poate porni automat sesiune XFCE dacă adăugați 
+\series bold
+XSESSION="Xfce4"
+\series default
+ la 
+\series bold
+/etc/env.d/90xsession
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Setări XSESSION
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# echo XSESSION=
+\backslash
+"Xfce4
+\backslash
+" > /etc/env.d/90xsession 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# env-update && source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Upgrade Xfce
+\end_layout
+
+\begin_layout Standard
+Dacă faceți upgrade la XFCE la o versiune anterioară (4.x), va trebui să
+ ștergeți cache-ul sesiuni și profiles, deoarece sunt incompatibile cu noile
+ versiuni care apar.
+ Pentru fiecare utilizator (dacă aveți mai mulți), rulați următoarele comenzi.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+ștergerea sesiunii vechi și cache
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+$ rm -r ~/.cache/sessions 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+$ rm -r ~/.config/xfce* 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+$ rm -r ~/.config/Thunar
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizatorii vor avea o nouă interfață dar vor pierde vechile setări personaliza
+te.
+ Din păcate momentan nu există o metodă de a migra setările de la o versiune
+ Xfce la alta.
+ 
 \end_layout
 
 \end_body
