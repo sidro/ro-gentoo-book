@@ -21,11 +21,11 @@
 \language_package auto
 \inputencoding utf8x
 \fontencoding global
-\font_roman default
+\font_roman Luxi Sans
 \font_sans default
 \font_typewriter default
-\font_default_family sfdefault
-\use_non_tex_fonts false
+\font_default_family default
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -87,15 +87,67 @@
 \begin_layout Title
 
 \series bold
-Manual Gentoo Linux 
+Manualul Gentoo Linux
 \begin_inset Newline newline
 \end_inset
 
-pentru arhitectura amd64 Instalarea Gentoo
+ platforma amd64
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Date
-Publicată în data de: 19.07.2013
+\begin_layout Author
+Autorii:
+\begin_inset Newline newline
+\end_inset
+
+Stoian Ovidiu - Translator
+\begin_inset Newline newline
+\end_inset
+
+Mihai Tene - Translator
+\begin_inset Newline newline
+\end_inset
+
+Alin Dobre - Translator(documenație versiuni intermediare)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Versiunea 0.0.1
 \end_layout
 
 \begin_layout Paragraph
@@ -23828,16 +23880,16 @@ Administrarea Utilizatorilor de Sistem
 \end_layout
 
 \begin_layout Subsection*
-Adăugarea Unui Utilizator pentru Întrebuinţarea Zilnică
+Adăugarea Unui Utilizator pentru Întrebuințarea Zilnică
 \end_layout
 
 \begin_layout Standard
-Utilizând root pe un sistem Unix/Linux este periculos şi trebuie evitat
+Utilizând root pe un sistem Unix/Linux este periculos și trebuie evitat
  cât mai mult.
- De aceea se recomandă insistent să adăugaţi un user pentru folosirea zilnică.
- Grupurile în care user-ul este membru definesc activităţile pe care le
+ De aceea se recomandă insistent să adăugați un user pentru folosirea zilnică.
+ Grupurile în care user-ul este membru definesc activitățile pe care le
  poate efectua user-ul.
- Următorul tabel afişează un număr de grupuri importante pe care le puteţi
+ Următorul tabel afișează un număr de grupuri importante pe care le puteți
  utiliza: 
 \begin_inset Newline newline
 \end_inset
@@ -24009,8 +24061,8 @@ plugdev
 \begin_inset Text
 
 \begin_layout Plain Layout
-pentru a putea efectua mount şi utiliza dispozitivele conectabile, cum ar
- fi camerele digitale şi memoriile USB 
+pentru a putea efectua mount și utiliza dispozitivele conectabile, cum ar
+ fi camerele digitale și memoriile USB 
 \end_layout
 
 \end_inset
@@ -24030,7 +24082,7 @@ video
 \begin_inset Text
 
 \begin_layout Plain Layout
-pentru a putea accesa componentele hardware de captură video şi a putea
+pentru a putea accesa componentele hardware de captură video și a putea
  beneficia de accelerare hardware 
 \end_layout
 
@@ -24070,8 +24122,8 @@ pentru a putea utiliza su
 
 \begin_layout Standard
 De exemplu, pentru a crea un user john care este membru al grupurilor wheel,
- users şi audio trebuie să efectuaţi login ca root (numai utilizatorii root
- pot crea user-i) şi să rulaţi 
+ users și audio trebuie să efectuați login ca root (numai utilizatorii root
+ pot crea user-i) și să rulați 
 \series bold
 useradd
 \series default
@@ -24092,7 +24144,7 @@ useradd
 \begin_inset Text
 
 \begin_layout Plain Layout
-Adăugarea unui user pentru întrebuinţarea zilnică
+Adăugarea unui user pentru întrebuințarea zilnică
 \end_layout
 
 \end_inset
@@ -24159,7 +24211,7 @@ Password: (Parola dvs.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Password: (Introduceţi parola pentru john)
+Password: (Introduceți parola pentru john)
 \end_layout
 
 \end_inset
@@ -24170,7 +24222,7 @@ Password: (Introduceţi parola pentru john)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Re-enter password: (Reintroduceţi parola pentru verificare)
+Re-enter password: (Reintroduceți parola pentru verificare)
 \end_layout
 
 \end_inset
@@ -24188,7 +24240,7 @@ Re-enter password: (Reintroduceţi parola pentru verificare)
 \end_layout
 
 \begin_layout Standard
-Dacă acest user are nevoie să facă anumite operaţi ca root, se poate utiliza
+Dacă acest user are nevoie să facă anumite operați ca root, se poate utiliza
  comanda 
 \color blue
 su -
@@ -24263,6 +24315,3798 @@ Felicitări aveți un sistem Gentoo Linux funcțional.
 
 \begin_layout Standard
 Urmează instalarea unui mediu Desktop.
+\end_layout
+
+\begin_layout Standard
+Continuați cu Ghid de configurare pentru Xorg.
+\end_layout
+
+\begin_layout Chapter
+Ghid de configurare pentru Xorg
+\end_layout
+
+\begin_layout Section
+Ce este serverul X Window?
+\end_layout
+
+\begin_layout Subsection*
+Modul Grafic vs.
+ Modul Text
+\end_layout
+
+\begin_layout Standard
+Utilizatorul mediu se sperie la gândul de a fi nevoit să scrie comenzi.
+ De ce să nu poată folosi un mediu grafic după cum ar vrea, având în vedere
+ libertatea pusă la dispoziție de Gentoo (Şi de Linux în general)? Sigur
+ că se poate.
+ Linuxul oferă o largă varietate de interfețe și medii grafice care arată
+ foarte bine, și care se pot instala peste aplicațiile care rulează în general
+ în mod text.
+ 
+\end_layout
+
+\begin_layout Standard
+Aceasta este una dintre surprizele cu care se întâlnesc noii utilizatori:
+ o interfață grafică nu este decât o aplicație care rulează în mod obișnuit
+ și nu face parte din kernelul Linux sau din componentele sistemului de
+ operare, ci este doar o unealtă care folosește pe deplin abilitățile grafice
+ ale unui calculator.
+ 
+\end_layout
+
+\begin_layout Standard
+Deoarece standardele sunt importante, și pentru desenarea și mișcarea ferestrelo
+r pe ecran, pentru interacțiunea cu utilizatorul prin intermediul tastaturii
+ și mouse-ului și pentru alte aspecte de bază ale unei interfețe grafice
+ a fost creat un standard.
+ Acesta poartă numele de X Window System, abreviat X11 sau doar X.
+ Acesta este folosit în Unix, BSD, Linux și alte clone de Unix.
+\end_layout
+
+\begin_layout Standard
+Una din aplicațiile care oferă utilizatorilor Linux-ului posibilitatea rulării
+ unei interfețe grafice și care respectă standardul X11 este Xorg-X11, o
+ ramură a proiectului XFree86.
+ XFree86 a hotărât să folosească o licență care s-ar putea să nu fie compatibilă
+ cu licența GPL, și astfel este recomandată folosirea Xorg ca și înlocuitor.
+ Structura Portage oficială nu mai oferă nici un pachet XFree86.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Proiectul X.org
+\end_layout
+
+\begin_layout Standard
+Proiectul 
+\begin_inset CommandInset href
+LatexCommand href
+name "X.org"
+target "http://www.x.org"
+
+\end_inset
+
+ a creat și dezvoltă o implementare open-source distribuită în mod liber
+ a X Windows System.
+ Este deci o infrastructură desktop open-source bazată pe standardul X11.
+ 
+\end_layout
+
+\begin_layout Standard
+Xorg oferă o interfață între componentele hardware și aplicațiile software
+ care rulează în mod grafic.
+ În plus, Xorg mai are capacități de lucru în rețea, adică permite rularea
+ unei aplicații pe un sistem și vizualizarea sa pe un altul.
+ 
+\end_layout
+
+\begin_layout Section
+Instalare Xorg
+\end_layout
+
+\begin_layout Subsection*
+Utilizarea emerge
+\end_layout
+
+\begin_layout Standard
+Gata cu introducerea, să trecem la treabă.
+ Pentru a instala Xorg în Gentoo este suficientă comanda 
+\color blue
+emerge xorg-x11
+\color inherit
+.
+ Instalarea Xorg durează destul de mult, deci puteți intre timp sa vă găsiți
+ altceva de făcut.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalarea Xorg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge xorg-x11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+După ce instalarea s-a terminat, s-ar putea să fie nevoie să reinițializați
+ unele variabile de mediu, înainte de a trece mai departe.
+ Este suficientă rularea comenzii 
+\color blue
+env-update
+\color inherit
+ urmată de 
+\color blue
+source /etc/profile
+\color inherit
+.
+ Aceasta nu deteriorează sistemul în nici un fel.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Reinițializarea variabilelor de mediu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# env-update 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Configurare Xorg
+\end_layout
+
+\begin_layout Subsection*
+Fișierul xorg.conf
+\end_layout
+
+\begin_layout Standard
+Fișierul de configurare al Xorg este numit 
+\series bold
+xorg.conf
+\series default
+ și se află în directorul 
+\series bold
+/etc/X11
+\series default
+.
+ Xorg-X11 oferă un exemplu de fișier de configurare aflat în 
+\series bold
+/etc/X11/xorg.conf.example
+\series default
+.
+ Acesta este comentat foarte intens, dar dacă este nevoie de mai multe informați
+i privind sintaxa nu ezitați să citiți pagina de manual: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Pagina de manual a xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# man 5 xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lectură plăcută pentru cei care doresc acest lucru, însă noi vom continua
+ configurarea folosind unelte unelte care vor modifica automat fișierul
+ xorg.conf făcând treaba cea mai dificilă în locul nostru.
+\end_layout
+
+\begin_layout Subsection*
+Implicit: Generarea automată a fișierului xorg.conf
+\end_layout
+
+\begin_layout Standard
+Xorg însuși poate sa detecteze cei mai mulți parametri în locul nostru.
+ În cele mai multe cazuri vom avea de modificat numai unele linii care vor
+ face ca interfața să ruleze la rezoluția dorită de către noi.
+ Dacă sunteți interesat de unele setări mai de profunzime, verificați resursele
+ oferite la sfârșitul acestui capitol.
+ Să încercăm să generăm mai întâi un fișier de configurare al Xorg (sperăm,
+ funcțional).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Generarea fișierului xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# Xorg -configure
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Citiți ultimile linii afișate pe ecran după ce Xorg a terminat de analizat
+ componentele hardware.
+ Dacă acolo scrie că Xorg a eșuat în timpul verificării, veți fi forțat
+ să editați în mod manual fișierul 
+\series bold
+xorg.conf
+\series default
+.
+ În caz contrar, se va afișa un mesaj care vă spune că fișierul 
+\series bold
+/root/xorg.conf.new
+\series default
+ a fost scris și este gata pentru a fi testat.
+ Așa că haideți să îl testăm.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Testarea fișierului xorg.conf.new
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# X -config /root/xorg.conf.new
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă totul merge bine, ar trebui să vedeți un model cu alb și negru.
+ Verificați dacă vă funcționează dispozitivul mouse și dacă rezoluția este
+ corectă.
+ Este posibil să nu puteți deduce rezoluția exactă, dar ar trebui să puteți
+ observa dacă este prea joasă.
+ Puteți ieși în orice moment prin apăsarea 
+\series bold
+Ctrl-Alt-Backspace
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Metodă alternativă: generarea semi-automată a fișierului xorg.conf
+\end_layout
+
+\begin_layout Standard
+Xorg conține un utilitar numit xorgconfig care vă va întreba unele informații
+ privitoare la hardware-ul dvs.
+ (placa grafică, tastatura, ...) și creează un fișier xorg.conf pe baza acestor
+ informații.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Generarea semi-automată a fișierului xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# xorgconfig
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un alt utilitar, de asemenea oferit de Xorg, este 
+\series bold
+xorgcfg
+\series default
+, ce va încerca, mai întâi, să ruleze Xorg -configure și apoi să pornească
+ aplicația server X pentru mai multe optimizări finale.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Utilizare xorgcfg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# xorgcfg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dacă aplicația X nu poate rula sau configurarea returnează eroare, încercați
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# xorgcfg -textmode
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Suprascriere xorg.conf
+\end_layout
+
+\begin_layout Standard
+Mai întâi copiem fișierul xorg.conf.new peste fișierul 
+\series bold
+/etc/X11/xorg.conf
+\series default
+ pentru a nu fi nevoiți sa rulăm tot timpul comanda 
+\color blue
+X -config
+\color inherit
+ -- lansarea X sau 
+\color blue
+startx
+\color inherit
+ este mult mai ușoară.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Suprascriere xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cp /root/xorg.conf.new /etc/X11/xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Utilizare startx
+\end_layout
+
+\begin_layout Standard
+Acum, încercați lansarea startx pentru a porni aplicația server X.
+ 
+\color blue
+startx
+\color inherit
+ este un fișier script ce execută o sesiune X, respectiv pornește aplicațiile
+ server X și unele aplicații grafice peste acestea.
+ Acesta decide care aplicații trebuie rulate, urmând următoarea logică:
+ 
+\end_layout
+
+\begin_layout Itemize
+Dacă un fișier denumit 
+\series bold
+.xinitrc
+\series default
+ există în directorul 
+\series bold
+home
+\series default
+, va executa comenzile conținute în acesta.
+\end_layout
+
+\begin_layout Itemize
+Altfel, va citi valoarea variabilei XSESSION și va executa una din sesiunile
+ disponibile în 
+\series bold
+/etc/X11/Sessions/
+\series default
+, corespunzător (puteți seta valoarea variabilei XSESSION în 
+\series bold
+/etc/rc.conf
+\series default
+ pentru a o face implicită pentru toți utilizatorii din sistem).
+ 
+\end_layout
+
+\begin_layout Itemize
+Dacă toate acțiunile de mai sus returnează eroare, va executa un mediu grafic
+ simplu, de obicei twm.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Pornire Xorg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# startx
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă se încarcă un mediu grafic urât, repulsiv, deformat, acela este 
+\series bold
+twm
+\series default
+.
+ Pentru a încheia sesiunea 
+\series bold
+twm
+\series default
+, tastați 
+\series bold
+exit
+\series default
+ sau 
+\series bold
+Ctrl-D
+\series default
+ în ferestrele 
+\series bold
+xterm
+\series default
+.
+ Puteți, de asemenea, să opriți sesiunea X, utilizând combinația 
+\series bold
+Ctrl-Alt-Backspace
+\series default
+.
+ Oricum, aceasta va determina ieșirea din mediul X într-un mod necorespunzător
+ -- ceva ce nu vă veți dori întotdeauna.
+ Totuși, nu este chiar atât de rău.
+\end_layout
+
+\begin_layout Section
+Optimizare xorg.conf
+\end_layout
+
+\begin_layout Subsection*
+Setarea rezoluției
+\end_layout
+
+\begin_layout Standard
+În cazul în care credeți că rezoluția este nepotrivită, veți fi nevoit să
+ verificați două secțiuni ale configurației.
+ Mai întâi aveți secțiunea Screen unde sunt listate rezoluțiile în care
+ va rula serverul X, dacă există.
+ În mod implicit, aceasta nu conține nici o rezoluție, caz în care Xorg
+ estimează rezoluțiile bazându-se pe informațiile din cea de-a doua secțiune,
+ 
+\series bold
+Monitor
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Tot ce face Xorg este verificarea setărilor 
+\series bold
+HorizSync
+\series default
+ și 
+\series bold
+VertRefresh
+\series default
+ din secțiunea 
+\series bold
+Monitor
+\series default
+ pentru a obține rezoluții valide.
+ Deocamdată lăsăm aceste setări așa cum sunt.
+ Doar dacă schimbările din secțiunea 
+\series bold
+Screen
+\series default
+ nu funcționează (le vom descrie mai jos) atunci va trebui să luați specificații
+le monitorului din cartea tehnică și să le scrieți în fișier.
+ Puteți însă și să folosiți un program care le determină în mod automat,
+ cum ar fi 
+\series bold
+sys-apps/ddcxinfo-knoppix
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Description
+
+\color red
+Atenție: Nu schimbați valorile acestor variabile fără a ști specificațiile
+ monitorului.
+ Aceasta poate duce în cel mai fericit caz la erori de sincronizare, dacă
+ nu cumva chiar și la arderea monitorului.
+
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+Acum, să schimbăm rezoluțiile.
+ În exemplul următor în 
+\series bold
+/etc/X11/xorg.conf
+\series default
+ adăugăm liniile 
+\series bold
+Modes
+\series default
+ și respectiv 
+\series bold
+DefaultDepth
+\series default
+ pentru ca serverul X să pornească în mod implicit în rezoluția 1024x768
+ cu adâncimea de culoare de 24 de biți.
+ Nu vă cramponați pe valorile date -- acestea sunt exemple, și este foarte
+ probabil ca aceste valori să difere de cele setate în sistemul dumneavoastră.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Schimbarea secțiunii Screen din /etc/X11/xorg.conf
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Section "Screen"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Identifier "Default Screen"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Device "S3 Inc.
+ ProSavage KN133 [Twister K]"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Monitor "Generic Monitor"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+DefaultDepth 24 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# Am eliminat din text pentru a-l face mai lizibil
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+SubSection "Display"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Depth 24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Modes "1024x768"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+EndSubSection
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+EndSection
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rulați serverul X (startx) pentru a vedea dacă acesta folosește rezoluția
+ dorită.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Configurarea tastaturii
+\end_layout
+
+\begin_layout Standard
+Pentru a face astfel încât X să folosească o tastatură localizată căutați
+ secțiunea InputDevice, în care care vă este configurată tastatura și adăugați
+ opțiunea XkbLayout care să indice schema de tastatură pe care o doriți.
+ Trebuie doar să înlocuiți codul țării cu cel dorit de dumneavoastră: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Schimbarea schemei de tastatură
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Section "InputDevice"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Identifier "Generic Keyboard"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Driver "keyboard"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "CoreKeyboard"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "XkbRules" "xorg"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "XkbModel" "pc105"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "XkbLayout" "ro"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+EndSection
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Configurarea mouse-ului
+\end_layout
+
+\begin_layout Standard
+Dacă mouse-ul nu vă funcționează, veți fi nevoit mai întâi să aflați dacă
+ este compatibil cu kernel-ul pe care îl aveți.
+ Dispozitivele mouse sunt detectate de către kernel ca 
+\series bold
+/dev/input/mouse0
+\series default
+ (sau 
+\series bold
+/dev/input/mice 
+\series default
+dacă doriți să utilizați mai multe dispozitive mouse).
+ În unele cazuri, este utilizat 
+\series bold
+/dev/psaux
+\series default
+.
+ Orice mouse ați avea, puteți verifica dacă aceste fișiere de tip device
+ vă reprezintă mouse-ul citind valorile aflate în acestea în timp ce mișcați
+ mouse-ul.
+ De obicei, veți observa niște caractere ciudate pe ecran.
+ Pentru a ieși din test apăsați Ctrl-C.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Verificarea fișierelor de tip device
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# cat /dev/input/mouse0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+(Apăsați Ctrl-C pentru a termina)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă mouse-ul nu este detectat verificați dacă toate modulele necesare sunt
+ încărcate în kernel.
+ 
+\end_layout
+
+\begin_layout Standard
+Dacă mouse-ul vă este detectat, introduceți dispozitivul la care este conectat
+ în secțiunea 
+\series bold
+InputDevice
+\series default
+ corespunzătoare.
+ În exemplul următor vom seta alte două opțiuni: Protocol (în care scriem
+ ce protocol de mouse va fi folosit -- majoritatea utilizatorilor vor scrie
+ aici PS/2 sau IMPS/2) și ZAxisMapping (care permite folosirea rotiței de
+ scroll, dacă există): 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Schimbarea setărilor mouse-ului în Xorg
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Section "InputDevice"
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Identifier "TouchPad Mouse" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Driver "mouse"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "CorePointer" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "Device" "/dev/input/mouse0" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "Protocol" "IMPS/2" 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+Option "ZAxisMapping" "4 5"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+EndSection
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rulați startx și bucurați-vă de rezultat.
+ Felicitări, acum (sperăm să) aveți în sistem un server Xorg funcțional.
+ Următorul pas este înlăturarea 
+\series bold
+twm
+\series default
+, managerul de ferestre urât amintit la început și înlocuirea sa cu un altul
+ mai frumos și mai funcțional sau de ce nu chiar cu un mediu desktop complet
+ cum ar fi 
+\series bold
+KDE
+\series default
+ sau 
+\series bold
+GNOME
+\series default
+, care însă nu va fi detaliată în acest ghid de instalare.
+\end_layout
+
+\begin_layout Section
+Resurse
+\end_layout
+
+\begin_layout Subsection*
+Crearea și editarea fișierului xorg.conf
+\end_layout
+
+\begin_layout Standard
+Întâi de toate, 
+\color blue
+man 5 xorg.conf 
+\color inherit
+oferă un ghid rapid și destul de complet al sintaxei fișierului de configurare.
+ Este bine ca acesta să fie deschis într-un terminal în timp ce editați
+ fișierul de configurare.
+\end_layout
+
+\begin_layout Standard
+O altă sursă de informații este directorul 
+\series bold
+/usr/X11R6/lib/X11/doc
+\series default
+ unde se pot găsi diferite fișiere 
+\series bold
+README
+\series default
+ pentru unele chipset-uri grafice.
+ 
+\end_layout
+
+\begin_layout Standard
+Internetul constituie o sursă imensă de documentații privitoare la editarea
+ fișierului 
+\series bold
+xorg.conf
+\series default
+.
+ Vă vom oferi aici doar câteva dintre ele.
+ Mai întâi încercați 
+\series bold
+Google
+\series default
+, unde puteți găsi multe informații, căutând 
+\series bold
+xorg.conf
+\series default
+ sau 
+\series bold
+XF86Config
+\series default
+ (fișierul de configurări al proiectului XFree86), cele două fișiere au
+ aceeași sintaxă pentru majoritatea opțiunilor.
+ Veți găsi mai multe surse căutând informații despre XF86Config.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Medii Grafice 
+\end_layout
+
+\begin_layout Enumerate
+Gnome
+\end_layout
+
+\begin_layout Enumerate
+KDE
+\end_layout
+
+\begin_layout Enumerate
+Xfce
+\end_layout
+
+\begin_layout Chapter
+Mediile Grafice expuse în manual pentru instalare
+\end_layout
+
+\begin_layout Standard
+Acest ghid vă va explica cum să instalați un mediu grafic (KDE, Gnome, XFCE)
+ pe un sistem stabil Gentoo amd64.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Cum setam flagurile necesare mediului grafic ales?
+\end_layout
+
+\begin_layout Standard
+Puteți efectua rapid setările necesare USE flags activând profilul necesar
+ în portage: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+# eselect profile list
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[1] default/linux/amd64/10.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[2] default/linux/amd64/10.0/selinux 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[3] default/linux/amd64/10.0/desktop 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[4] default/linux/amd64/10.0/desktop/gnome * 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[5] default/linux/amd64/10.0/desktop/kde 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[6] default/linux/amd64/10.0/developer 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[7] default/linux/amd64/10.0/no-multilib 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[8] default/linux/amd64/10.0/server 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[9] hardened/linux/amd64 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[10] hardened/linux/amd64/selinux 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[11] hardened/linux/amd64/no-multilib 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+[12] hardened/linux/amd64/no-multilib/selinux
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+În acest exemplu, profilul #4 este profilul gnome, așadar îl putem activa
+ prin comanda: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# eselect profile set 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă se dorește instalarea KDE-ului se setează profilul #5, iar pentru XFCE
+ ori alt mediu de lucru se folosește profilul #3.
+ Iată câteva exemple:
+\end_layout
+
+\begin_layout Itemize
+pentru KDE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+eselect profile set 5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+pentru XFCE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+eselect profile set 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gentoo are trei profile pentru mediile grafice: unul pentru KDE, unul pentru
+ Gnome și un profil generalist pentru restul mediilor grafice.
+ Pentru mediile grafice ce nu au un profil personal se folosește profilul
+ desktop.
+\end_layout
+
+\begin_layout Section
+Mediul grafic Gnome
+\end_layout
+
+\begin_layout Standard
+GNOME este un mediu desktop gratuit pentru sisteme compatibile UNIX.
+ Este software (open source), sub licența liberă (GPL) (anumite biblioteci
+ și toolkitul GTK+ sunt sub licența LGPL).
+ Este mediul standard de lucru pe un număr mare de distribuții Linux (Ubuntu,
+ Fedora, Red Hat etc.) și pe sistemele UNIX sau UNIX-like.
+ 
+\end_layout
+
+\begin_layout Standard
+GNOME a apărut în 1997, autorul inițial fiind Miguel de Icaza.
+ Proiectul a fost început ca urmare a utilizării de către KDE a toolkit-ului
+ Qt, care la vremea respectivă nu era open source - ducând la limitări asupra
+ a ceea putea fi programat pentru KDE, și la posibilitatea ca, în cazul
+ în care Qt își schimbă strategia, KDE să nu mai poată fi folosit legal.
+ Acest lucru nu mai este o problemă, Qt este software liber astăzi, dar
+ atât Gnome cât și KDE continuă a se dezvolta, fiecare proiect având obiective
+ diferite.
+ KDE și GNOME colaborează în cadrul proiectului Free Desktop, pentru a asigura
+ standardizarea în sisteme Unix/Linux.
+\end_layout
+
+\begin_layout Standard
+Pe un sistem cu depozitul stabil activ 
+\color blue
+emerge gnome 
+\color black
+va instala Gnome 2, versiunea stabila.
+ Pentru a instala Gnome 3 trebuie să editați fișierul 
+\series bold
+/etc/portage/packages.keywords 
+\series default
+și să adăugați următoarea linie 
+\series bold
+gnome-base/gnome ~amd64
+\series default
+ apoi salvați fișierul.
+ După ce ați terminat de editat fișierul 
+\series bold
+/etc/portage/packages.keywords 
+\series default
+puteți rula comanda 
+\color blue
+emerge gnome
+\color black
+ care vă va instala Gnome 3.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare Gnome 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge gnome
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare Gnome 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# nano /etc/portage/packages.keywords
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(adaugați la sfârșitul fișierului)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\color black
+gnome-base/gnome ~amd64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(salvați fișierul apăsând concomitent tastele CTRL+O, CTRL+X)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(rulați următoarea comanda pentru a instala gnome 3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge gnome
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vreți să instalați un Gnome minimal?
+\end_layout
+
+\begin_layout Standard
+Înlocuiți comanda 
+\color blue
+emerge gnome
+\color inherit
+ cu 
+\color blue
+emerge gnome-light
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+Recomand această metoda doar în cazul în care vreți să folosiți Gnome 2.
+\end_layout
+
+\begin_layout Standard
+Următoarea operațiune imediat după instalarea mediului grafic Gnome este
+ actualizarea variabilelor de mediu.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Actualizarea variabilelor de mediu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# env-update && source /etc/profile
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru funcționalitate Gnome are nevoie ca serviciul 
+\series bold
+dbus
+\series default
+ să fie pornit.
+ Iată cum pornim serviciul 
+\series bold
+dbus
+\series default
+ și îl adăugam la procesele de pornire ale sistemului.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+dbus - pornirea și adăugarea la procesele de pornire a sistemului
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# /etc/init.d/dbus start 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add dbus default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verificați dacă există grupul 
+\series bold
+plugdev
+\series default
+.
+ Dacă există asigurați-vă că faceți parte din acest grup, deși acest lucru
+ nu e obligatoriu.
+ Puteți sari peste pasul acesta dacă doriți.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Adăugarea utilizatorului la grupul plugdev
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# gpasswd -a utilizatorul-dvs plugdev
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unde 
+\series bold
+utilizatorul-dvs
+\series default
+ este utilizatorul creat de dumneavoastră pentru activitățile zilnice.
+\end_layout
+
+\begin_layout Standard
+Pentru a avea parte de logare în interfața grafică fără a tasta comenzi
+ în TTY cel mai convenabil este instalarea unui manager pentru mediul grafic
+ ce poartă numele de Display Manager (DM).
+\end_layout
+
+\begin_layout Standard
+În cazul mediului grafic Gnome recomandăm instalarea lui GDM ca manager
+ al mediului grafic.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare GDM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge gdm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dacă vreți ca display manager-ul să pornească imediat după inițializarea
+ sistemului de operare (Gentoo) trebuie să adăugați scriptul XDM la procesele
+ de inițializare, pe nivelul de inițializare implicit.
+ Ca sa faceți lucrul acesta 
+\series bold
+xdm
+\series default
+ trebuie să fie instalat în sistem.
+ În cazul în care 
+\series bold
+xdm
+\series default
+ nu este instalat vă rugăm să folosiți 
+\series bold
+emerge
+\series default
+ pentru a-l instala.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Instalare XDM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# emerge xdm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Adăugare XDM la procesul de inițializare
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+# rc-update add xdm default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acum, editați fișierul 
+\series bold
+/etc/conf.d/xdm
+\series default
+ în care modificați variabila 
+\series bold
+DISPLAYMANAGER
+\series default
+ în modul următor: 
+\series bold
+DISPLAYMANAGER="gdm" 
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Mediul grafic KDE
+\end_layout
+
+\begin_layout Standard
+KDE este un mediu grafic foarte puternic și util pentru calculatoarele care
+ au la bază Unix.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Versiuni disponibile
+\end_layout
+
+\begin_layout Standard
+KDE SC 4 este versiunea KDE menținută actual în depozitele testing.
+ În Portage este o versiune stabilă de asemenea și ar mai putea fi una (sau
+ mai multe) versiuni mai puțin stabile.
+ De regulă noile versiuni trec în stadiul de versiune stabilă aproximativ
+ o lună.
+ Adițional, KDE upstream pune la dispoziție 
+\begin_inset CommandInset href
+LatexCommand href
+name "depozitele live git"
+target "http://quickgit.kde.org/"
+
+\end_inset
+
+.
+ Echipa KDE pune la dispoziție cele mai recente versiuni KDE prin 
+\begin_inset CommandInset href
+LatexCommand href
+name "kde overlay "
+target "http://git.overlays.gentoo.org/gitweb/?p=proj/kde.git;a=summary"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Alegeți versiunea KDE SC care vi se potrivește: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+KDE SC versiune
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Depozit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Status
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KDE SC 4.10.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Portage
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stabil pentru amd64, ppc, ppc64 și x86; versiune de testare pentru arm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KDE SC 4.11.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Portage
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Versiune de test pentru amd64, arm, ppc, ppc64 și x86 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KDE SC 4.11 stable branch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kde overlay
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Versiune Live
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KDE SC master
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kde overlay
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Versiune Live
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Notă: Dacă rulați KDE PIM și vreți să faceți upgrade de la versiunea 4.4
+ la 4.10, vă rugăm să vă uitați pe 
+\begin_inset CommandInset href
+LatexCommand href
+name "KDE PIM 4.7 Upgrade Guide"
+target "http://wiki.gentoo.org/wiki/KDE/KDEPIM-4.7_upgrade"
+
+\end_inset
+
+ mai întâi (încă se aplică la versiunea 4.10)! Dacă însă doriți să rămâneți
+ la KDE PIM 4.4 puteți masca 
+\begin_inset CommandInset href
+LatexCommand href
+name "KDE PIM 4.10"
+target "http://www.gentoo.org/proj/en/desktop/kde/kdepim-4.7-mask.txt"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Modificări/Adăugări necesare
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+\shape italic
+\color black
+Profil
+\end_layout
+
+\begin_layout Standard
+Profilul Desktop a fost împărțit în subprofilelele KDE și GNOME .
+ Acest lucru reprezintă eliminarea KDE și GNOME USE flags din profilul de
+ baza desktop și punerea lor în subprofiluri.
+ Alegerea unui profil nu vă limitează la folosirea doar a unui Mediu Grafic.
+ Pentru a alege profilul care vi se potrivește, rulați
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color blue
+ eselect profile list
+\end_layout
+
+\begin_layout Standard
+pentru a vizualiza lista de profiluri, și 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color blue
+ eselect profile set X
+\end_layout
+
+\begin_layout Standard
+unde X este numărul profilului pe care doriți să îl selectați.
+ Pentru un mediu grafic complet KDE este recomandat să alegeți desktop/kde
+ , care este configurat specific pentru KDE.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+\color black
+Servicii
+\end_layout
+
+\begin_layout Standard
+Înainte să instalați KDE SC este recomandată setarea câtorva servicii.
+ O pare dintre aceste sunt setate automat dacă folosiți profilul desktop/kde
+ sau desktop.
+ Ar trebui de asemenea să folosiți: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ConsoleKit
+\series default
+: Oferă acces la framework-ul ConsoleKit pentru a defini și monitoriza utilizato
+rii, sesiunile de logare și locurile.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+D-Bus
+\series default
+: Permite utilizarea D-Bus message bus system.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+polkit
+\series default
+: Activează frameworkul polkit pentru controlul autorizațiilor pentru majoritate
+a serviciile de sistem.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+udev
+\series default
+: Activează suport pentru udev Alocarea dinamica și persistentă a numelor
+ pentru dispozitivele Linux.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+udisks2
+\series default
+: Activează suportul pentru diferite servicii de stocare.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Instalare
+\end_layout
+
+\begin_layout Description
+Notă: Dacă faceți actualizare, vă rugăm să verificați 
+\begin_inset CommandInset href
+LatexCommand href
+name "subpagina de actualizare"
+target "http://wiki.gentoo.org/wiki/KDE/upgrade"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Notă: Pentru versiunile uitați-vă pe articolul 
+\begin_inset CommandInset href
+LatexCommand href
+name "kde overlay"
+target "http://wiki.gentoo.org/wiki/KDE/Overlay"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+\color black
+Pachete
+\end_layout
+
+\begin_layout Standard
+În Gentoo sunt câteva pachete care ar putea instala mediul grafic KDE: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kde-meta"
+target "http://packages.gentoo.org/package/kde-base/kde-meta"
+
+\end_inset
+
+, pentru mediul complet KDE
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdebase-meta"
+target "http://packages.gentoo.org/package/kde-base/kdebase-meta"
+
+\end_inset
+
+, pentru un mediu de bază KDE
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdebase-startkde"
+target "http://packages.gentoo.org/package/kde-base/kdebase-startkde"
+
+\end_inset
+
+, un mediu minimal, nesuportat oficial pentru KDE (fără KDE plasma și alte
+ creații) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+emerge --ask kdebase-meta
+\end_layout
+
+\begin_layout Standard
+De asemenea sunt alte meta-pachete care pot fi instalate să întregească
+ gama KDE: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdeaccessibility-meta"
+target "http://packages.gentoo.org/package/kde-base/kdeaccessibility-meta"
+
+\end_inset
+
+: Aplicații de accesibilitate și utilitate.
+ 
+\shape italic
+\color black
+Serviciul de încărcare
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdeadmin-meta"
+target "http://packages.gentoo.org/package/kde-base/kdeadmin-meta"
+
+\end_inset
+
+: Unelte de administrare, care ajută la menținerea și administrarea sistemului.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdeartwork-meta"
+target "http://packages.gentoo.org/package/kde-base/kdeartwork-meta"
+
+\end_inset
+
+: Diferite teme, economizatoare de ecran, etc.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdebindings-meta"
+target "http://packages.gentoo.org/package/kde-base/kdebindings-meta"
+
+\end_inset
+
+: Suport pentru diferite limbi.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdeedu-meta"
+target "http://packages.gentoo.org/package/kde-base/kdeedu-meta"
+
+\end_inset
+
+: Aplicații pentru educație și jocuri.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdegames-meta"
+target "http://packages.gentoo.org/package/kde-base/kdegames-meta"
+
+\end_inset
+
+: Jocuri standard pentru mediu grafic.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdegraphics-meta"
+target "http://packages.gentoo.org/package/kde-base/kdegraphics-meta"
+
+\end_inset
+
+: Aplicații grafice pentru vizualizat poze, modificat poze, etc.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "http://packages.gentoo.org/package/kde-base/kdemultimedia-meta"
+target "kde-base/kdemultimedia-meta"
+
+\end_inset
+
+: Aplicații de redare audio/video.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdenetwork-meta"
+target "http://packages.gentoo.org/package/kde-base/kdenetwork-meta"
+
+\end_inset
+
+: Utilitare de rețea și servicii VNC.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdepim-meta"
+target "http://packages.gentoo.org/package/kde-base/kdepim-meta"
+
+\end_inset
+
+: Aplicații PIM cum ar fi emailer, addressbook, organizer, etc.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdesdk-meta"
+target "http://packages.gentoo.org/package/kde-base/kdesdk-meta"
+
+\end_inset
+
+: Diferite unelte pentru dezvoltare.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdetoys-meta"
+target "http://packages.gentoo.org/package/kde-base/kdetoys-meta"
+
+\end_inset
+
+: Aplicații gen jucării.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdeutils-meta"
+target "http://packages.gentoo.org/package/kde-base/kdeutils-meta"
+
+\end_inset
+
+: Aplicații grafice standard cum ar fi arhivatorul, calculatorul, etc.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdewebdev-meta"
+target "http://packages.gentoo.org/package/kde-base/kdewebdev-meta"
+
+\end_inset
+
+: Unelte pentru dezvoltare și creare aplicații WEB.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Localizarea
+\end_layout
+
+\begin_layout Standard
+Pentru 
+\begin_inset CommandInset href
+LatexCommand href
+name "localizare"
+target "http://wiki.gentoo.org/wiki/Localization"
+
+\end_inset
+
+ în KDE instalați 
+\series bold
+kde-base/kde-l10n
+\series default
+.
+ Dacă doriți suport pentru o singură limbă aleasă de dumneavoastră, definiți
+ LINGUAS USE flag pentru limba română:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Editare fișier /etc/portage/make.conf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+LINGUAS="ro"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+emerge --ask kde-l10n
+\end_layout
+
+\begin_layout Standard
+Pentru pachetele de localizare în 
+\series bold
+
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdepim-meta"
+target "http://packages.gentoo.org/package/kde-base/kdepim-meta"
+
+\end_inset
+
+
+\series default
+ trebuie să instalați 
+\series bold
+
+\begin_inset CommandInset href
+LatexCommand href
+name "kde-base/kdepim-l10n"
+target "http://packages.gentoo.org/package/kde-base/kdepim-l10n"
+
+\end_inset
+
+
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset CommandInset href
+LatexCommand href
+name "app-office/calligra"
+target "http://packages.gentoo.org/package/app-office/calligra"
+
+\end_inset
+
+
+\series default
+ are pachet de localizare propriu de asemenea, 
+\series bold
+
+\begin_inset CommandInset href
+LatexCommand href
+name "app-office/calligra-l10n"
+target "http://packages.gentoo.org/package/app-office/calligra-l10n"
+
+\end_inset
+
+
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Configurare
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+\color black
+Serviciul de încărcare
+\end_layout
+
+\begin_layout Standard
+Instalarea lui KDM ca manager desktop.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+emerge --ask kde-base/kdm
+\begin_inset Newline newline
+\end_inset
+
+
+\color black
+Setați KDM ca manager de afișare inițial:
+\color blue
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Editare fișier /etc/conf.d/xdm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+DISPLAYMANAGER="kdm"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a porni KDE automat la încărcarea sistemului, adăugați 
+\series bold
+xdm
+\series default
+ la privilegiul de rulare: 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+rc-update add xdm default
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pentru a porni KDE acum rulați: 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+/etc/init.d/xdm start
+\end_layout
+
+\begin_layout Subsection*
+Software adițional
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Widgeturi
+\end_layout
+
+\begin_layout Standard
+Multe widget-uri folositoare le puteți găsii în pachetul
+\series bold
+ kde-base/kdeplasma-addons
+\series default
+: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+root #
+\series default
+\color inherit
+ 
+\color blue
+emerge --ask kdeplasma-addons
+\end_layout
+
+\begin_layout Section
+Mediul grafic XFCE
 \end_layout
 
 \end_body
