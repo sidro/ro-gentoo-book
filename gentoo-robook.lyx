@@ -12282,7 +12282,7 @@ Utilizați comanda
 mount
 \color inherit
 .
- Nu uitați să creați directoarele de mount pentru fiecare partiție creată.
+ Nu uitați să creați directoarele de montare pentru fiecare partiție creată.
  Ca un exemplu, o să montăm partițiile rădăcină și de boot: 
 \begin_inset Newline newline
 \end_inset
@@ -12302,7 +12302,7 @@ mount
 \begin_layout Plain Layout
 
 \color magenta
-Mountarea partițiilor
+Montarea partițiilor
 \end_layout
 
 \end_inset
@@ -12802,8 +12802,8 @@ Asigurați-vă că ați descărcat o arhivă tar stage3 - instalările utilizân
 \begin_layout Standard
 Dacă doriți să verificați integritatea arhivei descărcate, folosiți openssl
  și comparați ceea ce este afișat cu suma aflată pe mirror.
- Fișierul digest va furnizează câteva sume de control fiecare având un algoritm
- propriu.
+ Fișierul digest vă furnizează câteva sume de control, fiecare având un
+ algoritm propriu.
  Cele recomandate sunt SHA512 și Whirlpool.
  Spre exemplu, pentru a verifica integritatea arhivei tar stage pentru amd64:
 \begin_inset Newline newline
@@ -12994,7 +12994,8 @@ p
 \series bold
 f
 \series default
- denotă că vrem să dezarhivăm un fișier și nu datele de la standard input.
+ denotă că vrem să dezarhivăm un fișier și nu datele de la intrarea standard
+ (en: standard input).
 \end_layout
 
 \begin_layout Standard
@@ -13114,7 +13115,7 @@ CXXFLAGS
  definesc opțiunile de optimizare pentru compilatorul gcc de C respectiv
  C++.
  Deși, în general, le definim aici, veți obține maximul de performanță dacă
- optimizați flag-urile pentru fiecare program, în parte.
+ optimizați flag-urile pentru fiecare program în parte.
  Motivul pentru această afirmație este că fiecare program este diferit.
  
 \end_layout
@@ -13131,21 +13132,22 @@ CXXFLAGS
 \begin_layout Standard
 Nu vom explica toate opțiunile de optimizare.
  Dacă vreți să le aflați pe toate, citiți Manualul(ele) Online GNU sau gcc
- pagina info(info gcc -- funcționează doar pe un sistem Linux funcțional).
+ pagina info (info gcc -- funcționează doar pe un sistem Linux funcțional).
  Fișierul make.conf.example însuși conține, de asemenea, multe exemple și
  informații; nu uitați să-l citiți.
  
 \end_layout
 
 \begin_layout Standard
-O primă opțiune este indicatorul -march= sau -mtune, care specifică numele
+O primă opțiune este indicatorul -march= sau -mtune=, care specifică numele
  arhitecturii țintă.
- Opțiunile posibile sunt descrise în fișierul make.conf.example (ca și comentarii).
+ Opțiunile posibile sunt descrise în fișierul make.conf.example (sub formă
+ de comentarii).
  De obicei se folosește valoarea 
 \series bold
 native
 \series default
- care spune compilatorului să selecteze arhitectura sistemului ținta (cel
+ care spune compilatorului să selecteze arhitectura sistemului țintă (cel
  pe care se face instalarea).
 \end_layout
 
@@ -13163,7 +13165,7 @@ Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
 O altă setare comună de optimizare este -pipe (utilizează canale pipe în
  locul fișierelor temporare pentru comunicația între diversele etape ale
  compilării).
- El nu are impact asupra codului generat, dar folosește mai multă memorie.
+ Ea nu are impact asupra codului generat, dar folosește mai multă memorie.
  Pe sisteme cu memorie puțină este recomandat a nu se folosi acest parametru.
 \end_layout
 
@@ -13349,7 +13351,7 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 
 \series default
 \color inherit
- și va căuta un server mirror (sau mai multe) mai apropiate de dvs.
+ și căuta un server mirror (sau mai multe) mai apropiate de dvs.
  (deoarece, în cele mai multe cazuri, acestea sunt și cele mai rapide),
  sau puteți utiliza utilitarul mirrorselect oferit de noi, cu care puteți
  printr-o interfață prietenoasă, să selectați server-ele mirror pe care
@@ -13478,8 +13480,8 @@ Precizarea Informațiilor despre DNS
 \end_layout
 
 \begin_layout Standard
-A rămas un singur lucru de făcut, înainte să putem intra noul mediu și anume
- trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
+A rămas un singur lucru de făcut, înainte să putem intra în noul mediu,
+ și anume trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
  Trebuie să facem asta, pentru a fi siguri că rețeaua funcționează, chiar
  și după ce intrăm în noul mediu.
  /etc/resolv.conf conține serverele DNS pentru rețeaua noastră.
@@ -13544,19 +13546,19 @@ Copierea informațiilor despre DNS
 \end_layout
 
 \begin_layout Subsection*
-Mountarea Sistemelor de Fișiere
+Montarea Sistemelor de Fișiere
 \end_layout
 
 \begin_layout Standard
-În câteva momente v-om schimba root-ul Linuxului către noua locație.
- Ca să ne asigurăm că noul mediu este funcțional trebuie să face câteva
+În câteva momente vom schimba root-ul Linuxului către noua locație.
+ Ca să ne asigurăm că noul mediu este funcțional trebuie să facem câteva
  sisteme de fișiere disponibile.
 \end_layout
 
 \begin_layout Standard
-Mount-ați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite
- instalării să utilizeze informația oferită de kernel, chiar și în mediul
- chroot, și apoi mount-ați prin legătură sistemele de fișiere /dev și /sys.
+Montați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite procesulu
+i de instalare să utilizeze informația oferită de kernel, chiar și în mediul
+ chroot, și apoi montați prin legătură sistemele de fișiere /dev și /sys.
  
 \begin_inset Newline newline
 \end_inset
@@ -13576,7 +13578,7 @@ Mount-ați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite
 \begin_layout Plain Layout
 
 \color magenta
-Mount-area sistemului de fișiere
+Montarea sistemului de fișiere
 \end_layout
 
 \end_inset
@@ -13637,7 +13639,7 @@ Intrarea în noul Mediu
 \end_layout
 
 \begin_layout Standard
-Acum, că toate partițiile sunt inițializate și mediul de bază instalat,
+Acum, că toate partițiile sunt inițializate și mediul de bază este instalat,
  a venit momentul să intrăm în noul mediu prin acțiunea de chrooting în
  acesta.
  Aceasta înseamnă că ne mutăm din mediul în care a decurs instalarea (Installati
@@ -13755,13 +13757,13 @@ Acum trebuie să instalați structura Portage, o colecție de fișiere ce inform
 \end_layout
 
 \begin_layout Standard
-Noi va recomandăm să folosiți 
+Noi vă recomandăm să folosiți 
 \series bold
 emerge-webrsync.
  
 \series default
 Acesta vă va descărca ultima structură Portage (pe care Gentoo o pune la
- dispoziție zilnic) de pe un mirror (oglindă) al comunității ca apoi să
+ dispoziție zilnic) de pe un mirror (oglindă) al comunității, ca apoi să
  vi-l instaleze în sistem.
 \begin_inset Newline newline
 \end_inset
@@ -13832,7 +13834,7 @@ Opțional: Actualizarea structurii Portage
 Acum, trebuie să vă actualizați structura Portage la ultima versiune.
  emerge --sync efectuează această acțiune pentru dvs.
  El va folosi protocolul rsync pentru a face update (a aduce ultima versiune,
- a actualiza) structurii Portage pe care ați descarcat-o mai devreme folosind
+ a actualiza) structurii Portage pe care ați descărcat-o mai devreme folosind
  
 \series bold
 emerge-webrsync
@@ -13928,14 +13930,13 @@ Dacă vă aflați în spatele unui firewall ce blochează traficul rsync, puteț
 \end_layout
 
 \begin_layout Standard
-Dacă sunteți atenționat că o noua versiune Portage este disponibila ar fi
- bine să actualizați Portage.
- Aceasta fiind posibilă după rularea comenzii 
+Dacă sunteți atenționat că o noua versiune Portage este disponibilă ar fi
+ bine să actualizați Portage, aceasta se face cu ajutorul comenzii 
 \color blue
 emerge --oneshot portage
 \color inherit
 .
- De asemenea veți fi notificați despre noutățile/știrile ce trebui citite
+ De asemenea veți fi notificați despre noutățile/știrile ce trebuie citite
  (news items need reading).
  
 \end_layout
@@ -14009,7 +14010,7 @@ Portage vă va informa că noi stiri sunt disponibile
 \end_layout
 
 \begin_layout Standard
-știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
+Știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
  utilizatorii cărora le sunt trimise mesaje importante prin protocolul rsync.
  Pentru a le administra trebuie sa folosiți 
 \color blue
@@ -14240,7 +14241,7 @@ Available profile symlink targets:
 
 \begin_layout Standard
 După cum puteți vedea, sunt disponibile atât subprofile desktop cât și server
- pentru ceva arhitecturi.
+ pentru câteva arhitecturi.
 \end_layout
 
 \begin_layout Standard
@@ -14253,7 +14254,7 @@ eselect profile list
 
 \begin_layout Standard
 După ce ați văzut profilele disponibile pentru arhitectura dumneavoastră,
- puteți folosi unu dintre cele listate dacă doriți.
+ puteți folosi unul dintre cele listate dacă doriți.
 \begin_inset Newline newline
 \end_inset
 
@@ -14327,7 +14328,7 @@ non-multilib
 \begin_layout Plain Layout
 
 \color magenta
-Schimarea profilului pe non-multilib
+Schimbarea profilului pe non-multilib
 \end_layout
 
 \end_inset
@@ -14762,8 +14763,8 @@ Localizarea
 \end_layout
 
 \begin_layout Standard
-În cele din urmă selectați-vă localizarea ca sistemul dumneavoastră să știe
- unde sunteți localizat fizic.
+În cele din urmă selectați-vă localizarea pentru ca sistemul dumneavoastră
+ să știe unde sunteți localizat fizic.
  Pentru localizare (timezone) uitați-vă în 
 \series bold
 /usr/share/zoneinfo
