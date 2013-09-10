@@ -3400,7 +3400,7 @@ Configurarea Automată a Rețelei
 Dacă rețeaua nu funcționează imediat, unele medii de instalare vă permit
  să folosiți net-setup (pentru rețele obișnuite sau wireless) sau pppoe-setup
  (pentru conexiuni ADSL) sau pptp (pentru conexiuni PPTP - disponibilă doar
- pe arhitectura x86, amd64, alpha, ppc și ppc64).
+ pe arhitectura x86, amd64, alpha, ppc and ppc64).
  
 \end_layout
 

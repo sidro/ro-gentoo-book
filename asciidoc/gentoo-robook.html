@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="pentru arhitectura amd64 Instalarea Gentoo">
+<title>Manual Gentoo Linux</title>
+<link rel="stylesheet" href="./custom.css">
+</head>
+<body class="book">
+<div id="header">
+<h1>Manual Gentoo Linux</h1>
+<span id="author">v1.0, 2013-04-09</span><br>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_despre_instalarea_gentoo_linux">Despre Instalarea Gentoo Linux.</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introducere">Introducere</h3>
+<div class="paragraph indented">
+<p>Bine ați venit!</p>
+</div>
+<div class="paragraph indented">
+<p>În primul rând vă urăm, bun venit în lumea minunată Gentoo.  Sunteți
+pe cale de a descoperi lumea flexibilității și performanței. Gentoo în
+primul rând înseamnă flexibilitatea alegerii. Odată ce veți hotărî să
+instalați Gentoo Linux, procedeul de instalare vă permite o foarte
+mare flexibilitate în alegerea modalității de instalare, care poate fi
+compilarea întregului sistem de la început sau doar instalând
+binarele, aveți posibilitatea de a alege componentele de sistem cum
+sunt bootloader-ul, logger-ele etc.</p>
+</div>
+<div class="paragraph indented">
+<p>Gentoo este o metadistribuție modernă și foarte
+rapidă, ce are o structură flexibilă. Gentoo este construit în jurul
+conceptului free software și pune la dispoziția utilizatorilor toate
+resursele. Portage, sistemul de administrare al pachetelor utilizat de
+Gentoo, este scris în limbajul de programare Python, utilizatorii
+având acces la codul sursă și putând modifica sursele în funcție de
+necesitățile proprii. Sistemul de pachete Gentoo utilizează codul
+sursă al programelor (deși oferă și suport pentru binare
+precompilate), iar configurarea Gentoo se efectuează prin editarea
+directă a fișierelor de configurare (fișiere de tip text, normale). Cu
+alte cuvinte este un sistem deschis. Este foarte important să
+înțelegeți că posibilitatea de a alege fac ca Gentoo sa
+funcționeze. Noi nu vă forțăm în nimic din ceea ce vă displaceți. În
+cazul în care credeți acest lucru, va rugăm să ne scrieți un
+<a href="https://bugs.gentoo.org">bugreport</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cum este structurat procesul de instalare?</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>După pasul 1, vă aflați în mediul de lucru și sunteți pregătit
+pentru instalarea Gentoo</p>
+</li>
+<li>
+<p>După pasul 2, conexiunea la internet este pregătită pentru
+instalarea Gentoo</p>
+</li>
+<li>
+<p>După pasul 3, hard disk-ul este pregătit pentru a găzdui Gentoo</p>
+</li>
+<li>
+<p>După pasul 4, mediul de instalare este pregătit și puteți
+utiliza chroot pentru integrarea în noul mediu</p>
+</li>
+<li>
+<p>După pasul 5, pachetele de bază, ce sunt la fel pentru toate
+sistemele Gentoo, vor fi instalate</p>
+</li>
+<li>
+<p>După pasul 6, Kernel-ul Linux va fi compilat</p>
+</li>
+<li>
+<p>După pasul 7, vor fi completate majoritatea fișierelor de
+configurare Gentoo</p>
+</li>
+<li>
+<p>După pasul 8, utilitarele de sistem necesare(pe care le puteți
+alege dintr-o listă completă) sunt instalate</p>
+</li>
+<li>
+<p>După pasul 9, aplicația bootloader aleasă a fost instalată și
+configurată și sunteți log-ați în noua instalare Gentoo</p>
+</li>
+<li>
+<p>După pasul 10, noul dvs. mediu Gentoo, va fi gata de explorat</p>
+</li>
+</ul>
+</div>
+<div class="paragraph indented">
+<p>Gentoo Linux vă permite o foarte mare flexibilitate în alegere, pe
+care vom încerca să le explicam atât din punct de vedere al punctelor
+forte cât și al punctelor slabe. Vom continua cu un set de opțiuni
+implicite, identificate cu "Implicite: " în titlu.  Celelalte opțiuni
+sunt marcate cu "Alternativ: ". Să nu considerați că opțiunile
+implicite sunt cele recomandate. În orice caz, sunt ceea ce credem că
+cei mai mulți dintre utilizatori vor folosi.</p>
+</div>
+<div class="paragraph">
+<p>În anumite cazuri puteți opta pentru soluții marcate ca "Opțional: ",
+care nu sunt obligatorii în timpul instalării Gentoo. Aveți grijă la
+anumite opțiuni care pot depinde de alte opțiuni ce au fost alese sau
+ce vor depinde de anumiți pași ce vor fi executați în prealabil sau
+după alegerea opțiunii și pe care îi vom menționa în documentația de
+față.</p>
+</div>
+<div class="paragraph">
+<p>Care sunt opțiunile?</p>
+</div>
+<div class="paragraph">
+<p>Gentoo Poate fi instalat în diferite moduri. Aveți posibilitatea de a
+descărca și instala Gentoo Linux de pe unul din mediile de instalare
+CD disponibile, de pe un alt CD boot-abil (cum este Knoppix), boot-ând
+din rețea, de pe o dischetă rescue etc.</p>
+</div>
+<div class="paragraph">
+<p>Acest document acoperă modalitatea de instalare utilizând un mediu de
+instalare CD Gentoo sau în unele cazuri bootarea din rețea. Această
+modalitate de instalare presupune că doriți să instalați ultima
+versiune a fiecărui pachet. Dacă doriți să efectuați o instalare fără
+rețea, va trebui să consultați
+<a href="http://www.gentoo.org/doc/en/handbook/">Manualele Gentoo</a> ce conțin
+instrucțiunile de instalare pentru un mediu fără rețea.</p>
+</div>
+<div class="paragraph">
+<p>Nota: Pentru o instalare de pe un alt CD decât cel oficial, incluzând
+discuri optice non-Gentoo, va rugam sa citiți ghidul de instalare
+alternativa.</p>
+</div>
+<div class="paragraph">
+<p>Dacă doriți o instalare din rețea, ar trebui sa citiți
+<a href="http://www.gentoo.org/doc/en/handbook/">Manualele Gentoo</a> , ce conțin
+pașii de instalare dintr-o rețea.</p>
+</div>
+<div class="paragraph">
+<p>De asemenea, notați faptul că dacă doriți să utilizați GRP (Gentoo
+Reference Platform, o colecție de pachete precompilate destinate
+utilizării imediate după o instalare Gentoo), trebuie să urmați
+instrucțiunile din <a href="http://www.gentoo.org/doc/en/handbook/">Manualele
+Gentoo</a>.</p>
+</div>
+<div class="paragraph">
+<p>Pentru instrucțiuni despre alte metode de instalare, vă rugăm să
+consultați <a href="http://www.gentoo.org/doc/en/altinstall.xml">Ghidul de
+Instalare Alternativă</a>.  De asemenea, vă oferim un document cu
+<a href="http://www.gentoo.org/doc/ro/gentoo-x86-tipsntricks.xml">Sfaturi și
+Trucuri pentru Instalarea Gentoo</a> care vă poate fi de folos, de
+asemenea. În cazul în care considerați că instrucțiunile de instalare
+curente sunt prea elaborate, puteți utiliza Ghidul de Instalare Rapid,
+disponibil pe pagina noastră de
+<a href="http://www.gentoo.org/doc/en/index.xml?style=printable">Resurse de
+Documentare</a>, dacă arhitectura dumnevoastră dispune de un asemenea
+document.</p>
+</div>
+<div class="paragraph">
+<p>De asemenea aveți mai multe posibilități: puteți compila întregul
+sistem de la bază sau a utiliza un mediu precompilat care permite o
+instalare foarte rapidă. și desigur puteți utiliza metoda de instalare
+intermediară unde nu este necesară compilarea întregului sistem ci
+doar a unei părți din sistemul de bază care vine semi-precompilat.</p>
+</div>
+<div class="paragraph">
+<p>Probleme?</p>
+</div>
+<div class="paragraph">
+<p>Dacă ați găsit o eroare sau neconcordanță în procesul de instalare
+(sau documentația de instalare) vă rugăm să vizitați
+<a href="http://bugs.gentoo.org">sistemul de urmărire al bug-urilor</a> și
+verificați dacă eroarea descoperită de către dumneavoastră este
+cunoscută. Dacă nu a fost semnalată creați un bugraport pentru a
+permite corectarea erorilor într-un timp cat mai scurt.  Nu vă temeți
+de dezvoltatorii cărora le atribuiți bug-urile (semnalate de dvs)&#8201;&#8212;&#8201;în general ei nu mănâncă oameni.</p>
+</div>
+<div class="paragraph">
+<p>Notați că, deși documentul pe care îl citiți acum este specific
+arhitecturii, va conține referințe și către alte arhitecturi, de
+asemenea. Aceasta se întâmplă deoarece multe părți ale Manualului
+Gentoo utilizează cod sursă ce este comun pentru toate arhitecturile
+(pentru a evita multiplicarea eforturilor și irosirea resurselor de
+dezvoltare). Vom încerca să minimizăm aceste informații pentru a evita
+confuzia.</p>
+</div>
+<div class="paragraph">
+<p>Dacă pe parcursul procesului de instalare întâmpinați greutăți și nu
+sunteți sigur de natura problemei care poate fi problemă-utilizator
+sau problemă-software și răspunsul nu-l puteți găsi în documentația de
+față sunteți invitați să va alătura la canalul de discuții oficial
+gentoo join #gentoo de pe irc.freenode.net unde cu siguranța veți
+putea găsi răspuns la problemele și întrebările ce vă
+interesează. Bineînțeles, sunteți binevenit și în alte situații</p>
+</div>
+<div class="paragraph">
+<p>Dacă aveți întrebări referitoare la Gentoo, vizitați
+<a href="http://www.gentoo.org/doc/ro/faq.xml">Întrebări frecvente despre Gentoo
+Linux</a> , pe care le puteți găsi la
+<a href="http://www.gentoo.org/doc/ro/">Documentații Gentoo</a>. De asemenea puteți
+consulta <a href="http://www.gentoo.org/doc/ro/faq.xml">FAQs</a> de pe
+<a href="http://forums.gentoo.org">forumuri</a>.</p>
+</div>
+<div class="paragraph">
+<p>Alegerea Mediului de Instalare Corect</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_necesit_i_hardware">Necesități Hardware</h3>
+<div class="paragraph">
+<p>Introducere</p>
+</div>
+<div class="paragraph">
+<p>Înainte de a începe, avem nevoie să cunoaștem componentele hardware ce
+sunt suportate de Gentoo Linux pentru o instalare reușită.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<caption class="title">Table 1. Necesități Hardware</caption>
+<colgroup>
+<col style="width:50%;">
+<col style="width:50%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Procesor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AMD64 sau ulterior</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Memorie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 MOcteți</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spațiu pe disc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5 GOcteți (excluzând spațiul swap)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spațiu swap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cel puțin 512 MOcteți</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Ar trebui să verificați
+<a href="http://www.gentoo.org/proj/en/base/amd64/?style=printable">Gentoo
+AMD64 Project Page</a> înainte să începeți.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_mediile_gentoo_installation_cd">Mediile Gentoo Installation CD</h3>
+<div class="paragraph">
+<p>Mediile Gentoo Installation CD sunt boot-abile și conțin mediu Gentoo
+complet funcțional. Acestea vă permit să boot-ați de pe CD. În timpul
+procesului de boot-are, sistemul va încerca identificarea tuturor
+componentelor hardware și instalarea driverelor specifice. Mentenanța
+acestora este efectuată de către dezvoltatorii Gentoo.</p>
+</div>
+<div class="paragraph">
+<p>Toate mediile Installation CD vă permit să boot-ați, să puteți
+configura rețeaua, inițializa partiție și începe instalarea Gentoo de
+pe Internet.</p>
+</div>
+<div class="paragraph">
+<p>Mediul Gentoo Installation CD Minimal</p>
+</div>
+<div class="paragraph">
+<p>Mediul Installation CD Minimal este denumit
+install-amd64-minimal-&lt;release&gt;.iso și ocupă numai 200 MOcteți de
+spațiu pe disc. Puteți utiliza acest mediu Installation CD pentru a
+instala Gentoo, dar întotdeauna cu o conexiune la Internet activă.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:50%;">
+<col style="width:50%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediul Installation CD Minimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pro și Contra</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ușor de descărcat din cauza dimensiunilor reduse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nu conține arhiva <code>stage3</code>, versiunea snapshot pentru Portage,
+pachetele necesare pentru instalarea GRP, de aceea nu există
+posibilitatea instalării fără conexiune la internet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Mediul Gentoo Installer LiveDVD</p>
+</div>
+<div class="paragraph">
+<p>Puteți utiliza acest mediu Installation DVD pentru a instala Gentoo,
+și chiar pentru a instala Gentoo fără a avea o conexiune activă la
+Internet, doar în cazul în care doriți să aduceți Gentoo pe un alt PC
+decât cel pe care instalați Gentoo. La aproximativ fiecare 6 luni
+Comunitatea Gentoo pune la dispoziție o imagine DVD a sistemului de
+operare Gentoo ce poate fi instalata și ea pe hard
+disk. Instrucțiunile de instalare pot fi puțin diferite deoarece acest
+manual are ca scop instalarea de pe mediul Gentoo Instalation CD
+Minimal. În orice caz puteți să ajungeți în contul root invocând sudo
+su sau sudo -i în terminal.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:50%;">
+<col style="width:50%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediul Installer LiveCD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pro și Contra</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conține toate pachetele necesare pentru o funcționare completă a
+sistemului. Facilitează instalarea Gentoo Linux fără suport
+pentru rețea.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mult de descărcat</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Arhiva Tar Stage3</p>
+</div>
+<div class="paragraph">
+<p>Un fișier <code>tar</code> <code>stage3</code> este o arhivă ce conține un mediul minimal
+Gentoo, potrivit pentru a continua instalarea Gentoo utilizând
+instrucțiunile din acest manual. Anterior, Manual Gentoo descria
+instalarea utilizând una din cele 3 arhive <code>tar</code> <code>stage</code>. În timp ce
+Gentoo încă mai oferă arhivele <code>tar</code> <code>stage1</code> și <code>stage2</code>, modalitatea
+de instalare oficială utilizează o arhivă <code>tar</code> <code>stage3</code>. Dacă sunteți
+interesat să utilizați un fișier <code>tar</code> <code>stage1</code> sau <code>stage2</code>, vă rugăm
+să consultați documentul cu Întrebări Frecvente în Gentoo, secțiunea
+<a href="http://www.gentoo.org/doc/en/faq.xml?style=printable#stage12">Cum
+Instalez Gentoo Utilizând O Arhivă Tar Stage1 sau Stage2?</a></p>
+</div>
+<div class="paragraph">
+<p>Arhivele <code>stage3</code> pot fi descărcate din directorul
+<code>releases/amd64/autobuilds/current-stage3/</code> de pe oricare din
+<a href="http://www.gentoo.org/main/en/mirrors.xml?style=printable">Mirror-urile
+Oficiale Gentoo</a> si nu sunt oferite pe mediul LiveCD.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_desc_rcarea_scrierea_i_bootarea_unui_mediu_installation_cd">Descărcarea, Scrierea și Bootarea unui Mediu Installation CD</h3>
+<div class="paragraph">
+<p>Descărcarea și Scrierea Mediului Installation CD</p>
+</div>
+<div class="paragraph">
+<p>Ați ales instalarea Gentoo utilizând un mediu Installation CD.  Vom
+începe prin a descărca și a scrie mediul Installation CD ales. Am
+tratat anterior mediile Installation CD disponibile, dar de unde le
+putem descărca?</p>
+</div>
+<div class="paragraph">
+<p>Puteți descărca unul din mediile Installation CD disponibile (și dacă
+doriți, Packages CD, de asemenea) de pe unul din site-urile
+mirror. Mediile Installation CD se găsesc în directorul
+<code>releases/amd64/autobuilds/current-iso</code>.</p>
+</div>
+<div class="paragraph">
+<p>În director veți găsi fișierele cu extensia ISO. Aceste fișiere sunt
+imagini exacte ale CD-urilor originale și care pot fi scrise pe
+DVD-R(W)/DVD+R(W), CD-R(W).</p>
+</div>
+<div class="paragraph">
+<p>În caz că vă întrebați dacă fișierul descărcat este corupt sau nu, îi
+puteți verifica suma de control SHA-2 oferită de noi (cum ar fi
+install-amd64-minimal-&lt;release&gt;.iso.DIGESTS). Puteți verifica suma de
+control SHA-2 utilizând utilitarul sha512sum pentru Linux/Unix, sau
+File Checksum Tool pentru Windows.</p>
+</div>
+<div class="paragraph">
+<p>O altă metodă de verificare a integrității imaginii LiveCD-ului
+descărcat, este utilizarea GnuPG pentru verificarea semnăturii
+criptografice ce v-o oferim (fișierul ce are terminația .asc).
+Descărcați fișierul ce conține semnătura și obțineți cheia publică.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+
+Substitute the key ids with those mentioned on the release
+engineering site)
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Obținerea cheii publice</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># gpg --keyserver subkeys.pgp.net --recv-keys 96D8BF6D 2D182910 17072058</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Verificarea semnăturii criptografice</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># gpg --verify &lt;fișierul cu semnătura&gt; &lt;fișierul iso descărcat&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pentru a scrie imaginile ISO pe CD-uri trebuie să selectați
+raw-burning. Felul cum activați această opțiune este dependent foarte
+mult de platformă. Vom trata aici cdrecord și K3B; pentru mai multe
+informații consultați documentul despre
+<a href="http://www.gentoo.org/doc/ro/faq.xml#isoburning">Întrebări Frecvente
+despre Gentoo</a>.</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Pentru cdrecord, trebuie doar să tastați cdrecord dev=/dev/sr0
+&lt;fișierul iso descărcat&gt; (înlocuiți /dev/sr0 cu calea către
+unitatea dvs. CD-RW)</p>
+</li>
+<li>
+<p>Pentru cdrecord, trebuie doar să tastați cdrecord dev=/dev/sr0
+&lt;fișierul iso descărcat&gt; (înlocuiți /dev/sr0 cu calea către
+unitatea dvs. CD-RW)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Boot-area Mediului Installation CD</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+
+Consultați cu atenție întreaga subsecțiune înainte de a
+continua, pentru că, probabil nu veți mai avea această posibilitate
+înainte de a continua ulterior.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>După ce ați scris mediul Installation CD a venit timpul să
+boot-ăm. Scoateți CD-ul (dacă este prezent) din unitatea CD-ROM,
+reporniți PC-ul și intrați în BIOS. Această operație se poate efectua
+apăsând una din tastele DEL, F1 sau ESC, depinzând de producătorul
+BIOS-ului instalat. În meniul din BIOS schimbați ordinea boot-ării
+unităților de disc, și anume setați CD-ROM-ul ca primul disc de pe
+care să se înceapă citirea inițializării sistemului de operare. În
+majoritatea cazurilor submeniul pentru schimbarea ordinii de boot se
+poate găsi în meniul "CMOS Setup" Dacă nu activați opțiunea de boot de
+pe CD-ROM după inițializarea BIOS-ului, PC-ul va încărca sistemul de
+operare de pe hard-disc ignorând CD-ROM-ul.</p>
+</div>
+<div class="paragraph">
+<p>Introduceți DVD/CD-ul în unitatea CD-ROM și reporniți PC-ul. După ce
+CD-ul a inițiat procedura de boot va apărea un prompt de boot.
+Apăsând tasta Enter procesul de boot a CD-ului va continua cu
+opțiunile prestabilite pentru inițializarea sistemului, sau puteți
+boot-a mediul Installation CD cu opțiuni suplimentare prin
+specificarea unei imagini de kernel, urmată de opțiuni de boot și apoi
+apăsarea Enter.</p>
+</div>
+<div class="paragraph">
+<p>Specificarea Kernel-ului? Mediul Installation CD vă oferă mai multe
+imagini de kernel. Kernel-ul implicit este gentoo. Alte imagini de
+kernel sunt specifice unor anume necesități hardware și variantele
+-nofb ce dezactivează opțiunea framebuffer.</p>
+</div>
+<div class="paragraph">
+<p>În continuare veți regăsi o prezentare scurtă a imaginilor de kernel
+disponibile:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:50%;">
+<col style="width:50%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kernel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Descriere</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gentoo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kernel implicit cu suport pentru sisteme multiprocesor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gentoo-nofb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La fel ca și în cazul gentoo, dar fără suport pentru framebuffer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memtest86</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Va încărca utilitarul pentru testarea memoriei RAM de erori</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Puteți utiliza și opțiuni de kernel. Ele reprezintă setări opționale
+ce le puteți (dez)activa în funcție de necesități.  Lista de opțiuni
+prezentată mai jos va apare la apăsarea tastei F2 în bootscreen.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:50%;">
+<col style="width:50%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acpi=on</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Încarcă suportul pentru ACPI și de asemenea pornește daemon-ul la
+boot când rulam de pe CD. Aveți nevoie de acesta doar dacă sistemul
+dumneavoastră are nevoie de ACPI pentru a funcționa.  Acesta nu este
+necesar pentru suportul Hyperthreading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acpi=off</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează suportul ACPI. Acesta este necesar pentru hardware mai
+vechi și este imperios necesar să folosim APM. Acest parametru
+(opțiune) va dezactiva suportul Hyperthreading din procesorul
+dumneavoastră.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">console=X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aceasta stabilește modul de accesare a CD-ului. Prima opțiune este
+dispozitivul, cel mai frecvent ttyS0 pe arhitectura x86, urmat de
+orice tip de conexiune, care sunt separate prin virgula.  Opțiunile
+inițiale sunt 9600,8,n,1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dmraid=X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vă permite să trimiteți spre sistemul device-mapper RAID o
+opțiune. Aceasta opțiune trebuie sa fie scrisă intre ghilimele.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">doapm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Încarcă modulul APM. De asemenea este nevoie sa dezactivați acpi în
+cazul în care folosiți aceasta opțiune.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dopcmcia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pornește serviciul pcmcia pentru dispozitivele cdroms PCMCIA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">doscsi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Încarcă suportul pentru controlere SCSI. De asemenea este necesar
+pentru a putea boota majoritatea deviceurilor USB.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sda=stroke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vă permite să partiționați întregul harddisk, chiar și atunci când
+BIOS-ul nu poate manipula discuri mari.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ide=nodma</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forțează dezactivarea DMA pentru dispozitivele IDE cu probleme de
+funcționare</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noapic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează apic (Advanced Programmable Interrupt Controller) acesta
+fiind prezent în plăcile de bază noi. Este cunoscut faptul că poate
+provoca probleme pe hardware vechi.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodetect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează întreaga autodetectare realizată de CD, inclusiv
+autodetectarea și probarea DHCP. Această opțiune este bună în cazul în
+care facem debugging în cazul unui driver cu probleme sau a unui CD.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodhcp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează DHCP pentru rețelele detectate. Este folositoare în
+cazul rețelelor cu adresa ip statică.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodmraid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează suportul pentru RAID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nofirewire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează încărcarea modulelor Firewire. Este necesară în cazul în
+care hardwareul Fireware vă creează probleme atunci când bootați de pe
+CD.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nogpm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează suportul pentru mouse în consola (tty).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nohotplug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează încarcarea scripturilor de inițializare hotplug și
+coldplug. Această opțiune este bună în cazul în care facem debugging
+în cazul unui driver cu probleme sau a unui CD.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nokeymap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează selecția definițiilor de taste pentru tastaturile cu
+dispunere non-us.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nolapic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează APIC din kernel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nosata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează încărcarea modulului disponibil pentru Serial ATA.  Este
+folositoare atunci când avem probleme cu sistemul SATA.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nosmp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează SMP, sau Symmetric Multiprocessing, pentru kernelurile
+cu suport SMP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nosound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează suportul pentru sunet și setările pentru volum. Este
+folositoare atunci când hardwareul pentru sunet cauzeaza probleme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nousb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dezactivează încărcarea modulului usb din initrd, dezactivează
+hotplug.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slowusb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adauga pauze mai lungi în procesul de bootare pentru unitati optice
+pe usb (USB CDROMs).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Acum boot-ați de pe CD, selectați un kernel (dacă nu sunteți mulțumit
+de imaginea gentoo implicită) cu opțiunile dorite. În exemplul de mai
+jos, vă prezentăm modalitatea de a boot-a imaginea de kernel gentoo cu
+<code>dopcmcia</code> ca parametri:</p>
+</div>
+<div class="paragraph">
+<p>[source,bash]w
+.Boot-area mediului Installation CD</p>
+</div>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre># boot: gentoo dopcmcia</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Apoi, veți observa imaginea de boot și bara de progres. Dacă instalați
+Gentoo pe un sistem cu o tastatură non-US, apăsați imediat Alt+F1
+pentru a comuta in modul informativ și urmați promptul. Dacă nu se
+efectuează nici o selecție în 10 secunde, cea implicită (tastatura US)
+va fi luată in considerare și procesul de boot va continua. Odată ce
+procesul de boot a fost finalizat veți fi logat în mediul "Live" al
+Gentoo Linux ca "root", modul super user. În consola curentă puteți
+observa promptul root ("#") și puteți comuta între alte console
+utilizând combinațiile de taste <code>Alt-F2</code>, <code>Alt-F3</code> și <code>Alt-F4</code>. Pentru
+a reveni la consola inițială utilizați combinația de taste <code>Alt-F1</code>.</p>
+</div>
+<div class="paragraph">
+<p>Acum, continuați cu Configurarea Suplimentară pentru Componentele
+Hardware.</p>
+</div>
+<div class="paragraph">
+<p>Configurarea Suplimentară pentru Componentele Hardware</p>
+</div>
+<div class="paragraph">
+<p>Mediul Gentoo Installation CD, în timp ce boot-ează, încearcă să
+identifice automat toate componentele hardware din sistem și încarcă
+modulele de kernel ce fac posibilă accesarea acestor resurse
+hardware. Dar, sunt și cazuri când încărcarea automată nu este
+efectuată pentru modulele necesare. În cazul în care autodetectarea
+componentelor PCI a eșuat în cazul unor componente ale sistemului
+dvs., vor trebui încărcate manual modulele de kernel necesare. În
+următorul exemplu vom încerca încărcarea modulului 8139too (ce oferă
+suport pentru un anumit tip de plăci de rețea):</p>
+</div>
+<div class="listingblock">
+<div class="title">Încărcarea modulelor de kernel</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># modprobe 8139too</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dacă aveți nevoie de suport PCMCIA, va trebui să porniți
+script-ul de inițializare pcmcia:</p>
+</div>
+<div class="listingblock">
+<div class="title">Pornirea script-ului de inițializare PCMCIA</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># /etc/init.d/pcmcia start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Opțional: Optimizarea Performanțelor Hard-Disk-ului</p>
+</div>
+<div class="paragraph">
+<p>Dacă sunteți un utilizator avansat, puteți optimiza performanța
+hard-disk-ului, utilizând hdparm. În combinație cu opțiunile -tT
+puteți testa performanțele hard discului (executați testul de mai
+multe ori pentru a avea o imagine cât mai precisă a vitezei
+HDD-ului).</p>
+</div>
+<div class="listingblock">
+<div class="title">Testarea peformanței discului</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># hdparm -tT /dev/sda</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pentru optimizare, puteți utiliza oricare din exemplele de mai
+jos (sau experimenta cu propriile optimizări) ce utilizează
+<code>/dev/hda</code> ca disc (substituiți cu discul dvs.):</p>
+</div>
+<div class="paragraph">
+<p>Optimizarea performanței hard-disk-ului.</p>
+</div>
+<div class="listingblock">
+<div class="title">Activarea DMA:</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># hdparm -d 1 /dev/hda</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Opțiuni sigure de creștere a performaței:</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># hdparm -d 1 -A 1 -m 16 -u 1 -a 64 /dev/hda</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Opțional: Conturi de Utilizator</p>
+</div>
+<div class="paragraph">
+<p>Dacă doriți să permiteți accesul utilizatorilor externi la mediul
+de instalare Gentoo Linux, sau utilizați chat-ul irssi fără
+drepturi de root (pentru un nivel mai ridicat al securității),
+trebuie să creați utilizatori separați și este necesară
+modificarea parolei de root.</p>
+</div>
+<div class="paragraph">
+<p>Pentru a schimba parola root, rulați utilitarul passwd.</p>
+</div>
+<div class="listingblock">
+<div class="title">Schimbarea parolei de root</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># passwd
+  New password: (Enter your new password)
+  Re-enter password: (Re-enter your password)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pentru crearea unui nou cont de utilizator trebuie să introducem
+denumirea contului și parola ce va fi asociată contului nou
+creat. Pentru aceasta vom utiliza comenzile useradd și passwd. În
+exemplu de mai jos vom crea un user numit "john".</p>
+</div>
+<div class="listingblock">
+<div class="title">Crearea unui cont de utilizator</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># useradd -m -G users john
+# passwd john
+  New password: (Enter john's password)
+  Re-enter password: (Re-enter john's password)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Puteți efectua login în noul cont creat din root, utilizând comanda
+su:</p>
+</div>
+<div class="listingblock">
+<div class="title">Comutarea la alt utilizator</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># su - john</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Opțional: Vizualizarea Documentației în Timpul Instalării</p>
+</div>
+<div class="paragraph">
+<p>Dacă doriți consultarea documentației de pe CD, puteți rula imediat
+aplicația links ce vă permite vizualizarea documentației:</p>
+</div>
+<div class="listingblock">
+<div class="title">Vizualizarea documentației de pe CD</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># links /mnt/cdrom/docs/html/index.html</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Totuși, este recomandat să utilizați Manualul Gentoo aflat online,
+deoarece este mult mai recent decât cel oferit pe CD.  Puteți utiliza,
+de asemenea, aplicația links, dar numai după ce ați terminat capitolul
+despre Configurarea Rețelei (în caz contrar nu veți putea accesa
+internetul pentru a putea consulta online Manualul Gentoo).</p>
+</div>
+<div class="listingblock">
+<div class="title">Accesarea Documentației Online</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># links http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Puteți reveni la terminalul inițial apăsând combinația de taste
+<code>Alt-F1</code>.</p>
+</div>
+<div class="paragraph">
+<p>Opțional: Pornirea Serviciului SSH</p>
+</div>
+<div class="paragraph">
+<p>Dacă vreți ca alți utilizatori să poată accesa procesul de instalare
+Gentoo Linux (posibil, ca să vă ajute să instalați Gentoo, sau chiar
+să îl instaleze pentru dvs.), va trebui să le creați conturi de
+utilizator sau chiar sa le oferiți parola de root (doar dacă aveți
+încredere deplină în acel utilizator).</p>
+</div>
+<div class="paragraph">
+<p>Pentru a inițializa serviciul SSH, executați comanda de mai jos:</p>
+</div>
+<div class="listingblock">
+<div class="title">Pornirea serviciului SSH</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># /etc/init.d/sshd start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pentru a putea utiliza serviciul ssh trebuie configurat accesul la
+rețea. Continuați cu capitolul despre Configurarea Rețelei.</p>
+</div>
+<div class="paragraph">
+<p>Configurarea rețelei</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_detectarea_automat_a_re_elei">Detectarea Automată a Rețelei</h3>
+<div class="paragraph">
+<p>Poate funcționa pur și simplu?</p>
+</div>
+<div class="paragraph">
+<p>Dacă sistemul dumneavoastră este conectat la o rețea deservită de un
+server DHCP, este foarte probabil ca suportul de rețea să fie deja
+configurat automat. Dacă este așa, puteți beneficia de avantajul
+comenzilor incluse pe mediul Installation CD cum ar fi ssh, scp, ping,
+irssi, wget și links, alături de altele.</p>
+</div>
+<div class="paragraph">
+<p>Dacă rețeaua a fost configurată automat, comanda /sbin/ifconfig ar
+trebui să afișeze informații despre alte câteva interfețe în afara lo,
+cum ar fi eth0:</p>
+</div>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash"># /sbin/ifconfig
+ eth0  Link encap:Ethernet HWaddr 00:50:BA:8F:61:7A
+       inet addr:192.168.0.2 Bcast:192.168.0.255 Mask:255.255.255.0
+       inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
+       UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+       RX packets:1498792 errors:0 dropped:0 overruns:0 frame:0
+       TX packets:1284980 errors:0 dropped:0 overruns:0 carrier:0
+       collisions:1984 txqueuelen:100
+       RX bytes:485691215 (463.1 Mb) TX bytes:123951388 (118.2 Mb)
+       Interrupt:11 Base address:0xe800</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Opțional: Configurare Proxy</p>
+</div>
+<div class="paragraph">
+<p>Dacă aveți acces la Internet prin intermediul unui proxy, va trebui să
+setați informațiile necesare în timpul instalării. Este foarte ușor să
+specificați folosirea unui proxy: trebuie doar să definiți o variabilă
+ce conține informațiile despre serverul folosit.</p>
+</div>
+<div class="paragraph">
+<p>În majoritatea cazurilor, este suficient să definiți variabilele
+folosind adresa serverului proxy. Ca exemplu, vom presupune că aceasta
+este proxy.gentoo.org și portul este 8080.</p>
+</div>
+<div class="paragraph">
+<p>Definirea serverelor proxy</p>
+</div>
+<div class="literalblock">
+
+<div class="content monospaced">
+<pre>(Pentru traficul HTTP)  # export http_proxy="http://proxy.gentoo.org:8080"
+(Pentru traficul FTP)   # export ftp_proxy="ftp://proxy.gentoo.org:8080"
+(Pentru traficul RSYNC) # export RSYNC_PROXY="proxy.gentoo.org:8080"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dacă serverul proxy folosit necesită autentificare cu nume și parolă,
+trebuie să folosiți următoarea sintaxă pentru definirea variabilelor:</p>
+</div>
+<div class="literalblock">
+
+<div class="content monospaced">
+<pre>Adăugarea nume/parolă la variabilele ce definesc proxy
+
+http://username:password@server</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>În funcție de mediul de pe care ați ales să instalați Gentoo puteți
+continua sau nu fără rețea (și acces Internet).</p>
+</div>
+<div class="paragraph">
+<p>În general aveți nevoie de a configura rețeaua (și accesul la
+Internet). Totuși, Gentoo vă permite și instalarea fără o conexiune la
+Internet, acest lucru fiind posibil numai cu ajutorul LiveCD-urilor
+Gentoo Universal.</p>
+</div>
+<div class="paragraph">
+<p>De ce am nevoie de rețea?</p>
+</div>
+<div class="paragraph">
+<p>Instalând Gentoo de pe Internet veți avea toate actualizările la
+zi. Veți avea o instalarea bazată pe cel mai recent Portage (care este
+o colecție de pachete furnizate împreună cu instrumentele necesare
+administrării lor). Acesta este de altfel motivul pentru care
+instalarea de pe Internet este preferată. Totuși, unele persoane nu
+pot sau nu vor să instaleze Gentoo pe un sistem conectat la Internet.</p>
+</div>
+<div class="paragraph">
+<p>Dacă sunteți în această situație atunci sunteți nevoiți să folosiți
+LiveCD-urile Gentoo Universal. Acest LiveCD include cod sursă, o
+versiune completă a Portage și instrumentele necesare instalării unui
+sistem de bază Gentoo, și chiar mai mult. Această metodă are însă
+prețul ei: nu veți avea ultimele versiuni ale programelor instalate,
+deși diferențele vor fi minime.</p>
+</div>
+<div class="paragraph">
+<p>Dacă vreți să urmați instalarea fără a fi conectați la internet și
+doriți să folosiți un CD Universal Gentoo LiveCD, săriți peste restul
+acestui capitol și continuați cu Pregătirea Discurilor.  Altfel,
+continuați cu secțiunile despre configurarea suportului de rețea ce
+urmează.</p>
+</div>
+<div class="paragraph">
+<p>Testarea rețelei</p>
+</div>
+<div class="paragraph">
+<p>Ați putea încerca să dați ping în serverele de nume ale provider-ului
+dumneavoastră (cele scrise în /etc/resolv.conf) și apoi într-un site
+la alegere, doar pentru a vă asigura că pachetele dumneavoastră ajung
+pe internet și rezolvarea numelor funcționează corect, etc.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemplu de testare a rețelei</div>
+<div class="content monospaced">
+<pre class="highlight"><code class="bash language-bash">$ ping -c 3 www.yahoo.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dacă puteți utiliza, acum, rețeaua, puteți sări peste restul acestei
+secțiuni și continua cu Pregătirea Discurilor. Dacă nu, citiți mai
+departe.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_configurarea_automat_a_re_elei">Configurarea Automată a Rețelei</h3>
+<div class="paragraph">
+<p>Dacă rețeaua nu funcționează imediat, unele medii de instalare vă
+permit să folosiți net-setup (pentru rețele obișnuite sau wireless)
+sau adsl-setup (pentru conexiuni ADSL) sau pptp (pentru conexiuni PPTP
+- disponibilă doar pe arhitectura x86).</p>
+</div>
+<div class="paragraph">
+<p>Dacă suportul dumneavoastră de instalare nu conține nici un astfel de
+instrument sau rețeaua nu funcționează încă, continuați cu
+Configurarea Manuală a Rețelei.</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Pentru conexiuni obișnuite continuați cu Implicit: Folosirea
+net-setup</p>
+</li>
+<li>
+<p>Pentru conexiuni ADSL continuați cu Alternativ: Folosirea
+RP-PPPoE</p>
+</li>
+<li>
+<p>Pentru conexiuni PPTP continuați cu Alternativ: Folosirea PPTP</p>
+<div class="literalblock">
+
+<div class="content monospaced">
+<pre>Implicit: Folosirea net-setup</pre>
+</div>
+</div>
+
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cea mai simplă cale de a configura rețeaua dacă aceasta nu s-a
+efectuat în mod automat este să rulați scriptul net-setup:</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2013-08-27 14:22:57 EEST
+</div>
+</div>
+</body>
+</html>
