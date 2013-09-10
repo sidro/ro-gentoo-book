@@ -116,7 +116,7 @@ Mihai Tene - Translator
 \begin_inset Newline newline
 \end_inset
 
-Alin Dobre - Translator(documenație versiuni intermediare)
+Alin Dobre - Translator (documenație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
@@ -805,7 +805,7 @@ Spațiu pe disc
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.5 GOcteți (excluzând spațiul swap) 
+5 GOcteți (excluzând spațiul swap) 
 \end_layout
 
 \end_inset
@@ -827,7 +827,7 @@ Spațiu swap
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cel puțin 512 MOcteți
+Cel puțin 1024 MOcteți
 \end_layout
 
 \end_inset
@@ -861,11 +861,11 @@ Mediile Gentoo Installation CD
 \end_layout
 
 \begin_layout Standard
-Mediile Gentoo Installation CD sunt boot-abile și conțin mediu Gentoo complet
- funcțional.
- Acestea vă permit să boot-ați de pe CD.
- În timpul procesului de boot-are, sistemul va încerca identificarea tuturor
- componentelor hardware și instalarea driverelor specifice.
+Mediile Gentoo Installation CD sunt încărcabile (boot-abile) și conțin mediu
+ Gentoo complet funcțional.
+ Acestea vă permit să încărcați (boot-ați) de pe CD.
+ În timpul procesului de încărcare (boot-are), sistemul va încerca identificarea
+ tuturor componentelor hardware și instalarea driverelor specifice.
  Mentenanța acestora este efectuată de către dezvoltatorii Gentoo.
  
 \end_layout
@@ -883,7 +883,10 @@ Mediul Gentoo Installation CD Minimal
 \end_layout
 
 \begin_layout Standard
-Mediul Installation CD Minimal este denumit install-amd64-minimal-<release>.iso
+Mediul Installation CD Minimal este denumit 
+\series bold
+install-amd64-minimal-<release>.iso
+\series default
  și ocupă numai 200 MOcteți de spațiu pe disc.
  Puteți utiliza acest mediu Installation CD pentru a instala Gentoo, dar
  întotdeauna cu o conexiune la Internet activă.
@@ -939,7 +942,7 @@ Pro și Contra
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ușor de descărcat din cauza dimensiunilor reduse
+Ușor de descărcat din cauza dimensiunilor reduse.
 \end_layout
 
 \end_inset
@@ -963,7 +966,7 @@ Ușor de descărcat din cauza dimensiunilor reduse
 \begin_layout Plain Layout
 Nu conține arhiva stage3, versiunea snapshot pentru Portage, pachetele necesare
  pentru instalarea GRP, de aceea nu există posibilitatea instalării fără
- conexiune la internet 
+ conexiune la internet.
 \end_layout
 
 \end_inset
@@ -988,16 +991,21 @@ Mediul Gentoo Installer LiveDVD
 
 \begin_layout Standard
 Puteți utiliza acest mediu Installation DVD pentru a instala Gentoo, și
- chiar pentru a instala Gentoo fără a avea o conexiune activă la Internet,
- doar în cazul în care doriți să aduceți Gentoo pe un alt PC decât cel pe
- care instalați Gentoo.
- La aproximativ fiecare 6 luni Comunitatea Gentoo pune la dispoziție o imagine
- DVD a sistemului de operare Gentoo ce poate fi instalata și ea pe hard
+ chiar pentru a instala Gentoo fără a avea o conexiune activă la Internet.
+ La aproximativ șase luni Comunitatea Gentoo pune la dispoziție o imagine
+ DVD a sistemului de operare Gentoo ce poate fi instalată și ea pe hard
  disk.
  Instrucțiunile de instalare pot fi puțin diferite deoarece acest manual
  are ca scop instalarea de pe mediul Gentoo Installation CD Minimal.
- În orice caz puteți să ajungeți în contul root invocând sudo su sau sudo
- -i în terminal.
+ În orice caz puteți să ajungeți în contul root invocând 
+\color blue
+sudo
+\color inherit
+ su sau 
+\color blue
+sudo -i
+\color inherit
+ în terminal.
 \end_layout
 
 \begin_layout Subsection*
@@ -1013,7 +1021,7 @@ Puteți utiliza acest mediu Installation DVD pentru a instala Gentoo, și
 \begin_layout Plain Layout
 
 \series bold
-Mediul Installer LiveCD
+Mediul Installer LiveDVD
 \end_layout
 
 \end_inset
@@ -1070,7 +1078,8 @@ Conține toate pachetele necesare pentru o funcționare completă a sistemului.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Mult de descărcat 
+Mult de descărcat.
+ 
 \end_layout
 
 \end_inset
@@ -1090,15 +1099,15 @@ Mult de descărcat
 \begin_layout Subsection*
 
 \size large
-Arhiva Tar Stage3
+Arhiva tar Stage3
 \end_layout
 
 \begin_layout Standard
 Un fișier tar stage3 este o arhivă ce conține un mediul minimal Gentoo,
  potrivit pentru a continua instalarea Gentoo utilizând instrucțiunile din
  acest manual.
- Anterior, Manual Gentoo descria instalarea utilizând una din cele 3 arhive
- tar stage.
+ Anterior, Manual Gentoo descria instalarea utilizând una din cele trei
+ arhive tar stage.
  În timp ce Gentoo încă mai oferă arhivele tar stage1 și stage2, modalitatea
  de instalare oficială utilizează o arhivă tar stage3.
  Dacă sunteți interesat să utilizați un fișier tar stage1 sau stage2, vă
@@ -1127,20 +1136,20 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 
 \end_inset
 
- si nu sunt oferite pe mediul LiveCD.
+ și nu sunt oferite pe mediul Live CD.
  
 \end_layout
 
 \begin_layout Section
-Descărcarea, Scrierea și Bootarea 
+Descărcarea, scrierea și boot-area 
 \begin_inset Newline newline
 \end_inset
 
-unui Mediu Installation CD
+unui mediu Installation CD
 \end_layout
 
 \begin_layout Subsection*
-Descărcarea și Scrierea Mediului Installation CD
+Descărcarea și scrierea mediului Installation CD
 \end_layout
 
 \begin_layout Standard
@@ -1154,28 +1163,37 @@ Ați ales instalarea Gentoo utilizând un mediu Installation CD.
 \align left
 Puteți descărca unul din mediile Installation CD disponibile (și dacă doriți,
  Packages CD, de asemenea) de pe unul din site-urile mirror.
- Mediile Installation CD se găsesc în directorul releases/amd64/autobuilds/curre
-nt-iso.
+ Mediile Installation CD se găsesc în directorul 
+\series bold
+releases/amd64/autobuilds/current-iso
+\series default
+.
 \end_layout
 
 \begin_layout Standard
 În director veți găsi fișierele cu extensia ISO.
- Aceste fișiere sunt imagini exacte ale CD-urilor originale și care pot
- fi scrise pe DVD-R(W)/DVD+R(W), CD-R(W).
+ Aceste fișiere sunt imagini exacte ale CD-urilor originale care pot fi
+ scrise pe DVD-R(W)/DVD+R(W), CD-R(W).
  
 \end_layout
 
 \begin_layout Standard
 În caz că vă întrebați dacă fișierul descărcat este corupt sau nu, îi puteți
- verifica suma de control SHA-2 oferită de noi (cum ar fi install-amd64-minimal-
-<release>.iso.DIGESTS).
- Puteți verifica suma de control SHA-2 utilizând utilitarul sha512sum pentru
- Linux/Unix, sau File Checksum Tool pentru Windows.
+ verifica suma de control SHA-2 oferită de noi (cum ar fi 
+\series bold
+install-amd64-minimal-<release>.iso.DIGESTS
+\series default
+).
+ Puteți verifica suma de control SHA-2 utilizând utilitarul 
+\series bold
+sha512sum
+\series default
+ pentru Linux/Unix, sau File Checksum Tool pentru Windows.
  
 \end_layout
 
 \begin_layout Standard
-O altă metodă de verificare a integrității imaginii LiveCD-ului descărcat,
+O altă metodă de verificare a integrității imaginii Live CD-ului descărcat,
  este utilizarea GnuPG pentru verificarea semnăturii criptografice ce v-o
  oferim (fișierul ce are terminația .asc).
  Descărcați fișierul ce conține semnătura și obțineți cheia publică.
@@ -1309,8 +1327,11 @@ Cu K3B, selectați Tools > Burn CD Image.
 \end_layout
 
 \begin_layout Itemize
-Pentru cdrecord, trebuie doar să tastați cdrecord dev=/dev/sr0 <fișierul
- iso descărcat> (înlocuiți /dev/sr0 cu calea către unitatea dvs.
+Pentru cdrecord, trebuie doar să tastați 
+\color blue
+cdrecord dev=/dev/sr0 <fișierul iso descărcat>
+\color inherit
+ (înlocuiți /dev/sr0 cu calea către unitatea dvs.
  CD-RW) 
 \end_layout
 
@@ -1330,28 +1351,31 @@ Important:
 \end_layout
 
 \begin_layout Standard
-După ce ați scris mediul Installation CD a venit timpul să boot-ăm.
+După ce ați scris mediul Installation CD a venit timpul să îl încărcăm (boot-ăm).
  Scoateți CD-ul (dacă este prezent) din unitatea CD-ROM, reporniți PC-ul
  și intrați în BIOS.
  Această operație se poate efectua apăsând una din tastele DEL, F1 sau ESC,
  depinzând de producătorul BIOS-ului instalat.
- În meniul din BIOS schimbați ordinea boot-ării unităților de disc, și anume
- setați CD-ROM-ul ca primul disc de pe care să se înceapă citirea inițializării
- sistemului de operare.
+ În meniul din BIOS schimbați ordinea încărcării (boot-ării) unităților
+ de disc, și anume setați CD-ROM-ul ca primul disc de pe care să se înceapă
+ citirea inițializării sistemului de operare.
  În majoritatea cazurilor submeniul pentru schimbarea ordinii de boot se
- poate găsi în meniul "CMOS Setup" Dacă nu activați opțiunea de boot de
- pe CD-ROM după inițializarea BIOS-ului, PC-ul va încărca sistemul de operare
- de pe hard-disc ignorând CD-ROM-ul.
+ poate găsi în meniul "CMOS Setup".
+ Dacă nu activați opțiunea de boot de pe CD-ROM după inițializarea BIOS-ului,
+ PC-ul va încărca sistemul de operare de pe hard-disc ignorând unitatea
+ CD-ROM.
  
 \end_layout
 
 \begin_layout Standard
 Introduceți DVD/CD-ul în unitatea CD-ROM și reporniți PC-ul.
  După ce CD-ul a inițiat procedura de boot va apărea un prompt de boot.
- Apăsând tasta Enter procesul de boot a CD-ului va continua cu opțiunile
- prestabilite pentru inițializarea sistemului, sau puteți boot-a mediul
- Installation CD cu opțiuni suplimentare prin specificarea unei imagini
- de kernel, urmată de opțiuni de boot și apoi apăsarea Enter.
+ Apăsând tasta Enter procesul de încărcare (tr.
+ en: boot) al CD-ului va continua cu opțiunile prestabilite pentru inițializarea
+ sistemului, sau puteți boot-a mediul Installation CD cu opțiuni suplimentare
+ prin specificarea unei imagini de kernel, urmată de opțiuni de încărcare
+ (tr.
+ en: boot) și apoi apăsarea Enter.
 \end_layout
 
 \begin_layout Standard
@@ -1416,7 +1440,7 @@ gentoo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Kernel implicit cu suport pentru sisteme multiprocesor
+Kernel implicit cu suport pentru sisteme multiprocesor.
 \end_layout
 
 \end_inset
@@ -1436,7 +1460,7 @@ gentoo-nofb
 \begin_inset Text
 
 \begin_layout Plain Layout
-La fel ca și în cazul gentoo, dar fără suport pentru framebuffer
+La fel ca și în cazul gentoo, dar fără suport pentru framebuffer.
 \end_layout
 
 \end_inset
@@ -1456,7 +1480,7 @@ memtest86
 \begin_inset Text
 
 \begin_layout Plain Layout
-Va încărca utilitarul pentru testarea memoriei RAM de erori
+Va încărca utilitarul pentru testarea memoriei RAM de erori.
 \end_layout
 
 \end_inset
@@ -1485,8 +1509,8 @@ Va încărca utilitarul pentru testarea memoriei RAM de erori
 Puteți utiliza și opțiuni de kernel.
  Ele reprezintă setări opționale ce le puteți (dez)activa în funcție de
  necesități.
- Lista de opțiuni prezentată mai jos va apare la apăsarea tastei F2 în bootscree
-n.
+ Lista de opțiuni prezentată mai jos va apare la apăsarea tastei F2 în meniu
+ de încărcare (bootscreen).
 \begin_inset Newline newline
 \end_inset
 
@@ -1515,8 +1539,8 @@ acpi=on
 \begin_inset Text
 
 \begin_layout Plain Layout
-Încarcă suportul pentru ACPI și de asemenea pornește daemon-ul la boot când
- rulăm de pe CD.
+Încarcă suportul pentru ACPI și de asemenea pornește serviciul la încărcare
+ când rulăm de pe CD.
  Aveți nevoie de acesta doar dacă sistemul dumneavoastră are nevoie de ACPI
  pentru a funcționa.
  Acesta nu este necesar pentru suportul Hyperthreading.
@@ -1569,7 +1593,7 @@ console=X
 \begin_layout Plain Layout
 Aceasta stabilește modul de accesare a CD-ului.
  Prima opțiune este dispozitivul, cel mai frecvent ttyS0 pe arhitectura
- x86, urmată de orice tip de conexiune, care sunt separate prin virgulă.
+ x86/x64, urmată de orice tip de conexiune, care sunt separate prin virgulă.
  Opțiunile inițiale sunt 9600,8,n,1.
 \end_layout
 
@@ -1592,7 +1616,8 @@ dmraid=X
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vă permite să trimiteți spre sistemul device-mapper RAID o opțiune.
+Vă permite să trimiteți spre sistemul dispozitiv de mapare (device-mapper)
+ RAID o opțiune.
  Această opțiune trebuie să fie scrisă între ghilimele.
 \end_layout
 
@@ -1616,7 +1641,7 @@ doapm
 
 \begin_layout Plain Layout
 Încarcă modulul APM.
- De asemenea este nevoie să dezactivați acpi în cazul în care folosiți această
+ De asemenea este nevoie să dezactivați ACPI în cazul în care folosiți această
  opțiune.
 \end_layout
 
@@ -1662,8 +1687,8 @@ doscsi
 
 \begin_layout Plain Layout
 Încarcă suportul pentru controlere SCSI.
- De asemenea este necesar pentru a putea boota majoritatea dispozitivelor
- USB.
+ De asemenea este necesar pentru a putea încărca (boota) majoritatea dispozitive
+lor USB.
 \end_layout
 
 \end_inset
@@ -1685,8 +1710,8 @@ sda=stroke
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vă permite să partiționați întregul harddisk, chiar și atunci când BIOS-ul
- nu poate manipula discuri mari.
+Vă permite să partiționați întregul disc dur (hard disk), chiar și atunci
+ când BIOS-ul nu poate manipula discuri mari.
 \end_layout
 
 \end_inset
@@ -1730,7 +1755,7 @@ noapic
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dezactivează apic (Advanced Programmable Interrupt Controller) acesta fiind
+Dezactivează APIC (Advanced Programmable Interrupt Controller) acesta fiind
  prezent în plăcile de bază noi.
  Este cunoscut faptul că poate provoca probleme pe hardware vechi.
 \end_layout
@@ -1825,8 +1850,8 @@ nofirewire
 
 \begin_layout Plain Layout
 Dezactivează încărcarea modulelor Firewire.
- Este necesară în cazul în care hardwareul Fireware vă creează probleme
- atunci cânrulam de pe CD.d bootați de pe CD.
+ Este necesară în cazul în care hardware-ul Fireware vă creează probleme
+ atunci când încărcați de pe CD.
 \end_layout
 
 \end_inset
@@ -1962,7 +1987,7 @@ nosmp
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dezactivează SMP, sau Symmetric Multi-processing, pentru kernelurile cu
+Dezactivează SMP, sau Symmetric Multi-processing, pentru kernel-urile cu
  suport SMP.
 \end_layout
 
@@ -2030,8 +2055,8 @@ slowusb
 \begin_inset Text
 
 \begin_layout Plain Layout
-Adaugă pauze mai lungi în procesul de bootare pentru unități optice pe usb
- (USB CDROMs).
+Adaugă pauze mai lungi în procesul de încărcare (bootare) pentru unități
+ optice pe usb (USB CDROM).
  
 \end_layout
 
@@ -2043,21 +2068,18 @@ Adaugă pauze mai lungi în procesul de bootare pentru unități optice pe usb
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
 \begin_layout Standard
-Acum boot-ați de pe CD, selectați un kernel (dacă nu sunteți mulțumit de
- imaginea gentoo implicită) cu opțiunile dorite.
- În exemplul de mai jos, vă prezentăm modalitatea de a boot-a imaginea de
- kernel gentoo cu 
+Acum încărcați (boot-ați) de pe CD, selectați un kernel (dacă nu sunteți
+ mulțumit de imaginea gentoo implicită) cu opțiunile dorite.
+ În exemplul de mai jos, vă prezentăm modalitatea de a încărca (boot-a)
+ imaginea de kernel gentoo cu 
 \color blue
 dopcmcia
 \color inherit
- ca parametri: 
+ ca parametru: 
 \begin_inset Newline newline
 \end_inset
 
@@ -2115,13 +2137,13 @@ Boot-area mediului Installation CD
 \end_layout
 
 \begin_layout Standard
-Apoi, veți observa imaginea de boot și bara de progres.
+Apoi, veți observa imaginea de încărcare (boot) și bara de progres.
  Dacă instalați Gentoo pe un sistem cu o tastatură non-US, apăsați imediat
  Alt+F1 pentru a comuta în modul informativ și urmați promptul.
  Dacă nu se efectuează nici o selecție în 10 secunde, cea implicită (tastatura
- US) va fi luată în considerare și procesul de boot va continua.
- Odată ce procesul de boot a fost finalizat veți fi logat în mediul "Live"
- al Gentoo Linux ca "root", modul super user.
+ US) va fi luată în considerare și procesul de încărcare (boot) va continua.
+ Odată ce procesul de încarcare (boot) a fost finalizat veți fi logat în
+ mediul "Live" al Gentoo Linux ca "root", modul super user.
  În consola curentă puteți observa promptul root ("#") și puteți comuta
  între alte console utilizând combinațiile de taste Alt-F2, Alt-F3 și Alt-F4.
  Pentru a reveni la consola inițială utilizați combinația de taste Alt-F1.
@@ -2137,15 +2159,15 @@ Configurarea Suplimentară pentru Componentele Hardware
 \end_layout
 
 \begin_layout Standard
-Mediul Gentoo Installation CD, în timp ce boot-ează, încearcă să identifice
- automat toate componentele hardware din sistem și încarcă modulele de kernel
- ce fac posibilă accesarea acestor resurse hardware.
+Mediul Gentoo Installation CD, în timp ce încarcă (boot-ează), încearcă
+ să identifice automat toate componentele hardware din sistem și încarcă
+ modulele de kernel ce fac posibilă accesarea acestor resurse hardware.
  Dar, sunt și cazuri când încărcarea automată nu este efectuată pentru modulele
  necesare.
  În cazul în care autodetectarea componentelor PCI a eșuat în cazul unor
- componente ale sistemului dvs., vor trebui încărcate manual modulele de
- kernel necesare.
- În următorul exemplu vom încerca încărcarea modulului 8139too (ce oferă
+ componente ale sistemului dumneavoastră, vor trebui încărcate manual modulele
+ de kernel necesare.
+ În următorul exemplu o să încercam încărcarea modulului 8139too (ce oferă
  suport pentru un anumit tip de plăci de rețea): 
 \begin_inset Newline newline
 \end_inset
@@ -2201,15 +2223,11 @@ Mediul Gentoo Installation CD, în timp ce boot-ează, încearcă să identifice
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Dacă aveți nevoie de suport PCMCIA, va trebui să porniți script-ul de inițializa
-re pcmcia: 
+Dacă aveți nevoie de suport PCMCIA, va trebui să porniți scriptul de inițializar
+e pcmcia: 
 \begin_inset Newline newline
 \end_inset
 
@@ -2232,7 +2250,7 @@ re pcmcia:
 \begin_layout Plain Layout
 
 \color magenta
-Pornirea script-ului de inițializare PCMCIA
+Pornirea scriptului de inițializare PCMCIA
 \end_layout
 
 \end_inset
@@ -2263,15 +2281,19 @@ Pornirea script-ului de inițializare PCMCIA
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Optimizarea Performanțelor discului dur (Hard-Disk-ului)
+Opțional: Optimizarea performanțelor discului dur (Hard-Disk-ului)
 \end_layout
 
 \begin_layout Standard
 Dacă sunteți un utilizator avansat, puteți optimiza performanța discului
- dur (hard-disk-ului), utilizând hdparm.
+ dur (hard disk-ului), utilizând 
+\color blue
+hdparm
+\color inherit
+.
  În combinație cu opțiunile -tT puteți testa performanțele hard discului
  (executați testul de mai multe ori pentru a avea o imagine cât mai precisă
- a vitezei HDD-ului).
+ a vitezei a discului dur).
 \begin_inset Newline newline
 \end_inset
 
@@ -2327,7 +2349,7 @@ Testarea peformanței discului
 \begin_layout Standard
 Pentru optimizare, puteți utiliza oricare din exemplele de mai jos (sau
  experimenta cu propriile optimizări) ce utilizează /dev/sda ca disc (substituiț
-i cu discul dvs.): 
+i cu discul dumneavoastră.): 
 \begin_inset Newline newline
 \end_inset
 
@@ -2407,7 +2429,7 @@ Opțiuni sigure de creștere a performaței:
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Conturi de Utilizator
+Opțional: Conturi de utilizator
 \end_layout
 
 \begin_layout Standard
@@ -2510,8 +2532,16 @@ Re-enter password: (Re-enter your password)
 \begin_layout Standard
 Pentru crearea unui nou cont de utilizator trebuie să introducem denumirea
  contului și parola ce va fi asociată contului nou creat.
- Pentru aceasta vom utiliza comenzile useradd și passwd.
- În exemplu de mai jos vom crea un user numit "john".
+ Pentru aceasta vom utiliza comenzile 
+\series bold
+useradd
+\series default
+ și 
+\series bold
+passwd
+\series default
+.
+ În exemplu de mai jos o să cream un user numit "john".
  
 \begin_inset Newline newline
 \end_inset
@@ -2609,8 +2639,11 @@ Re-enter password: (Re-enter john's password)
 \end_layout
 
 \begin_layout Standard
-Puteți efectua login în noul cont creat din root, utilizând comanda su:
- 
+Puteți efectua login în noul cont creat din root, utilizând comanda 
+\color blue
+su
+\color inherit
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -2656,12 +2689,16 @@ Comutarea la alt utilizator
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Vizualizarea Documentației în Timpul Instalării
+Opțional: Vizualizarea documentației oficiale în timpul instalării
 \end_layout
 
 \begin_layout Standard
 Dacă doriți consultarea documentației de pe CD, puteți rula imediat aplicația
- links ce vă permite vizualizarea documentației: 
+ 
+\color blue
+links
+\color inherit
+ ce vă permite vizualizarea documentației: 
 \begin_inset Newline newline
 \end_inset
 
@@ -2719,11 +2756,16 @@ Vizualizarea documentației de pe CD
 \end_layout
 
 \begin_layout Standard
-Totuși, este recomandat să utilizați Manualul Gentoo aflat online, deoarece
- este mult mai recent decât cel oferit pe CD.
- Puteți utiliza, de asemenea, aplicația links, dar numai după ce ați terminat
- capitolul despre Configurarea Rețelei (în caz contrar nu veți putea accesa
- internetul pentru a putea consulta online Manualul Gentoo).
+Pentru cei ce doresc să utilizeze documentația oficială în limba engleză
+ este recomandat să utilizeze Manualul Gentoo aflat online, deoarece este
+ mult mai recent decât cel oferit pe CD.
+ De asemenea pot utiliza aplicația 
+\color blue
+links
+\color inherit
+, dar numai după ce au terminat capitolul despre Configurarea Rețelei (în
+ caz contrar nu vor putea accesa internetul pentru a putea consulta online
+ Manualul Gentoo).
 \begin_inset Newline newline
 \end_inset
 
