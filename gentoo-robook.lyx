@@ -116,7 +116,7 @@ Mihai Tene - Translator
 \begin_inset Newline newline
 \end_inset
 
-Alin Dobre - Translator(documenație versiuni intermediare)
+Alin Dobre - Translator (documenație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
@@ -159,7 +159,7 @@ Conținut:
 \align block
 
 \series bold
-Despre Instalarea Gentoo Linux.
+Despre instalarea Gentoo Linux.
 
 \series default
  
@@ -177,7 +177,7 @@ Acest capitol vă introduce în tipul de instalare documentat în această parte
 \align block
 
 \series bold
-Alegerea Mediului de Instalare Corect.
+Alegerea mediului de instalare corect.
  
 \end_layout
 
@@ -186,8 +186,8 @@ Alegerea Mediului de Instalare Corect.
 \align block
 Puteți instala Gentoo în multe moduri.
  Acest capitol vă explică cum să instalați Gentoo utilizând mediul Minimal
- Installation CD, deși este posibilă instalarea utilizând Universal Installation
- CD, de asemenea.
+ Installation CD, deși de asemenea este posibilă instalarea utilizând Universal
+ Installation CD.
  
 \end_layout
 
@@ -196,7 +196,7 @@ Puteți instala Gentoo în multe moduri.
 \align block
 
 \series bold
-Configurarea Rețelei.
+Configurarea rețelei.
  
 \end_layout
 
@@ -211,8 +211,8 @@ Pentru a descărca ultimele surse de cod, trebuie să vă configurați rețeaua.
 \align block
 
 \series bold
-Pregătirea Discurilor.
- /mnt/gentoo/usr/share/portage/make.conf.example
+Pregătirea discurilor.
+ 
 \end_layout
 
 \begin_deeper
@@ -228,7 +228,7 @@ Pentru a putea instala Gentoo, trebuie să creați partițiile necesare.
 \align block
 
 \series bold
-Instalarea Fișierelor Gentoo necesare Instalării.
+Instalarea fișierelor Gentoo necesare instalării.
  
 \end_layout
 
@@ -236,7 +236,7 @@ Instalarea Fișierelor Gentoo necesare Instalării.
 \begin_layout Standard
 \align block
 Instalările Gentoo funcționează prin intermediul unei arhive tar stage3.
- În acest capitol vom descrie modul de a dezarhiva arhiva tar stage3 și
+ În acest capitol o să descriem modul de a dezarhiva arhiva tar stage3 și
  de a configura Portage.
  
 \end_layout
@@ -246,15 +246,15 @@ Instalările Gentoo funcționează prin intermediul unei arhive tar stage3.
 \align block
 
 \series bold
-Instalarea Sistemului de Bază al Gentoo.
+Instalarea sistemului de bază Gentoo.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align block
-După instalarea și configurarea în stagiul 3, rezultatul final va fii că
- veți avea un sistem de bază Gentoo, la dispoziția dvs.
+După instalarea și configurarea în stagiul 3, rezultatul final va fii un
+ sistem de bază Gentoo.
  Acest capitol explică cum să progresați până la acel stadiu.
  
 \end_layout
@@ -264,15 +264,15 @@ După instalarea și configurarea în stagiul 3, rezultatul final va fii că
 \align block
 
 \series bold
-Configurarea Kernel-ului.
+Configurarea kernel-ului.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align block
-Kernel-ul Linux este nucleul fiecărei distribuții.
- Acest capitol explică cum să vă configurați kernel-ul.
+Kernelul Linux este nucleul fiecărei distribuții Gnu/Linux.
+ Acest capitol explică cum să vă configurați kernelul.
  
 \end_layout
 
@@ -281,7 +281,7 @@ Kernel-ul Linux este nucleul fiecărei distribuții.
 \align block
 
 \series bold
-Configurarea Sistemului.
+Configurarea sistemului.
  
 \end_layout
 
@@ -299,7 +299,7 @@ Trebuie să editați unele fișiere de configurare importante.
 \align block
 
 \series bold
-Instalarea Utilitarelor de Sistem Necesare.
+Instalarea utilitarelor de sistem necesare.
  
 \end_layout
 
@@ -316,17 +316,18 @@ Așa cum am menționat anterior, Gentoo reprezintă posibilitatea alegerii.
 \align block
 
 \series bold
-Configurarea Aplicației Bootloader.
+Configurarea aplicației bootloader.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align block
-Există mai multe aplicații bootloader disponibile pentru arhitectura amd64.
+Există mai multe aplicații (încărcător de sistem) bootloader disponibile
+ pentru arhitectura amd64.
  Fiecare dintre ele are modul propriu de configurare.
- Vom parcurge procesul configurării aplicației bootloader în concordanță
- cu nevoile dvs.
+ O să parcurgem procesul configurării aplicației bootloader în concordanță
+ cu nevoile dumneavoastră.
  
 \end_layout
 
@@ -335,7 +336,7 @@ Există mai multe aplicații bootloader disponibile pentru arhitectura amd64.
 \align block
 
 \series bold
-Finalizarea Instalării Gentoo.
+Finalizarea instalării Gentoo.
  
 \end_layout
 
@@ -343,7 +344,7 @@ Finalizarea Instalării Gentoo.
 \begin_layout Standard
 \align block
 Sunteți aproape gata.
- Vom crea unul (sau mai mulți) utilizatori pentru sistemul dvs.
+ O să cream unul sau mai mulți utilizatori pentru sistemul dvs.
  
 \end_layout
 
@@ -369,20 +370,20 @@ Bine ați venit!
 
 \series medium
 În primul rând vă urăm, bun venit în lumea minunată Gentoo.
- Sunteți pe cale de a descoperi lumea flexibilității și performanței.
- Gentoo în primul rând înseamnă flexibilitatea alegerii.
- Odată ce veți hotărî să instalați Gentoo Linux, procedeul de instalare
+ Sunteți pe cale să descoperiți lumea flexibilității și performanței.
+ Odată ce vă veți hotărî să instalați Gentoo Linux, procedeul de instalare
  vă permite o foarte mare flexibilitate în alegerea modalității de instalare,
  care poate fi compilarea întregului sistem de la început sau doar instalând
- binarele, aveți posibilitatea de a alege componentele de sistem cum sunt
- încărcătorul de sistem (bootloader), logger-ele etc.
+ binarele.
+ Aveți posibilitatea de a alege componentele de sistem cum sunt încărcătorul
+ de sistem (bootloader), logger-ele etc.
  
 \end_layout
 
 \begin_layout Standard
 
 \series medium
-Gentoo este o metadistribuție modernă și foarte rapidă, ce are o structură
+Gentoo este o meta-distribuție modernă și foarte rapidă, ce are o structură
  flexibilă.
  Gentoo este construit în jurul conceptului programelor libere (free software)
  și pune la dispoziția utilizatorilor toate resursele.
@@ -392,16 +393,16 @@ Gentoo este o metadistribuție modernă și foarte rapidă, ce are o structură
  Sistemul de pachete Gentoo utilizează codul sursă al programelor (deși
  oferă și suport pentru binare precompilate), iar configurarea Gentoo se
  efectuează prin editarea directă a fișierelor de configurare (fișiere de
- tip text, normale).
+ tip text).
  Cu alte cuvinte este un sistem deschis.
  
 \series default
 Este foarte important să înțelegeți că posibilitatea de a alege face ca
 \series medium
- Gentoo sa funcționeze.
+ Gentoo să funcționeze.
  
 \series default
-Noi nu vă forțăm în nimic din ceea ce vă displace.
+Noi nu vă forțăm să faceți nimic din ceea ce vă displace.
 
 \series medium
  În cazul în care nu credeți acest lucru, vă rugăm să ne scrieți un 
@@ -421,57 +422,60 @@ Cum este structurat procesul de instalare?
 
 \begin_layout Itemize
 După pasul 1, vă aflați în mediul de lucru și sunteți pregătit pentru instalarea
- Gentoo 
-\end_layout
-
-\begin_layout Itemize
-După pasul 2, conexiunea la internet este pregătită pentru instalarea Gentoo
+ Gentoo.
  
 \end_layout
 
 \begin_layout Itemize
-După pasul 3, hard disk-ul este pregătit pentru a găzdui Gentoo
+După pasul 2, conexiunea la internet este pregătită pentru instalarea Gentoo.
+ 
+\end_layout
+
+\begin_layout Itemize
+După pasul 3, discul dur (hard disk-ul) este pregătit pentru a găzdui Gentoo.
 \end_layout
 
 \begin_layout Itemize
 După pasul 4, mediul de instalare este pregătit și puteți utiliza chroot
- pentru integrarea în noul mediu 
+ pentru integrarea în noul mediu.
+ 
 \end_layout
 
 \begin_layout Itemize
 După pasul 5, pachetele de bază, ce sunt la fel pentru toate sistemele Gentoo,
- vor fi instGentoo Reference Platformalate 
+ vor fi instalate.
+ 
 \end_layout
 
 \begin_layout Itemize
-După pasul 6, Kernel-ul Linux va fi compilat
+După pasul 6, kernel-ul Linux va fi compilat.
 \end_layout
 
 \begin_layout Itemize
-După pasul 7, vor fi completate majoritatea fișierelor de configurare Gentoo
+După pasul 7, vor fi completate majoritatea fișierelor de configurare Gentoo.
  
 \end_layout
 
 \begin_layout Itemize
 După pasul 8, utilitarele de sistem necesare (pe care le puteți alege dintr-o
- listă completă) sunt instalate 
+ listă completă) sunt instalate.
+ 
 \end_layout
 
 \begin_layout Itemize
 După pasul 9, aplicația încărcătorul de sistem (bootloader) aleasă a fost
- instalată și configurată și sunteți logați în noua instalare Gentoo 
+ instalată, configurată și sunteți logați în noua instalare Gentoo.
 \end_layout
 
 \begin_layout Itemize
-După pasul 10, noul dvs.
- mediu Gentoo, va fi gata de explorat
+După pasul 10, noul dumneavoastră mediu Gentoo, va fii gata de explorat.
 \end_layout
 
 \begin_layout Standard
 Gentoo Linux vă permite o foarte mare flexibilitate în alegere, pe care
- vom încerca să le explicăm atât din punct de vedere al punctelor forte
+ o să încercăm să o explicăm atât din punct de vedere al punctelor forte
  cât și al punctelor slabe.
- Vom continua cu un set de opțiuni implicite, identificate cu "Implicite:
+ O să continuăm cu un set de opțiuni implicite, identificate cu "Implicite:
  " în titlu.
  Celelalte opțiuni sunt marcate cu "Alternativ: ".
  Să nu considerați că opțiunile implicite sunt cele recomandate.
@@ -485,8 +489,8 @@ Gentoo Linux vă permite o foarte mare flexibilitate în alegere, pe care
  nu sunt obligatorii în timpul instalării Gentoo.
  Aveți grijă la anumite opțiuni care pot depinde de alte opțiuni ce au fost
  alese sau ce vor depinde de anumiți pași ce vor fi executați în prealabil
- sau după alegerea opțiunii și pe care îi vom menționa în documentația de
- față.
+ sau după alegerea opțiunii și pe care o să-i menționăm în documentația
+ de față.
  
 \end_layout
 
@@ -502,10 +506,10 @@ Care sunt opțiunile?
 \align block
 
 \series medium
-Gentoo Poate fi instalat în diferite moduri.
+Gentoo poate fi instalat în diferite moduri.
  Aveți posibilitatea de a descărca și instala Gentoo Linux de pe unul din
  mediile de instalare CD disponibile, de pe un alt CD boot-abil (cum este
- Knoppix), boot-ând din rețea, de pe o dischetă rescue etc.
+ Knoppix), boot-ând din rețea etc.
 
 \series default
  
@@ -515,7 +519,7 @@ Gentoo Poate fi instalat în diferite moduri.
 
 \series medium
 Acest document acoperă modalitatea de instalare utilizând un mediu de instalare
- CD Gentoo sau în unele cazuri bootarea din rețea.
+ CD Gentoo sau în unele cazuri boot-area din rețea.
  Această modalitate de instalare presupune că doriți să instalați ultima
  versiune a fiecărui pachet.
  Dacă doriți să efectuați o instalare fără rețea, va trebui să consultați
@@ -581,9 +585,9 @@ target "http://www.gentoo.org/doc/ro/gentoo-x86-tipsntricks.xml"
 
 \end_inset
 
- care vă poate fi de folos, de asemenea.
+ care de asemenea vă poate fi de folos.
  În cazul în care considerați că instrucțiunile de instalare curente sunt
- prea elaborate, puteți utiliza Ghidul de Instalare Rapid, disponibil pe
+ prea elaborate, puteți utiliza Ghidul de Instalare Rapidă, disponibil pe
  pagina noastră de 
 \begin_inset CommandInset href
 LatexCommand href
@@ -623,8 +627,8 @@ target "http://bugs.gentoo.org"
 \end_inset
 
  și să verificați dacă eroarea descoperită de către dumneavoastră este cunoscută.
- Dacă nu a fost semnalată creați un bug-raport pentru a permite corectarea
- erorilor într-un timp cât mai scurt.
+ Dacă nu a fost semnalată creați un raport cu defecte de funcționare (bug-raport
+) pentru a permite corectarea erorilor într-un timp cât mai scurt.
  
 \end_layout
 
@@ -634,17 +638,17 @@ Notați că, deși documentul pe care îl citiți acum este specific arhitecturi
  Aceasta se întâmplă deoarece multe părți ale Manualului Gentoo utilizează
  cod sursă ce este comun pentru toate arhitecturile (pentru a evita multiplicare
 a eforturilor și irosirea resurselor de dezvoltare).
- Vom încerca să minimizăm aceste informații pentru a evita confuzia.
+ O să încercăm să minimizăm aceste informații pentru a evita confuzia.
 \end_layout
 
 \begin_layout Standard
 Dacă pe parcursul procesului de instalare întâmpinați greutăți și nu sunteți
  sigur de natura problemei care poate fi problemă-utilizator sau problemă-softwa
-re și răspunsul nu-l puteți găsi în documentația de față sunteți invitați
- să va alătura la canalul de discuții oficial gentoo join #gentoo de pe
- irc.freenode.net unde cu siguranța veți putea găsi răspuns la problemele
+re și răspunsul nu-l puteți găsi în documentația de față, sunteți invitați
+ să vă alăturați la canalul de discuții oficial Gentoo join #gentoo de pe
+ irc.freenode.net, unde cu siguranță veți putea găsi răspuns la problemele
  și întrebările ce vă interesează.
- Bineînțeles, sunteți binevenit și în alte situații 
+ Bineînțeles, sunteți binevenit și în alte situații.
 \end_layout
 
 \begin_layout Standard
@@ -682,7 +686,6 @@ target "http://forums.gentoo.org"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Chapter
