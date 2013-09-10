@@ -203,7 +203,7 @@ Configurarea Rețelei.
 \begin_deeper
 \begin_layout Standard
 \align block
-Pentru a descărca ultimele surse de cod, trebuie să vă configurați rețeaua
+Pentru a descărca ultimele surse de cod, trebuie să vă configurați rețeaua.
 \end_layout
 
 \end_deeper
@@ -212,7 +212,7 @@ Pentru a descărca ultimele surse de cod, trebuie să vă configurați rețeaua
 
 \series bold
 Pregătirea Discurilor.
- 
+ /mnt/gentoo/usr/share/portage/make.conf.example
 \end_layout
 
 \begin_deeper
@@ -375,7 +375,7 @@ Bine ați venit!
  vă permite o foarte mare flexibilitate în alegerea modalității de instalare,
  care poate fi compilarea întregului sistem de la început sau doar instalând
  binarele, aveți posibilitatea de a alege componentele de sistem cum sunt
- bootloader-ul, logger-ele etc.
+ încărcătorul de sistem (bootloader), logger-ele etc.
  
 \end_layout
 
@@ -384,8 +384,8 @@ Bine ați venit!
 \series medium
 Gentoo este o metadistribuție modernă și foarte rapidă, ce are o structură
  flexibilă.
- Gentoo este construit în jurul conceptului free software și pune la dispoziția
- utilizatorilor toate resursele.
+ Gentoo este construit în jurul conceptului programelor libere (free software)
+ și pune la dispoziția utilizatorilor toate resursele.
  Portage, sistemul de administrare al pachetelor utilizat de Gentoo, este
  scris în limbajul de programare Python, utilizatorii având acces la codul
  sursă și putând modifica sursele în funcție de necesitățile proprii.
@@ -394,10 +394,17 @@ Gentoo este o metadistribuție modernă și foarte rapidă, ce are o structură
  efectuează prin editarea directă a fișierelor de configurare (fișiere de
  tip text, normale).
  Cu alte cuvinte este un sistem deschis.
- Este foarte important să înțelegeți că posibilitatea de a alege fac ca
+ 
+\series default
+Este foarte important să înțelegeți că posibilitatea de a alege face ca
+\series medium
  Gentoo sa funcționeze.
- Noi nu vă forțăm în nimic din ceea ce vă displaceți.
- În cazul în care credeți acest lucru, va rugăm să ne scrieți un 
+ 
+\series default
+Noi nu vă forțăm în nimic din ceea ce vă displace.
+
+\series medium
+ În cazul în care nu credeți acest lucru, vă rugăm să ne scrieți un 
 \begin_inset CommandInset href
 LatexCommand href
 name "bugreport"
@@ -433,7 +440,7 @@ După pasul 4, mediul de instalare este pregătit și puteți utiliza chroot
 
 \begin_layout Itemize
 După pasul 5, pachetele de bază, ce sunt la fel pentru toate sistemele Gentoo,
- vor fi instalate 
+ vor fi instGentoo Reference Platformalate 
 \end_layout
 
 \begin_layout Itemize
@@ -446,13 +453,13 @@ După pasul 7, vor fi completate majoritatea fișierelor de configurare Gentoo
 \end_layout
 
 \begin_layout Itemize
-După pasul 8, utilitarele de sistem necesare(pe care le puteți alege dintr-o
+După pasul 8, utilitarele de sistem necesare (pe care le puteți alege dintr-o
  listă completă) sunt instalate 
 \end_layout
 
 \begin_layout Itemize
-După pasul 9, aplicația bootloader aleasă a fost instalată și configurată
- și sunteți log-ați în noua instalare Gentoo 
+După pasul 9, aplicația încărcătorul de sistem (bootloader) aleasă a fost
+ instalată și configurată și sunteți logați în noua instalare Gentoo 
 \end_layout
 
 \begin_layout Itemize
@@ -462,7 +469,7 @@ După pasul 10, noul dvs.
 
 \begin_layout Standard
 Gentoo Linux vă permite o foarte mare flexibilitate în alegere, pe care
- vom încerca să le explicam atât din punct de vedere al punctelor forte
+ vom încerca să le explicăm atât din punct de vedere al punctelor forte
  cât și al punctelor slabe.
  Vom continua cu un set de opțiuni implicite, identificate cu "Implicite:
  " în titlu.
@@ -525,11 +532,11 @@ target "http://www.gentoo.org/doc/en/handbook/"
 
 \begin_layout Description
 Nota: Pentru o instalare de pe un alt CD decât cel oficial, incluzând discuri
- optice non-Gentoo, va rugam sa citiți ghidul de instalare alternativa.
+ optice non-Gentoo, vă rugăm să citiți ghidul de instalare alternativă.
 \end_layout
 
 \begin_layout Standard
-Dacă doriți o instalare din rețea, ar trebui sa citiți 
+Dacă doriți o instalare din rețea, ar trebui să citiți 
 \begin_inset CommandInset href
 LatexCommand href
 name "Manualele Gentoo"
@@ -591,10 +598,9 @@ target "http://www.gentoo.org/doc/en/index.xml?style=printable"
 \begin_layout Standard
 De asemenea aveți mai multe posibilități: puteți compila întregul sistem
  de la bază sau a utiliza un mediu precompilat care permite o instalare
- foarte rapidă.
- și desigur puteți utiliza metoda de instalare intermediară unde nu este
- necesară compilarea întregului sistem ci doar a unei părți din sistemul
- de bază care vine semi-precompilat.
+ foarte rapidă și desigur puteți utiliza metoda de instalare intermediară
+ unde nu este necesară compilarea întregului sistem ci doar a unei părți
+ din sistemul de bază care vine semi-precompilat.
  
 \end_layout
 
@@ -616,16 +622,15 @@ target "http://bugs.gentoo.org"
 
 \end_inset
 
- și verificați dacă eroarea descoperită de către dumneavoastră este cunoscută.
- Dacă nu a fost semnalată creați un bugraport pentru a permite corectarea
+ și să verificați dacă eroarea descoperită de către dumneavoastră este cunoscută.
+ Dacă nu a fost semnalată creați un bug-raport pentru a permite corectarea
  erorilor într-un timp cât mai scurt.
- Nu vă temeți de dezvoltatorii cărora le atribuiți bug-urile (semnalate
- de dvs) -- în general ei nu mănâncă oameni.
+ 
 \end_layout
 
 \begin_layout Standard
 Notați că, deși documentul pe care îl citiți acum este specific arhitecturii,
- va conține referințe și către alte arhitecturi, de asemenea.
+ va conține de asemenea și referințe către alte arhitecturi.
  Aceasta se întâmplă deoarece multe părți ale Manualului Gentoo utilizează
  cod sursă ce este comun pentru toate arhitecturile (pentru a evita multiplicare
 a eforturilor și irosirea resurselor de dezvoltare).
@@ -864,7 +869,7 @@ Mediile Gentoo Installation CD sunt boot-abile și conțin mediu Gentoo complet
 
 \begin_layout Standard
 Toate mediile Installation CD vă permit să boot-ați, să puteți configura
- rețeaua, inițializa partiție și începe instalarea Gentoo de pe Internet.
+ rețeaua, inițializa partițiile și să începeți instalarea Gentoo de pe Internet.
  
 \end_layout
 
@@ -1144,7 +1149,7 @@ Ați ales instalarea Gentoo utilizând un mediu Installation CD.
 
 \begin_layout Standard
 \align left
-Puteți descărca unul din mediile Installation CD disponibile (și, dacă doriți,
+Puteți descărca unul din mediile Installation CD disponibile (și dacă doriți,
  Packages CD, de asemenea) de pe unul din site-urile mirror.
  Mediile Installation CD se găsesc în directorul releases/amd64/autobuilds/curre
 nt-iso.
@@ -1280,7 +1285,7 @@ $ gpg --verify <fișierul cu semnătura> <fișierul iso descărcat>
 
 \begin_layout Standard
 Pentru a scrie imaginile ISO pe CD-uri trebuie să selectați raw-burning.
- Felul cum activați această opțiune este dependent foarte mult de platformă.
+ Felul cum activați această opțiune depinde foarte mult de platformă.
  Vom trata aici cdrecord și K3B; pentru mai multe informații consultați
  documentul despre 
 \begin_inset CommandInset href
@@ -1295,9 +1300,9 @@ target "http://www.gentoo.org/doc/ro/faq.xml#isoburning"
 \end_layout
 
 \begin_layout Itemize
-Pentru cdrecord, trebuie doar să tastați cdrecord dev=/dev/sr0 <fișierul
- iso descărcat> (înlocuiți /dev/sr0 cu calea către unitatea dvs.
- CD-RW) 
+Cu K3B, selectați Tools > Burn CD Image.
+ Apoi veți putea localiza fișierul ISO din locația 'Image to Burn'.
+ Pentru finalizare dați click pe Start.
 \end_layout
 
 \begin_layout Itemize
@@ -1508,7 +1513,7 @@ acpi=on
 
 \begin_layout Plain Layout
 Încarcă suportul pentru ACPI și de asemenea pornește daemon-ul la boot când
- rulam de pe CD.
+ rulăm de pe CD.
  Aveți nevoie de acesta doar dacă sistemul dumneavoastră are nevoie de ACPI
  pentru a funcționa.
  Acesta nu este necesar pentru suportul Hyperthreading.
@@ -1534,8 +1539,8 @@ acpi=off
 
 \begin_layout Plain Layout
 Dezactivează suportul ACPI.
- Acesta este necesar pentru hardware mai vechi și este imperios necesar
- să folosim APM.
+ Acesta este necesar pentru hardware mai vechi și este necesar să folosim
+ APM.
  Acest parametru (opțiune) va dezactiva suportul Hyperthreading din procesorul
  dumneavoastră.
 \end_layout
@@ -1561,7 +1566,7 @@ console=X
 \begin_layout Plain Layout
 Aceasta stabilește modul de accesare a CD-ului.
  Prima opțiune este dispozitivul, cel mai frecvent ttyS0 pe arhitectura
- x86, urmat de orice tip de conexiune, care sunt separate prin virgula.
+ x86, urmată de orice tip de conexiune, care sunt separate prin virgulă.
  Opțiunile inițiale sunt 9600,8,n,1.
 \end_layout
 
@@ -1585,7 +1590,7 @@ dmraid=X
 
 \begin_layout Plain Layout
 Vă permite să trimiteți spre sistemul device-mapper RAID o opțiune.
- Aceasta opțiune trebuie sa fie scrisă intre ghilimele.
+ Această opțiune trebuie să fie scrisă între ghilimele.
 \end_layout
 
 \end_inset
@@ -1608,7 +1613,7 @@ doapm
 
 \begin_layout Plain Layout
 Încarcă modulul APM.
- De asemenea este nevoie sa dezactivați acpi în cazul în care folosiți aceasta
+ De asemenea este nevoie să dezactivați acpi în cazul în care folosiți această
  opțiune.
 \end_layout
 
@@ -1631,7 +1636,7 @@ dopcmcia
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pornește serviciul pcmcia pentru dispozitivele cdroms PCMCIA
+Pornește serviciul pcmcia pentru dispozitivele cdrom PCMCIA
 \end_layout
 
 \end_inset
@@ -1654,7 +1659,7 @@ doscsi
 
 \begin_layout Plain Layout
 Încarcă suportul pentru controlere SCSI.
- De asemenea este necesar pentru a putea boota majoritatea deviceurilor
+ De asemenea este necesar pentru a putea boota majoritatea dispozitivelor
  USB.
 \end_layout
 
@@ -1818,7 +1823,7 @@ nofirewire
 \begin_layout Plain Layout
 Dezactivează încărcarea modulelor Firewire.
  Este necesară în cazul în care hardwareul Fireware vă creează probleme
- atunci când bootați de pe CD.
+ atunci cânrulam de pe CD.d bootați de pe CD.
 \end_layout
 
 \end_inset
@@ -1978,7 +1983,7 @@ nosound
 
 \begin_layout Plain Layout
 Dezactivează suportul pentru sunet și setările pentru volum.
- Este folositoare atunci când hardwareul pentru sunet cauzează probleme.
+ Este folositoare atunci când hardware-ul pentru sunet cauzează probleme.
 \end_layout
 
 \end_inset
@@ -2034,6 +2039,14 @@ Adaugă pauze mai lungi în procesul de bootare pentru unități optice pe usb
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 Acum boot-ați de pe CD, selectați un kernel (dacă nu sunteți mulțumit de
  imaginea gentoo implicită) cu opțiunile dorite.
  În exemplul de mai jos, vă prezentăm modalitatea de a boot-a imaginea de
@@ -2247,12 +2260,12 @@ Pornirea script-ului de inițializare PCMCIA
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Optimizarea Performanțelor Hard-Disk-ului
+Opțional: Optimizarea Performanțelor discului dur (Hard-Disk-ului)
 \end_layout
 
 \begin_layout Standard
-Dacă sunteți un utilizator avansat, puteți optimiza performanța hard-disk-ului,
- utilizând hdparm.
+Dacă sunteți un utilizator avansat, puteți optimiza performanța discului
+ dur (hard-disk-ului), utilizând hdparm.
  În combinație cu opțiunile -tT puteți testa performanțele hard discului
  (executați testul de mai multe ori pentru a avea o imagine cât mai precisă
  a vitezei HDD-ului).
@@ -2334,7 +2347,7 @@ i cu discul dvs.):
 \begin_layout Plain Layout
 
 \color magenta
-Optimizarea performanței hard-disk-ului
+Optimizarea performanței discului dur (hard-disk-ului)
 \end_layout
 
 \end_inset
@@ -3294,7 +3307,7 @@ De ce am nevoie de rețea?
 
 \begin_layout Standard
 Instalând Gentoo de pe Internet veți avea toate actualizările la zi.
- Veți avea o instalarea bazată pe cel mai recent Portage (care este o colecție
+ Veți avea o instalare bazată pe cel mai recent Portage (care este o colecție
  de pachete furnizate împreună cu instrumentele necesare administrării lor).
  Acesta este de altfel motivul pentru care instalarea de pe Internet este
  preferată.
@@ -3400,7 +3413,7 @@ Configurarea Automată a Rețelei
 Dacă rețeaua nu funcționează imediat, unele medii de instalare vă permit
  să folosiți net-setup (pentru rețele obișnuite sau wireless) sau pppoe-setup
  (pentru conexiuni ADSL) sau pptp (pentru conexiuni PPTP - disponibilă doar
- pe arhitectura x86, amd64, alpha, ppc and ppc64).
+ pe arhitectura x86, amd64, alpha, ppc și ppc64).
  
 \end_layout
 
@@ -4708,7 +4721,7 @@ Aceasta setează numele rețelei wireless la "GentooNode")
 \begin_layout Standard
 Puteți acum să revedeți setările pentru placa wireless folosind iwconfig.
  Odată ce aveți placa wireless funcțională, puteți continua cu configurarea
- adresei IP așa cum este descris în următoarea secțiune (Terminologia Utilizată
+ adresei IP așa cum este descrisă în următoarea secțiune (Terminologia Utilizată
  în Rețelistică) sau să folosiți utilitarul net-setup descris anterior.
  
 \end_layout
@@ -6444,10 +6457,10 @@ r de fișiere pentru instalarea dvs.
 \begin_layout Standard
 Pentru a începe, vom face introducerea dispozitivelor bloc.
  Cel mai renumit dispozitiv bloc este probabil cel care reprezintă primul
- hard-disk într-un sistem Linux, și anume /dev/sda.
- Dacă sistemul dvs.
- utilizează discuri SCSI sau SATA, atunci primul dvs.
- hard-disk ar trebui să fie /dev/sd*; chiar și hard-disk-urile IDE sunt
+ disc dur (harddisk) într-un sistem Linux, și anume /dev/sda.
+ Dacă sistemul dumneavoastră.
+ utilizează discuri SCSI sau SATA, atunci primul dumneavoastră disc dur
+ (hard disk) ar trebui să fie /dev/sd*; chiar și hard-disk-urile IDE sunt
  detectate ca /dev/sd* cu kernelurile recente.
  
 \end_layout
@@ -6472,8 +6485,8 @@ Partiții
 Deși este teoretic posibil să utilizăm un disc întreg pentru a găzdui sistemul
  dvs.
  Linux, acesta este un lucru foarte rar pus în practică.
- În loc, dispozitivele bloc întregi sunt împărțite în dispozitive bloc mai
- mici și mai ușor de manipulat.
+ Mai degrabă, dispozitivele bloc întregi sunt împărțite în dispozitive bloc
+ mai mici și mai ușor de manipulat.
  Pe sistemele AMD64, acestea sunt numite partiții.
  
 \end_layout
@@ -6485,7 +6498,7 @@ Partițiile sunt împărțite în trei tipuri: primare, extinse și logice.
 \begin_layout Standard
 O partiție primară este o partiție ce deține informația stocată în zona
  MBR (master boot record).
- Cum o zona MBR este foarte mică (512 octeți) doar patru partiții primare
+ Cum o zonă MBR este foarte mică (512 octeți) doar patru partiții primare
  pot fi definite (spre exemplu, /dev/sda1 până la /dev/sda4).
 \end_layout
 
@@ -6526,8 +6539,8 @@ Schema de Partiționare Implicită
 
 \begin_layout Standard
 Dacă nu sunteți interesat în proiectarea unei scheme de partiționare pentru
- sistemul dvs., puteți utiliza schema de partiționare ce o folosim pe tot
- parcursul manualului: 
+ sistemul dvs., puteți utiliza schema de partiționare pe care o folosim pe
+ tot parcursul manualului: 
 \begin_inset Newline newline
 \end_inset
 
@@ -6714,8 +6727,8 @@ Partiția pentru rădăcină
 \end_layout
 
 \begin_layout Standard
-Dacă vă interesează cât de mare ar trebui să fie o partiție, sau chiar câte
- partiții aveți nevoie, citiți mai departe.
+Dacă vă interesează cât de mare ar trebui să fie o partiție, sau chiar de
+ câte partiții aveți nevoie, citiți mai departe.
  Altfel, continuați cu Utilizarea fdisk sau parted pentru partiționarea
  Discului (amândouă sunt utilitare pentru partiționare, fdisk este un utilitar
  stabil, parted este mai recent dar suporta partiții mai mari de 2TB).
@@ -6744,7 +6757,7 @@ Numărul de partiții este în foarte mare măsură dependent de mediul dvs.
 \end_layout
 
 \begin_layout Standard
-După cum puteți observa, depinde foarte mult scopul pe care doriți să-l
+După cum puteți observa, depinde foarte mult de scopul pe care doriți să-l
  atingeți.
  Partiții sau volume separate au următoarele avantaje: 
 \end_layout
@@ -6776,10 +6789,10 @@ Securitatea poate fi îmbunătățită prin montarea unor partiții sau volume
 În orice caz, partițiile multiple au un mare dezavantaj.
  Dacă nu sunt configurate corect, pot cauza ca un sistem să aibă foarte
  mult loc liber pe o partiție și fără loc liber pe alta.
- Un alt inconvenient este ca partiții separate (în special pentru punctele
- de mount importante, cum ar fi /usr sau /var) necesită adesea administratorul
- cu un initramfs pentru a monta partiția înainte de a începe scripturile
- de inițializare ca să pornească.
+ Un alt inconvenient este că partițiile separate (în special pentru punctele
+ de mount importante, cum ar fi /usr sau /var) necesită adesea ca administratoru
+l să buteze cu un initramfs pentru a monta partiția înainte de a începe
+ scripturile de inițializare să pornească.
  Nu este întotdeauna cazul, deci rezultatul poate varia.
  Deși există o limitare la 15 partiții pentru SCSI și SATA puteți folosi
  GPT.
@@ -8977,7 +8990,7 @@ Partition number (1-4): 1
 
 \begin_layout Standard
 Partiția a fost programată pentru ștergere.
- Nu va mai fi afișată dacă tastați p, dat nu va fi ștearsă până când schimbările
+ Nu va mai fi afișată dacă tastați p, dar nu va fi ștearsă până când schimbările
  nu vor fi salvate.
  Dacă ați efectuat o greșeală și doriți să anulați fără să salvați schimbările,
  tastați q imediat și apoi enter și partițiile dvs.
@@ -10968,7 +10981,7 @@ Crearea Partiției Rădăcină
 În cele din urmă, trebuie creată partiția rădăcină.
  Pentru acest lucru, tastați n pentru a crea o nouă partiție, apoi p pentru
  a îi specifica aplicației fdisk că doriți o partiție primară.
- Apoi tastați 3 pentru a crea-o ca treia partiție primară, /dev/sda3 în
+ Apoi tastați 3 pentru a crea-o ca a treia partiție primară, /dev/sda3 în
  cazul nostru.
  Când vi se va cere primul cilindru, apăsați enter.
  Când vi se va cere ultimul cilindru, apăsați enter pentru a crea o partiție
@@ -11748,7 +11761,7 @@ Introducere
 \begin_layout Standard
 Acum, că partițiile dvs.
  sunt create, este timpul să aplicăm un sistem de fișiere pe acestea.
- Dacă nu vă pasă ce sistem de fișiere să alegeți și sunteți mulțumiți cu
+ Dacă nu vă pasă ce sistem de fișiere utilizați și sunteți mulțumiți cu
  ceea ce utilizăm noi implicit în acest manual, continuați cu Aplicarea
  unui Sistem de Fișiere pe o Partiție.
  Altfel, citiți mai departe pentru a învăța despre sistemele de fișiere
@@ -11789,8 +11802,6 @@ ext3 este versiunea jurnalizată a sistemului de fișiere ext2, oferind informa�
  Puteți activa această indexare prin adăugarea opțiunii -O dir_index comenzii
  mke2fs.
  Pe scurt, ext3 este un sistem de fișiere excelent.
- fișiere excelent.
- 
 \end_layout
 
 \begin_layout Description
@@ -12255,16 +12266,24 @@ Creați și activați partiția swap utilizând comenzile menționate anterior.
 \end_layout
 
 \begin_layout Section
-Mountarea
+Montarea
 \end_layout
 
 \begin_layout Standard
 Acum ca partițiile dvs.
- sunt inițializate și găzduiesc un sistem de fișiere, este timpul să mount-ați
- aceste partiții.
- Utilizați comanda mount.
- Nu uitați să creați directoarele de mount pentru fiecare partiție creată.
- Ca un exemplu, vom mount-a partițiile rădăcină și de boot: 
+ sunt inițializate și găzduiesc un sistem de fișiere, este timpul să montați
+ (n.t.: mount în lb.
+ engleză) aceste partiții.
+\end_layout
+
+\begin_layout Standard
+Utilizați comanda 
+\color blue
+mount
+\color inherit
+.
+ Nu uitați să creați directoarele de montare pentru fiecare partiție creată.
+ Ca un exemplu, o să montăm partițiile rădăcină și de boot: 
 \begin_inset Newline newline
 \end_inset
 
@@ -12283,7 +12302,7 @@ Acum ca partițiile dvs.
 \begin_layout Plain Layout
 
 \color magenta
-Mountarea partițiilor
+Montarea partițiilor
 \end_layout
 
 \end_inset
@@ -12340,16 +12359,38 @@ Mountarea partițiilor
 \end_layout
 
 \begin_layout Description
-Notă: Dacă doriți ca directorul /tmp să se afle pe o partiție separată,
- asigurați-vă că îi schimbați permisiunile după mount-are: chmod 1777 /mnt/gento
-o/tmp.
- Aceasta este valabil și pentru /var/tmp.
+Notă: Dacă doriți ca directorul 
+\series bold
+/tmp
+\series default
+ să se afle pe o partiție separată, asigurați-vă că îi schimbați permisiunile
+ după montare: 
+\color blue
+chmod 1777 /mnt/gentoo/tmp
+\color inherit
+.
+ Aceasta este valabil și pentru 
+\series bold
+/var/tmp
+\series default
+.
  
 \end_layout
 
 \begin_layout Standard
-Trebuie, de asemenea, să utilizăm mount pentru sistemul de fișiere proc
- (o interfață virtuală cu kernel-ul) în /proc.
+Trebuie, de asemenea, să utilizăm 
+\color blue
+mount
+\color inherit
+ pentru sistemul de fișiere 
+\series bold
+proc
+\series default
+ (o interfață virtuală cu kernel-ul) în 
+\series bold
+/proc
+\series default
+.
  Dar, mai întâi va trebui să stocăm fișierele noastre pe partiții.
 \end_layout
 
@@ -12513,7 +12554,7 @@ Descărcarea Arhivei Stage
 \end_layout
 
 \begin_layout Standard
-Mergeți în directorul în care ați mount-at sistemul de fișiere Gentoo (cel
+Mergeți în directorul în care ați montat sistemul de fișiere Gentoo (cel
  mai probabil în /mnt/gentoo): 
 \begin_inset Newline newline
 \end_inset
@@ -12533,7 +12574,7 @@ Mergeți în directorul în care ați mount-at sistemul de fișiere Gentoo (cel
 \begin_layout Plain Layout
 
 \color magenta
-Intrăm în directorul în care am mount-at Gentoo
+Intrăm în directorul în care am montat Gentoo
 \end_layout
 
 \end_inset
@@ -12761,8 +12802,8 @@ Asigurați-vă că ați descărcat o arhivă tar stage3 - instalările utilizân
 \begin_layout Standard
 Dacă doriți să verificați integritatea arhivei descărcate, folosiți openssl
  și comparați ceea ce este afișat cu suma aflată pe mirror.
- Fișierul digest va furnizează câteva sume de control fiecare având un algoritm
- propriu.
+ Fișierul digest vă furnizează câteva sume de control, fiecare având un
+ algoritm propriu.
  Cele recomandate sunt SHA512 și Whirlpool.
  Spre exemplu, pentru a verifica integritatea arhivei tar stage pentru amd64:
 \begin_inset Newline newline
@@ -12864,7 +12905,7 @@ sau
 \begin_layout Standard
 Apoi comparați ceea ce au returnat comenzile de mai sus cu valorile din
  fișierul .DIGESTS pe care îl găsiți pe mirror.
- Valorile trebuie sa coincidă, altfel fișierul descarcat ar putea fi corupt.
+ Valorile trebuie să coincidă, altfel fișierul descărcat ar putea fi corupt.
 \end_layout
 
 \begin_layout Subsection*
@@ -12953,7 +12994,8 @@ p
 \series bold
 f
 \series default
- denotă că vrem să dezarhivăm un fișier și nu datele de la standard input.
+ denotă că vrem să dezarhivăm un fișier și nu datele de la intrarea standard
+ (en: standard input).
 \end_layout
 
 \begin_layout Standard
@@ -12972,17 +13014,24 @@ Introducere
 \begin_layout Standard
 Pentru optimizarea Gentoo, puteți seta unele variabile ce vor determina
  comportamentul Portage.
- Toate aceste variabile pot fi setate ca și variabile de mediu (folosind
- export), dar acest lucru nu este permanent.
+ Toate aceste variabile pot fi setate ca variabile de mediu (folosind export),
+ dar acest lucru nu este permanent.
  Pentru a vă menține setările, Portage conține un fișier de configurare
- /etc/portage/make.conf.
+ 
+\series bold
+/etc/portage/make.conf
+\series default
+.
  Acest fișier îl vom edita acum.
  
 \end_layout
 
 \begin_layout Description
-Notă: O listă comentată a tuturor variabilelor, poate fi găsită în /mnt/gentoo/u
-sr/share/portage/make.conf.example.
+Notă: O listă comentată a tuturor variabilelor, poate fi găsită în 
+\series bold
+/mnt/gentoo/usr/share/portage/make.conf.example
+\series default
+.
  Pentru o instalare reușită Gentoo va trebui doar să setați aceste variabile
  menționate mai sus.
  
@@ -13066,7 +13115,7 @@ CXXFLAGS
  definesc opțiunile de optimizare pentru compilatorul gcc de C respectiv
  C++.
  Deși, în general, le definim aici, veți obține maximul de performanță dacă
- optimizați flag-urile pentru fiecare program, în parte.
+ optimizați flag-urile pentru fiecare program în parte.
  Motivul pentru această afirmație este că fiecare program este diferit.
  
 \end_layout
@@ -13083,21 +13132,22 @@ CXXFLAGS
 \begin_layout Standard
 Nu vom explica toate opțiunile de optimizare.
  Dacă vreți să le aflați pe toate, citiți Manualul(ele) Online GNU sau gcc
- pagina info(info gcc -- funcționează doar pe un sistem Linux funcțional).
+ pagina info (info gcc -- funcționează doar pe un sistem Linux funcțional).
  Fișierul make.conf.example însuși conține, de asemenea, multe exemple și
  informații; nu uitați să-l citiți.
  
 \end_layout
 
 \begin_layout Standard
-O primă opțiune este indicatorul -march= sau -mtune, care specifică numele
+O primă opțiune este indicatorul -march= sau -mtune=, care specifică numele
  arhitecturii țintă.
- Opțiunile posibile sunt descrise în fișierul make.conf.example (ca și comentarii).
+ Opțiunile posibile sunt descrise în fișierul make.conf.example (sub formă
+ de comentarii).
  De obicei se folosește valoarea 
 \series bold
 native
 \series default
- care spune compilatorului să selecteze arhitectura sistemului ținta (cel
+ care spune compilatorului să selecteze arhitectura sistemului țintă (cel
  pe care se face instalarea).
 \end_layout
 
@@ -13115,7 +13165,7 @@ Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
 O altă setare comună de optimizare este -pipe (utilizează canale pipe în
  locul fișierelor temporare pentru comunicația între diversele etape ale
  compilării).
- El nu are impact asupra codului generat, dar folosește mai multă memorie.
+ Ea nu are impact asupra codului generat, dar folosește mai multă memorie.
  Pe sisteme cu memorie puțină este recomandat a nu se folosi acest parametru.
 \end_layout
 
@@ -13301,7 +13351,7 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 
 \series default
 \color inherit
- și va căuta un server mirror (sau mai multe) mai apropiate de dvs.
+ și căuta un server mirror (sau mai multe) mai apropiate de dvs.
  (deoarece, în cele mai multe cazuri, acestea sunt și cele mai rapide),
  sau puteți utiliza utilitarul mirrorselect oferit de noi, cu care puteți
  printr-o interfață prietenoasă, să selectați server-ele mirror pe care
@@ -13430,8 +13480,8 @@ Precizarea Informațiilor despre DNS
 \end_layout
 
 \begin_layout Standard
-A rămas un singur lucru de făcut, înainte să putem intra noul mediu și anume
- trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
+A rămas un singur lucru de făcut, înainte să putem intra în noul mediu,
+ și anume trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
  Trebuie să facem asta, pentru a fi siguri că rețeaua funcționează, chiar
  și după ce intrăm în noul mediu.
  /etc/resolv.conf conține serverele DNS pentru rețeaua noastră.
@@ -13496,19 +13546,19 @@ Copierea informațiilor despre DNS
 \end_layout
 
 \begin_layout Subsection*
-Mountarea Sistemelor de Fișiere
+Montarea Sistemelor de Fișiere
 \end_layout
 
 \begin_layout Standard
-În câteva momente v-om schimba root-ul Linuxului către noua locație.
- Ca să ne asigurăm că noul mediu este funcțional trebuie să face câteva
+În câteva momente vom schimba root-ul Linuxului către noua locație.
+ Ca să ne asigurăm că noul mediu este funcțional trebuie să facem câteva
  sisteme de fișiere disponibile.
 \end_layout
 
 \begin_layout Standard
-Mount-ați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite
- instalării să utilizeze informația oferită de kernel, chiar și în mediul
- chroot, și apoi mount-ați prin legătură sistemele de fișiere /dev și /sys.
+Montați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite procesulu
+i de instalare să utilizeze informația oferită de kernel, chiar și în mediul
+ chroot, și apoi montați prin legătură sistemele de fișiere /dev și /sys.
  
 \begin_inset Newline newline
 \end_inset
@@ -13528,7 +13578,7 @@ Mount-ați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite
 \begin_layout Plain Layout
 
 \color magenta
-Mount-area sistemului de fișiere
+Montarea sistemului de fișiere
 \end_layout
 
 \end_inset
@@ -13589,7 +13639,7 @@ Intrarea în noul Mediu
 \end_layout
 
 \begin_layout Standard
-Acum, că toate partițiile sunt inițializate și mediul de bază instalat,
+Acum, că toate partițiile sunt inițializate și mediul de bază este instalat,
  a venit momentul să intrăm în noul mediu prin acțiunea de chrooting în
  acesta.
  Aceasta înseamnă că ne mutăm din mediul în care a decurs instalarea (Installati
@@ -13707,13 +13757,13 @@ Acum trebuie să instalați structura Portage, o colecție de fișiere ce inform
 \end_layout
 
 \begin_layout Standard
-Noi va recomandăm să folosiți 
+Noi vă recomandăm să folosiți 
 \series bold
 emerge-webrsync.
  
 \series default
 Acesta vă va descărca ultima structură Portage (pe care Gentoo o pune la
- dispoziție zilnic) de pe un mirror (oglindă) al comunității ca apoi să
+ dispoziție zilnic) de pe un mirror (oglindă) al comunității, ca apoi să
  vi-l instaleze în sistem.
 \begin_inset Newline newline
 \end_inset
@@ -13784,7 +13834,7 @@ Opțional: Actualizarea structurii Portage
 Acum, trebuie să vă actualizați structura Portage la ultima versiune.
  emerge --sync efectuează această acțiune pentru dvs.
  El va folosi protocolul rsync pentru a face update (a aduce ultima versiune,
- a actualiza) structurii Portage pe care ați descarcat-o mai devreme folosind
+ a actualiza) structurii Portage pe care ați descărcat-o mai devreme folosind
  
 \series bold
 emerge-webrsync
@@ -13880,14 +13930,13 @@ Dacă vă aflați în spatele unui firewall ce blochează traficul rsync, puteț
 \end_layout
 
 \begin_layout Standard
-Dacă sunteți atenționat că o noua versiune Portage este disponibila ar fi
- bine să actualizați Portage.
- Aceasta fiind posibilă după rularea comenzii 
+Dacă sunteți atenționat că o noua versiune Portage este disponibilă ar fi
+ bine să actualizați Portage, aceasta se face cu ajutorul comenzii 
 \color blue
 emerge --oneshot portage
 \color inherit
 .
- De asemenea veți fi notificați despre noutățile/știrile ce trebui citite
+ De asemenea veți fi notificați despre noutățile/știrile ce trebuie citite
  (news items need reading).
  
 \end_layout
@@ -13961,7 +14010,7 @@ Portage vă va informa că noi stiri sunt disponibile
 \end_layout
 
 \begin_layout Standard
-știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
+Știrile venite prin Portage sunt create pentru a înlesni comunicarea cu
  utilizatorii cărora le sunt trimise mesaje importante prin protocolul rsync.
  Pentru a le administra trebuie sa folosiți 
 \color blue
@@ -14192,7 +14241,7 @@ Available profile symlink targets:
 
 \begin_layout Standard
 După cum puteți vedea, sunt disponibile atât subprofile desktop cât și server
- pentru ceva arhitecturi.
+ pentru câteva arhitecturi.
 \end_layout
 
 \begin_layout Standard
@@ -14205,7 +14254,7 @@ eselect profile list
 
 \begin_layout Standard
 După ce ați văzut profilele disponibile pentru arhitectura dumneavoastră,
- puteți folosi unu dintre cele listate dacă doriți.
+ puteți folosi unul dintre cele listate dacă doriți.
 \begin_inset Newline newline
 \end_inset
 
@@ -14279,7 +14328,7 @@ non-multilib
 \begin_layout Plain Layout
 
 \color magenta
-Schimarea profilului pe non-multilib
+Schimbarea profilului pe non-multilib
 \end_layout
 
 \end_inset
@@ -14714,8 +14763,8 @@ Localizarea
 \end_layout
 
 \begin_layout Standard
-În cele din urmă selectați-vă localizarea ca sistemul dumneavoastră să știe
- unde sunteți localizat fizic.
+În cele din urmă selectați-vă localizarea pentru ca sistemul dumneavoastră
+ să știe unde sunteți localizat fizic.
  Pentru localizare (timezone) uitați-vă în 
 \series bold
 /usr/share/zoneinfo
@@ -15166,7 +15215,8 @@ dacă doriți să rulați și aplicații pe 32 de biți.
 Notă: Dacă aveți în plan să utilizați profilul non-multilib (pentru un sistem
  64 biți), atunci nu selectați suportul IA32 Emulation.
  Totuși va trebui să urmați următoarele instrucțiuni pentru a va comuta
- sistemul pe profilul non-multilib, precum și alegerea corectă a bootloader-ului.
+ sistemul pe profilul non-multilib, precum și alegerea corectă a încărcătorului
+ de sistem (bootloader).
 \end_layout
 
 \begin_layout Standard
@@ -17096,7 +17146,7 @@ Compilarea kernel-ului
 Când compilarea s-a terminat, copiați imaginea de kernel în directorul /boot.
  Utilizați orice nume considerați că este potrivit pentru kernel-ul dvs.
  și amintiți-vă acest nume deoarece veți avea nevoie de el ulterior când
- vă veți configura aplicația bootloader.
+ vă veți configura aplicația încărcătorul de sistem (bootloader).
  Amintiți-vă să înlocuiți kernel-3.4.9-gentoo cu numele și versiunea kernel-ului
  dumneavoastră.
  
@@ -17562,7 +17612,8 @@ Odată ce genkernel își încheie execuția, vor fi create un set întreg de
 \end_layout
 
 \begin_layout Standard
-O să folosi kernel-ul și initrd când vom configura bootloader-ul.
+O să folosim kernel-ul și initrd când o să configurăm încărcătorul de sistem
+ (bootloader-ul).
  Notați undeva numele imaginii de kernel și al fișierului initrd pentru
  că vă va trebui când veți configura aplicația bootloader.
  Initrd-ul va porni imediat după boot, pentru a iniția autodetecția hardware
@@ -21175,9 +21226,9 @@ Pentru arhitectura amd64, Gentoo Linux oferă GRUB Legacy și GRUB2.
 \end_layout
 
 \begin_layout Standard
-Dar, înainte de a instala unul dintre aceste aplicații bootloader, vă vom
- informa cum să configurați framebuffer-ul (presupunând că doriți acest
- lucru, bineînțeles).
+Dar, înainte de a instala unul dintre aceste aplicații încărcător de sistem
+ (bootloader), o să vă informăm cum să configurați framebuffer-ul (presupunând
+ că doriți acest lucru, bineînțeles).
  Cu framebuffer puteți rula linia de comandă Linux beneficiind de unele
  caracteristici (limitate) grafice (cum ar fi utilizarea imaginii bootsplash
  pe care Gentoo o oferă).
@@ -21191,7 +21242,8 @@ Opțional: Framebuffer
 \begin_layout Standard
 Dacă v-ați configurat kernel-ul cu suport pentru framebuffer (sau ați utilizat
  configurația implicită din genkernel), puteți activa framebuffer prin adăugarea
- parametrului vga sau video în configurația aplicației bootloader.
+ parametrului vga sau video în configurația aplicației bootloader (încărcătorul
+ de sistem).
  
 \end_layout
 
