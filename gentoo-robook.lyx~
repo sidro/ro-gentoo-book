@@ -695,7 +695,7 @@ Alegerea Mediului de Instalare Corect
 \end_layout
 
 \begin_layout Section
-Necesități Hardware
+Necesități hardware
 \end_layout
 
 \begin_layout Subsection*
@@ -1099,7 +1099,7 @@ Mult de descărcat.
 \begin_layout Subsection*
 
 \size large
-Arhiva tar Stage3
+Arhiva tar stage3
 \end_layout
 
 \begin_layout Standard
@@ -2068,7 +2068,6 @@ Adaugă pauze mai lungi în procesul de încărcare (bootare) pentru unități
 \end_inset
 
 
-
 \end_layout
 
 \begin_layout Standard
@@ -2155,7 +2154,7 @@ Acum, continuați cu Configurarea Suplimentară pentru Componentele Hardware.
 \end_layout
 
 \begin_layout Subsection*
-Configurarea Suplimentară pentru Componentele Hardware
+Configurarea suplimentară pentru componentele hardware
 \end_layout
 
 \begin_layout Standard
@@ -2828,10 +2827,10 @@ Opțional: Pornirea Serviciului SSH
 
 \begin_layout Standard
 Dacă vreți ca alți utilizatori să poată accesa procesul de instalare Gentoo
- Linux (posibil, ca să vă ajute să instalați Gentoo, sau chiar să îl instaleze
- pentru dvs.), va trebui să le creați conturi de utilizator sau chiar sa
- le oferiți parola de root (doar dacă aveți încredere deplină în acel utilizator
-).
+ Linux (posibil, să vă ajute să instalați Gentoo, sau chiar să îl instaleze
+ pentru dumneavoastră.), va trebui să le creați conturi de utilizator sau
+ chiar sa le oferiți parola de root (doar dacă aveți încredere deplină în
+ acel utilizator).
  
 \end_layout
 
@@ -2890,7 +2889,11 @@ Pornirea serviciului SSH
 \end_layout
 
 \begin_layout Standard
-Pentru a putea utiliza serviciul ssh trebuie configurat accesul la rețea.
+Pentru a putea utiliza serviciul 
+\series bold
+ssh
+\series default
+ trebuie configurat accesul la rețea.
  Continuați cu capitolul despre Configurarea Rețelei.
 \end_layout
 

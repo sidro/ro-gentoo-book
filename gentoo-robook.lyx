@@ -148,7 +148,7 @@ Alin Dobre - Translator (documenație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
-Versiunea 0.0.1
+Versiunea 0.1
 \end_layout
 
 \begin_layout Paragraph
@@ -695,7 +695,7 @@ Alegerea Mediului de Instalare Corect
 \end_layout
 
 \begin_layout Section
-Necesități Hardware
+Necesități hardware
 \end_layout
 
 \begin_layout Subsection*
@@ -728,7 +728,7 @@ Introducere
 
 \series bold
 \color black
-Necesități Hardware
+Necesități hardware
 \end_layout
 
 \end_inset
@@ -1099,7 +1099,7 @@ Mult de descărcat.
 \begin_layout Subsection*
 
 \size large
-Arhiva tar Stage3
+Arhiva tar stage3
 \end_layout
 
 \begin_layout Standard
@@ -1141,7 +1141,7 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 \end_layout
 
 \begin_layout Section
-Descărcarea, scrierea și boot-area 
+Descărcarea, scrierea și încărcarea 
 \begin_inset Newline newline
 \end_inset
 
@@ -1336,7 +1336,7 @@ cdrecord dev=/dev/sr0 <fișierul iso descărcat>
 \end_layout
 
 \begin_layout Subsection*
-Boot-area Mediului Installation CD
+Încărcarea Mediului Installation CD
 \end_layout
 
 \begin_layout Quote
@@ -2068,7 +2068,6 @@ Adaugă pauze mai lungi în procesul de încărcare (bootare) pentru unități
 \end_inset
 
 
-
 \end_layout
 
 \begin_layout Standard
@@ -2142,7 +2141,7 @@ Apoi, veți observa imaginea de încărcare (boot) și bara de progres.
  Alt+F1 pentru a comuta în modul informativ și urmați promptul.
  Dacă nu se efectuează nici o selecție în 10 secunde, cea implicită (tastatura
  US) va fi luată în considerare și procesul de încărcare (boot) va continua.
- Odată ce procesul de încarcare (boot) a fost finalizat veți fi logat în
+ Odată ce procesul de încărcare (boot) a fost finalizat veți fi logat în
  mediul "Live" al Gentoo Linux ca "root", modul super user.
  În consola curentă puteți observa promptul root ("#") și puteți comuta
  între alte console utilizând combinațiile de taste Alt-F2, Alt-F3 și Alt-F4.
@@ -2155,7 +2154,7 @@ Acum, continuați cu Configurarea Suplimentară pentru Componentele Hardware.
 \end_layout
 
 \begin_layout Subsection*
-Configurarea Suplimentară pentru Componentele Hardware
+Configurarea suplimentară pentru componentele hardware
 \end_layout
 
 \begin_layout Standard
