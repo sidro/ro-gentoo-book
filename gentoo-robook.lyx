@@ -116,7 +116,7 @@ Mihai Tene - Translator
 \begin_inset Newline newline
 \end_inset
 
-Alin Dobre - Translator (documenație versiuni intermediare)
+Alin Dobre - Translator (documentație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
@@ -6789,25 +6789,47 @@ Cât de Multe și Cât de Mari?
 \begin_layout Standard
 Numărul de partiții este în foarte mare măsură dependent de mediul dvs.
  Spre exemplu, dacă aveți un număr foarte mare de utilizatori, cel mai probabil
- veți dori să aveți directorul /home separat, deoarece sporește securitatea
- și facilitează operațiile de backup.
+ veți dori să aveți directorul 
+\series bold
+/home
+\series default
+ separat, deoarece sporește securitatea și facilitează operațiile de backup.
  Dacă instalați Gentoo ca server de mail, directorul dvs.
- /var ar trebui să fie separat, pentru că toate mail-urile sunt stocate
- în /var.
+ 
+\series bold
+/var
+\series default
+ ar trebui să fie separat, pentru că toate mail-urile sunt stocate în 
+\series bold
+/var
+\series default
+.
  O bună alegere a sistemului de fișiere va mări la maxim performanțele.
- Serverele de jocuri vor avea o partiție /opt separată, deoarece majoritatea
- aplicațiilor server pentru jocuri sunt instalate acolo.
- Motivul este similar cu cel pentru /home: securitate și backup.
- Veți dori în mod sigur să vă păstrați /usr mare: nu numai că va conține
- majoritatea aplicațiilor, dar numai structura Portage ocupă în jur de 500
- MOcteți, excluzând sursele ce sunt stocate în acesta.
+ Serverele de jocuri vor avea o partiție 
+\series bold
+/opt
+\series default
+ separată, deoarece majoritatea aplicațiilor server pentru jocuri sunt instalate
+ acolo.
+ Motivul este similar cu cel pentru 
+\series bold
+/home
+\series default
+: securitate și backup.
+ Veți dori în mod sigur să vă păstrați 
+\series bold
+/usr
+\series default
+ mare: nu numai că va conține majoritatea aplicațiilor, dar numai structura
+ Portage ocupă în jur de 500 MOcteți, excluzând sursele ce sunt stocate
+ în acesta.
  
 \end_layout
 
 \begin_layout Standard
 După cum puteți observa, depinde foarte mult de scopul pe care doriți să-l
  atingeți.
- Partiții sau volume separate au următoarele avantaje: 
+ Partițiile sau volumele separate au următoarele avantaje: 
 \end_layout
 
 \begin_layout Itemize
@@ -6838,9 +6860,20 @@ Securitatea poate fi îmbunătățită prin montarea unor partiții sau volume
  Dacă nu sunt configurate corect, pot cauza ca un sistem să aibă foarte
  mult loc liber pe o partiție și fără loc liber pe alta.
  Un alt inconvenient este că partițiile separate (în special pentru punctele
- de mount importante, cum ar fi /usr sau /var) necesită adesea ca administratoru
-l să buteze cu un initramfs pentru a monta partiția înainte de a începe
- scripturile de inițializare să pornească.
+ de mount importante, cum ar fi 
+\series bold
+/usr
+\series default
+ sau 
+\series bold
+/var
+\series default
+) necesită adesea ca administratorul să buteze cu un 
+\series bold
+initramfs
+\series default
+ pentru a monta partiția înainte de a începe scripturile de inițializare
+ să pornească.
  Nu este întotdeauna cazul, deci rezultatul poate varia.
  Deși există o limitare la 15 partiții pentru SCSI și SATA puteți folosi
  GPT.
@@ -7613,15 +7646,34 @@ swap
 \end_layout
 
 \begin_layout Standard
-/usr este destul de plin (83% utilizat), dar odată ce toate aplicațiile
- software sunt instalate /usr nu va tinde să mai crească prea mult.
- Deși alocarea unor câțiva giga-octeți de spațiu de disc pentru /var ar
- putea părea excesiv, amintiți-vă că Portage utilizează această partiție
+
+\series bold
+/usr
+\series default
+ este destul de plin (83% utilizat), dar odată ce toate aplicațiile software
+ sunt instalate 
+\series bold
+/usr
+\series default
+ nu va tinde să mai crească prea mult.
+ Deși alocarea unor câțiva giga-octeți de spațiu de disc pentru 
+\series bold
+/var
+\series default
+ ar putea părea excesiv, amintiți-vă că Portage utilizează această partiție
  implicit pentru compilarea pachetelor.
- Dacă doriți să vă păstrați /var la o mărime mai rezonabilă, cum ar fi 1
- GO, va trebui să modificați variabila dvs.
- PORTAGE_TMPDIR din /etc/make.conf să indice către partiția cu spațiu liber
- suficient pentru compilarea pachetelor extrem de mari, cum ar fi OpenOffice.
+ Dacă doriți să vă păstrați 
+\series bold
+/var
+\series default
+ la o mărime mai rezonabilă, cum ar fi 1 GO, va trebui să modificați variabila
+ dvs.
+ PORTAGE_TMPDIR din 
+\series bold
+/etc/make.conf
+\series default
+ să indice către partiția cu spațiu liber suficient pentru compilarea pachetelor
+ extrem de mari, cum ar fi OpenOffice.
 \end_layout
 
 \begin_layout Section
@@ -7747,10 +7799,22 @@ Vizualizarea Schemei de Partiționare Curentă
 \end_layout
 
 \begin_layout Standard
-fdisk este un utilitar foarte popular și puternic pentru a vă împărți discul
+
+\series bold
+fdisk
+\series default
+ este un utilitar foarte popular și puternic pentru a vă împărți discul
  în partiții.
- Porniți fdisk pentru discul dvs.
- (în exemplul nostru, utilizăm /dev/sda): 
+ Porniți 
+\series bold
+fdisk
+\series default
+ pentru discul dvs.
+ (în exemplul nostru, utilizăm 
+\series bold
+/dev/sda
+\series default
+): 
 \begin_inset Newline newline
 \end_inset
 
@@ -7800,7 +7864,11 @@ Lansarea fdisk
 \end_layout
 
 \begin_layout Standard
-Odată ce intrăm în fdisk, veți fi întâmpinați cu un prompt ce va arăta așa:
+Odată ce intrăm în 
+\series bold
+fdisk
+\series default
+, veți fi întâmpinați cu un prompt ce va arăta așa:
 \begin_inset Newline newline
 \end_inset
 
@@ -8968,7 +9036,7 @@ Acest disc este configurat să găzduiască șapte sisteme de fișiere Linux
 \end_layout
 
 \begin_layout Subsection*
-ștergerea tuturor Partițiilor
+Ștergerea tuturor Partițiilor
 \end_layout
 
 \begin_layout Standard
@@ -10376,18 +10444,52 @@ Crearea Partiției pentru Swap
 
 \begin_layout Standard
 Acum, trebuie creată partiția pentru swap.
- Pentru acest lucru, tastați n pentru o nouă partiție, apoi p pentru a-i
- specifica aplicației fdisk că doriți o partiție primară.
- Apoi, tastați 2 pentru a crea-o ca a doua partiție primară, /dev/hda2 în
- cazul nostru.
- Când vi se va cere primul cilindru, apăsați enter.
- Când vi se va cere ultimul cilindru, tastați +512M pentru a crea o partiție
- de mărimea a 512 MO.
- După ce ați specificat acest lucru, apăsați t pentru a seta tipul partiției,
- 2 pentru a selecta partiția pe care tocmai ați creat-o, și apoi tastați
- 82 pentru a seta tipul partiției ca "Linux Swap".
- După terminarea acestor pași, prin tastarea p ar trebui să vi se afișeze
- o tabelă de partiții similară cu aceasta: 
+ Pentru acest lucru, tastați 
+\series bold
+n
+\series default
+ pentru o nouă partiție, apoi 
+\series bold
+p
+\series default
+ pentru a-i specifica aplicației fdisk că doriți o partiție primară.
+ Apoi, tastați 
+\series bold
+2
+\series default
+ pentru a crea-o ca a doua partiție primară, 
+\series bold
+/dev/hda2
+\series default
+ în cazul nostru.
+ Când vi se va cere primul cilindru, apăsați 
+\series bold
+enter
+\series default
+.
+ Când vi se va cere ultimul cilindru, tastați 
+\series bold
++512M
+\series default
+ pentru a crea o partiție de mărimea a 512 MO.
+ După ce ați specificat acest lucru, apăsați 
+\series bold
+t
+\series default
+ pentru a seta tipul partiției, 
+\series bold
+2
+\series default
+ pentru a selecta partiția pe care tocmai ați creat-o, și apoi tastați 
+\series bold
+82
+\series default
+ pentru a seta tipul partiției ca "Linux Swap".
+ După terminarea acestor pași, prin tastarea 
+\series bold
+p
+\series default
+ ar trebui să se afișeze o tabelă de partiții similară cu aceasta: 
 \begin_inset Newline newline
 \end_inset
 
@@ -11027,15 +11129,44 @@ Crearea Partiției Rădăcină
 
 \begin_layout Standard
 În cele din urmă, trebuie creată partiția rădăcină.
- Pentru acest lucru, tastați n pentru a crea o nouă partiție, apoi p pentru
- a îi specifica aplicației fdisk că doriți o partiție primară.
- Apoi tastați 3 pentru a crea-o ca a treia partiție primară, /dev/sda3 în
- cazul nostru.
- Când vi se va cere primul cilindru, apăsați enter.
- Când vi se va cere ultimul cilindru, apăsați enter pentru a crea o partiție
- ce va ocupa restul spațiului rămas disponibil pe discul dvs.
- După terminarea acestor pași, prin tastarea p ar trebui să vi se afișeze
- de tabelă de partiții similară cu aceasta: 
+ Pentru acest lucru, tastați 
+\series bold
+n
+\series default
+ pentru a crea o nouă partiție, apoi 
+\series bold
+p
+\series default
+ pentru a îi specifica aplicației 
+\series bold
+fdisk
+\series default
+ că doriți o partiție primară.
+ Apoi tastați 
+\series bold
+3
+\series default
+ pentru a crea-o ca a treia partiție primară, 
+\series bold
+/dev/sda3
+\series default
+ în cazul nostru.
+ Când vi se va cere primul cilindru, apăsați 
+\series bold
+enter
+\series default
+.
+ Când vi se va cere ultimul cilindru, apăsați 
+\series bold
+enter
+\series default
+ pentru a crea o partiție ce va ocupa restul spațiului rămas disponibil
+ pe discul dvs.
+ După terminarea acestor pași, prin tastarea 
+\series bold
+p
+\series default
+ ar trebui să se afișeze de tabelă de partiții similară cu aceasta: 
 \begin_inset Newline newline
 \end_inset
 
@@ -11742,7 +11873,11 @@ Salvarea Schemei de Partiționare
 \end_layout
 
 \begin_layout Standard
-Pentru a salva schema de partiționare și a ieși din fdisk, tastați w.
+Pentru a salva schema de partiționare și a ieși din fdisk, tastați 
+\series bold
+w
+\series default
+.
  
 \begin_inset Newline newline
 \end_inset
