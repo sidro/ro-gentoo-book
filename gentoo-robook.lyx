@@ -2930,9 +2930,12 @@ Dacă sistemul dumneavoastră este conectat la o rețea deservită de un server
 \begin_layout Standard
 
 \color black
-Dacă rețeaua a fost configurată automat, comanda /sbin/ifconfig ar trebui
- să afișeze informații despre alte câteva interfețe în afara lo, cum ar
- fi eth0: 
+Dacă rețeaua a fost configurată automat, comanda
+\color blue
+ /sbin/ifconfig
+\color black
+ ar trebui să afișeze informații despre alte câteva interfețe în afara lo,
+ cum ar fi eth0: 
 \color inherit
 
 \begin_inset Newline newline
@@ -3216,7 +3219,7 @@ Dacă aveți acces la Internet prin intermediul unui proxy, va trebui să setaț
 \begin_layout Standard
 În majoritatea cazurilor, este suficient să definiți variabilele folosind
  adresa serverului proxy.
- Ca exemplu, vom presupune că aceasta este proxy.gentoo.org și portul este
+ Ca exemplu, o să presupunem că aceasta este proxy.gentoo.org și portul este
  8080.
  
 \begin_inset Newline newline
@@ -3370,8 +3373,7 @@ Dacă sunteți în această situație atunci sunteți nevoiți să folosiți Liv
  Acest LiveCD include cod sursă, o versiune completă a Portage și instrumentele
  necesare instalării unui sistem de bază Gentoo, și chiar mai mult.
  Această metodă are însă prețul ei: nu veți avea ultimele versiuni ale programel
-or instalate, deși diferențele vor fi minime.
- 
+or instalate.
 \end_layout
 
 \begin_layout Standard
@@ -3388,10 +3390,17 @@ Testarea rețelei
 \end_layout
 
 \begin_layout Standard
-Ați putea încerca să dați ping în serverele de nume ale provider-ului dumneavoas
-tră (cele scrise în /etc/resolv.conf) și apoi într-un site la alegere, doar
- pentru a vă asigura că pachetele dumneavoastră ajung pe internet și rezolvarea
- numelor funcționează corect, etc.
+Ați putea încerca să dați 
+\series bold
+ping
+\series default
+ în serverele de nume ale provider-ului dumneavoastră (cele scrise în 
+\series bold
+/etc/resolv.conf
+\series default
+) și apoi într-un site la alegere, doar pentru a vă asigura că pachetele
+ dumneavoastră ajung pe internet și rezolvarea numelor funcționează corect,
+ etc.
 \begin_inset Newline newline
 \end_inset
 
@@ -3490,7 +3499,11 @@ Implicit: Folosirea net-setup
 
 \begin_layout Standard
 Cea mai simplă cale de a configura rețeaua dacă aceasta nu s-a efectuat
- în mod automat este să rulați scriptul net-setup: 
+ în mod automat este să rulați scriptul 
+\color blue
+net-setup
+\color inherit
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -3544,7 +3557,11 @@ Rularea scriptului net-setup
 \end_layout
 
 \begin_layout Standard
-net-setup vă va interoga despre câteva lucruri despre rețea.
+
+\color blue
+net-setup
+\color inherit
+ vă va interoga despre câteva lucruri referitoare la rețea.
  La final ar trebui să aveți o rețea funcțională.
  Testați rețeaua în modul descris anterior.
  Dacă testele sunt pozitive, felicitări! Acum sunteți gata să instalați
@@ -3567,9 +3584,13 @@ Alternativ: Folosirea PPP
 Presupunând că aveți nevoie de PPPoE pentru a vă conecta la internet, mediul
  Installation CD (orice versiune) a simplificat lucrurile pentru dumneavoastră
  incluzând scriptul ppp.
- Folosiți scriptul pppoe-setup pentru a configura conexiunea.
+ Folosiți scriptul 
+\color blue
+pppoe-setup
+\color inherit
+ pentru a configura conexiunea.
  Va trebui să specificați care anume interfață de rețea este conectată la
- modemul adsl, numele și parola, ip-urile serverelor de nume (DNS) și dacă
+ modemul ADSL, numele și parola, ip-urile serverelor de nume (DNS) și dacă
  doriți sau nu un firewall minim.
  
 \begin_inset Newline newline
@@ -3643,7 +3664,14 @@ Folosirea ppp
 
 \begin_layout Standard
 Dacă ceva nu a funcționat, verificați din nou dacă ați introdus numele și
- parola corecte uitându-vă în /etc/ppp/pap-secrets sau /etc/ppp/chap-secrets
+ parola corecte uitându-vă în 
+\series bold
+/etc/ppp/pap-secrets
+\series default
+ sau 
+\series bold
+/etc/ppp/chap-secrets
+\series default
  și asigurați-vă că ați specificat corect interfața folosită pentru conectare.
  Dacă interfața de rețea nu există, va trebui să încărcați modulul corespunzător.
  În acest caz ar trebui să continuați cu Configurarea Manuală a Rețelei
@@ -3661,11 +3689,21 @@ Alternativ: Folosirea PPTP
 \end_layout
 
 \begin_layout Standard
-Dacă aveți nevoie de PPTP, puteți folosi scriptul pptpclient disponibil
- pe mediul Installation CD.
+Dacă aveți nevoie de PPTP, puteți folosi scriptul 
+\color blue
+pptpclient
+\color inherit
+ disponibil pe mediul Installation CD.
  Dar, mai întâi, trebuie să vă asigurați că aveți o configurație corectă.
- Editați /etc/ppp/pap-secrets sau /etc/ppp/chap-secrets astfel încât acestea
- să conțină combinația corectă nume/parolă:
+ Editați 
+\series bold
+/etc/ppp/pap-secrets
+\series default
+ sau 
+\series bold
+/etc/ppp/chap-secrets
+\series default
+ astfel încât acestea să conțină combinația corectă nume/parolă:
 \begin_inset Newline newline
 \end_inset
 
@@ -3719,7 +3757,11 @@ Editare /etc/ppp/chap-secrets
 \end_layout
 
 \begin_layout Standard
-Ajustăm, dacă este necesar, /etc/ppp/options.pptp: 
+Ajustăm, dacă este necesar 
+\series bold
+/etc/ppp/options.pptp
+\series default
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -3769,8 +3811,15 @@ Editare /etc/ppp/options.pptp
 \end_layout
 
 \begin_layout Standard
-Când totul este în regulă, doar rulați pptp (împreună cu opțiunile pe care
- nu le-ați putut seta în options.pptp) pentru a vă conecta la server: 
+Când totul este în regulă, doar rulați 
+\color blue
+pptp
+\color inherit
+ (împreună cu opțiunile pe care nu le-ați putut seta în 
+\series bold
+options.pptp
+\series default
+) pentru a vă conecta la server: 
 \begin_inset Newline newline
 \end_inset
 
@@ -3833,9 +3882,9 @@ Configurarea manuală a rețelei
 \end_layout
 
 \begin_layout Standard
-La boot-area de pe mediul Installation CD, se încearcă detectarea tuturor
- dispozitivelor hardware și încărcarea modulelor kernel (driver-e) necesare
- acestora.
+La încărcarea (boot-area) de pe mediul Installation CD, se încearcă detectarea
+ tuturor dispozitivelor hardware și încărcarea modulelor kernel (driver-e)
+ necesare acestora.
  În marea majoritate a cazurilor, LiveCD-ul face o treabă foarte bună (detectând
  aproape tot).
  Totuși, în unele cazuri, este posibil să nu fie încărcate automat unele
@@ -3852,7 +3901,11 @@ Dacă net-setup sau pppoe-setup eșuează, atunci este posibil ca placa de
 \end_layout
 
 \begin_layout Standard
-Pentru a afla ce module sunt disponibile pentru rețea, folosiți ls: 
+Pentru a afla ce module sunt disponibile pentru rețea, folosiți 
+\color blue
+ls
+\color inherit
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -3902,8 +3955,11 @@ Căutarea modulelor disponibile
 \end_layout
 
 \begin_layout Standard
-Dacă ați găsit driver-ul necesar plăcii de rețea, folosiți modprobe pentru
- a-l încărca: 
+Dacă ați găsit driver-ul necesar plăcii de rețea, folosiți 
+\color blue
+modprobe
+\color inherit
+ pentru a-l încărca: 
 \begin_inset Newline newline
 \end_inset
 
@@ -3958,7 +4014,11 @@ Folosirea modprobe pentru a încărca un modul kernel
 
 \begin_layout Standard
 Pentru a verifica dacă placa dumneavoastră de rețea este detectată, folosiți
- ifconfig.
+ 
+\color blue
+ifconfig
+\color inherit
+.
  O placă de rețea detectată ar trebui să furnizeze un rezultat de genul:
  
 \begin_inset Newline newline
@@ -4232,7 +4292,7 @@ eth0:
 
 \begin_layout Standard
 Dacă aveți mai multe plăci de rețea în sistemul dumneavoastră acestea sunt
- numite eth0, eth1, etc.
+ numite eth0, eth1 etc.
  Asigurați-vă că placa pe care doriți să o folosiți funcționează corespunzător
  și amintiți-vă să folosiți numele corespunzător împreună cu acest document.
  Noi vom presupune că este folosită placa eth0.
@@ -4242,7 +4302,7 @@ Dacă aveți mai multe plăci de rețea în sistemul dumneavoastră acestea sunt
 \begin_layout Standard
 Presupunând că acum placa de rețea este detectată, puteți reîncerca net-setup
  sau pppoe-setup (acum ar trebui să meargă), dar pentru cei cărora le place
- calea dificilă vom explica cum să configurați manual rețeaua.
+ calea dificilă o să vă explicăm cum să configurați manual rețeaua.
  
 \end_layout
 
@@ -4251,20 +4311,28 @@ Selectați una din următoarele secțiuni în funcție de tipul rețelei:
 \end_layout
 
 \begin_layout Itemize
-Folosirea DHCP pentru alocarea automată a IP-ului
+Folosirea DHCP pentru alocarea automată a IP-ului;
 \end_layout
 
 \begin_layout Itemize
-Pregătirea pentru acces Wireless dacă aveți o placă wireless 
+Pregătirea pentru acces Wireless dacă aveți o placă wireless;
 \end_layout
 
 \begin_layout Itemize
-Terminologia Utilizată în Rețelistică explică ceea ce trebuie să știți despre
- rețele 
+Terminologia utilizată în rețelistică explică ceea ce trebuie să știți despre
+ rețele; 
 \end_layout
 
 \begin_layout Itemize
-Folosirea ifconfig și route explică cum să setați manual rețeaua 
+Folosirea 
+\color blue
+ifconfig
+\color inherit
+ și 
+\color blue
+route
+\color inherit
+ explică cum să setați manual rețeaua.
 \end_layout
 
 \begin_layout Subsection*
@@ -4278,7 +4346,11 @@ DHCP (Dynamic Host Configuration Protocol) face posibilă obținerea în mod
  Aceasta funcționează numai dacă în rețeaua dumneavoastră există un server
  DHCP (sau provider-ul dumneavoastră de internet vă furnizează serviciul
  DHCP).
- Pentru ca placa de rețea să fie configurată automat folosiți dhcpcd: 
+ Pentru ca placa de rețea să fie configurată automat folosiți 
+\color blue
+dhcpcd
+\color inherit
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -4367,8 +4439,12 @@ Unii administratori de rețea vă impun să folosiți pentru mașina dumneavoast
 \end_layout
 
 \begin_layout Standard
-Dacă totul a fost în regulă (încercați ping în câteva adrese internet, de
- exemplu Google), atunci aveți totul setat și sunteți gata pentru a continua.
+Dacă totul a fost în regulă (încercați 
+\color blue
+ping
+\color inherit
+ la câteva adrese internet, de exemplu Google), atunci aveți totul setat
+ și sunteți gata pentru a continua.
  Săriți peste restul acestei secțiuni și continuați cu Pregătirea Discurilor.
  
 \end_layout
@@ -4378,10 +4454,18 @@ Pregătirea pentru acces Wireless
 \end_layout
 
 \begin_layout Description
-Notă: Suportul pentru comanda iwconfig este disponibil doar pentru mediile
- Installation CD pentru arhitecturile x86, amd64 și ppc.
+Notă: Suportul pentru comanda 
+\color blue
+iwconfig
+\color inherit
+ este disponibil doar pentru mediile Installation CD pentru arhitecturile
+ x86, amd64 și ppc.
  Puteți, însă, să faceți să funcționeze placa wireless urmând instrucțiunile
- din proiectul linux-wlan-ng.
+ din proiectul 
+\series bold
+linux-wlan-ng
+\series default
+.
  
 \end_layout
 
@@ -4389,8 +4473,16 @@ Notă: Suportul pentru comanda iwconfig este disponibil doar pentru mediile
 Dacă folosiți o placă wireless (802.11), trebuie să efectuați toate setările
  necesare înainte de a putea să continuați.
  Pentru a vedea setările curente ale plăcii dumneavoastră, puteți folosi
- iwconfig.
- Rularea iwconfig poate afișa ceva de genul: 
+ 
+\color blue
+iwconfig
+\color inherit
+.
+ Rularea 
+\color blue
+iwconfig
+\color inherit
+ poate afișa ceva de genul: 
 \begin_inset Newline newline
 \end_inset
 
@@ -4640,8 +4732,11 @@ Tx excessive retries:237 Invalid misc:350282 Missed beacon:84
 
 \begin_layout Description
 Notă: Unele plăci wireless pot avea numele wlan0 sau ra0 în loc de eth0.
- Rulați iwconfig fără nici un parametru, pentru a determina numele corect
- al dispozitivului.
+ Rulați 
+\color blue
+iwconfig
+\color inherit
+ fără nici un parametru, pentru a determina numele corect al dispozitivului.
  
 \end_layout
 
@@ -4767,21 +4862,29 @@ Aceasta setează numele rețelei wireless la "GentooNode")
 \end_layout
 
 \begin_layout Standard
-Puteți acum să revedeți setările pentru placa wireless folosind iwconfig.
- Odată ce aveți placa wireless funcțională, puteți continua cu configurarea
- adresei IP așa cum este descrisă în următoarea secțiune (Terminologia Utilizată
- în Rețelistică) sau să folosiți utilitarul net-setup descris anterior.
+Puteți acum să revedeți setările pentru placa wireless folosind 
+\color blue
+iwconfig
+\color inherit
+.
+ Odată ce aveți placa wireless funcțională, puteți continua cu Configurarea
+ adresei IP așa cum este descrisă în următoarea secțiune (Terminologia utilizată
+ în rețelistică) sau să folosiți utilitarul 
+\color blue
+net-setup
+\color inherit
+ descris anterior.
  
 \end_layout
 
 \begin_layout Subsection*
-Terminologia Utilizată în Rețelistică
+Terminologia utilizată în rețelistică
 \end_layout
 
 \begin_layout Description
-Notă: Dacă știți adresele dumneavoastră IP, broadcast, netmask si serverele
- de nume, atunci puteți sări peste această subsecțiune și continua cu Folosirea
- ifconfig și route.
+Notă: Dacă știți adresele dumneavoastră IP, broadcast, netmask și serverele
+ de nume, atunci puteți sări peste această subsecțiune și puteți continua
+ cu Folosirea ifconfig și route.
  
 \end_layout
 
@@ -6077,7 +6180,11 @@ Anterior am stabilit că fiecare stație are propria adresă IP.
  unei adrese IP (cum ar fi 64.5.62.82).
  Un astfel de serviciu este numit serviciu de nume.
  Pentru a folosi un astfel de serviciu, trebuie să definiți serverele de
- nume în /etc/resolv.conf.
+ nume în 
+\series bold
+/etc/resolv.conf
+\series default
+.
  
 \end_layout
 
@@ -6244,10 +6351,18 @@ Folosirea ifconfig și route
 
 \begin_layout Standard
 Setarea unei rețele constă în trei pași.
- Întâi ne vom atribui o adresă IP folosind ifconfig.
+ Întâi ne o să atribuim o adresă IP folosind 
+\color blue
+ifconfig
+\color inherit
+.
  Apoi vom seta ruta către gateway folosind route.
  Apoi vom finaliza punând adresele IP corespunzătoare serverelor de nume
- în /etc/resolv.conf.
+ în 
+\series bold
+/etc/resolv.conf
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -6355,8 +6470,15 @@ Folosirea route
 \end_layout
 
 \begin_layout Standard
-Acum deschideți /etc/resolv.conf cu editorul favorit (în exemplu nostru,
- vom folosi nano): 
+Acum deschideți 
+\series bold
+/etc/resolv.conf
+\series default
+ cu editorul favorit (în exemplu nostru, o să folosim 
+\series bold
+nano
+\series default
+): 
 \begin_inset Newline newline
 \end_inset
 
@@ -6471,8 +6593,7 @@ nameserver ${NAMESERVER2}
 \end_layout
 
 \begin_layout Standard
-Aceasta este tot.
- Acum testați rețeaua folosind ping către câteva servere din Internet (ca
+Acum testați rețeaua folosind ping către câteva servere din Internet (ca
  de exemplu Google).
  Funcționează? Felicitări atunci.
  Sunteți gata să instalați Gentoo.
@@ -6480,15 +6601,15 @@ Aceasta este tot.
 \end_layout
 
 \begin_layout Chapter
-Pregătirea Discurilor
+Pregătirea discurilor
 \end_layout
 
 \begin_layout Section
-Introducere în Dispozitive Bloc
+Introducere în dispozitive bloc
 \end_layout
 
 \begin_layout Subsection*
-Dispozitive Bloc
+Dispozitive bloc
 \end_layout
 
 \begin_layout Standard
@@ -6868,7 +6989,7 @@ Securitatea poate fi îmbunătățită prin montarea unor partiții sau volume
 \series bold
 /var
 \series default
-) necesită adesea ca administratorul să buteze cu un 
+) necesită adesea ca administratorul să încarce (boot-eze) cu un 
 \series bold
 initramfs
 \series default
