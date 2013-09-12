@@ -1336,7 +1336,7 @@ cdrecord dev=/dev/sr0 <fișierul iso descărcat>
 \end_layout
 
 \begin_layout Subsection*
-Încărcarea Mediului Installation CD
+Încărcarea mediului Installation CD
 \end_layout
 
 \begin_layout Quote
@@ -2822,7 +2822,7 @@ Puteți reveni la terminalul inițial apăsând combinația de taste Alt-F1.
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Pornirea Serviciului SSH
+Opțional: Pornirea serviciului SSH
 \end_layout
 
 \begin_layout Standard
@@ -2902,7 +2902,7 @@ Configurarea rețelei
 \end_layout
 
 \begin_layout Section
-Detectarea Automată a Rețelei
+Detectarea automată a rețelei
 \end_layout
 
 \begin_layout Standard
@@ -3205,7 +3205,7 @@ Interrupt:11 Base address:0xe800
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Configurare Proxy
+Opțional: Configurare proxy
 \end_layout
 
 \begin_layout Standard
@@ -3463,7 +3463,7 @@ Dacă puteți utiliza, acum, rețeaua, puteți sări peste restul acestei secți
 \end_layout
 
 \begin_layout Section
-Configurarea Automată a Rețelei
+Configurarea automată a rețelei
 \end_layout
 
 \begin_layout Standard
@@ -6613,23 +6613,26 @@ Dispozitive bloc
 \end_layout
 
 \begin_layout Standard
-Vom arunca o privire atentă asupra aspectelor în legătură cu discurile din
- Gentoo Linux și Linux, în general, incluzând sistemele de fișiere, partiții
+O să aruncăm o privire atentă asupra aspectelor în legătură cu discurile
+ din Gentoo Linux, în general, incluzând sistemele de fișiere, partiții
  și dispozitive bloc.
  Apoi, odată ce vă familiarizați cu toate aspectele despre discuri și sisteme
  de fișiere, veți fi ghidați prin procesul de setare al partițiilor și sistemelo
-r de fișiere pentru instalarea dvs.
- de Gentoo Linux.
+r de fișiere pentru instalarea dumneavoastră de Gentoo Linux.
  
 \end_layout
 
 \begin_layout Standard
-Pentru a începe, vom face introducerea dispozitivelor bloc.
+Pentru a începe, o să facem introducerea dispozitivelor bloc.
  Cel mai renumit dispozitiv bloc este probabil cel care reprezintă primul
- disc dur (harddisk) într-un sistem Linux, și anume /dev/sda.
+ disc dur (hard disk) într-un sistem Linux, și anume 
+\series bold
+/dev/sda
+\series default
+.
  Dacă sistemul dumneavoastră.
  utilizează discuri SCSI sau SATA, atunci primul dumneavoastră disc dur
- (hard disk) ar trebui să fie /dev/sd*; chiar și hard-disk-urile IDE sunt
+ (hard disk) ar trebui să fie /dev/sd*; chiar și discurile dure IDE sunt
  detectate ca /dev/sd* cu kernelurile recente.
  
 \end_layout
@@ -6639,8 +6642,8 @@ Pentru a începe, vom face introducerea dispozitivelor bloc.
 Dispozitivele bloc amintite mai sus, reprezintă o interfață abstractă pentru
  disc.
  Programele utilizator pot folosi aceste dispozitive bloc pentru a interacționa
- cu discul dvs.
- fără a avea grija dacă hard-disk-urile sunt IDE, SATA, SCSI sau altceva.
+ cu discul dumneavoastră fără a avea grija dacă discurile dure sunt IDE,
+ SATA, SCSI sau altceva.
  Programul poate adresa ceea ce urmează să se stocheze pe disc ca o mulțime
  continuă de blocuri de 512 octeți accesibile aleator.
  
@@ -6687,29 +6690,29 @@ O partiție logică este o partiție conținută într-o partiție extinsă.
 \end_layout
 
 \begin_layout Subsection*
-Stocare Avansată
+Stocare avansată
 \end_layout
 
 \begin_layout Standard
 Mediile Installation CD pentru arhitectura AMD64 oferă suport pentru LVM2.
  LVM2 mărește flexibilitatea oferită de setarea partițiilor.
- Pe parcursul instrucțiunilor de instalare, ne vom concentra pe partiții
+ Pe parcursul instrucțiunilor de instalare, o să ne concentrăm pe partiții
  "obișnuite", dar este, totuși, bine să știți că este suportat și LVM2.
  
 \end_layout
 
 \begin_layout Section
-Proiectarea unei Scheme de Partiționare
+Proiectarea unei scheme de partiționare
 \end_layout
 
 \begin_layout Subsection*
-Schema de Partiționare Implicită
+Schema de partiționare implicită
 \end_layout
 
 \begin_layout Standard
 Dacă nu sunteți interesat în proiectarea unei scheme de partiționare pentru
- sistemul dvs., puteți utiliza schema de partiționare pe care o folosim pe
- tot parcursul manualului: 
+ sistemul dumneavoastră, puteți utiliza schema de partiționare pe care o
+ folosim pe tot parcursul manualului: 
 \begin_inset Newline newline
 \end_inset
 
@@ -6898,25 +6901,32 @@ Partiția pentru rădăcină
 \begin_layout Standard
 Dacă vă interesează cât de mare ar trebui să fie o partiție, sau chiar de
  câte partiții aveți nevoie, citiți mai departe.
- Altfel, continuați cu Utilizarea fdisk sau parted pentru partiționarea
- Discului (amândouă sunt utilitare pentru partiționare, fdisk este un utilitar
- stabil, parted este mai recent dar suporta partiții mai mari de 2TB).
+ Altfel, continuați cu Utilizarea 
+\series bold
+fdisk
+\series default
+ sau 
+\series bold
+parted
+\series default
+ pentru partiționarea discului (amândouă sunt utilitare pentru partiționare,
+ fdisk este un utilitar stabil, parted este mai recent dar suporta partiții
+ mai mari de 2TB).
 \end_layout
 
 \begin_layout Subsection*
-Cât de Multe și Cât de Mari?
+Cât de multe și cât de mari?
 \end_layout
 
 \begin_layout Standard
-Numărul de partiții este în foarte mare măsură dependent de mediul dvs.
+Numărul de partiții este în foarte mare măsură dependent de mediul dumneavoastră.
  Spre exemplu, dacă aveți un număr foarte mare de utilizatori, cel mai probabil
  veți dori să aveți directorul 
 \series bold
 /home
 \series default
  separat, deoarece sporește securitatea și facilitează operațiile de backup.
- Dacă instalați Gentoo ca server de mail, directorul dvs.
- 
+ Dacă instalați Gentoo ca server de mail, directorul dumneavoastră 
 \series bold
 /var
 \series default
@@ -6937,11 +6947,11 @@ Numărul de partiții este în foarte mare măsură dependent de mediul dvs.
 /home
 \series default
 : securitate și backup.
- Veți dori în mod sigur să vă păstrați 
+ Veți dori în mod sigur să vă păstrați directorul
 \series bold
-/usr
+ /usr
 \series default
- mare: nu numai că va conține majoritatea aplicațiilor, dar numai structura
+ mai mare: nu numai că va conține majoritatea aplicațiilor, dar numai structura
  Portage ocupă în jur de 500 MOcteți, excluzând sursele ce sunt stocate
  în acesta.
  
@@ -6981,7 +6991,7 @@ Securitatea poate fi îmbunătățită prin montarea unor partiții sau volume
  Dacă nu sunt configurate corect, pot cauza ca un sistem să aibă foarte
  mult loc liber pe o partiție și fără loc liber pe alta.
  Un alt inconvenient este că partițiile separate (în special pentru punctele
- de mount importante, cum ar fi 
+ de montare importante, cum ar fi 
 \series bold
 /usr
 \series default
@@ -7001,8 +7011,8 @@ initramfs
 \end_layout
 
 \begin_layout Standard
-Ca un exemplu de partiționare, vă vom arăta unul pentru un disc de 20GO,
- utilizat ca un laptop demonstrativ (conține aplicații server pentru web,
+Ca un exemplu de partiționare, o să vă arătam unul pentru un disc de 20GO,
+ utilizat pe un laptop demonstrativ (conține aplicații server pentru web,
  aplicații server pentru mail, gnome, ...): 
 \begin_inset Newline newline
 \end_inset
@@ -7794,7 +7804,7 @@ swap
 /etc/make.conf
 \series default
  să indice către partiția cu spațiu liber suficient pentru compilarea pachetelor
- extrem de mari, cum ar fi OpenOffice.
+ extrem de mari, cum ar fi OpenOffice/Libreoffice.
 \end_layout
 
 \begin_layout Section
@@ -7916,7 +7926,7 @@ Schimbați schema de de partiționare în concordanță cu propriile preferințe
 \end_layout
 
 \begin_layout Subsection*
-Vizualizarea Schemei de Partiționare Curentă
+Vizualizarea schemei de partiționare curentă
 \end_layout
 
 \begin_layout Standard
@@ -7930,8 +7940,7 @@ fdisk
 \series bold
 fdisk
 \series default
- pentru discul dvs.
- (în exemplul nostru, utilizăm 
+ pentru discul dumneavoastră (în exemplul nostru, utilizăm 
 \series bold
 /dev/sda
 \series default
@@ -8039,8 +8048,11 @@ Command (m for help):
 \end_layout
 
 \begin_layout Standard
-Tastați p pentru a afișa configurația curentă a partițiilor discului dvs.:
- 
+Tastați 
+\series bold
+p
+\series default
+ pentru a afișa configurația curentă a partițiilor discului dvs.: 
 \begin_inset Newline newline
 \end_inset
 
@@ -9157,13 +9169,21 @@ Acest disc este configurat să găzduiască șapte sisteme de fișiere Linux
 \end_layout
 
 \begin_layout Subsection*
-Ștergerea tuturor Partițiilor
+Ștergerea tuturor partițiilor
 \end_layout
 
 \begin_layout Standard
-Mai întâi vom șterge toate partițiile existente de pe disc.
- Tastați d pentru a șterge o partiție.
- Spre exemplu, pentru a șterge o partiție existentă /dev/sda1: 
+Mai întâi o să ștergem toate partițiile existente pe disc.
+ Tastați 
+\series bold
+d
+\series default
+ pentru a șterge o partiție.
+ Spre exemplu, pentru a șterge o partiție existentă
+\series bold
+ /dev/sda1
+\series default
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -9182,7 +9202,7 @@ Mai întâi vom șterge toate partițiile existente de pe disc.
 \begin_layout Plain Layout
 
 \color magenta
-ștergerea unei partiții
+Ștergerea unei partiții
 \end_layout
 
 \end_inset
@@ -9227,17 +9247,34 @@ Partition number (1-4): 1
 
 \begin_layout Standard
 Partiția a fost programată pentru ștergere.
- Nu va mai fi afișată dacă tastați p, dar nu va fi ștearsă până când schimbările
- nu vor fi salvate.
+ Nu va mai fi afișată dacă tastați 
+\series bold
+p
+\series default
+, dar nu va fi ștearsă până când schimbările nu vor fi salvate.
  Dacă ați efectuat o greșeală și doriți să anulați fără să salvați schimbările,
- tastați q imediat și apoi enter și partițiile dvs.
- nu vor fi șterse.
+ tastați 
+\series bold
+q
+\series default
+ imediat și apoi 
+\series bold
+enter
+\series default
+ și partițiile dumneavoastră nu vor fi șterse.
 \end_layout
 
 \begin_layout Standard
 Acum, presupunând că doriți într-adevăr să ștergeți toate partițiile de
- pe sistemul dvs., tastați în mod repetat p pentru a vi se afișa tabela de
- partiții și apoi tastați d și numărul partiției pe care doriți să o ștergeți.
+ pe sistemul dumneavoastră, tastați în mod repetat 
+\series bold
+p
+\series default
+ pentru a vi se afișa tabela de partiții și apoi tastați 
+\series bold
+d
+\series default
+ și numărul partiției pe care doriți să o ștergeți.
  În cele din urmă, veți termina având o tabelă de partiție ce nu va conține
  nimic:
 \begin_inset Newline newline
@@ -9682,20 +9719,35 @@ Command (m for help):
 \begin_layout Standard
 Acum că tabela de partiții din memorie este goală, suntem gata de a crea
  partițiile.
- Vom utiliza o schemă de partiționare implicită, așa cum am amintit anterior.
+ O să utilizam o schemă de partiționare implicită, așa cum am amintit anterior.
  Bineînțeles, nu urmați aceste instrucțiuni mot-a-mot dacă nu doriți aceeași
  schemă de partiționare.
 \end_layout
 
 \begin_layout Subsection*
-Crearea Partiției pentru Boot
+Crearea partiției pentru boot
 \end_layout
 
 \begin_layout Standard
-Mai întâi trebuie creată o partiție pentru boot mică.
- Tastați n pentru a crea o nouă partiție, apoi p pentru a selecta-o ca partiție
- primară, urmat de 1 pentru a selecta prima partiție primară.
- Când vi se va cere primul cilindru, apăsați enter.
+Mai întâi trebuie creată o partiție pentru boot (încărcare sistem) mică.
+ Tastați 
+\series bold
+n
+\series default
+ pentru a crea o nouă partiție, apoi 
+\series bold
+p
+\series default
+ pentru a o selecta ca partiție primară, urmat de 
+\series bold
+1
+\series default
+ pentru a selecta prima partiție primară.
+ Când vi se va cere primul cilindru, apăsați 
+\series bold
+enter
+\series default
+.
  Când vi se va cere ultimul cilindru, tastați +32M pentru a crea o partiție
  de 32 MOcteți ca mărime: 
 \begin_inset Newline newline
@@ -9984,7 +10036,11 @@ Last cylinder or +size or +sizeM or +sizeK (1-3876, default 3876): +32M
 \end_layout
 
 \begin_layout Standard
-Acum, când tastați p, ar trebui să vi se afișeze: 
+Acum, când tastați 
+\series bold
+p
+\series default
+, ar trebui să vi se afișeze: 
 \begin_inset Newline newline
 \end_inset
 
@@ -10551,16 +10607,27 @@ Linux
 \end_layout
 
 \begin_layout Standard
-Trebuie să facem această partiție capabilă de boot.
- Tastați a pentru a activa indicatorul de boot pentru această partiție și
- apoi selectați 1.
- Dacă apăsați p din nou, veți observa că un caracter * este afișat pe coloana
- "Boot".
+Trebuie să facem această partiție capabilă de a încărca sistemul (boot).
+ Tastați 
+\series bold
+a
+\series default
+ pentru a activa indicatorul de boot pentru această partiție și apoi selectați
+ 
+\series bold
+1
+\series default
+.
+ Dacă apăsați 
+\series bold
+p
+\series default
+ din nou, veți observa că un caracter * este afișat pe coloana "Boot".
  
 \end_layout
 
 \begin_layout Subsection*
-Crearea Partiției pentru Swap
+Crearea partiției pentru swap
 \end_layout
 
 \begin_layout Standard
@@ -10578,9 +10645,9 @@ p
 \series bold
 2
 \series default
- pentru a crea-o ca a doua partiție primară, 
+ pentru a o crea ca a doua partiție primară, 
 \series bold
-/dev/hda2
+/dev/sda2
 \series default
  în cazul nostru.
  Când vi se va cere primul cilindru, apăsați 
@@ -11245,7 +11312,7 @@ Linux swap
 \end_layout
 
 \begin_layout Subsection*
-Crearea Partiției Rădăcină
+Crearea partiției rădăcină
 \end_layout
 
 \begin_layout Standard
@@ -11267,7 +11334,7 @@ fdisk
 \series bold
 3
 \series default
- pentru a crea-o ca a treia partiție primară, 
+ pentru a o crea ca a treia partiție primară, 
 \series bold
 /dev/sda3
 \series default
@@ -11282,7 +11349,7 @@ enter
 enter
 \series default
  pentru a crea o partiție ce va ocupa restul spațiului rămas disponibil
- pe discul dvs.
+ pe discul dumneavoastră.
  După terminarea acestor pași, prin tastarea 
 \series bold
 p
@@ -11990,7 +12057,7 @@ Linux
 \end_layout
 
 \begin_layout Subsection*
-Salvarea Schemei de Partiționare
+Salvarea schemei de partiționare
 \end_layout
 
 \begin_layout Standard
@@ -12049,13 +12116,13 @@ Command (m for help): w
 \end_layout
 
 \begin_layout Standard
-Acum că partițiile dvs.
- sunt create, puteți continua cu Crearea Sistemelor de Fișiere.
+Acum că partițiile dumneavoastră sunt create, puteți continua cu Crearea
+ Sistemelor de Fișiere.
  
 \end_layout
 
 \begin_layout Section
-Crearea Sistemelor de Fișiere
+Crearea sistemelor de fișiere
 \end_layout
 
 \begin_layout Subsection*
@@ -12063,23 +12130,23 @@ Introducere
 \end_layout
 
 \begin_layout Standard
-Acum, că partițiile dvs.
- sunt create, este timpul să aplicăm un sistem de fișiere pe acestea.
+Acum, că partițiile dumneavoastră sunt create, este timpul să aplicăm un
+ sistem de fișiere pe acestea.
  Dacă nu vă pasă ce sistem de fișiere utilizați și sunteți mulțumiți cu
  ceea ce utilizăm noi implicit în acest manual, continuați cu Aplicarea
- unui Sistem de Fișiere pe o Partiție.
+ unui sistem de fișiere pe o partiție.
  Altfel, citiți mai departe pentru a învăța despre sistemele de fișiere
  disponibile.
 \end_layout
 
 \begin_layout Subsection*
-Sisteme de Fișiere?
+Sisteme de fișiere
 \end_layout
 
 \begin_layout Standard
 Kernel-ul Linux suportă diverse sisteme de fișiere.
- Vom explica ext2, ext3, ext4, ReiserFS, XFS și JFS, deoarece sunt sistemele
- de fișiere utilizate cel mai des pe sistemele Linux.
+ O să vă explicăm ext2, ext3, ext4, ReiserFS, XFS și JFS, deoarece sunt
+ sistemele de fișiere utilizate cel mai des pe sistemele Linux.
 \end_layout
 
 \begin_layout Description
@@ -12088,8 +12155,8 @@ ext2 este cel mai încercat sistem de fișiere Linux, dar nu conține destule
  de rutină ale sistemului de fișiere ext2 la pornirea sistemului pot dura
  o perioada considerabilă de timp.
  Există acum o mulțime de sisteme de fișiere jurnalizate din noua generație
- ce pot fi verificate pentru consistență foarte repede și sunt, de aceea,
- preferate celor corespondente nejurnalizate.
+ ce pot fi verificate pentru consistență foarte repede și de aceea sunt
+ preferate în locul celor nejurnalizate.
  Sistemele de fișiere jurnalizate previn durata lungă la pornirea sistemului
  când sistemul de fișiere este într-o stare de inconsitență.
  
@@ -12097,22 +12164,26 @@ ext2 este cel mai încercat sistem de fișiere Linux, dar nu conține destule
 
 \begin_layout Description
 ext3 este versiunea jurnalizată a sistemului de fișiere ext2, oferind informații
- de jurnalizare de tip metadata pentru recuperări rapide în plus față de
- alte moduri de îmbunătățire ca jurnalizarea completă a datelor și jurnalizarea
- ordonată a datelor.
+ de jurnalizare de tip metadata în plus față de ext2, îmbunătățire ca jurnalizar
+ea completă a datelor și jurnalizarea ordonată a datelor pentru recuperări
+ rapide.
  ext3 este un sistem de fișiere foarte bun și sigur.
  Conține o indexare adițională b-tree, opțiune de indexare ce oferă o performanț
 ă bună în aproape toate situațiile.
- Puteți activa această indexare prin adăugarea opțiunii -O dir_index comenzii
- mke2fs.
- Pe scurt, ext3 este un sistem de fișiere excelent.
+ Puteți activa această indexare prin adăugarea opțiunii 
+\series bold
+-O dir_index
+\series default
+ comenzii mke2fs.
+ 
 \end_layout
 
 \begin_layout Description
 ext4 este un tip de fișier de sistem creat ca un branșament al tipului ext3
  aducând noi opțiuni, îmbunătățiri ale performanței și reducând limitele
- de dimensiuni cu schimbări moderate la formatul pe disk.
- Poate deschide volume până la 1 EB și cu o dimensiune maximă de 16 TB.
+ de dimensiuni cu schimbări moderate la formatul pe disc.
+ Poate deschide volume de până la 1 EB cu o dimensiune maximă a partiției
+ de 16 TB.
  Spre deosebire de clasicul ext2/3 în alocarea blocului bitmap, ext4 folosește
  extents, care îmbunătățește performața fișierelor de dimensiuni mari și
  reduce fragmentarea.
@@ -12134,10 +12205,10 @@ ReiserFS este un sistem de fișiere B*-tree ce oferă în general o performanț�
  ori.
  ReiserFS oferă o scalabilitate foarte bună și conține jurnalizare de tip
  metadata.
- Începând cu kernel 2.4.18+, ReiserFS este solid și utilizabil atât în cazuri
- normale cât și pentru cazuri extreme cum ar fi crearea de sisteme de fișiere
- foarte mari, utilizarea multor fișiere foarte mici, fișiere foarte mari
- și directoare conținând zeci de mii de fișiere.
+ ReiserFS este solid și utilizabil atât în cazuri normale cât și pentru
+ cazuri extreme cum ar fi crearea de sisteme de fișiere foarte mari, utilizarea
+ multor fișiere foarte mici, fișiere foarte mari și directoare conținând
+ zeci de mii de fișiere.
 \end_layout
 
 \begin_layout Description
@@ -12160,12 +12231,12 @@ JFS este sistemul de fișiere cu jurnalizare de înaltă performanță al IBM.
 \end_layout
 
 \begin_layout Subsection*
-Aplicarea unui Sistem de Fișiere pe o Partiție
+Aplicarea unui sistem de fișiere pe o partiție
 \end_layout
 
 \begin_layout Standard
 Pentru a crea un sistem de fișiere pe o partiție sau volum, există utilitare
- disponibile pentru fiecare sistem de fișiere posibil: 
+ disponibile pentru fiecare sistem de fișiere existent: 
 \begin_inset Newline newline
 \end_inset
 
@@ -12461,11 +12532,15 @@ Acum creați sistemele de fișiere pe partițiile (sau volumele logice) nou
 \end_layout
 
 \begin_layout Subsection*
-Activarea Partiției Swap
+Activarea partiției swap
 \end_layout
 
 \begin_layout Standard
-mkswap este comanda utilizată pentru a inițializa partițiile swap: 
+
+\color blue
+mkswap
+\color inherit
+ este comanda utilizată pentru a inițializa partițiile swap: 
 \begin_inset Newline newline
 \end_inset
 
@@ -12484,7 +12559,7 @@ mkswap este comanda utilizată pentru a inițializa partițiile swap:
 \begin_layout Plain Layout
 
 \color magenta
-Crearea unei semnături Swap
+Crearea unei semnături swap
 \end_layout
 
 \end_inset
@@ -12574,9 +12649,8 @@ Montarea
 \end_layout
 
 \begin_layout Standard
-Acum ca partițiile dvs.
- sunt inițializate și găzduiesc un sistem de fișiere, este timpul să montați
- (n.t.: mount în lb.
+Acum ca partițiile dumneavoastră sunt inițializate și găzduiesc un sistem
+ de fișiere, este timpul să montați (n.t.: mount în lb.
  engleză) aceste partiții.
 \end_layout
 
@@ -12699,7 +12773,7 @@ proc
 \end_layout
 
 \begin_layout Standard
-Continuați cu Instalarea Fișierelor de Instalare Gentoo.
+Continuați cu Instalarea fișierelor Gentoo necesare instalării.
  
 \end_layout
 
