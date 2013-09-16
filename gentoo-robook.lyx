@@ -12778,15 +12778,11 @@ Continuați cu Instalarea fișierelor Gentoo necesare instalării.
 \end_layout
 
 \begin_layout Chapter
-Instalarea Fișierelor Gentoo necesare Instalării
+Instalarea fișierelor Gentoo necesare instalării
 \end_layout
 
 \begin_layout Section
-Instalarea unei Arhive Tar Stage
-\end_layout
-
-\begin_layout Subsection*
-Instalarea unei Arhive Tar Stage
+Instalarea unei arhive tar stage
 \end_layout
 
 \begin_layout Standard
@@ -12913,22 +12909,26 @@ Setarea datei/orei UTC
 \end_layout
 
 \begin_layout Subsection*
-Alegerea Dumneavoastră
+Alegerea dumneavoastră
 \end_layout
 
 \begin_layout Standard
 Următorul pas pe care trebuie să îl urmați este să instalați arhiva tar
  stage3 pe sistemul dumneavoastră.
- Comanda uname -m poate fi utilizată pentru a vă ajuta să decideți ce arhivă
- tar stage să descărcați.
+ Comanda 
+\color blue
+uname -m
+\color inherit
+ poate fi utilizată pentru a vă ajuta să decideți ce arhivă tar stage să
+ descărcați.
 \end_layout
 
 \begin_layout Section
-Implicit: Folosirea un Stage de pe Internet
+Implicit: Folosirea unui stage de pe internet
 \end_layout
 
 \begin_layout Subsection*
-Descărcarea Arhivei Stage
+Descărcarea arhivei stage
 \end_layout
 
 \begin_layout Standard
@@ -12984,9 +12984,13 @@ Intrăm în directorul în care am montat Gentoo
 
 \begin_layout Standard
 În funcție de mediul de instalare, aveți câteva unelte disponibile pentru
- a descărca un Stage.
- Dacă aveți links disponibil, atunci puteți naviga cu ușurință către lista
- de servere mirror Gentoo și să alegeți unul cât mai apropiat de dumneavoastră.
+ a descărca un stage.
+ Dacă aveți 
+\color blue
+links
+\color inherit
+ disponibil, atunci puteți naviga cu ușurință către lista de servere mirror
+ Gentoo și să alegeți unul cât mai apropiat de dumneavoastră.
  Tastați 
 \color green
 links http://www.gentoo.org/main/en/mirrors.xml
@@ -12999,10 +13003,24 @@ ENTER
 \end_layout
 
 \begin_layout Standard
-Dacă nu aveți disponibilă aplicația links, ar trebui să aveți aplicația
- lynx la dispoziție.
- Dacă trebuie să utilizați un server proxy, exportați variabilele http_proxy
- și ftp_proxy: 
+Dacă nu aveți disponibilă aplicația 
+\color blue
+links
+\color inherit
+, ar trebui să aveți aplicația 
+\color blue
+lynx
+\color inherit
+ la dispoziție.
+ Dacă trebuie să utilizați un server proxy, exportați variabilele 
+\series bold
+http_proxy
+\series default
+ și 
+\series bold
+ftp_proxy
+\series default
+: 
 \begin_inset Newline newline
 \end_inset
 
@@ -13065,7 +13083,11 @@ Setarea informațiilor despre proxy pentru lynx
 \end_layout
 
 \begin_layout Standard
-Vom presupune, de acum, că aveți la dispoziție links.
+O să presupunem, de acum, că aveți la dispoziție 
+\color blue
+links
+\color inherit
+.
  
 \end_layout
 
@@ -13075,8 +13097,15 @@ Selectați un mirror apropiat.
 \end_layout
 
 \begin_layout Standard
-Selectați directorul releases/, urmat de cel al arhitecturii folosite (de
- exemplu amd64/autobuilds/).
+Selectați directorul 
+\series bold
+releases/
+\series default
+, urmat de cel al arhitecturii folosite (de exemplu 
+\series bold
+amd64/autobuilds/
+\series default
+).
  Acolo ar trebui să găsiți toate arhivele tar stage disponibile pentru arhitectu
 ra dumneavoastră (este posibil să fie stocate în directoare având numele
  subarhitecturilor individuale).
@@ -13085,7 +13114,11 @@ ra dumneavoastră (este posibil să fie stocate în directoare având numele
 D
 \series default
  pentru a o descărca.
- Când ați terminat, apăsați Q pentru a ieși din browser.
+ Când ați terminat, apăsați 
+\series bold
+Q
+\series default
+ pentru a ieși din browser.
  
 \begin_inset Newline newline
 \end_inset
@@ -13178,10 +13211,16 @@ Asigurați-vă că ați descărcat o arhivă tar stage3 - instalările utilizân
 \end_layout
 
 \begin_layout Standard
-Dacă doriți să verificați integritatea arhivei descărcate, folosiți openssl
+Dacă doriți să verificați integritatea arhivei descărcate, folosiți 
+\series bold
+openssl
+\series default
  și comparați ceea ce este afișat cu suma aflată pe mirror.
- Fișierul digest vă furnizează câteva sume de control, fiecare având un
- algoritm propriu.
+ Fișierul 
+\series bold
+digest
+\series default
+ vă furnizează câteva sume de control, fiecare având un algoritm propriu.
  Cele recomandate sunt SHA512 și Whirlpool.
  Spre exemplu, pentru a verifica integritatea arhivei tar stage pentru amd64:
 \begin_inset Newline newline
@@ -13377,12 +13416,12 @@ f
 \end_layout
 
 \begin_layout Standard
-Acum că avem Stage-ul instalat, continuăm cu Instalarea Portage.
+Acum că avem stage-ul instalat, continuăm cu Instalarea Portage.
  
 \end_layout
 
 \begin_layout Section
-Configurarea Opțiunilor de Compilare
+Configurarea opțiunilor de compilare
 \end_layout
 
 \begin_layout Subsection*
@@ -13391,7 +13430,11 @@ Introducere
 
 \begin_layout Standard
 Pentru optimizarea Gentoo, puteți seta unele variabile ce vor determina
- comportamentul Portage.
+ comportamentul 
+\series bold
+portage
+\series default
+.
  Toate aceste variabile pot fi setate ca variabile de mediu (folosind export),
  dar acest lucru nu este permanent.
  Pentru a vă menține setările, Portage conține un fișier de configurare
@@ -13400,7 +13443,7 @@ Pentru optimizarea Gentoo, puteți seta unele variabile ce vor determina
 /etc/portage/make.conf
 \series default
 .
- Acest fișier îl vom edita acum.
+ Acest fișier îl o să îl editam acum.
  
 \end_layout
 
@@ -13416,9 +13459,12 @@ Notă: O listă comentată a tuturor variabilelor, poate fi găsită în
 \end_layout
 
 \begin_layout Standard
-Deschideți editorul de text favorit (în acest ghid noi folosim nano) astfel
- încât să modificăm variabilele de optimizare, pe care le vom explica în
- continuare.
+Deschideți editorul de text favorit (în acest ghid noi folosim 
+\series bold
+nano
+\series default
+) astfel încât să modificăm variabilele de optimizare, pe care le vom explica
+ în continuare.
  
 \begin_inset Newline newline
 \end_inset
@@ -13472,7 +13518,11 @@ Deschiderea /etc/portage/make.conf
 Așa cum probabil ați observat, fișierul make.conf.example este structurat
  într-un mod generic: liniile comentate încep cu "#", iar celelalte definesc
  variabile folosind sintaxa: VARIABLE="conținut".
- Fișierul make.conf utilizează aceeași sintaxă.
+ Fișierul 
+\series bold
+make.conf
+\series default
+ utilizează aceeași sintaxă.
  Multe dintre acele variabile sunt discutate în continuare.
  
 \end_layout
@@ -13499,28 +13549,45 @@ CXXFLAGS
 \end_layout
 
 \begin_layout Standard
-În make.conf ar trebui să definiți opțiunile de optimizare care credeți că
- vor face sistemul cât mai rapid în general.
- Nu puneți valori experimentale în această variabilă; o optimizare prea
- mare poate duce la un comportament ciudat al programelor (oprirea funcționării,
+În 
+\series bold
+make.conf
+\series default
+ ar trebui să definiți opțiunile de optimizare care credeți că vor face
+ sistemul cât mai rapid în general.
+ Nu puneți valori experimentale în acest fișier; o optimizare prea mare
+ poate duce la un comportament ciudat al programelor (oprirea funcționării,
  sau chiar mai rău, funcționarea incorectă).
  
 \end_layout
 
 \begin_layout Standard
-Nu vom explica toate opțiunile de optimizare.
+Nu o să explicam toate opțiunile de optimizare.
  Dacă vreți să le aflați pe toate, citiți Manualul(ele) Online GNU sau gcc
  pagina info (info gcc -- funcționează doar pe un sistem Linux funcțional).
- Fișierul make.conf.example însuși conține, de asemenea, multe exemple și
- informații; nu uitați să-l citiți.
+ Fișierul 
+\series bold
+make.conf.example
+\series default
+ conține, de asemenea, multe exemple și informații; nu uitați să-l citiți.
  
 \end_layout
 
 \begin_layout Standard
-O primă opțiune este indicatorul -march= sau -mtune=, care specifică numele
- arhitecturii țintă.
- Opțiunile posibile sunt descrise în fișierul make.conf.example (sub formă
- de comentarii).
+O primă opțiune este indicatorul 
+\series bold
+-march=
+\series default
+ sau 
+\series bold
+-mtune=
+\series default
+, care specifică numele arhitecturii țintă.
+ Opțiunile posibile sunt descrise în fișierul 
+\series bold
+make.conf.example
+\series default
+ (sub formă de comentarii).
  De obicei se folosește valoarea 
 \series bold
 native
@@ -13530,27 +13597,69 @@ native
 \end_layout
 
 \begin_layout Standard
-Al doilea este indicatorul -O (care reprezintă majuscula O, nu cifra zero),
- care specifică clasa de optimizare gcc.
- Clasele posibile sunt s (pentru optimizarea mărimii), 0 (zero - pentru
- nici o optimizare), 1, 2 sau 3 pentru mai multe optimizări de viteză (fiecare
- clasă are aceiași indicatori ca cea dinainte, plus altele).
- -O2 este recomandat ca implicit.
- -O3 poate produce instabilitate, de aceea este recomandat -O2.
+Al doilea este indicatorul 
+\series bold
+-O
+\series default
+ (care reprezintă majuscula O, nu cifra zero), care specifică clasa de optimizar
+e gcc.
+ Clasele posibile sunt 
+\series bold
+s
+\series default
+ (pentru optimizarea mărimii), 
+\series bold
+0
+\series default
+ (zero - pentru nici o optimizare), 
+\series bold
+1
+\series default
+, 
+\series bold
+2
+\series default
+ sau 
+\series bold
+3
+\series default
+ pentru mai multe optimizări de viteză (fiecare clasă are aceiași indicatori
+ ca cea dinainte, plus altele).
+ 
+\series bold
+-O2
+\series default
+ este recomandat ca implicit.
+ 
+\series bold
+-O3
+\series default
+ poate produce instabilitate, de aceea este recomandat 
+\series bold
+-O2
+\series default
+.
 \end_layout
 
 \begin_layout Standard
-O altă setare comună de optimizare este -pipe (utilizează canale pipe în
- locul fișierelor temporare pentru comunicația între diversele etape ale
- compilării).
+O altă setare comună de optimizare este 
+\series bold
+-pipe
+\series default
+ (utilizează canale pipe în locul fișierelor temporare pentru comunicația
+ între diversele etape ale compilării).
  Ea nu are impact asupra codului generat, dar folosește mai multă memorie.
  Pe sisteme cu memorie puțină este recomandat a nu se folosi acest parametru.
 \end_layout
 
 \begin_layout Standard
-Luați aminte faptul că utilizarea -fomit-frame-pointer (ce nu păstrează
- indicatorul frame într-un registru pentru funcțiile ce nu necesită acest
- lucru) poate avea repercursiuni serioase asupra aplicațiilor de depanare!
+Luați aminte faptul că utilizarea 
+\series bold
+-fomit-frame-pointer
+\series default
+ (ce nu păstrează indicatorul frame într-un registru pentru funcțiile ce
+ nu necesită acest lucru) poate avea repercursiuni serioase asupra aplicațiilor
+ de depanare!
 \end_layout
 
 \begin_layout Standard
@@ -13691,30 +13800,36 @@ Fiți gata, Pregătiți-vă, Porniți!
 \end_layout
 
 \begin_layout Standard
-Actualizați fișierul /mnt/gentoo/etc/portage/make.conf, cu preferințele dumneavoa
-stră și salvați (utilizatorii nano tastează Ctrl-X).
+Actualizați fișierul 
+\series bold
+/mnt/gentoo/etc/portage/make.conf
+\series default
+, cu preferințele dumneavoastră și salvați (utilizatorii nano tastează Ctrl-X).
  Acum sunteți gata să continuați cu Instalarea Sistemului de Bază al Gentoo.
  
 \end_layout
 
 \begin_layout Chapter
-Instalarea Sistemului de Bază al Gentoo
+Instalarea sistemului de bază al Gentoo
 \end_layout
 
 \begin_layout Section
-Utilizarea mediului Chroot
+Utilizarea mediului chroot
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Alegerea Mirror-urilor
+Opțional: Alegerea mirror-urilor
 \end_layout
 
 \begin_layout Standard
 Pentru a descărca sursele mai rapid, este recomandat să selectați un server
  mirror rapid.
- Portage va căuta în fișierul dvs.
- make.conf definiția variabilei GENTOO_MIRRORS și va utiliza server-ele mirror
- afișate acolo.
+ Portage va căuta în fișierul dumneavoastră 
+\series bold
+make.conf
+\series default
+ definiția variabilei GENTOO_MIRRORS și va utiliza server-ele mirror afișate
+ acolo.
  Puteți naviga în documentul nostru ce conține 
 \series bold
 \color blue
@@ -13729,11 +13844,14 @@ target "http://www.gentoo.org/main/en/mirrors.xml?style=printable"
 
 \series default
 \color inherit
- și căuta un server mirror (sau mai multe) mai apropiate de dvs.
+ și căuta un server mirror (sau mai multe) mai apropiate de dumneavoastră
  (deoarece, în cele mai multe cazuri, acestea sunt și cele mai rapide),
- sau puteți utiliza utilitarul mirrorselect oferit de noi, cu care puteți
- printr-o interfață prietenoasă, să selectați server-ele mirror pe care
- le doriți.
+ sau puteți utiliza utilitarul 
+\color blue
+mirrorselect
+\color inherit
+ oferit de noi, cu care puteți printr-o interfață prietenoasă, să selectați
+ server-ele mirror pe care le doriți.
 \begin_inset Newline newline
 \end_inset
 
@@ -13783,10 +13901,18 @@ Utilizarea mirrorselect pentru variabila GENTOO_MIRRORS
 \end_layout
 
 \begin_layout Standard
-O altă setare importantă este variabila SYNC din make.conf.
+O altă setare importantă este variabila 
+\series bold
+SYNC
+\series default
+ din 
+\series bold
+make.conf
+\series default
+.
  Această variabilă conține server-ul rsync pe care doriți să-l utilizați
- când vă actualizați structura Portage (colecția de fișiere ebuild, script-urile
- ce conțin toate informațiile de care Portage are nevoie pentru a descărca
+ când vă actualizați structura portage (colecția de fișiere ebuild, script-urile
+ ce conțin toate informațiile de care portage are nevoie pentru a descărca
  și a instala aplicațiile).
  Deși puteți introduce manual un server SYNC, mirrorselect vă poate ușura
  această operație: 
@@ -13840,17 +13966,32 @@ Selectarea unui server mirror rsync utilizând mirrorselect
 
 \begin_layout Standard
 După rularea mirrorselect este recomandat să verificați încă o dată setările
- din /mnt/gentoo/etc/portage/make.conf ! 
+ din 
+\series bold
+/mnt/gentoo/etc/portage/make.conf
+\series default
+! 
 \end_layout
 
 \begin_layout Description
-Notă: Dacă doriți să setați un server de SYNC manual în make.conf, ar trebui
- să încercați lista cu servere mirror și să alegeți un mirror cât mai apropiat
- de dumneavoastră ca și locație.
+Notă: Dacă doriți să setați un server de SYNC manual în 
+\series bold
+make.conf
+\series default
+, ar trebui să încercați lista cu servere mirror și să alegeți un mirror
+ cât mai apropiat de dumneavoastră ca și locație.
  Noi vă recomandam să alegeți o listă de mirror-uri pe care sa o salvați
- în make.conf și nu doar un mirror.
+ în 
+\series bold
+make.conf
+\series default
+ și nu doar un mirror.
  Deoarece în cazul în care un mirror este indisponibil să se utilizeze următorul
- mirror ce se află în fișierul make.conf.
+ mirror ce se află în fișierul 
+\series bold
+make.conf
+\series default
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13859,10 +14000,18 @@ Precizarea Informațiilor despre DNS
 
 \begin_layout Standard
 A rămas un singur lucru de făcut, înainte să putem intra în noul mediu,
- și anume trebuie să copiem informațiile despre DNS în /etc/resolv.conf.
+ și anume trebuie să copiem informațiile despre DNS în 
+\series bold
+/etc/resolv.conf
+\series default
+.
  Trebuie să facem asta, pentru a fi siguri că rețeaua funcționează, chiar
  și după ce intrăm în noul mediu.
- /etc/resolv.conf conține serverele DNS pentru rețeaua noastră.
+ 
+\series bold
+/etc/resolv.conf
+\series default
+ conține serverele DNS pentru rețeaua noastră.
  
 \begin_inset Newline newline
 \end_inset
@@ -13924,19 +14073,35 @@ Copierea informațiilor despre DNS
 \end_layout
 
 \begin_layout Subsection*
-Montarea Sistemelor de Fișiere
+Montarea sistemelor de fișiere
 \end_layout
 
 \begin_layout Standard
-În câteva momente vom schimba root-ul Linuxului către noua locație.
+În câteva momente o să schimbăm root-ul Linuxului către noua locație.
  Ca să ne asigurăm că noul mediu este funcțional trebuie să facem câteva
  sisteme de fișiere disponibile.
 \end_layout
 
 \begin_layout Standard
-Montați sistemul de fișiere /proc în /mnt/gentoo/proc pentru a permite procesulu
-i de instalare să utilizeze informația oferită de kernel, chiar și în mediul
- chroot, și apoi montați prin legătură sistemele de fișiere /dev și /sys.
+Montați sistemul de fișiere 
+\series bold
+/proc
+\series default
+ în 
+\series bold
+/mnt/gentoo/proc
+\series default
+ pentru a permite procesului de instalare să utilizeze informația oferită
+ de kernel, chiar și în mediul chroot, și apoi montați prin legătură sistemele
+ de fișiere 
+\series bold
+/dev
+\series default
+ și 
+\series bold
+/sys
+\series default
+.
  
 \begin_inset Newline newline
 \end_inset
@@ -14013,7 +14178,7 @@ Montarea sistemului de fișiere
 \end_layout
 
 \begin_layout Subsection*
-Intrarea în noul Mediu
+Intrarea în noul mediu
 \end_layout
 
 \begin_layout Standard
@@ -14027,11 +14192,28 @@ on CD sau alt mediu de instalare), în sistemul instalat (adică în partiția
 
 \begin_layout Standard
 Acțiunea de chrooting, se face în trei etape.
- Mai întâi, vom muta rădăcina, din / (de pe discul de instalare), către
- /mnt/gentoo (de pe partiția aleasa pentru instalare), folosind comanda
- chroot.
- Apoi, variabilele distribuite de /etc/profile le încărcăm în memorie, folosind
- comanda source.
+ Mai întâi, vom muta rădăcina, din 
+\series bold
+/
+\series default
+ (de pe discul de instalare), către 
+\series bold
+/mnt/gentoo
+\series default
+ (de pe partiția aleasa pentru instalare), folosind comanda 
+\color blue
+chroot
+\color inherit
+.
+ Apoi, variabilele distribuite de 
+\series bold
+/etc/profile
+\series default
+ le încărcăm în memorie, folosind comanda 
+\color blue
+source
+\color inherit
+.
  Iar în ultimul pas redefinim promptul pentru a ne ajuta să ne reamintim
  că suntem într-un mediu chrootat (mediul unde se realizează instalarea).
 \begin_inset Newline newline
@@ -14111,7 +14293,7 @@ Chroot în noul mediu
 \begin_layout Standard
 Felicitări! Sunteți acum în propriul mediu Gentoo Linux.
  Desigur, suntem departe de a fi terminat, motiv pentru care procesul de
- instalare mai are câteva secțiuni de parcurs :-) 
+ instalare mai are câteva secțiuni de parcurs.
 \end_layout
 
 \begin_layout Standard
@@ -14125,13 +14307,21 @@ Configurarea Portage
 \end_layout
 
 \begin_layout Subsection*
-Despachetarea structurii Portage
+Despachetarea structurii portage
 \end_layout
 
 \begin_layout Standard
-Acum trebuie să instalați structura Portage, o colecție de fișiere ce informează
- Portage ce software poți instala, ce profile sunt disponibile etc.
- Conținutul structurii Portage va fi extras în /usr/portage.
+Acum trebuie să instalați structura 
+\series bold
+portage
+\series default
+, o colecție de fișiere ce informează portage ce software poți instala,
+ ce profile sunt disponibile etc.
+ Conținutul structurii portage va fi extras în 
+\series bold
+/usr/portage
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -14205,14 +14395,18 @@ Rularea lui emerge--webrsync pentru a instala o structură Portage
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Actualizarea structurii Portage
+Opțional: Actualizarea structurii portage
 \end_layout
 
 \begin_layout Standard
 Acum, trebuie să vă actualizați structura Portage la ultima versiune.
- emerge --sync efectuează această acțiune pentru dvs.
+ 
+\color blue
+emerge --sync
+\color inherit
+ efectuează această acțiune pentru dumneavoastră.
  El va folosi protocolul rsync pentru a face update (a aduce ultima versiune,
- a actualiza) structurii Portage pe care ați descărcat-o mai devreme folosind
+ a actualiza) structurii portage pe care ați descărcat-o mai devreme folosind
  
 \series bold
 emerge-webrsync
@@ -14304,12 +14498,12 @@ puteți adăuga opțiunea --quiet pentru a mări viteza acestui proces:)
 
 \begin_layout Standard
 Dacă vă aflați în spatele unui firewall ce blochează traficul rsync, puteți
- ignora această etapă din moment ce aveți deja o structură Portage actualizată.
+ ignora această etapă din moment ce aveți deja o structură portage actualizată.
 \end_layout
 
 \begin_layout Standard
-Dacă sunteți atenționat că o noua versiune Portage este disponibilă ar fi
- bine să actualizați Portage, aceasta se face cu ajutorul comenzii 
+Dacă sunteți atenționat că o noua versiune portage este disponibilă ar fi
+ bine să actualizați portage, aceasta se face cu ajutorul comenzii 
 \color blue
 emerge --oneshot portage
 \color inherit
@@ -14324,7 +14518,7 @@ Citirea știrilor
 \end_layout
 
 \begin_layout Standard
-Când structura Portage este sincronizata/actualizată, Portage vă poate atenționa
+Când structura portage este sincronizata/actualizată, portage vă poate atenționa
 /avertiza cu următorul mesaj:
 \begin_inset Newline newline
 \end_inset
@@ -14480,7 +14674,7 @@ man news.eselect
 \end_layout
 
 \begin_layout Subsubsection*
-Alegerea Profilului Corect
+Alegerea profilului corect
 \begin_inset Newline newline
 \end_inset
 
@@ -14503,9 +14697,16 @@ Mai înainte de toate, o mică definiție.
 
 \series medium
 Un profil este un bloc ce stă la baza construirii oricărui sistem Gentoo.
- Nu numai că specifică valorile implicite pentru CHOST, CFLAGS și alte variabile
- importante, dar și blochează sistemul într-o anumită plajă de versiuni
- ale pachetelor.
+ Nu numai că specifică valorile implicite pentru 
+\series default
+CHOST
+\series medium
+, 
+\series default
+CFLAGS
+\series medium
+ și alte variabile importante, dar și blochează sistemul într-o anumită
+ plajă de versiuni ale pachetelor.
  Mentenanța tuturor acestora este asigurată de dezvoltatorii Gentoo.
  
 \end_layout
@@ -14921,8 +15122,12 @@ Configurarea variabilei USE
 \end_layout
 
 \begin_layout Standard
-USE este una dintre cele mai puternice variabile, pe care Gentoo o pune
- la dispoziția utilizatorilor.
+
+\series bold
+USE
+\series default
+ este una dintre cele mai puternice variabile, pe care Gentoo o pune la
+ dispoziția utilizatorilor.
  Multe dintre programe pot fi compilate, cu sau fără suport opțional pentru
  diferite pachete.
  De exemplu, unele programe pot fi compilate cu suport GTK sau cu suport
@@ -14947,40 +15152,57 @@ Majoritatea distribuțiilor își compilează propriile pachete, folosind suport
  De exemplu, opțiunea ssl va compila suportul pentru ssl, în cadrul programelor
  care îl suportă.
  -X va elimina suportul pentru X-server (observați semnul minus din față).
- gnome gtk -kde -qt va compila programele cu suport gnome (gtk) dar fără
- suport kde (și qt), făcându-vă sistemul, pe deplin optimizat pentru GNOME.
+ 
+\series bold
+gnome gtk -kde -qt
+\series default
+ va compila programele cu suport gnome (gtk) dar fără suport kde (și qt),
+ făcându-vă sistemul, pe deplin optimizat pentru GNOME.
  
 \end_layout
 
 \begin_layout Standard
-Setările USE implicite se află în fișierele make.defaults din profilul dvs.
- Veți putea regăsi fișierele make.defaults în directorul spre care indică
- /etc/portage/make.profile și în toate directoarele ascendente.
- Setarea USE reprezintă suma tuturor setărilor USE din toate fișierele make.defau
-lts.
- Ceea ce adăugați în /etc/portage/make.conf este calculat în concordanță
- cu aceste setări implicite.
+Setările USE implicite se află în fișierele 
+\series bold
+make.defaults
+\series default
+ din profilul dumneavoastră.
+ Veți putea regăsi fișierele 
+\series bold
+make.defaults
+\series default
+ în directorul spre care indică 
+\series bold
+/etc/portage/make.profile
+\series default
+ și în toate directoarele ascendente.
+ Setarea USE reprezintă suma tuturor setărilor USE din toate fișierele 
+\series bold
+make.defaults
+\series default
+.
+ Ceea ce adăugați în 
+\series bold
+/etc/portage/make.conf
+\series default
+ este calculat în concordanță cu aceste setări implicite.
  Dacă adăugați ceva setărilor USE, este adăugat listei implicite.
  Dacă ștergeți ceva din setările USE (prin scrierea semnului minus în fața
  sa), atunci este șters din lista implicită (în cazul în care ar fi fost
  în listă).
- Niciodată nu faceți schimbări în interiorul directorului /etc/portage/make.profi
-le; va fi rescris când actualizați Portage! 
+ Niciodată nu faceți schimbări în interiorul directorului 
+\series bold
+/etc/portage/make.profile
+\series default
+; va fi rescris când actualizați Portage! 
 \end_layout
 
 \begin_layout Standard
-O descriere completă, a variabilei USE, poate fi găsită în cea de a doua
- parte a Gentoo Handbook, 
-\begin_inset CommandInset href
-LatexCommand href
-name "Indicatori USE"
-target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part2_chap2"
-
-\end_inset
-
+O descriere completă a variabilelor USE existente, poate fi găsită în 
+\series bold
+/usr/portage/profiles/use.desc
+\series default
 .
- O descriere completă a variabilelor USE existente, poate fi găsită în /usr/port
-age/profiles/use.desc.
  
 \begin_inset Newline newline
 \end_inset
@@ -15152,8 +15374,11 @@ Localizarea
 /etc/localtime
 \series default
 .
- Zonele de timp din /usr/share/zoneinfo/Etc/GMT* după cum sugerează și denumirea
-, nu indică exact zonele așteptate.
+ Zonele de timp din 
+\series bold
+/usr/share/zoneinfo/Etc/GMT*
+\series default
+ după cum sugerează și denumirea, nu indică exact zonele așteptate.
  De exemplu, GMT-8 este de fapt GMT+8.
 \begin_inset Newline newline
 \end_inset
@@ -15197,7 +15422,7 @@ Setarea localizării
 \begin_inset Text
 
 \begin_layout Plain Layout
-(Suppose you want to use Europe/Brussels) 
+(Suppose you want to use Europe/Bucharest) 
 \end_layout
 
 \end_inset
@@ -15210,7 +15435,7 @@ Setarea localizării
 \begin_layout Plain Layout
 
 \color blue
-# cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+# cp /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 \color inherit
  
 \end_layout
