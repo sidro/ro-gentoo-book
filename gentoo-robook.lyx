@@ -21136,25 +21136,26 @@ Instalarea Utilitarelor de Sistem Necesare
 \end_layout
 
 \begin_layout Chapter
-Instalarea Utilitarelor de Sistem Necesare
+Instalarea utilitarelor de sistem necesare
 \end_layout
 
 \begin_layout Section
-Sistemul de Log
+Sistemul de log
 \end_layout
 
 \begin_layout Standard
 Unele utilitare lipsesc din arhiva stage3 pentru că există mai multe pachete
  care oferă aceeași funcționalitate.
- Depinde de dvs., acum, să le alegeți pe cele pe care le doriți instalate.
+ Depinde de dumneavoastră, acum, să le alegeți pe cele pe care le doriți
+ instalate.
  
 \end_layout
 
 \begin_layout Standard
 Primul instrument pentru care trebuie să te decizi, trebuie să asigure facilităț
 i de logare pentru sistemul tău.
- Unix si Linux au istorie excelentă în acest domeniu -- dacă doriți puteți
- să logați tot ce se întâmplă în sistemul dvs.
+ Unix și Linux au istorie excelentă în acest domeniu.
+ Dacă doriți puteți să logați tot ce se întâmplă în sistemul dumneavoastră
  în fișierele log.
  Aceasta se întâmplă prin 
 \series bold
@@ -21201,13 +21202,13 @@ syslog-ng
 \series bold
 logrotate
 \series default
-, apoi, deoarece aceste sisteme de logare nu oferă nici un mecanism de rotire
+, deoarece aceste sisteme de logare nu oferă nici un mecanism de rotire
  pentru fișierele log.
  
 \end_layout
 
 \begin_layout Standard
-Pentru a instala un sistem de log la alegerea dvs., utilizați 
+Pentru a instala un sistem de log la alegerea dumneavoastră, utilizați 
 \series bold
 emerge
 \series default
@@ -21225,7 +21226,11 @@ rc-update
 syslog-ng
 \series default
 .
- Bineînțeles, înlocuiți cu sistemul dumneavoastră de log: 
+ 
+\end_layout
+
+\begin_layout Standard
+Bineînțeles, înlocuiți cu sistemul dumneavoastră de log: 
 \begin_inset Newline newline
 \end_inset
 
@@ -21288,7 +21293,7 @@ Instalarea unui sistem de log
 \end_layout
 
 \begin_layout Section
-Opțional: Cron Daemon
+Opțional: Cron daemon
 \end_layout
 
 \begin_layout Standard
@@ -21301,7 +21306,7 @@ cron
 daemon
 \series default
 .
- Este opțional și nu este cerut de sistem dar este înțelept să instalați
+ Este opțional și nu este cerut de sistem, dar este înțelept să instalați
  unul.
  Ce este un 
 \series bold
@@ -21450,7 +21455,7 @@ Instalare cron daemon
 \end_layout
 
 \begin_layout Section
-Opțional: Indexare de Fișiere
+Opțional: Indexare de fișiere
 \end_layout
 
 \begin_layout Standard
@@ -21704,15 +21709,14 @@ s1:12345:respawn:/sbin/agetty 9600 ttyS1 vt100
 \end_layout
 
 \begin_layout Section
-Utilitare pentru Sistemul de Fișiere
+Utilitare pentru sistemul de fișiere
 \end_layout
 
 \begin_layout Standard
 În funcție de ce sistem de fișiere folosiți, trebuie să instalați utilitarele
- necesare sistemului dvs.
- (pentru a verifica integritatea sistemului de fișiere, a crea unele în
- plus etc.).
- Vă rugăm să notați că aveți deja instalate instrumentele de lucru cu sistemele
+ necesare sistemului dumneavoastră (pentru a verifica integritatea sistemului
+ de fișiere, a crea unele în plus etc.).
+ Vă rugăm să notați că deja aveți instalate instrumentele de lucru cu sistemele
  de fișiere 
 \series bold
 ext2
@@ -21751,7 +21755,7 @@ Următorul tabel afișează instrumentele pe care trebuie să le instalați dac�
 \begin_layout Plain Layout
 
 \series bold
-Sistem de Fișiere
+Sistem de fișiere
 \end_layout
 
 \end_inset
@@ -21773,7 +21777,7 @@ Utilitar
 \begin_layout Plain Layout
 
 \series bold
-Comanda pentru Instalare
+Comanda pentru instalare
 \end_layout
 
 \end_inset
@@ -21896,7 +21900,7 @@ emerge jfsutils
 \end_layout
 
 \begin_layout Section
-Utilitare pentru Rețea
+Utilitare pentru rețea
 \end_layout
 
 \begin_layout Standard
@@ -21976,7 +21980,7 @@ Instalarea dhcpcd
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Instalarea unui Client PPPoE
+Opțional: Instalarea unui client PPPoE
 \end_layout
 
 \begin_layout Standard
@@ -22037,14 +22041,14 @@ Instalarea ppp
 \begin_layout Standard
 Acum continuați cu 
 \series bold
-Configurarea Bootloader-ului
+Configurarea aplicației bootloader
 \series default
 .
  
 \end_layout
 
 \begin_layout Chapter
-Configurarea Aplicației Bootloader
+Configurarea aplicației bootloader
 \end_layout
 
 \begin_layout Section
@@ -22057,7 +22061,7 @@ Introducere
 
 \begin_layout Standard
 Acum, kernel-ul este configurat și compilat și fișierele de configurare
- a sistemului sunt completate corect, este timpul să instalăm un program
+ ale sistemului sunt completate corect, este timpul să instalăm un program
  ce va încărca kernel-ul când porniți sistemul.
  Un astfel de program se numește 
 \series bold
@@ -22130,11 +22134,11 @@ bootloader
 \end_layout
 
 \begin_layout Standard
-Mai întâi de toate, trebuie să știți ce 
+Mai întâi de toate, trebuie să știți ce
 \series bold
-device
+ 
 \series default
- utilizați pentru 
+dispozitiv (device) utilizați pentru 
 \series bold
 framebuffer
 \series default
@@ -22343,15 +22347,7 @@ video=uvesafb:mtrr:3,ywrap,1024x768-32@85
 \end_layout
 
 \begin_layout Standard
-Acum, continuați cu instalarea 
-\begin_inset CommandInset href
-LatexCommand href
-name "GRUB Legacy"
-target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#grub"
-
-\end_inset
-
- sau GRUB2.
+Acum, continuați cu instalarea GRUB Legacy sau GRUB2.
 \end_layout
 
 \begin_layout Section
@@ -22365,10 +22361,9 @@ Implicit: Utilizarea GRUB Legacy
 \begin_layout Standard
 Cea mai critică parte în procesul de înțelegere a aplicației GRUB este familiari
 zarea cu modul cum acesta se referă la discuri dure și partiții.
- Partiția dvs.
- de Linux 
+ Partiția dumneavoastră de Linux 
 \series bold
-/dev/hda1
+/dev/sda1
 \series default
  va fi aproape sigur referită în GRUB ca (hd0,0).
  Atenție la parantezele din jurul 
@@ -22384,8 +22379,9 @@ hd0
 \end_layout
 
 \begin_layout Standard
-Unitățile de disc dur sunt numerotate de la zero în loc de "a" și partițiile
- încep de la zero în loc de unu.
+Unitățile de disc dur sunt numerotate hdx (unde x este 0 (zero) pentru primul
+ disc dur, 1 - pentru al doilea disc dur etc) și partițiile încep de la
+ zero în loc de unu.
  Atenție, din nou, la faptul că doar unitățile de disc dur sunt numerotate,
  nu și dispozitivele 
 \series bold
@@ -22396,13 +22392,13 @@ non-atapi
 cdrom
 \series default
  și cele de înregistrat CD-uri.
- De asemenea, aceeași referire există și pentru drive-urile SCSI.
+ De asemenea, aceeași referire există și pentru dispozitivele SCSI.
  (Normal, ele sunt numerotate până la numere mai mari decât drive-urile
  IDE, exceptând cazul în care BIOS-ul este configurat să încarce sistemul
  de pe dispozitivele SCSI).
  Când configurați în BIOS să încarce sistemul de pe un disc diferit (spre
  ex.
- discul dvs.
+ discul dumneavoastra.
  
 \series bold
 primary
@@ -22522,8 +22518,8 @@ Instalarea GRUB
 
 \begin_layout Standard
 Deși GRUB este acum instalat, tot mai trebuie să îi scriem un fișier de
- configurare și să-l instalăm în zona MBR pentru ca GRUB să boot-eze automat
- în noul kernel creat.
+ configurare și să-l instalăm în zona MBR pentru ca GRUB să încarce (boot-eze)
+ automat noul kernel creat.
  Creați 
 \series bold
 /boot/grub/grub.conf
@@ -22582,7 +22578,7 @@ Crearea /boot/grub/grub.conf
 \end_layout
 
 \begin_layout Standard
-Acum vom scrie un fișier 
+Acum o să scriem un fișier 
 \series bold
 grub.conf
 \series default
@@ -22591,8 +22587,7 @@ grub.conf
 \series bold
 kernel
 \series default
- și, dacă este cazul, imaginea dvs.
- 
+ și, dacă este cazul, imaginea dumneavoastră 
 \series bold
 initrd
 \series default
@@ -22603,16 +22598,16 @@ initrd
 \begin_layout Description
 Notă: Grub alocă din BIOS destinația dispozitivului.
  Dacă schimbați setările BIOS-ului dumneavoastră, modul de notare al dispozitivu
-lui (harddisk-ului) se va schimba și el.
- De exemplu, dacă veți schimba ordinea de boot-are a dispozitivului, veți
- fi nevoit să reconfigurați GRUB-ul.
+lui dur (hard disk-ului) se va schimba și el.
+ De exemplu, dacă veți schimba ordinea de încărcare (boot-are) a dispozitivului,
+ veți fi nevoit să reconfigurați GRUB-ul.
 \end_layout
 
 \begin_layout Description
-Notă: Dacă sistemul de fișiere al partiției dvs.
- rădăcină este JFS, trebuie să adăugați " ro" în linia de kernel, deoarece
- JFS trebuie să-și restaureze log-ul înainte de a permite montarea în modul
- read-write (citire-scriere).
+Notă: Dacă sistemul de fișiere al partiției dumneavoastră rădăcină este
+ JFS, trebuie să adăugați " ro" în linia de kernel, deoarece JFS trebuie
+ să-și restaureze log-ul înainte de a permite montarea în modul read-write
+ (citire-scriere).
  
 \end_layout
 
@@ -23053,31 +23048,20 @@ Dacă utilizați o schemă de partiționare și/sau imagine de kernel diferită,
 În plus, dacă alegeți să utilizați o altă schemă de partiționare și nu ați
  pus /boot pe o partiție separată, prefixul /boot utilizat în exemplele
  de cod de mai sus este chiar necesar.
- Dacă ați urmat planul de partiționare sugerat de noi, prefixul /
-\series bold
-boot
-\series default
- nu este necesar, însă link-ul simbolic 
+ Dacă ați urmat planul de partiționare sugerat de noi, prefixul /boot nu
+ este necesar, însă link-ul simbolic 
 \series bold
 boot
 \series default
  îl face să funcționeze.
  Pe scurt, exemplele de mai sus ar trebuie să funcționeze, indiferent dacă
- ați utilizat o partiție separată pentru /
-\series bold
-boot
-\series default
- sau nu.
+ ați utilizat o partiție separată pentru /boot sau nu.
  
 \end_layout
 
 \begin_layout Standard
 Dacă doriți să introduceți opțiuni adiționale pentru kernel, adăugați-le
- la sfârșitul comenzii 
-\series bold
-kernel
-\series default
-.
+ la sfârșitul comenzii kernel.
  Deja avem o opțiune (
 \series bold
 root=/dev/sda3
@@ -23190,7 +23174,7 @@ chroot
 /etc/mtab
 \series default
  ce conține toate sistemele de fișiere montate.
- Din fericire, există o soluție simplă pentru a realiza acest pas - trebuie
+ Din fericire, există o soluție simplă pentru a realiza acest pas, trebuie
  doar să copiați 
 \series bold
 /proc/mounts
@@ -23338,7 +23322,7 @@ Continuați cu Repornirea Sistemului.
 \end_layout
 
 \begin_layout Subsection*
-Alternativ: Setarea GRUB Utilizând Instrucțiuni Manuale
+Alternativ: Setarea GRUB utilizând instrucțiuni manuale
 \end_layout
 
 \begin_layout Standard
@@ -23879,9 +23863,9 @@ Instalarea unei imagini de boot
 \end_layout
 
 \begin_layout Standard
-În cazul în care aveți o partiție de /
+În cazul în care aveți o partiție de 
 \series bold
-boot
+/boot
 \series default
 , montați-o.
 \end_layout
@@ -23917,9 +23901,9 @@ mount /boot
 \end_inset
 
 Dacă folosiți platforma EFI, montați-vă sistemul de volum (partiția) în
- /
+ 
 \series bold
-boot/efi
+/boot/efi
 \series default
 .
  Aceasta trebuie sa fie un volum (o partiție) de tip FAT ce va conține un
@@ -24194,7 +24178,7 @@ grub2-mkconfig
 /etc/grub.d
 \series default
 .
- iar șabloanele implicite ar trebui să acopere cele mai frecvente setări
+ Iar șabloanele implicite ar trebui să acopere cele mai frecvente setări
  de 
 \series bold
 boot
@@ -24964,15 +24948,15 @@ Continuați cu Finalizarea Instalării Gentoo.
 \end_layout
 
 \begin_layout Chapter
-Finalizarea Instalării Gentoo
+Finalizarea instalării Gentoo
 \end_layout
 
 \begin_layout Section
-Administrarea Utilizatorilor de Sistem
+Administrarea utilizatorilor de sistem
 \end_layout
 
 \begin_layout Subsection*
-Adăugarea Unui Utilizator pentru Întrebuințarea Zilnică
+Adăugarea unui utilizator pentru întrebuințarea zilnică
 \end_layout
 
 \begin_layout Standard
@@ -25217,9 +25201,24 @@ pentru a putea utiliza su
 \end_layout
 
 \begin_layout Standard
-De exemplu, pentru a crea un user john care este membru al grupurilor wheel,
- users și audio trebuie să efectuați login ca root (numai utilizatorii root
- pot crea user-i) și să rulați 
+De exemplu, pentru a crea un utilizator 
+\series bold
+john
+\series default
+ care este membru al grupurilor 
+\series bold
+wheel
+\series default
+, 
+\series bold
+users
+\series default
+ și a
+\series bold
+udio
+\series default
+ trebuie să efectuați login ca root (numai utilizatorul root pot crea utilizator
+i) și să rulați 
 \series bold
 useradd
 \series default
@@ -25240,6 +25239,8 @@ useradd
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color magenta
 Adăugarea unui user pentru întrebuințarea zilnică
 \end_layout
 
@@ -25251,7 +25252,9 @@ Adăugarea unui user pentru întrebuințarea zilnică
 \begin_inset Text
 
 \begin_layout Plain Layout
-Login: root 
+
+\color blue
+#su -
 \end_layout
 
 \end_inset
@@ -25285,6 +25288,8 @@ Password: (Parola dvs.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color blue
 # useradd -m -G users,wheel,audio -s /bin/bash john 
 \end_layout
 
@@ -25296,6 +25301,8 @@ Password: (Parola dvs.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color blue
 # passwd john
 \end_layout
 
@@ -25384,7 +25391,7 @@ Acum că ați finalizat instalarea Gentoo-lui, dacă totul a decurs normal
 \begin_layout Plain Layout
 
 \color magenta
-ștergerea arhivei stage3 din sistem
+Ștergerea arhivei stage3 din sistem
 \end_layout
 
 \end_inset
@@ -25443,14 +25450,14 @@ Ce este serverul X Window
 \end_layout
 
 \begin_layout Subsection*
-Modul Grafic vs.
- Modul Text
+Modul grafic vs.
+ Modul text
 \end_layout
 
 \begin_layout Standard
 Utilizatorul mediu se sperie la gândul de a fi nevoit să scrie comenzi.
  De ce să nu poată folosi un mediu grafic după cum ar vrea, având în vedere
- libertatea pusă la dispoziție de Gentoo (Și de Linux în general)? Sigur
+ libertatea pusă la dispoziție de Gentoo (Și de Gnu/Linux în general)? Sigur
  că se poate.
  Linuxul oferă o largă varietate de interfețe și medii grafice care arată
  foarte bine, și care se pot instala peste aplicațiile care rulează în general
@@ -25672,7 +25679,7 @@ xorg.conf
 /etc/X11
 \series default
 .
- Xorg-X11 oferă un exemplu de fișier de configurare aflat în 
+ Xorg oferă un exemplu de fișier de configurare aflat în 
 \series bold
 /etc/X11/xorg.conf.example
 \series default
@@ -25728,7 +25735,7 @@ Pagina de manual a xorg.conf
 \end_layout
 
 \begin_layout Standard
-Lectură plăcută pentru cei care doresc acest lucru, însă noi vom continua
+Lectură plăcută pentru cei care doresc acest lucru, însă noi o să continuăm
  configurarea folosind unelte care vor modifica automat fișierul 
 \series bold
 xorg.conf
@@ -25742,11 +25749,11 @@ Implicit: Generarea automată a fișierului xorg.conf
 
 \begin_layout Standard
 Xorg însuși poate să detecteze cei mai mulți parametri în locul nostru.
- În cele mai multe cazuri vom avea de modificat numai unele linii care vor
- face ca interfața să ruleze la rezoluția dorită de către noi.
+ În cele mai multe cazuri o să aveam de modificat numai unele linii care
+ vor face ca interfața să ruleze la rezoluția dorită de către noi.
  Dacă sunteți interesat de unele setări mai de profunzime, verificați resursele
  oferite la sfârșitul acestui capitol.
- Să încercăm să generăm mai întâi un fișier de configurare al Xorg (sperăm,
+ Să încercăm să generăm mai întâi un fișier de configurare Xorg (sperăm,
  funcțional).
  
 \begin_inset Newline newline
@@ -25875,7 +25882,7 @@ Ctrl-Alt-Backspace
 \end_layout
 
 \begin_layout Subsection*
-Metodă alternativă: generarea semi-automată a fișierului xorg.conf
+Metodă alternativă: Generarea semi-automată a fișierului xorg.conf
 \end_layout
 
 \begin_layout Standard
@@ -25883,7 +25890,7 @@ Xorg conține un utilitar numit
 \series bold
 xorgconfig
 \series default
- care vă va întreba unele informații privitoare la hardware-ul dvs.
+ care vă va întreba unele informații privitoare la hardware-ul dumneavoastră.
  (placa grafică, tastatura, ...) și creează un fișier 
 \series bold
 xorg.conf
@@ -26035,8 +26042,11 @@ xorg.conf.new
  pentru a nu fi nevoiți să rulăm tot timpul comanda 
 \color blue
 X -config
+\color black
+.
+
 \color inherit
- -- lansarea X sau 
+ Lansarea cu 
 \color blue
 startx
 \color inherit
@@ -26096,9 +26106,9 @@ Utilizare startx
 
 \begin_layout Standard
 Acum, încercați lansarea 
-\series bold
+\color blue
 startx
-\series default
+\color inherit
  pentru a porni aplicația server X.
  
 \color blue
@@ -26209,8 +26219,8 @@ xterm
 Ctrl-Alt-Backspace
 \series default
 .
- Oricum, aceasta va determina ieșirea din mediul X într-un mod necorespunzător
- -- ceva ce nu vă veți dori întotdeauna.
+ Oricum, aceasta va determina ieșirea din mediul X într-un mod necorespunzător,
+ ceva ce nu veți dori întotdeauna.
  Totuși, nu este chiar atât de rău.
 \end_layout
 
@@ -26259,8 +26269,8 @@ Monitor
 \series bold
 Screen
 \series default
- nu funcționează (le vom descrie mai jos) atunci va trebui să luați specificații
-le monitorului din cartea tehnică și să le scrieți în fișier.
+ nu funcționează (o să le descrie mai jos) atunci va trebui să luați specificați
+ile monitorului din cartea tehnică și să le scrieți în fișier.
  Puteți însă să folosiți un program care le determină în mod automat, cum
  ar fi 
 \series bold
@@ -26298,7 +26308,7 @@ DefaultDepth
 \series default
  pentru ca serverul X să pornească în mod implicit în rezoluția 1024x768
  cu adâncimea de culoare de 24 de biți.
- Nu vă cramponați pe valorile date -- acestea sunt exemple, și este foarte
+ Nu vă cramponați pe valorile date, acestea sunt exemple, și este foarte
  probabil ca aceste valori să difere de cele setate în sistemul dumneavoastră.
  
 \begin_inset Newline newline
@@ -26721,8 +26731,11 @@ EndSection
 \end_layout
 
 \begin_layout Standard
-Rulați serverul X (startx) pentru a vedea dacă acesta folosește rezoluția
- dorită.
+Rulați serverul X (
+\color blue
+startx
+\color inherit
+) pentru a vedea dacă acesta folosește rezoluția dorită.
  
 \end_layout
 
@@ -27066,11 +27079,7 @@ Verificarea fișierelor de tip device
 
 \begin_layout Standard
 Dacă mouse-ul nu este detectat verificați dacă toate modulele necesare sunt
- încărcate în 
-\series bold
-kernel
-\series default
-.
+ încărcate în kernel.
  
 \end_layout
 
@@ -27081,7 +27090,7 @@ Dacă mouse-ul este detectat, introduceți dispozitivul la care este conectat
 InputDevice
 \series default
  corespunzătoare.
- În exemplul următor vom seta alte două opțiuni: 
+ În exemplul următor o să setam alte două opțiuni: 
 \series bold
 Protocol
 \series default
@@ -27331,9 +27340,9 @@ EndSection
 
 \begin_layout Standard
 Rulați 
-\series bold
+\color blue
 startx
-\series default
+\color inherit
  și bucurați-vă de rezultat.
  Felicitări, acum (sperăm să) aveți în sistem un server Xorg funcțional.
  Următorul pas este înlăturarea 
@@ -27391,7 +27400,7 @@ Internetul constituie o sursă imensă de documentații privitoare la editarea
 xorg.conf
 \series default
 .
- Vă vom oferi aici doar câteva dintre ele.
+ O să vă oferim aici doar câteva dintre ele.
  Mai întâi încercați 
 \series bold
 Google
@@ -27437,7 +27446,7 @@ Xfce
 \end_layout
 
 \begin_layout Chapter
-Mediile Grafice expuse în manual pentru instalare
+Mediile grafice expuse în manual pentru instalare
 \end_layout
 
 \begin_layout Standard
@@ -27694,7 +27703,7 @@ gnome
 
 \begin_layout Standard
 Dacă se dorește instalarea KDE-ului se setează profilul #5, iar pentru XFCE
- ori alt mediu de lucru se folosește profilul #3.
+ sau alt mediu de lucru se folosește profilul #3.
  Iată câteva exemple:
 \end_layout
 
