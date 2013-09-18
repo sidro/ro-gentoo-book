@@ -120,7 +120,7 @@ Alin Dobre - Translator (documentație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
-
+Ștefan Suciu - Corecturi
 \begin_inset Newline newline
 \end_inset
 
@@ -148,7 +148,11 @@ Alin Dobre - Translator (documentație versiuni intermediare)
 \begin_inset Newline newline
 \end_inset
 
-Versiunea 0.1
+
+\begin_inset Newline newline
+\end_inset
+
+Versiunea 0.2
 \end_layout
 
 \begin_layout Paragraph
@@ -344,7 +348,35 @@ Finalizarea instalării Gentoo.
 \begin_layout Standard
 \align block
 Sunteți aproape gata.
- O să cream unul sau mai mulți utilizatori pentru sistemul dvs.
+ O să creăm unul sau mai mulți utilizatori pentru sistemul dvs.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Ghid de instalare și configurare pentru Xorg
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Pentru a beneficia de un mediu desktop avem nevoie de serverul de ecran
+ Xorg.
+ În acest capitol o să învățăm cum instalam și configurăm acest server.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Mediile grafice expuse în manual pentru instalare
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Acest ghid vă va explica cum să instalați un mediu grafic (KDE, Gnome, XFCE)
+ pe un sistem stabil Gentoo amd64.
  
 \end_layout
 
@@ -7799,7 +7831,7 @@ swap
 \series default
  la o mărime mai rezonabilă, cum ar fi 1 GO, va trebui să modificați variabila
  dvs.
- PORTAGE_TMPDIR din 
+ Portage_TMPDIR din 
 \series bold
 /etc/make.conf
 \series default
@@ -13432,7 +13464,7 @@ Introducere
 Pentru optimizarea Gentoo, puteți seta unele variabile ce vor determina
  comportamentul 
 \series bold
-portage
+Portage
 \series default
 .
  Toate aceste variabile pot fi setate ca variabile de mediu (folosind export),
@@ -13450,7 +13482,7 @@ portage
 \begin_layout Description
 Notă: O listă comentată a tuturor variabilelor, poate fi găsită în 
 \series bold
-/mnt/gentoo/usr/share/portage/make.conf.example
+/mnt/gentoo/usr/share/Portage/make.conf.example
 \series default
 .
  Pentru o instalare reușită Gentoo va trebui doar să setați aceste variabile
@@ -13911,8 +13943,8 @@ make.conf
 \series default
 .
  Această variabilă conține server-ul rsync pe care doriți să-l utilizați
- când vă actualizați structura portage (colecția de fișiere ebuild, script-urile
- ce conțin toate informațiile de care portage are nevoie pentru a descărca
+ când vă actualizați structura Portage (colecția de fișiere ebuild, script-urile
+ ce conțin toate informațiile de care Portage are nevoie pentru a descărca
  și a instala aplicațiile).
  Deși puteți introduce manual un server SYNC, mirrorselect vă poate ușura
  această operație: 
@@ -14307,19 +14339,19 @@ Configurarea Portage
 \end_layout
 
 \begin_layout Subsection*
-Despachetarea structurii portage
+Despachetarea structurii Portage
 \end_layout
 
 \begin_layout Standard
 Acum trebuie să instalați structura 
 \series bold
-portage
+Portage
 \series default
-, o colecție de fișiere ce informează portage ce software poți instala,
+, o colecție de fișiere ce informează Portage ce software poți instala,
  ce profile sunt disponibile etc.
- Conținutul structurii portage va fi extras în 
+ Conținutul structurii Portage va fi extras în 
 \series bold
-/usr/portage
+/usr/Portage
 \series default
 .
 \end_layout
@@ -14364,7 +14396,7 @@ Rularea lui emerge--webrsync pentru a instala o structură Portage
 \begin_layout Plain Layout
 
 \color blue
-# mkdir /usr/portage
+# mkdir /usr/Portage
 \end_layout
 
 \end_inset
@@ -14395,7 +14427,7 @@ Rularea lui emerge--webrsync pentru a instala o structură Portage
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Actualizarea structurii portage
+Opțional: Actualizarea structurii Portage
 \end_layout
 
 \begin_layout Standard
@@ -14406,7 +14438,7 @@ emerge --sync
 \color inherit
  efectuează această acțiune pentru dumneavoastră.
  El va folosi protocolul rsync pentru a face update (a aduce ultima versiune,
- a actualiza) structurii portage pe care ați descărcat-o mai devreme folosind
+ a actualiza) structurii Portage pe care ați descărcat-o mai devreme folosind
  
 \series bold
 emerge-webrsync
@@ -14498,14 +14530,14 @@ puteți adăuga opțiunea --quiet pentru a mări viteza acestui proces:)
 
 \begin_layout Standard
 Dacă vă aflați în spatele unui firewall ce blochează traficul rsync, puteți
- ignora această etapă din moment ce aveți deja o structură portage actualizată.
+ ignora această etapă din moment ce aveți deja o structură Portage actualizată.
 \end_layout
 
 \begin_layout Standard
-Dacă sunteți atenționat că o noua versiune portage este disponibilă ar fi
- bine să actualizați portage, aceasta se face cu ajutorul comenzii 
+Dacă sunteți atenționat că o noua versiune Portage este disponibilă ar fi
+ bine să actualizați Portage, aceasta se face cu ajutorul comenzii 
 \color blue
-emerge --oneshot portage
+emerge --oneshot Portage
 \color inherit
 .
  De asemenea veți fi notificați despre noutățile/știrile ce trebuie citite
@@ -14518,7 +14550,7 @@ Citirea știrilor
 \end_layout
 
 \begin_layout Standard
-Când structura portage este sincronizata/actualizată, portage vă poate atenționa
+Când structura Portage este sincronizata/actualizată, Portage vă poate atenționa
 /avertiza cu următorul mesaj:
 \begin_inset Newline newline
 \end_inset
@@ -15200,7 +15232,7 @@ make.defaults
 \begin_layout Standard
 O descriere completă a variabilelor USE existente, poate fi găsită în 
 \series bold
-/usr/portage/profiles/use.desc
+/usr/Portage/profiles/use.desc
 \series default
 .
  
@@ -15235,7 +15267,7 @@ Vizualizarea indicatorilor USE existenți
 \begin_layout Plain Layout
 
 \color blue
-# less /usr/portage/profiles/use.desc 
+# less /usr/Portage/profiles/use.desc 
 \end_layout
 
 \end_inset
@@ -22612,10 +22644,6 @@ Notă: Dacă sistemul de fișiere al partiției dumneavoastră rădăcină este
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="24" columns="1">
 <features tabularvalignment="middle">
@@ -23615,7 +23643,7 @@ Instalarea propriu-zisă
 \begin_layout Standard
 Momentan GRUB2 este mascat în 
 \series bold
-portage
+Portage
 \series default
 .
  O intrare în fișierul 
@@ -25092,7 +25120,7 @@ pentru a putea rula jocuri
 \begin_inset Text
 
 \begin_layout Plain Layout
-portage
+Portage
 \end_layout
 
 \end_inset
@@ -25435,7 +25463,7 @@ Continuați cu Ghid de configurare pentru Xorg.
 \end_layout
 
 \begin_layout Chapter
-Ghid de configurare pentru Xorg
+Ghid de instalare și configurare pentru Xorg
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Ghid-de-configurare"
@@ -27466,7 +27494,7 @@ USE flags
 \series default
  activând profilul necesar în 
 \series bold
-portage
+Portage
 \series default
 : 
 \begin_inset Newline newline
@@ -27780,7 +27808,7 @@ Mediul grafic Gnome
 
 \begin_layout Standard
 GNOME este un mediu desktop gratuit pentru sisteme compatibile UNIX.
- Este software (open source), sub licența liberă (GPL) (anumite biblioteci
+ Este software (open source), sub licența liberă GPL (anumite biblioteci
  și toolkitul GTK+ sunt sub licența LGPL).
  Este mediul standard de lucru pe un număr mare de distribuții Linux (Ubuntu,
  Fedora, Red Hat etc.) și pe sistemele UNIX sau UNIX-like.
@@ -27790,7 +27818,7 @@ GNOME este un mediu desktop gratuit pentru sisteme compatibile UNIX.
 \begin_layout Standard
 GNOME a apărut în 1997, autorul inițial fiind Miguel de Icaza.
  Proiectul a fost început ca urmare a utilizării de către KDE a toolkit-ului
- Qt, care la vremea respectivă nu era open source - ducând la limitări asupra
+ Qt, care la vremea respectivă nu era open source, ducând la limitări asupra
  a ceea ce putea fi programat pentru KDE, și la posibilitatea ca, în cazul
  în care Qt își schimbă strategia, KDE să nu mai poată fi folosit legal.
  Acest lucru nu mai este o problemă, Qt este software liber astăzi, dar
@@ -27801,7 +27829,7 @@ GNOME a apărut în 1997, autorul inițial fiind Miguel de Icaza.
 \end_layout
 
 \begin_layout Standard
-Pe un sistem cu depozitul stabil activ 
+Pe un sistem cu depozitul stabil activ, 
 \color blue
 emerge gnome 
 \color black
@@ -27814,7 +27842,7 @@ va instala Gnome 2, versiunea stabilă.
 \series bold
 gnome-base/gnome ~amd64
 \series default
- apoi salvați fișierul.
+, apoi salvați fișierul.
  După ce ați terminat de editat fișierul 
 \series bold
 /etc/portage/packages.keywords 
@@ -27912,7 +27940,7 @@ Instalare Gnome 3
 \begin_inset Text
 
 \begin_layout Plain Layout
-(adaugați la sfârșitul fișierului)
+(adăugați la sfârșitul fișierului)
 \end_layout
 
 \end_inset
@@ -28250,7 +28278,7 @@ Instalare GDM
 
 \begin_layout Standard
 Dacă vreți ca display manager-ul să pornească imediat după inițializarea
- sistemului de operare (Gentoo) trebuie să adăugați scriptul XDM la procesele
+ sistemului de operare Gentoo trebuie să adăugați scriptul XDM la procesele
  de inițializare, pe nivelul de inițializare implicit.
  Ca să faceți lucrul acesta 
 \series bold
@@ -28396,13 +28424,9 @@ KDE SC 4 este versiunea KDE menținută actual în depozitele
 testing
 \series default
 .
- În 
-\series bold
-Portage
-\series default
- este o versiune stabilă de asemenea și ar mai putea fi una (sau mai multe)
- versiuni mai puțin stabile.
- De regulă noile versiuni trec în stadiul de versiune stabilă aproximativ
+ De asemenea în Portage există o versiune stabilă și ar mai putea fi una
+ (sau mai multe) versiuni mai puțin stabile.
+ De regulă noile versiuni trec în stadiul de versiune stabilă la aproximativ
  o lună.
  Adițional, KDE upstream pune la dispoziție 
 \begin_inset CommandInset href
@@ -28498,7 +28522,7 @@ Portage
 \begin_inset Text
 
 \begin_layout Plain Layout
-Stabil pentru amd64, ppc, ppc64 și x86; versiune de testare pentru arm
+Stabil pentru amd64, ppc, ppc64 și x86; versiune de testare pentru arm.
 \end_layout
 
 \end_inset
@@ -28527,7 +28551,8 @@ Portage
 \begin_inset Text
 
 \begin_layout Plain Layout
-Versiune de test pentru amd64, arm, ppc, ppc64 și x86 
+Versiune de test pentru amd64, arm, ppc, ppc64 și x86.
+ 
 \end_layout
 
 \end_inset
@@ -28556,7 +28581,7 @@ kde overlay
 \begin_inset Text
 
 \begin_layout Plain Layout
-Versiune Live
+Versiune Live.
 \end_layout
 
 \end_inset
@@ -28585,7 +28610,7 @@ kde overlay
 \begin_inset Text
 
 \begin_layout Plain Layout
-Versiune Live
+Versiune Live.
 \end_layout
 
 \end_inset
@@ -28640,7 +28665,7 @@ Profil
 Profilul Desktop a fost împărțit în subprofilele KDE și GNOME .
  Acest lucru reprezintă eliminarea KDE și GNOME USE flags din profilul de
  baza desktop și punerea lor în subprofiluri.
- Alegerea unui profil nu vă limitează la folosirea doar a unui Mediu Grafic.
+ Alegerea unui profil nu vă limitează la folosirea doar a unui mediu grafic.
  Pentru a alege profilul care vi se potrivește, rulați
 \end_layout
 
@@ -28670,7 +28695,7 @@ root #
 
 \begin_layout Standard
 unde X este numărul profilului pe care doriți să îl selectați.
- Pentru un mediu grafic complet KDE este recomandat să alegeți desktop/kde
+ Pentru un mediu grafic complet KDE, este recomandat să alegeți desktop/kde
  , care este configurat specific pentru KDE.
  
 \end_layout
@@ -28684,7 +28709,7 @@ Servicii
 
 \begin_layout Standard
 Înainte să instalați KDE SC este recomandată setarea câtorva servicii.
- O pare dintre aceste sunt setate automat dacă folosiți profilul desktop/kde
+ O pare dintre acestea sunt setate automat dacă folosiți profilul desktop/kde
  sau desktop.
  Ar trebui de asemenea să folosiți: 
 \end_layout
@@ -28790,7 +28815,7 @@ target "http://packages.gentoo.org/package/kde-base/kde-meta"
 
 \end_inset
 
-, pentru mediul complet KDE
+, pentru mediul complet KDE.
 \end_layout
 
 \begin_layout Itemize
@@ -28801,7 +28826,7 @@ target "http://packages.gentoo.org/package/kde-base/kdebase-meta"
 
 \end_inset
 
-, pentru un mediu de bază KDE
+, pentru un mediu de bază KDE.
 \end_layout
 
 \begin_layout Itemize
@@ -28813,7 +28838,7 @@ target "http://packages.gentoo.org/package/kde-base/kdebase-startkde"
 \end_inset
 
 , un mediu minimal, nesuportat oficial pentru KDE (fără KDE plasma și alte
- creații) 
+ creații).
 \end_layout
 
 \begin_layout Standard
@@ -28842,10 +28867,6 @@ target "http://packages.gentoo.org/package/kde-base/kdeaccessibility-meta"
 \end_inset
 
 : Aplicații de accesibilitate și utilitate.
- 
-\shape italic
-\color black
-Serviciul de încărcare
 \end_layout
 
 \begin_layout Itemize
@@ -29352,8 +29373,8 @@ target "http://www.kde.org/"
 
 \begin_layout Standard
 Acest ghid nu doar că vă va arăta cum să instalați un mediu grafic minimal
- XFCE, dar vă va oferii opțiunea de a vă crea un mediu desktop complet având
- în prim plan filosofia Xfce: ușor, rapid și modular.
+ XFCE, dar vă va oferii posibilitatea de a vă crea un mediu desktop complet
+ având în prim plan filosofia Xfce: ușor, rapid și modular.
  
 \end_layout
 
@@ -29435,7 +29456,7 @@ Instalare Xfce
 \begin_layout Plain Layout
 
 \color blue
-# emerge -avt xfce4-meta
+# emerge -av xfce4-meta
 \end_layout
 
 \end_inset
@@ -29497,7 +29518,7 @@ Atribuirea utilizatorului unui grup hardware
 \begin_inset Text
 
 \begin_layout Plain Layout
-(înlocuiți username cu numele dvs de utilizator)
+(înlocuiți username cu numele dumneavoastră de utilizator)
 \end_layout
 
 \end_inset
@@ -29579,7 +29600,7 @@ Actualizarea variabilelor de mediu
 
 \begin_layout Standard
 Veți avea de asemenea nevoie de un terminal grafic ca să lucrați în noul
- dvs mediu grafic.
+ dumneavoastră mediu grafic.
  
 \end_layout
 
@@ -29669,7 +29690,7 @@ startx
 \begin_layout Plain Layout
 
 \color magenta
-Setare xfce ca sistem grafic implicit
+Setare Xfce ca sistem grafic implicit
 \end_layout
 
 \end_inset
@@ -29723,7 +29744,11 @@ consolekit
 \end_layout
 
 \begin_layout Standard
-Acum puteți intra în noul mediu grafic prin comanda startx.
+Acum puteți intra în noul mediu grafic prin comanda 
+\color blue
+startx
+\color inherit
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -29785,7 +29810,7 @@ Sesiune și pornire la încărcarea sistemului
 
 \begin_layout Standard
 Dacă ați instalat (sau plănuiți să instalați) aplicații Gnome sau KDE precum
- k3b, nautilus, kmail, evolution, etc.
+ K3b, nautilus, kmail, evolution, etc.
  Ar trebui să vă asigurați că Xfce pornește serviciile necesare pentru ca
  aceste aplicații să funcționeze.
  
@@ -29834,7 +29859,7 @@ startx
 .
  Acest lucru este în regulă dacă preferați încărcarea sistemului și logarea
  în mod text, dar haideți să folosim un manager grafic care să încarce în
- mod automat XFCE la încărcarea sistemului (ca să vă puteți loga în modul
+ mod automat Xfce la încărcarea sistemului (ca să vă puteți loga în modul
  grafic).
 \end_layout
 
@@ -30082,9 +30107,9 @@ Upgrade XFCE
 \end_layout
 
 \begin_layout Standard
-Dacă faceți upgrade la XFCE la o versiune anterioară (4.x), va trebui să
- ștergeți cache-ul sesiuni și profiles, deoarece sunt incompatibile cu noile
- versiuni care apar.
+Dacă faceți upgrade la XFCE de la o versiune anterioară versiunii 4.x, va
+ trebui să ștergeți cache-ul sesiuni și profiles, deoarece sunt incompatibile
+ cu noile versiuni care apar.
  Pentru fiecare utilizator (dacă aveți mai mulți), rulați următoarele comenzi.
 \begin_inset Newline newline
 \end_inset
@@ -30161,8 +30186,8 @@ $ rm -r ~/.config/Thunar
 \end_layout
 
 \begin_layout Standard
-Utilizatorii vor avea o nouă interfață dar vor pierde vechile setări personaliza
-te.
+Utilizatorii vor avea o nouă interfață, dar vor pierde vechile setări personaliz
+ate.
  Din păcate momentan nu există o metodă de a migra setările de la o versiune
  Xfce la alta.
  
