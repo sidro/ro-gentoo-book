@@ -21,7 +21,7 @@ Versiunea manualului va fi afisata si aici, nu doar in manual, ca informatie uti
 
 
 
-================= Versiune 0.0.1 =================
+================= Versiune 0.2 =================
 
 
 Contributorii
