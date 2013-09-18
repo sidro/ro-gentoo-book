@@ -20,7 +20,7 @@ Versiunea manualului va fi afisata si aici, ca informatie utila pentru cei ce vo
 
 
 
-=================================================== Versiune 0.0.1 =====================================================
+================= Versiune 0.0.1 =================
 
 
 Contributorii
