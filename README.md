@@ -27,6 +27,9 @@ Contributorii
 -------------
 
 Stoian Ovidiu - Translator
+
 Mihai Tene - Translator
+
 Alin Dobre - Translator (documentație versiuni intermediare)
+
 Ștefan Suciu - Corecturi
