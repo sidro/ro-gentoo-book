@@ -15512,6 +15512,7 @@ Pentru sistemele bazate pe arhitectura amd64 vă oferim, alături de alte
  surse de kernel, vanilla-sources (sursele de kernel implicite dezvoltate
  de programatorii de kernel Linux), gentoo-sources (sursele de kernel ce
  conțin patch-uri pentru îmbunătățirea performanței).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15565,11 +15566,18 @@ Instalarea unor surse de kernel
 \end_layout
 
 \begin_layout Standard
-Când vă veți uita în /usr/src ar trebui să vedeți un symlink numit linux,
- ce indică spre sursa kernel-ului dvs.
- În acest caz, sursele de kernel instalate indică către gentoo-sources-3.4.9.
- Versiunea dvs.
- ar putea fi diferită, deci rețineți acest aspect.
+Când vă veți uita în 
+\series bold
+/usr/src
+\series default
+ ar trebui să vedeți un symlink numit linux, ce indică spre sursa kernel-ului
+ dumneavoastră.
+ În acest caz, sursele kernel-ului instalate indică către 
+\series bold
+gentoo-sources-3.4.9
+\series default
+.
+ Versiunea dumneavoastră ar putea fi diferită, deci rețineți acest aspect.
  
 \begin_inset Newline newline
 \end_inset
@@ -15634,15 +15642,22 @@ lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -> linux-3.4.9
 
 \begin_layout Standard
 Acum este timpul să configurăm și să compilăm sursa kernel.
- Toate arhitecturile pot folosi genkernel pentru asta, care va construi
- un kernel generic așa cum este folosit pe mediul Installation CD.
- Vom explica configurarea manuală, acesta fiind totuși cea mai bună cale
+ Toate arhitecturile pot folosi 
+\color blue
+genkernel
+\color inherit
+ pentru asta, care va construi un kernel generic așa cum este folosit pe
+ mediul Installation CD.
+ O să explică configurarea manuală, acesta fiind totuși cea mai bună cale
  de a vă optimiza sistemul.
  
 \end_layout
 
 \begin_layout Standard
-Dacă doriți să vă configurați manual kernel-ul, continuați acum cu Implicit:
+Dacă doriți să vă configurați kernel-ul manual, continuați acum cu 
+\series bold
+Implicit:
+\series default
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -15656,7 +15671,11 @@ target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable
 \end_layout
 
 \begin_layout Standard
-Dacă doriți să utilizați genkernel, ar trebui să citiți Alternativ: 
+Dacă doriți să utilizați genkernel, ar trebui să citiți 
+\series bold
+Alternativ:
+\series default
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "Utilizarea genkernel"
@@ -15664,12 +15683,12 @@ target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable
 
 \end_inset
 
-, în loc.
+.
  
 \end_layout
 
 \begin_layout Section
-Implicit: Configurarea Manuală
+Implicit: Configurarea manuală
 \end_layout
 
 \begin_layout Subsection*
@@ -15679,31 +15698,66 @@ Introducere
 \begin_layout Standard
 Configurarea manuală a kernel-ului este des percepută ca cea mai grea încercare,
  pe care fiecare utilizator Linux trebuie să o treacă.
- Nimic mai fals -- după ce veți configura câteva kernel-uri, nici nu vă
- veți mai aminti că a fost greu.
- ;)
+ Nimic mai fals, după ce veți configura câteva kernel-uri, nici nu vă veți
+ mai aminti că a fost greu.
 \end_layout
 
 \begin_layout Standard
 Totuși, un lucru este adevărat: trebuie să vă cunoașteți sistemul înainte
  de a începe configurarea manuală a kernel-ului.
- Cele mai multe informații le puteți obține prin instalarea pciutils (emerge
- pciutils) care conține utilitarul lspci.
- Acum veți putea să utilizați comanda lspci în interiorul mediului chroot.
- Puteți ignora cu încredere orice avertismente pcilib (cum ar fi: pcilib:
- cannot open /sys/bus/pci/devices) afișate de lspci.
- Alternativ, puteți rula lspci dintr-un mediu non-chroot.
+ Cele mai multe informații le puteți obține prin instalarea 
+\series bold
+pciutils
+\series default
+ (
+\color blue
+emerge pciutils
+\color inherit
+) care conține utilitarul 
+\series bold
+lspci
+\series default
+.
+ Acum veți putea să utilizați comanda 
+\series bold
+lspci
+\series default
+ în interiorul mediului chroot.
+ Puteți ignora cu încredere orice avertismente 
+\series bold
+pcilib
+\series default
+ (cum ar fi: pcilib: cannot open /sys/bus/pci/devices) afișate de 
+\series bold
+lspci
+\series default
+.
+ Alternativ, puteți rula 
+\series bold
+lspci
+\series default
+ dintr-un mediu non-chroot.
  Rezultatele sunt aceleași.
- De asemenea, puteți rula lsmod pentru a vizualiza modulele kernel-ului
- folosit de mediul Installation CD (ar putea să vă formeze o idee despre
- ce anume să activați).
+ De asemenea, puteți rula 
+\series bold
+lsmod
+\series default
+ pentru a vizualiza modulele kernel-ului folosit de mediul Installation
+ CD (ar putea să vă formeze o idee despre ce anume să activați).
  
 \end_layout
 
 \begin_layout Standard
-Acum mergeți în directorul ce conține sursa kernel-ului și executați make
- menuconfig.
- Aceasta va porni un meniu de configurare bazat pe ncurses.
+Acum mergeți în directorul ce conține sursa kernel-ului și executați 
+\color blue
+make menuconfig
+\color inherit
+.
+ Aceasta va porni un meniu de configurare bazat pe 
+\series bold
+ncurses
+\series default
+.
  
 \begin_inset Newline newline
 \end_inset
@@ -15768,22 +15822,21 @@ Invocarea menuconfig
 
 \begin_layout Standard
 Veți fi întâmpinat cu mai multe secțiuni de configurare.
- Mai întâi vom enumera câteva opțiuni pe care trebuie să le activați (altfel
+ Mai întâi o să enumerăm câteva opțiuni pe care trebuie să le activați (altfel
  Gentoo nu va funcționa deloc sau nu va funcționa corect fără anumite trucuri
  suplimentare).
  
 \end_layout
 
 \begin_layout Subsection*
-Activarea Opțiunilor Necesare
+Activarea opțiunilor necesare
 \end_layout
 
 \begin_layout Standard
-Asigurați-vă că fiecare driver ce este vital pentru procesul de boot al
- sistemului dvs.
- (cum ar fi controller-ul SCSI, ...) este compilat în kernel, și nu ca modul,
- altfel sistemul dvs.
- nu va putea completa procesul de boot.
+Asigurați-vă că fiecare driver ce este vital pentru procesul de încărcare
+ (boot) al sistemului dumneavoastră (cum ar fi controller-ul SCSI, ...) este
+ compilat în kernel, și nu ca modul, altfel sistemul dumneavoastră nu va
+ putea completa procesul de încărcare (boot).
  
 \end_layout
 
@@ -17745,9 +17798,13 @@ Compilarea kernel-ului
 \end_layout
 
 \begin_layout Standard
-Când compilarea s-a terminat, copiați imaginea de kernel în directorul /boot.
- Utilizați orice nume considerați că este potrivit pentru kernel-ul dvs.
- și amintiți-vă acest nume deoarece veți avea nevoie de el ulterior când
+Când compilarea s-a terminat, copiați imaginea de kernel în directorul 
+\series bold
+/boot
+\series default
+.
+ Utilizați orice nume considerați că este potrivit pentru kernel-ul dumneavoastr
+ă și amintiți-vă acest nume deoarece veți avea nevoie de el ulterior când
  veți configura aplicația încărcătorul de sistem (bootloader).
  Amintiți-vă să înlocuiți kernel-3.4.9-gentoo cu numele și versiunea kernel-ului
  dumneavoastră.
@@ -18081,8 +18138,8 @@ genkernel
 genkernel
 \series default
  pentru a vă construi un kernel, sistemul va detecta, la modul general,
- toate componentele hardware, în timpul procesului de boot, așa cum o face
- mediul Installation CD.
+ toate componentele hardware, în timpul procesului de încărcare (boot),
+ așa cum o face mediul Installation CD.
  Deoarece 
 \series bold
 genkernel
@@ -18233,8 +18290,7 @@ Odată ce
 \series bold
 genkernel
 \series default
- își încheie execuția, vor fi create un set întreg de module și inițial
- ram disk (initramfs).
+ își încheie execuția, vor fi create un set întreg de module și initramfs.
 \end_layout
 
 \begin_layout Standard
@@ -18247,7 +18303,8 @@ initrd
 \series bold
 initrd
 \series default
- pentru că vă va trebui când veți configura aplicația bootloader.
+ pentru că vă va trebui când veți configura aplicația încărcătorul de sistem
+ (bootloader).
  Initrd-ul va porni imediat după boot, pentru a iniția autodetecția hardware
  (la fel ca și la mediul Installation CD) înainte ca "adevăratul" sistem
  să pornească.
@@ -18321,7 +18378,11 @@ Va trebui să enumerați toate modulele, pe care vreți să le încărcați auto
 
 \begin_layout Standard
 Pentru a vizualiza toate modulele disponibile, folosiți următoarea comandă
- find.
+ 
+\color blue
+find
+\color inherit
+.
  Nu uitați să înlocuiți "<versiune kernel>" cu versiunea efectivă de kernel
  pe care tocmai ați compilat-o:
 \begin_inset Newline newline
@@ -18378,7 +18439,7 @@ De exemplu, pentru încărcarea automata a modulului
 \series bold
 3c59x.ko
 \series default
- (ce este un driver pentru plăcile de rețea 3Com), editați fișierul 
+ (un driver pentru plăcile de rețea 3Com), editați fișierul 
 \series bold
 /etc/conf.d/modules
 \series default
@@ -18475,7 +18536,7 @@ Configurarea Sistemului
 \end_layout
 
 \begin_layout Section
-Informații despre Sistemul de Fișiere
+Informații despre sistemul de fișiere
 \end_layout
 
 \begin_layout Subsection*
@@ -18489,9 +18550,9 @@ Sub Linux, toate partițiile folosite de sistem trebuie scrise în
 \series default
 .
  Fișierul conține punctele de montare a partițiilor (unde apar în structura
- sistemului de fișiere), cum trebuie montate și cu ce opțiuni speciale (montare
- automată sau nu, dacă utilizatorii normali (non-root) pot monta sau nu
- partiția, etc.).
+ sistemului de fișiere), cum trebuie montate și cu ce opțiuni speciale pot
+ fi montate (montare automată sau nu, dacă utilizatorii normali (non-root)
+ pot monta sau nu partiția, etc.).
  
 \end_layout
 
@@ -18531,7 +18592,11 @@ Al patrulea câmp arată opțiunile folosite la montarea partițiilor.
 \series bold
 mount
 \series default
- (man mount) pentru o listare completă.
+ (
+\color blue
+man mount
+\color inherit
+) pentru o listare completă.
  Punctele de montare sunt separate prin virgulă.
  
 \end_layout
@@ -18627,23 +18692,23 @@ Deschiderea /etc/fstab
 
 \end_deeper
 \begin_layout Standard
-Să vedem cum scriem opțiunile pentru partiția /
+Să vedem cum scriem opțiunile pentru partiția 
 \series bold
-boot
+/boot
 \series default
 .
  Acesta este doar un exemplu, astfel, dacă arhitectura folosită nu necesită
- /
+ 
 \series bold
-boot
+/boot
 \series default
  (cum sunt mașinile PPC de la Apple), nu o copiați.
 \end_layout
 
 \begin_layout Standard
-În exemplul nostru implicită pentru AMD64, /
+În exemplul nostru implicită pentru AMD64, 
 \series bold
-boot
+/boot
 \series default
  este partiția 
 \series bold
@@ -18654,7 +18719,8 @@ boot
 ext2
 \series default
  ca sistem de fișiere.
- Trebuie verificat în timpul procesului de boot, așadar vom scrie: 
+ Trebuie verificat în timpul procesului de încărcare (boot), așadar o să
+ scriem: 
 \begin_inset Newline newline
 \end_inset
 
@@ -18816,9 +18882,9 @@ defaults
 \end_layout
 
 \begin_layout Standard
-Unii utilizatori nu doresc ca partiția lor /
+Unii utilizatori nu doresc ca partiția lor 
 \series bold
-boot
+/boot
 \series default
  să fie montată automat, pentru a îmbunătăți securitatea sistemului.
  Aceștia trebuie să înlocuiască 
@@ -19299,7 +19365,7 @@ Hostname, Domainname etc.
 \end_layout
 
 \begin_layout Standard
-O decizie ce trebuie făcută de user este numele PC-ului.
+O decizie ce trebuie făcută de utilizator este numele PC-ului.
  Aceasta pare a fi ușoară, dar mulți utilizatori au dificultăți în a alege
  un nume potrivit pentru PC-ul cu Linux.
  Pentru a grăbi puțin lucrurile, trebuie să știți că orice nume alegeți,
@@ -19615,7 +19681,11 @@ bzless
 \series bold
 openresolv
 \series default
- (emerge openresolv) pentru a vă ajuta la administrarea DNS/NIS.
+ (
+\color blue
+emerge openresolv
+\color inherit
+) pentru a vă ajuta la administrarea DNS/NIS.
 \end_layout
 
 \begin_layout Subsection*
@@ -19624,7 +19694,7 @@ Configurarea rețelei
 
 \begin_layout Standard
 Înainte de a avea acea stare "Hei, am mai făcut asta o dată", trebuie să
- știți că setările făcute la începutul instalării au fost DOAR pentru instalare.
+ știți că setările făcute la începutul instalării au fost doar pentru instalare.
  Acum, vom face configurările permanente pentru noul sistem Gentoo.
  
 \end_layout
@@ -19663,7 +19733,7 @@ Toate setările rețelei sunt ținute în
 .
  Acesta folosește o sintaxă simplă, dar care nu poate fi folosită intuitiv,
  dacă nu știți să setați rețeaua manual.
- Dar nu vă temeți, vă vom explica totul.
+ Dar nu vă temeți, o să vă explicăm totul.
  Un exemplu de fișier comentat ce acoperă diverse configurații este disponibil
  în 
 \series bold
@@ -19838,7 +19908,7 @@ Fișierul implicit /etc/conf.d/net
 \end_layout
 
 \begin_layout Standard
-Pentru a introduce propriile dvs.
+Pentru a introduce propriile dumneavoastră.
  adrese 
 \series bold
 IP
@@ -19862,16 +19932,16 @@ routes_eth0
 : 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 Notă: Asta presupune ca interfața rețelei dumneavoastră să fie 
 \series bold
 eth0
 \series default
 .
- în orice caz asta depinde de sistem.
+ În orice caz asta depinde de sistem.
  Dacă imaginea de pe care instalați sistemul este suficient de recentă când
- butați (porniți sistemul) presupunem că interfața de rețea are același
- nume ca și înainte de boot.
+ porniți sistemul (boot) presupunem că interfața de rețea are același nume
+ ca și înainte de boot.
 \begin_inset Newline newline
 \end_inset
 
@@ -20151,11 +20221,11 @@ rc-update del net.eth0 default
 \end_layout
 
 \begin_layout Subsection*
-Scrierea Informațiilor despre Rețea
+Scrierea informațiilor despre rețea
 \end_layout
 
 \begin_layout Standard
-Trebuie să informați Linux-ul despre rețea.
+Trebuie să informați linux-ul despre rețea.
  Acesta este definită în 
 \series bold
 /etc/hosts
@@ -20337,7 +20407,7 @@ target "http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable
 \end_layout
 
 \begin_layout Subsection*
-Opțional: Activarea PCMCIA în scopul Funcționării
+Opțional: Activarea PCMCIA în scopul funcționării
 \end_layout
 
 \begin_layout Standard
@@ -20453,7 +20523,7 @@ Setarea parolei pentru root
 \end_layout
 
 \begin_layout Subsection*
-Informații Despre Sistem
+Informații despre sistem
 \end_layout
 
 \begin_layout Standard
@@ -20747,7 +20817,7 @@ Deschiderea fișierului /etc/locale.gen
 
 \begin_layout Standard
 Următoarele localizări sunt specifice pentru limba engleză (Statele Unite)
- și germană (Germania), localizări ce sunt acompaniate și de suportul UTF-8.
+ și romană (Romania), localizări ce sunt acompaniate și de suportul UTF-8.
 \begin_inset Newline newline
 \end_inset
 
@@ -20955,7 +21025,7 @@ Setarea localizării implicite în /etc/env.d/02locale
 \begin_layout Plain Layout
 
 \color blue
-LANG="de_DE.UTF-8" 
+LANG="ro_RO.UTF-8" 
 \end_layout
 
 \end_inset
