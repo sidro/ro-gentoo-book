@@ -34,3 +34,7 @@ Mihai Tene - Translator
 Alin Dobre - Translator (documentație versiuni intermediare)
 
 Ștefan Suciu - Corecturi
+
+Manualul se afla sub licenta Creative Commons 2.5.
+Pentru mai multe informatii cititi atributele licentei (CC-BY-SA-2.5).
+http://creativecommons.org/licenses/by-sa/2.5/
