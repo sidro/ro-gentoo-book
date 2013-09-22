@@ -13,7 +13,7 @@ Manualul se gaseste in format portabil.
 Formatul portabil al manualului se gaseste atat pe acest depozit cat si pe cloud-ul dropbox.
 Pentru cei ce vor doar manualul, fara sursa lui, il pot descarca mai usor accesand urmatorul link:
 
-https://dl.dropboxusercontent.com/u/21274910/Gentoo/gentoo-robook.pdf
+https://dl.dropboxusercontent.com/u/21274910/Gentoo/Manualul%20Gentoo.zip
 
 Versiunea manualului va fi afisata si aici, nu doar in manual, ca informatie utila pentru cei ce vor sa descarce versiunea curenta.
 
