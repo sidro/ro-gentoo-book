@@ -7831,7 +7831,7 @@ swap
 \series default
  la o mărime mai rezonabilă, cum ar fi 1 GO, va trebui să modificați variabila
  dvs.
- Portage_TMPDIR din 
+ PORTAGE_TMPDIR din 
 \series bold
 /etc/make.conf
 \series default
@@ -13482,7 +13482,7 @@ Portage
 \begin_layout Description
 Notă: O listă comentată a tuturor variabilelor, poate fi găsită în 
 \series bold
-/mnt/gentoo/usr/share/Portage/make.conf.example
+/mnt/gentoo/usr/share/portage/make.conf.example
 \series default
 .
  Pentru o instalare reușită Gentoo va trebui doar să setați aceste variabile
@@ -14347,11 +14347,11 @@ Acum trebuie să instalați structura
 \series bold
 Portage
 \series default
-, o colecție de fișiere ce informează Portage ce software poți instala,
+, o colecție de fișiere ce informează portage ce software poți instala,
  ce profile sunt disponibile etc.
  Conținutul structurii Portage va fi extras în 
 \series bold
-/usr/Portage
+/usr/portage
 \series default
 .
 \end_layout
@@ -14396,7 +14396,7 @@ Rularea lui emerge--webrsync pentru a instala o structură Portage
 \begin_layout Plain Layout
 
 \color blue
-# mkdir /usr/Portage
+# mkdir /usr/portage
 \end_layout
 
 \end_inset
@@ -15232,7 +15232,7 @@ make.defaults
 \begin_layout Standard
 O descriere completă a variabilelor USE existente, poate fi găsită în 
 \series bold
-/usr/Portage/profiles/use.desc
+/usr/portage/profiles/use.desc
 \series default
 .
  
@@ -15267,7 +15267,7 @@ Vizualizarea indicatorilor USE existenți
 \begin_layout Plain Layout
 
 \color blue
-# less /usr/Portage/profiles/use.desc 
+# less /usr/portage/profiles/use.desc 
 \end_layout
 
 \end_inset
@@ -25120,7 +25120,7 @@ pentru a putea rula jocuri
 \begin_inset Text
 
 \begin_layout Plain Layout
-Portage
+portage
 \end_layout
 
 \end_inset
