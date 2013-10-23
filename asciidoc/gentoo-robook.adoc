@@ -3738,7 +3738,7 @@ acopere cele mai frecvente setări de boot.
 
 [source,bash]
 ----
-.user $ ls /etc/grub.d
+user $ ls /etc/grub.d
 00_header 10_linux 20_linux_xen 30_os-prober 40_custom 41_custom README
 ----
 
@@ -3785,7 +3785,7 @@ fișierul /etc/default/grub următoarea linie.
 
 Fișierul '/etc/default/grub':
 
-...
+....
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 ....
 
@@ -3816,14 +3816,12 @@ rerulați grub2-mkconfig.
 În loc să rulați grub2-mkconfig, un grub.conf simplu poate fi
 convertit ușor să se potrivească pentru utilizarea în grub.cfg.
 
-
 [width="60%",cols="2",options="header"]
 |===
 |grub.conf (Grub Legacy)
 |grub.cfg (GRUB2)
 
 | timeout 5 +
-....
 title Gentoo Linux 3.2.12 +
 root (hd0,0) +
 kernel /boot/kernel-3.2.12-gentoo +
@@ -4282,8 +4280,8 @@ Puteți efectua rapid setările necesare USE flags activând profilul
 necesar în Portage:
 
 [source,bash]
-.# eselect profile list
 ----
+# eselect profile list
 [1] default/linux/amd64/10.0
 [2] default/linux/amd64/10.0/selinux
 [3] default/linux/amd64/10.0/desktop
@@ -4303,7 +4301,7 @@ activa prin comanda:
 
 [source,bash]
 ----
-.# eselect profile set 4
+# eselect profile set 4
 ----
 
 Dacă se dorește instalarea KDE-ului se setează profilul #5, iar pentru
@@ -4314,15 +4312,14 @@ exemple:
 
 [source,bash]
 ----
-.eselect profile set 5
+eselect profile set 5
 ----
-
 
 - pentru XFCE
 
 [source,bash]
 ----
-.eselect profile set 3
+eselect profile set 3
 ----
 
 Gentoo are trei profile pentru mediile grafice: unul pentru KDE, unul
@@ -4394,8 +4391,8 @@ pornit. Iată cum pornim serviciul dbus și îl adăugăm la procesele de
 pornire ale sistemului.
 
 [source,bash]
-.dbus - pornirea și adăugarea la procesele de pornire a sistemului
 ----
+dbus - pornirea și adăugarea la procesele de pornire a sistemului
 # /etc/init.d/dbus start
 # rc-update add dbus default
 ----
