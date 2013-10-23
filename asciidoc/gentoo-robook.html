@@ -84,7 +84,7 @@ div.titlepage + p:first-letter {
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Translatori: Stoian Ovidiu, Mihai Tene şi Alin Dobre</p>
+<p>Translatori: Stoian Ovidiu, Mihai Tene și Alin Dobre</p>
 </div>
 <div class="paragraph">
 <p>Corecturi: Ștefan Suciu</p>
@@ -482,7 +482,7 @@ Descărcați fișierul ce conține semnătura și obțineți cheia publică.</p>
 <div class="listingblock">
 <div class="title">Verificarea semnăturii criptografice</div>
 <div class="content">
-<pre class="highlight"><code class="bash language-bash"># gpg --verify &lt;fișierul cu semnătura&gt; &lt;fișierul iso descărcat&gt;</code></pre>
+<pre class="highlight"><code class="bash language-bash"># gpg --verify &lt;fisierul cu semnatura&gt; &lt;fisierul iso descarcat&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2321,10 +2321,15 @@ va trebui să stocăm fișierele noastre pe partiții.</p>
 <div class="paragraph">
 <p>Continuați cu Instalarea fișierelor Gentoo necesare instalării.</p>
 </div>
-<div class="paragraph">
-<p>Instalarea fișierelor Gentoo necesare instalării</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_capitolul_5">Capitolul 5</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_instalarea_fi_ierelor_gentoo_necesare_instal_rii">Instalarea fișierelor Gentoo necesare instalării</h3>
 <div class="sect3">
 <h4 id="_instalarea_unei_arhive_tar_stage">Instalarea unei arhive tar stage</h4>
 <div class="paragraph">
@@ -2705,9 +2710,11 @@ conține serverele DNS pentru rețeaua noastră.</p>
 <div class="listingblock">
 <div class="title">Copierea informațiilor despre DNS</div>
 <div class="content">
-<pre class="highlight"><code class="bash language-bash">(Opțiunea "-L" ne asigură că nu copiem un link simbolic)
-# cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf</code></pre>
+<pre class="highlight"><code class="bash language-bash"># cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(Opțiunea "-L" ne asigură că nu copiem un link simbolic)</p>
 </div>
 <div class="paragraph">
 <p><strong>Montarea sistemelor de fișiere</strong></p>
@@ -2996,9 +3003,11 @@ actualizați Portage!</p>
 <div class="listingblock">
 <div class="title">Vizualizarea indicatorilor USE existenți</div>
 <div class="content">
-<pre class="highlight"><code class="bash language-bash"># less /usr/portage/profiles/use.desc
-(Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea 'q')</code></pre>
+<pre class="highlight"><code class="bash language-bash"># less /usr/portage/profiles/use.desc</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea <em>q</em>)</p>
 </div>
 <div class="paragraph">
 <p>Drept exemplu, vă prezentăm setările unui sistem bazat pe KDE, cu
@@ -3086,8 +3095,7 @@ diferită, deci rețineți acest aspect.</p>
 <div class="title">Vizualizare symlink sursă kernel</div>
 <div class="content">
 <pre class="highlight"><code class="bash language-bash"># ls -l /usr/src/linux
-lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -&gt;
-linux-3.4.9</code></pre>
+lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -&gt; linux-3.4.9</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3496,9 +3504,11 @@ scrieți numele modulului în el.</p>
 <div class="title">Inserare module in /etc/conf.d/modules</div>
 <div class="content">
 <pre class="highlight"><code class="bash language-bash"># nano -w /etc/conf.d/modules
-modules_3_4="3c59x"
-(unde 3_4 este versiunea majora a kernelului instalat)</code></pre>
+modules_3_4="3c59x"</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(unde 3_4 este versiunea majora a kernelului instalat)</p>
 </div>
 <div class="paragraph">
 <p>Continuați instalarea cu
@@ -3655,10 +3665,11 @@ domeniul homenetwork.</p>
 <div class="title">Setarea numelui</div>
 <div class="content">
 <pre class="highlight"><code class="bash language-bash"># nano -w /etc/conf.d/hostname
-
-(Setați variabila HOSTNAME pentru numele sistemului)
 hostname="tux"</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(Setați variabila HOSTNAME pentru numele sistemului)</p>
 </div>
 <div class="paragraph">
 <p>A doua decizie este legată de domainname, dacă aveți nevoie de
@@ -3672,10 +3683,11 @@ la domainnames sau DNS.</p>
 <div class="title">Setarea numelui domeniului</div>
 <div class="content">
 <pre class="highlight"><code class="bash language-bash"># nano -w /etc/conf.d/net
-
-(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 dns_domain_lo="homenetwork"</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(Setați variabila DNSDOMAIN cu numele domeniului dvs.)</p>
 </div>
 <div class="paragraph">
 <p>Dacă aveți un domeniu NIS (dacă nu știți ce este acesta, sigur nu
@@ -3685,10 +3697,11 @@ utilizați așa ceva), aveți nevoie să-l definiți și pe acesta:</p>
 <div class="title">Setarea numelui de domeniu NIS</div>
 <div class="content">
 <pre class="highlight"><code class="bash language-bash"># nano -w /etc/conf.d/net
-
-(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 nis_domain_lo="my-nisdomain"</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>(Setați variabila DNSDOMAIN cu numele domeniului dvs.)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3698,11 +3711,11 @@ nis_domain_lo="my-nisdomain"</code></pre>
 </td>
 <td class="content">
 Dacă doriți mai multe informații despre DNS și NIS vă rugam să
-citiți exemplele aflate în
-/usr/share/doc/openrc-*/net.example.bz2 ce pot fi citite
-folosind bzless. De asemenea poate doriți să vă instalați
-openresolv (emerge openresolv) pentru a vă ajuta la
-administrarea DNS/NIS.
+      citiți exemplele aflate în
+      /usr/share/doc/openrc-*/net.example.bz2 ce pot fi citite
+      folosind bzless. De asemenea poate doriți să vă instalați
+      openresolv (emerge openresolv) pentru a vă ajuta la
+      administrarea DNS/NIS.
 </td>
 </tr>
 </table>
@@ -3724,34 +3737,34 @@ sistem Gentoo.</p>
 </td>
 <td class="content">
 Informații mai detaliate despre rețea, incluzând subiecte
-avansate ca sistemele bonding, bridging, rețele VLAN 802.1Q sau
-rețelistica wireless, sunt incluse în secțiunea despre [
-<a href="http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&amp;full=1#book_part4">Configurarea
-Reţelei</a> în Gentoo.
+      avansate ca sistemele bonding, bridging, rețele VLAN 802.1Q sau
+      rețelistica wireless, sunt incluse în secțiunea despre [
+      <a href="http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&amp;full=1#book_part4">Configurarea
+      Rețelei</a> în Gentoo.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Toate setările rețelei sunt ținute în /etc/conf.d/net. Acesta
+<p>Toate setările rețelei sunt ținute în <em>/etc/conf.d/net</em>. Acesta
 folosește o sintaxă simplă, dar care nu poate fi folosită intuitiv,
 dacă nu știți să setați rețeaua manual. Dar nu vă temeți, o să vă
 explicăm totul. Un exemplu de fișier comentat ce acoperă diverse
 configurații este disponibil în
-/usr/share/doc/openrc-*/net.example.bz2.</p>
+<em>/usr/share/doc/openrc-*/net.example.bz2</em>.</p>
 </div>
 <div class="paragraph">
 <p>DHCP este utilizat implicit. Pentru a utiliza DHCP trebuie să
 instalați un client DHCP. Aceasta este descrisa în
 <a href="http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&amp;full=1#networking-tools">Instalarea
-utilitarelor necesare de sistem </a> . Nu uitați să instalați un client
+utilitarelor necesare de sistem </a>. Nu uitați să instalați un client
 pentru DHCP.</p>
 </div>
 <div class="paragraph">
 <p>Dacă trebuie să vă configurați conexiunea la rețea, fie pentru că
 aveți nevoie să specificați anumite opțiuni DHCP sau pentru că nu
-utilizați deloc DHCP, deschideți /etc/conf.d/net cu editorul favorit
-(în acest exemplu este folosit nano ):</p>
+utilizați deloc DHCP, deschideți <em>/etc/conf.d/net</em> cu editorul favorit
+(în acest exemplu este folosit nano):</p>
 </div>
 <div class="listingblock">
 <div class="title">Deschiderea /etc/conf.d/net pentru editare</div>
@@ -3784,10 +3797,10 @@ gateway, trebuie să setați atât config_eth0 cât și routes_eth0:</p>
 </td>
 <td class="content">
 Asta presupune ca interfața rețelei dumneavoastră să fie
-eth0. În orice caz asta depinde de sistem. Dacă imaginea de pe
-care instalați sistemul este suficient de recentă când porniți
-sistemul (boot) presupunem că interfața de rețea are același
-nume ca și înainte de boot.
+      eth0. În orice caz asta depinde de sistem. Dacă imaginea de pe
+      care instalați sistemul este suficient de recentă când porniți
+      sistemul (boot) presupunem că interfața de rețea are același
+      nume ca și înainte de boot.
 </td>
 </tr>
 </table>
@@ -3812,7 +3825,7 @@ config_eth0="dhcp"</pre>
 </div>
 <div class="paragraph">
 <p>Vă rugăm să consultați fișierul
-/usr/share/doc/openrc-*/net.example.bz2 pentru o listă cu toate
+<em>/usr/share/doc/openrc-*/net.example.bz2</em> pentru o listă cu toate
 opțiunile disponibile. Dacă vreți setări specifice citiți manualele
 clientului dumneavoastră DHCP.</p>
 </div>
@@ -3849,8 +3862,8 @@ greșite (pe care momentan le-am numit eth0 &#8230; ), atunci:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>modificați fișierul /etc/conf.d/net cu numele interfeței
-corecte (ca enp3s0 în loc de eth0),</p>
+<p>modificați fișierul <em>/etc/conf.d/net</em> cu numele interfeței corecte
+(ca enp3s0 în loc de eth0),</p>
 </li>
 <li>
 <p>creați noi link-uri simbolice (ca /etc/init.d/net.enp3s0),</p>
@@ -3872,7 +3885,7 @@ default.</p>
 </div>
 <div class="paragraph">
 <p>Trebuie să informați linux-ul despre rețea. Acesta este definită în
-/etc/hosts și permite rezolvarea numelor corespondente adreselor IP
+<em>/etc/hosts</em> și permite rezolvarea numelor corespondente adreselor IP
 pentru host-urile ce nu sunt rezolvate de serverul DNS. Trebuie să vă
 definiți sistemul. De asemenea, ați putea să definiți și alte sisteme
 din rețeaua dumneavoastră dacă nu doriți să vă setați propriul server
@@ -3904,7 +3917,7 @@ resă IP statică pentru a fi definite în acest mod.)
 </div>
 <div class="paragraph">
 <p>Dacă nu aveți PCMCIA, puteți continua cu
-<a href="http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&amp;full=1#sysinfo">Informaţiile
+<a href="http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&amp;full=1#sysinfo">Informațiile
 despre Sistem </a> . Utilizatorii PCMCIA ar trebui să citească următoarea
 parte despre PCMCIA.</p>
 </div>
@@ -3975,10 +3988,11 @@ tastaturii. Editați-l pentru a vă configura tastatura.</p>
 greșit KEYMAP, veți obține rezultate ciudate când tastați.</p>
 </div>
 <div class="paragraph">
-<p>Când ați terminat configurarea /etc/conf.d/keymaps, salvați și ieșiți.</p>
+<p>Când ați terminat configurarea <em>/etc/conf.d/keymaps</em>, salvați și
+ieșiți.</p>
 </div>
 <div class="paragraph">
-<p>Gentoo utilizează /etc/conf.d/hwclock pentru a seta opțiunile de
+<p>Gentoo utilizează <em>/etc/conf.d/hwclock</em> pentru a seta opțiunile de
 ceas. Editați-l conform nevoilor dumneavoastră.</p>
 </div>
 <div class="listingblock">
@@ -3996,7 +4010,8 @@ trebui să setați această variabilă corespunzător, altfel vor apărea
 probleme.</p>
 </div>
 <div class="paragraph">
-<p>Când ați terminat configurarea /etc/conf.d/hwclock, salvați și ieșiți.</p>
+<p>Când ați terminat configurarea <em>/etc/conf.d/hwclock</em>, salvați și
+ieșiți.</p>
 </div>
 <div class="paragraph">
 <p><strong>Configurarea localizării</strong></p>
@@ -6344,7 +6359,7 @@ setările de la o versiune Xfce la alta.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-10-23 17:09:02 EEST
+Last updated 2013-10-23 19:07:29 EEST
 </div>
 </div>
 </body>

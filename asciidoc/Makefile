@@ -7,7 +7,7 @@
 # Versiunile programelor folosite:
 # asciidoc 8.6.8
 # Asciidoctor 0.1.3
-# texlive-20120701
+# LaTeX cu pachetul unicode
 # dblatex-0.3
 # DocBook xsl-stylesheets-1.78.1
 
