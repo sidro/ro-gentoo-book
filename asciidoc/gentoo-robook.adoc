@@ -4464,8 +4464,7 @@ overlay].
 
 Alegeți versiunea KDE SC care vi se potrivește:
 
-
-[width="80%",cols="1,8",options="header"]
+[width="80%",cols="4,2,6",options="header"]
 |===
 |KDE SC versiune |Depozit |Status
 
