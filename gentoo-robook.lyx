@@ -28944,8 +28944,8 @@ target "http://packages.gentoo.org/package/kde-base/kdegraphics-meta"
 \begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
-name "http://packages.gentoo.org/package/kde-base/kdemultimedia-meta"
-target "kde-base/kdemultimedia-meta"
+name "kde-base/kdemultimedia-meta"
+target "http://packages.gentoo.org/package/kde-base/kdemultimedia-meta"
 
 \end_inset
 
