@@ -10,6 +10,7 @@ v0.2, 2013-10-21
 Translatori: Stoian Ovidiu, Mihai Tene și Alin Dobre
 
 Corecturi: Ștefan Suciu
+Versiuni alternative (HTML, PDF și EPUB): Ștefan Suciu
 
 == Capitolul 1
 
