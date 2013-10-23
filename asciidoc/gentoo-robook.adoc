@@ -7,7 +7,7 @@ v0.2, 2013-10-21
 :imagesdir:   assets/images
 :homepage:    http://gentoo-land.org/
 
-Translatori: Stoian Ovidiu, Mihai Tene şi Alin Dobre
+Translatori: Stoian Ovidiu, Mihai Tene și Alin Dobre
 
 Corecturi: Ștefan Suciu
 
@@ -303,7 +303,7 @@ Acum, verificați semnătura criptografică.
 .Verificarea semnăturii criptografice
 [source,bash]
 ----
-# gpg --verify <fișierul cu semnătura> <fișierul iso descărcat>
+# gpg --verify <fisierul cu semnatura> <fisierul iso descarcat>
 ----
 
 Pentru a scrie imaginile ISO pe CD-uri trebuie să selectați
@@ -1712,7 +1712,9 @@ va trebui să stocăm fișierele noastre pe partiții.
 
 Continuați cu Instalarea fișierelor Gentoo necesare instalării.
 
-Instalarea fișierelor Gentoo necesare instalării
+== Capitolul 5
+
+=== Instalarea fișierelor Gentoo necesare instalării
 
 ==== Instalarea unei arhive tar stage
 
@@ -2014,9 +2016,10 @@ conține serverele DNS pentru rețeaua noastră.
 [source,bash]
 .Copierea informațiilor despre DNS
 ----
-(Opțiunea "-L" ne asigură că nu copiem un link simbolic)
 # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 ----
+
+(Opțiunea "-L" ne asigură că nu copiem un link simbolic)
 
 *Montarea sistemelor de fișiere*
 
@@ -2261,8 +2264,9 @@ O descriere completă a variabilelor USE existente, poate fi găsită în
 .Vizualizarea indicatorilor USE existenți
 ----
 # less /usr/portage/profiles/use.desc
-(Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea 'q')
 ----
+
+(Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea 'q')
 
 Drept exemplu, vă prezentăm setările unui sistem bazat pe KDE, cu
 suport DVD, ALSA și CD-Recording:
@@ -2337,8 +2341,7 @@ diferită, deci rețineți acest aspect.
 .Vizualizare symlink sursă kernel
 ----
 # ls -l /usr/src/linux
-lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux ->
-linux-3.4.9
+lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -> linux-3.4.9
 ----
 
 Acum este timpul să configurăm și să compilăm sursa kernel. Toate
@@ -2680,8 +2683,9 @@ scrieți numele modulului în el.
 ----
 # nano -w /etc/conf.d/modules
 modules_3_4="3c59x"
-(unde 3_4 este versiunea majora a kernelului instalat)
 ----
+
+(unde 3_4 este versiunea majora a kernelului instalat)
 
 Continuați instalarea cu
 http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part1_chap8[Configurarea
@@ -2804,10 +2808,10 @@ domeniul homenetwork.
 .Setarea numelui
 ----
 # nano -w /etc/conf.d/hostname
-
-(Setați variabila HOSTNAME pentru numele sistemului)
 hostname="tux"
 ----
+
+(Setați variabila HOSTNAME pentru numele sistemului)
 
 A doua decizie este legată de domainname, dacă aveți nevoie de
 domaninname setați-l prin editarea fișierului /etc/conf.d/net.  Aveți
@@ -2820,10 +2824,10 @@ la domainnames sau DNS.
 .Setarea numelui domeniului
 ----
 # nano -w /etc/conf.d/net
-
-(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 dns_domain_lo="homenetwork"
 ----
+
+(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 
 Dacă aveți un domeniu NIS (dacă nu știți ce este acesta, sigur nu
 utilizați așa ceva), aveți nevoie să-l definiți și pe acesta:
@@ -2832,17 +2836,17 @@ utilizați așa ceva), aveți nevoie să-l definiți și pe acesta:
 .Setarea numelui de domeniu NIS
 ----
 # nano -w /etc/conf.d/net
-
-(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 nis_domain_lo="my-nisdomain"
 ----
 
+(Setați variabila DNSDOMAIN cu numele domeniului dvs.)
+
 NOTE: Dacă doriți mai multe informații despre DNS și NIS vă rugam să
-citiți exemplele aflate în
-/usr/share/doc/openrc-*/net.example.bz2 ce pot fi citite
-folosind bzless. De asemenea poate doriți să vă instalați
-openresolv (emerge openresolv) pentru a vă ajuta la
-administrarea DNS/NIS.
+      citiți exemplele aflate în
+      /usr/share/doc/openrc-*/net.example.bz2 ce pot fi citite
+      folosind bzless. De asemenea poate doriți să vă instalați
+      openresolv (emerge openresolv) pentru a vă ajuta la
+      administrarea DNS/NIS.
 
 *Configurarea rețelei*
 
@@ -2852,28 +2856,28 @@ pentru instalare. Acum, vom face configurările permanente pentru noul
 sistem Gentoo.
 
 NOTE: Informații mai detaliate despre rețea, incluzând subiecte
-avansate ca sistemele bonding, bridging, rețele VLAN 802.1Q sau
-rețelistica wireless, sunt incluse în secțiunea despre [
-http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part4[Configurarea
-Reţelei] în Gentoo.
+      avansate ca sistemele bonding, bridging, rețele VLAN 802.1Q sau
+      rețelistica wireless, sunt incluse în secțiunea despre [
+      http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part4[Configurarea
+      Rețelei] în Gentoo.
 
-Toate setările rețelei sunt ținute în /etc/conf.d/net. Acesta
+Toate setările rețelei sunt ținute în '/etc/conf.d/net'. Acesta
 folosește o sintaxă simplă, dar care nu poate fi folosită intuitiv,
 dacă nu știți să setați rețeaua manual. Dar nu vă temeți, o să vă
 explicăm totul. Un exemplu de fișier comentat ce acoperă diverse
 configurații este disponibil în
-/usr/share/doc/openrc-*/net.example.bz2.
+'/usr/share/doc/openrc-*/net.example.bz2'.
 
 DHCP este utilizat implicit. Pentru a utiliza DHCP trebuie să
 instalați un client DHCP. Aceasta este descrisa în
 http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#networking-tools[Instalarea
-utilitarelor necesare de sistem ] . Nu uitați să instalați un client
+utilitarelor necesare de sistem ]. Nu uitați să instalați un client
 pentru DHCP.
 
 Dacă trebuie să vă configurați conexiunea la rețea, fie pentru că
 aveți nevoie să specificați anumite opțiuni DHCP sau pentru că nu
-utilizați deloc DHCP, deschideți /etc/conf.d/net cu editorul favorit
-(în acest exemplu este folosit nano ):
+utilizați deloc DHCP, deschideți '/etc/conf.d/net' cu editorul favorit
+(în acest exemplu este folosit nano):
 
 [source,bash]
 .Deschiderea /etc/conf.d/net pentru editare
@@ -2896,10 +2900,10 @@ Pentru a introduce propriile dumneavoastră. adrese IP, netmask și
 gateway, trebuie să setați atât config_eth0 cât și routes_eth0:
 
 NOTE: Asta presupune ca interfața rețelei dumneavoastră să fie
-eth0. În orice caz asta depinde de sistem. Dacă imaginea de pe
-care instalați sistemul este suficient de recentă când porniți
-sistemul (boot) presupunem că interfața de rețea are același
-nume ca și înainte de boot.
+      eth0. În orice caz asta depinde de sistem. Dacă imaginea de pe
+      care instalați sistemul este suficient de recentă când porniți
+      sistemul (boot) presupunem că interfața de rețea are același
+      nume ca și înainte de boot.
 
 ....
 Setarea manuală a informațiilor despre IP pentru eth0
@@ -2917,7 +2921,7 @@ config_eth0="dhcp"
 ....
 
 Vă rugăm să consultați fișierul
-/usr/share/doc/openrc-*/net.example.bz2 pentru o listă cu toate
+'/usr/share/doc/openrc-*/net.example.bz2' pentru o listă cu toate
 opțiunile disponibile. Dacă vreți setări specifice citiți manualele
 clientului dumneavoastră DHCP.
 
@@ -2945,8 +2949,8 @@ apropiate de genul net.*, exact cum ați făcut cu net.eth0.
 Dacă mai târziu găsiți că numele interfețelor de rețea sunt
 greșite (pe care momentan le-am numit eth0 ... ), atunci:
 
-1. modificați fișierul /etc/conf.d/net cu numele interfeței
-corecte (ca enp3s0 în loc de eth0),
+1. modificați fișierul '/etc/conf.d/net' cu numele interfeței corecte
+(ca enp3s0 în loc de eth0),
 
 2. creați noi link-uri simbolice (ca /etc/init.d/net.enp3s0),
 
@@ -2960,7 +2964,7 @@ default.
 *Scrierea informațiilor despre rețea*
 
 Trebuie să informați linux-ul despre rețea. Acesta este definită în
-/etc/hosts și permite rezolvarea numelor corespondente adreselor IP
+'/etc/hosts' și permite rezolvarea numelor corespondente adreselor IP
 pentru host-urile ce nu sunt rezolvate de serverul DNS. Trebuie să vă
 definiți sistemul. De asemenea, ați putea să definiți și alte sisteme
 din rețeaua dumneavoastră dacă nu doriți să vă setați propriul server
@@ -2989,7 +2993,7 @@ resă IP statică pentru a fi definite în acest mod.)
 Salvați și ieșiți din editor pentru a continua.
 
 Dacă nu aveți PCMCIA, puteți continua cu
-http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#sysinfo[Informaţiile
+http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#sysinfo[Informațiile
 despre Sistem ] . Utilizatorii PCMCIA ar trebui să citească următoarea
 parte despre PCMCIA.
 
@@ -3048,9 +3052,10 @@ tastaturii. Editați-l pentru a vă configura tastatura.
 Acordați mai multă atenție variabilei KEYMAP. Dacă selectați în mod
 greșit KEYMAP, veți obține rezultate ciudate când tastați.
 
-Când ați terminat configurarea /etc/conf.d/keymaps, salvați și ieșiți.
+Când ați terminat configurarea '/etc/conf.d/keymaps', salvați și
+ieșiți.
 
-Gentoo utilizează /etc/conf.d/hwclock pentru a seta opțiunile de
+Gentoo utilizează '/etc/conf.d/hwclock' pentru a seta opțiunile de
 ceas. Editați-l conform nevoilor dumneavoastră.
 
 [source,bash]
@@ -3066,7 +3071,8 @@ ceasul hardware este setat ca local, deci dacă doriți dualboot ar
 trebui să setați această variabilă corespunzător, altfel vor apărea
 probleme.
 
-Când ați terminat configurarea /etc/conf.d/hwclock, salvați și ieșiți.
+Când ați terminat configurarea '/etc/conf.d/hwclock', salvați și
+ieșiți.
 
 *Configurarea localizării*
 
