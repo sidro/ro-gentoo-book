@@ -2452,8 +2452,6 @@ folosit. Nu compilați sistemul de fișiere folosit pentru partiția root
 ca modul, altfel sistemul nu va putea să vă monteze partiția. De
 asemenea selectați memoria virtuala și /proc.
 
-
-
 ....
 Selectarea sistemului de fișiere necesar
 
@@ -3239,8 +3237,9 @@ referire la consola serială, puteți face asta deschizând fișierul
 
 Ce ar trebui decomentat pentru consola serială.
 
+Decomentarea consolei seriale din '/etc/inittab':
+
 ....
-.Decomentarea consolei seriale din /etc/inittab
 # CONSOLA SERIALĂ
 s0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100
 s1:12345:respawn:/sbin/agetty 9600 ttyS1 vt100
@@ -3434,8 +3433,9 @@ este JFS, trebuie să adăugați " ro" în linia de kernel, deoarece
 JFS trebuie să-și restaureze log-ul înainte de a permite
 montarea în modul read-write (citire-scriere).
 
+Exemplu de 'grub.conf':
+
 ....
-.Exemplu de grub.conf
 # Which listing to boot as default. 0 is the first, 1 the second
 etc.
 default 0
@@ -3470,8 +3470,9 @@ chainloader +1
 Linux, atunci trebuie să specificați prin initramfs rădăcina reală a
 dispozitivului dumneavoastră.
 
+Exemplu 'grub.conf' cu *initramfs* activat:
+
 ....
-.Exemplu grub.conf cu initramfs activat
 title Gentoo Linux 3.4.9
 root (hd0,0)
 kernel /boot/3.4.9 real_root=/dev/sda3
@@ -3646,8 +3647,9 @@ Momentan GRUB2 este mascat în Portage. O intrare în fișierul
 '/etc/portage/package.keywords' este necesară pentru a putea fi
 instalat.
 
+Editarea fișierului '/etc/portage/package.keywords':
+
 ....
-.Editarea fișierului /etc/portage/package.keywords
 sys-boot/grub:2 #aceasta linie trebuie adăugată în fișier pentru
 a putea instala GRUB2
 ....
@@ -3656,8 +3658,9 @@ a putea instala GRUB2
 doriți setarea manuala sau explicita a platformei o puteți face setând
 GRUB_PLATFORMS în make.conf.
 
+Setarea variabilei GRUB_PLATFORMS în '/etc/portage/make.conf':
+
 ....
-.Setarea variabilei GRUB_PLATFORMS în /etc/portage/make.conf
 # Standard PC (BIOS)
 GRUB_PLATFORMS="pc"
 
@@ -3672,7 +3675,7 @@ Instalarea cu ajutorul lui emerge.
 
 [source,bash]
 ----
-.root # emerge --ask sys-boot/grub:2
+root # emerge --ask sys-boot/grub:2
 ----
 
 *Instalarea unei imagini de boot*
@@ -3681,7 +3684,7 @@ Instalarea cu ajutorul lui emerge.
 
 [source,bash]
 ----
-.root # mount /boot
+root # mount /boot
 ----
 
 Dacă folosiți platforma EFI, montați-vă sistemul de volum (partiția)
@@ -3690,7 +3693,7 @@ ce va conține un subdirector EFI.
 
 [source,bash]
 ----
-.root # mount /boot/efi
+root # mount /boot/efi
 ----
 
 Rulați utilitarul grub2-install pentru a copia fișierele relevante în
@@ -3780,8 +3783,9 @@ done
 Pentru a decompresa kernelul Linux în mod discret trebuie să aveți în
 fișierul /etc/default/grub următoarea linie.
 
-....
-.Fișierul /etc/default/grub
+Fișierul '/etc/default/grub':
+
+...
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 ....
 
@@ -3790,8 +3794,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 Pentru a încărca systemd cu ajutorul lui grub2 asigurați-vă că
 următoarea linie va arăta ca mai jos.
 
+Fișierul '/etc/default/grub':
+
 ....
-.Fișierul /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="init=/usr/lib/systemd/systemd"
 ....
 
@@ -3799,7 +3804,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="init=/usr/lib/systemd/systemd"
 
 [source,bash]
 ----
-.root # emerge os-prober ntfs3g
+root # emerge os-prober ntfs3g
 ----
 
 După rulați comanda grub2-mkconfig -o /boot/grub2/grub.cfg. Dacă ați
@@ -4147,8 +4152,9 @@ pentru ca serverul X să pornească în mod implicit în rezoluția
 valorile date, acestea sunt exemple, și este foarte probabil ca aceste
 valori să difere de cele setate în sistemul dumneavoastră.
 
+Schimbarea secțiunii Screen din '/etc/X11/xorg.conf':
+
 ....
-.Schimbarea secțiunii Screen din /etc/X11/xorg.conf
 Section "Screen"
 Identifier "Default Screen"
 Device "S3 Inc. ProSavage KN133 [Twister K]"
@@ -4156,9 +4162,9 @@ Monitor "Generic Monitor"
 DefaultDepth 24
 # Am eliminat din text pentru a-l face mai lizibil
 SubSection "Display"
-Depth 24
-Modes "1024x768"
-EndSubSection
+    Depth 24
+    Modes "1024x768"
+    EndSubSection
 EndSection
 ....
 
@@ -4173,15 +4179,16 @@ tastatura și adăugați opțiunea XkbLayout care să indice schema de
 tastatură pe care o doriți. Trebuie doar să înlocuiți codul țării cu
 cel dorit de dumneavoastră:
 
+Schimbarea schemei de tastatură:
+
 ....
-.Schimbarea schemei de tastatură
 Section "InputDevice"
-Identifier "Generic Keyboard"
-Driver "keyboard"
-Option "CoreKeyboard"
-Option "XkbRules" "xorg"
-Option "XkbModel" "pc105"
-Option "XkbLayout" "ro"
+    Identifier "Generic Keyboard"
+    Driver "keyboard"
+    Option "CoreKeyboard"
+    Option "XkbRules" "xorg"
+    Option "XkbModel" "pc105"
+    Option "XkbLayout" "ro"
 EndSection
 ....
 
@@ -4214,20 +4221,21 @@ mouse va fi folosit -- majoritatea utilizatorilor vor scrie aici PS/2
 sau IMPS/2) și ZAxisMapping (care permite folosirea rotiței de scroll,
 dacă există):
 
+Schimbarea setărilor mouse-ului în Xorg:
+
 ....
-.Schimbarea setărilor mouse-ului în Xorg
 Section "InputDevice"
-Identifier "TouchPad Mouse"
-Driver "mouse"
-Option "CorePointer"
-Option "Device" "/dev/input/mouse0"
-Option "Protocol" "IMPS/2"
-Option "ZAxisMapping" "4 5"
+    Identifier "TouchPad Mouse"
+    Driver "mouse"
+    Option "CorePointer"
+    Option "Device" "/dev/input/mouse0"
+    Option "Protocol" "IMPS/2"
+    Option "ZAxisMapping" "4 5"
 EndSection
 ....
 
-Rulați startx și bucurați-vă de rezultat. Felicitări, acum (sperăm să)
-aveți în sistem un server Xorg funcțional. Următorul pas este
+Rulați *startx* și bucurați-vă de rezultat. Felicitări, acum (sperăm
+să) aveți în sistem un server Xorg funcțional. Următorul pas este
 înlăturarea twm, managerul de ferestre urât amintit la început și
 înlocuirea sa cu un altul mai frumos și mai funcțional sau de ce nu
 chiar cu un mediu desktop complet cum ar fi KDE sau GNOME, care însă
@@ -4493,14 +4501,14 @@ profilul care vi se potrivește, rulați
 
 [source,bash]
 ----
-.root # eselect profile list
+root # eselect profile list
 ----
 
 pentru a vizualiza lista de profiluri, și
 
 [source,bash]
 ----
-.root # eselect profile set X
+root # eselect profile set X
 ----
 
 unde X este numărul profilului pe care doriți să îl selectați.  Pentru
@@ -4548,7 +4556,7 @@ alte creații).
 
 [source,bash]
 ----
-.root # emerge --ask kdebase-meta
+root # emerge --ask kdebase-meta
 ----
 
 
@@ -4567,19 +4575,14 @@ administrarea sistemului.
 - http://packages.gentoo.org/package/kde-base/kdeedu-meta[kde-base/kdeedu-meta]
 : Aplicații pentru educație și jocuri.
 
-- http://packages.gentoo.org/package/kde-base/kdegames-meta[kde-base/kdegames-meta]
-: Jocuri standard pentru mediu grafic.
+- http://packages.gentoo.org/package/kde-base/kdegames-meta[kde-base/kdegames-meta] : Jocuri standard pentru mediu grafic.
 
-- http://packages.gentoo.org/package/kde-base/kdegraphics-meta[kde-base/kdegraphics-meta]
-: Aplicații grafice pentru vizualizat poze, modificat poze,
+- http://packages.gentoo.org/package/kde-base/kdegraphics-meta[kde-base/kdegraphics-meta] : Aplicații grafice pentru vizualizat poze, modificat poze,
 etc.
 
-???
-- kde-base/kdemultimedia-metahttp://packages.gentoo.org/package/kde-base/kdemultimedia-meta]
-: Aplicații de redare audio/video.
+- http://packages.gentoo.org/package/kde-base/kdemultimedia-meta[kde-base/kdemultimedia-meta]] : Aplicații de redare audio/video.
 
-- http://packages.gentoo.org/package/kde-base/kdenetwork-meta[kde-base/kdenetwork-meta]
-: Utilitare de rețea și servicii VNC.
+- http://packages.gentoo.org/package/kde-base/kdenetwork-meta[kde-base/kdenetwork-meta] : Utilitare de rețea și servicii VNC.
 
 - http://packages.gentoo.org/package/kde-base/kdepim-meta[kde-base/kdepim-meta]
 : Aplicații PIM cum ar fi emailer, addressbook, organizer, etc.
@@ -4587,15 +4590,11 @@ etc.
 - http://packages.gentoo.org/package/kde-base/kdesdk-meta[kde-base/kdesdk-meta]
 : Diferite unelte pentru dezvoltare.
 
-- http://packages.gentoo.org/package/kde-base/kdetoys-meta[kde-base/kdetoys-meta]
-: Aplicații gen jucării.
+- http://packages.gentoo.org/package/kde-base/kdetoys-meta[kde-base/kdetoys-meta] : Aplicații gen jucării.
 
-- http://packages.gentoo.org/package/kde-base/kdeutils-meta[kde-base/kdeutils-meta]
-: Aplicații grafice standard cum ar fi arhivatorul,
-calculatorul, etc.
+- http://packages.gentoo.org/package/kde-base/kdeutils-meta[kde-base/kdeutils-meta] : Aplicații grafice standard cum ar fi arhivatorul, calculatorul, etc.
 
-- http://packages.gentoo.org/package/kde-base/kdewebdev-meta[kde-base/kdewebdev-meta]
-: Unelte pentru dezvoltare și creare aplicații WEB.
+- http://packages.gentoo.org/package/kde-base/kdewebdev-meta[kde-base/kdewebdev-meta] : Unelte pentru dezvoltare și creare aplicații WEB.
 
 *Localizarea*
 
@@ -4604,14 +4603,15 @@ instalați kde-base/kde-l10n. Dacă doriți suport pentru o singură limbă
 aleasă de dumneavoastră, definiți LINGUAS USE flag pentru limba
 română:
 
+Editare fișier '/etc/portage/make.conf':
+
 ....
-.Editare fișier /etc/portage/make.conf
 LINGUAS="ro"
 ....
 
 [source,bash]
 ----
-.root # emerge --ask kde-l10n
+root # emerge --ask kde-l10n
 ----
 
 Pentru pachetele de localizare în
@@ -4631,13 +4631,14 @@ Instalarea lui KDM ca manager desktop.
 
 [source,bash]
 ----
-.root # emerge --ask kde-base/kdm
+root # emerge --ask kde-base/kdm
 ----
 
 Setați KDM ca manager de afișare inițial:
 
+Editare fișier '/etc/conf.d/xdm:'
+
 ....
-.Editare fișier /etc/conf.d/xdm
 DISPLAYMANAGER="kdm"
 ....
 
@@ -4646,14 +4647,14 @@ privilegiul de rulare:
 
 [source,bash]
 ----
-.root # rc-update add xdm default
+root # rc-update add xdm default
 ----
 
 Pentru a porni KDE acum rulați:
 
 [source,bash]
 ----
-.root # /etc/init.d/xdm start
+root # /etc/init.d/xdm start
 ----
 
 *Software adițional*
@@ -4665,7 +4666,7 @@ kde-base/kdeplasma-addons:
 
 [source,bash]
 ----
-.root # emerge --ask kdeplasma-addons
+root # emerge --ask kdeplasma-addons
 ----
 
 ==== Mediul grafic XFCE
@@ -4820,8 +4821,10 @@ câteva opțiuni în Portage, pentru acest ghid, folosim LXDM.
 ----
 
 Pentru a edita variabila DISPLAYMANAGER mergem în '/etc/conf.d/xdm'.
+
+Editare '/etc/conf.d/xdm'
+
 ....
-.Editare /etc/conf.d/xdm
 DISPLAYMANAGER="lxdm"
 ....
 
