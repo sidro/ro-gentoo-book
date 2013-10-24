@@ -3,6 +3,7 @@ Manual Gentoo Linux
 v0.2, 2013-10-21
 :Author:      Sven Vermeulen
 :doctype:     book
+:lang:        ro
 :description: platforma amd64
 :imagesdir:   assets/images
 :homepage:    http://gentoo-land.org/
@@ -11,13 +12,11 @@ Translatori: Stoian Ovidiu, Mihai Tene și Alin Dobre
 
 Corecturi: Ștefan Suciu
 
-Versiuni alternative (HTML, PDF și EPUB): Ștefan Suciu
+Versiune asciidoc: Ștefan Suciu
 
-== Capitolul 1
+== Despre instalarea Gentoo
 
-=== Despre instalarea Gentoo
-
-==== Introducere
+=== Introducere
 
 Bine ați venit!
 
@@ -164,13 +163,11 @@ Dacă aveți întrebări referitoare la Gentoo, vizitați Întrebări
 frecvente despre Gentoo Linux, pe care le puteți găsi la Documentații
 Gentoo. De asemenea puteți consulta FAQs de pe forumuri.
 
-== Capitolul 2
+== Alegerea Mediului de Instalare Corect
 
-=== Alegerea Mediului de Instalare Corect
+=== Necesități hardware
 
-==== Necesități hardware
-
-===== Introducere
+==== Introducere
 
 Înainte de a începe, avem nevoie să cunoaștem componentele hardware ce
 sunt suportate de Gentoo Linux pentru o instalare reușită.
@@ -193,7 +190,7 @@ sunt suportate de Gentoo Linux pentru o instalare reușită.
 
 Ar trebui să verificați Gentoo AMD64 Project Page înainte să începeți.
 
-==== Mediile Gentoo Installation CD
+=== Mediile Gentoo Installation CD
 
 Mediile Gentoo Installation CD sunt încărcabile (boot-abile) și conțin
 mediu Gentoo complet funcțional. Acestea vă permit să încărcați
@@ -263,10 +260,10 @@ consultați documentul cu Întrebări Frecvente în Gentoo, secțiunea
 Cum Instalez Gentoo Utilizând O Arhivă Tar Stage1 sau Stage2?
 
 Arhivele stage3 pot fi descărcate din directorul
-_releases/amd64/autobuilds/current-stage3/_ de pe oricare din
+'releases/amd64/autobuilds/current-stage3/' de pe oricare din
 Mirror-urile Oficiale Gentoo și nu sunt oferite pe mediul Live CD.
 
-==== Descărcarea, scrierea și încărcarea unui mediu Installation CD
+=== Descărcarea, scrierea și încărcarea unui mediu Installation CD
 
 *Descărcarea și scrierea mediului Installation CD*
 
@@ -278,7 +275,7 @@ putem descărca?
 Puteți descărca unul din mediile Installation CD disponibile (și dacă
 doriți, Packages CD, de asemenea) de pe unul din site-urile
 mirror. Mediile Installation CD se găsesc în directorul
-__releases/amd64/autobuilds/current-iso__.
+'releases/amd64/autobuilds/current-iso'.
 
 În director veți găsi fișierele cu extensia ISO. Aceste fișiere sunt
 imagini exacte ale CD-urilor originale care pot fi scrise pe
@@ -317,8 +314,8 @@ consultați documentul despre Întrebări Frecvente despre Gentoo.
 fișierul ISO din locația ’Image to Burn’. Pentru finalizare dați click
 pe Start.
 
-- Pentru cdrecord, trebuie doar să tastați cdrecord dev=/dev/sr0
-<fișierul iso descărcat> (înlocuiți /dev/sr0 cu calea către unitatea
+- Pentru cdrecord, trebuie doar să tastați 'cdrecord dev=/dev/sr0
+<fișierul iso descărcat>' (înlocuiți '/dev/sr0' cu calea către unitatea
 dvs. CD-RW)
 
 *Încărcarea mediului Installation CD*
@@ -515,8 +512,8 @@ dumneavoastră, vor trebui încărcate manual modulele de kernel
 necesare. În următorul exemplu o să încercam încărcarea modulului
 8139too (ce oferă suport pentru un anumit tip de plăci de rețea):
 
-.Încărcarea modulelor de kernel
 [source,bash]
+.Încărcarea modulelor de kernel
 ----
 # modprobe 8139too
 ----
@@ -531,7 +528,7 @@ inițializare pcmcia:
 # /etc/init.d/pcmcia start
 ----
 
-Opțional: Optimizarea performanțelor discului dur (Hard-Disk-ului)
+*Opțional: Optimizarea performanțelor discului dur (Hard-Disk-ului)*
 
 Dacă sunteți un utilizator avansat, puteți optimiza performanța
 discului dur (hard disk-ului), utilizând hdparm. În combinație cu
@@ -547,7 +544,7 @@ vitezei a discului dur).
 
 Pentru optimizare, puteți utiliza
 oricare din exemplele de mai jos (sau experimenta cu propriile
-optimizări) ce utilizează /dev/sda ca disc (substituiți cu discul
+optimizări) ce utilizează '/dev/sda' ca disc (substituiți cu discul
 dumneavoastră.):
 
 
@@ -563,7 +560,7 @@ dumneavoastră.):
 # hdparm -d 1 -A 1 -m 16 -u 1 -a 64 /dev/hda
 ----
 
-Opțional: Conturi de Utilizator
+*Opțional: Conturi de Utilizator*
 
 Dacă doriți să permiteți accesul utilizatorilor externi la mediul de
 instalare Gentoo Linux, sau utilizați chat-ul irssi fără drepturi de
@@ -603,7 +600,7 @@ su:
 # su - john
 ----
 
-Opțional: Vizualizarea Documentației în Timpul Instalării
+*Opțional: Vizualizarea Documentației în Timpul Instalării*
 
 Dacă doriți consultarea documentației de pe CD, puteți rula imediat
 aplicația links ce vă permite vizualizarea documentației:
@@ -630,7 +627,7 @@ internetul pentru a putea consulta online Manualul Gentoo).
 Puteți reveni la terminalul inițial apăsând combinația de taste
 Alt-F1.
 
-Opțional: Pornirea serviciului SSH
+*Opțional: Pornirea serviciului SSH*
 
 Dacă vreți ca alți utilizatori să poată accesa procesul de instalare
 Gentoo Linux (posibil, să vă ajute să instalați Gentoo, sau chiar să
@@ -649,11 +646,9 @@ Pentru a inițializa serviciul SSH, executați comanda de mai jos:
 Pentru a putea utiliza serviciul ssh trebuie configurat accesul la
 rețea. Continuați cu capitolul despre Configurarea Rețelei.
 
-== Capitolul 3
+== Configurarea rețelei
 
-=== Configurarea rețelei
-
-==== Detectarea automată a rețelei
+=== Detectarea automată a rețelei
 
 Poate funcționa pur și simplu?
 
@@ -663,7 +658,7 @@ configurat automat. Dacă este așa, puteți beneficia de avantajul
 comenzilor incluse pe mediul Installation CD cum ar fi ssh, scp, ping,
 irssi, wget și links, alături de altele.
 
-Dacă rețeaua a fost configurată automat, comanda /sbin/ifconfig ar
+Dacă rețeaua a fost configurată automat, comanda '/sbin/ifconfig' ar
 trebui să afișeze informații despre alte câteva interfețe în afara
 lo, cum ar fi eth0:
 
@@ -681,7 +676,7 @@ RX bytes:485691215 (463.1 Mb) TX bytes:123951388 (118.2 Mb)
 Interrupt:11 Base address:0xe800
 ----
 
-Opțional: Configurare proxy
+*Opțional: Configurare proxy*
 
 Dacă aveți acces la Internet prin intermediul unui proxy, va trebui să
 setați informațiile necesare în timpul instalării. Este foarte ușor
@@ -719,7 +714,7 @@ Internet). Totuși, Gentoo vă permite și instalarea fără o conexiune la
 Internet, acest lucru fiind posibil numai cu ajutorul LiveCD-urilor
 Gentoo Universal.
 
-De ce am nevoie de rețea?
+*De ce am nevoie de rețea?*
 
 Instalând Gentoo de pe Internet veți avea toate actualizările la
 zi. Veți avea o instalare bazată pe cel mai recent Portage (care este
@@ -740,10 +735,10 @@ restul acestui capitol și continuați cu Pregătirea Discurilor.
 Altfel, continuați cu secțiunile despre configurarea suportului de
 rețea ce urmează.
 
-Testarea rețelei
+*Testarea rețelei*
 
-Ați putea încerca să dați __ping__ în serverele de nume ale
-provider-ului dumneavoastră (cele scrise în __/etc/resolv.conf__) și
+Ați putea încerca să dați *ping* în serverele de nume ale
+provider-ului dumneavoastră (cele scrise în '/etc/resolv.conf') și
 apoi într-un site la alegere, doar pentru a vă asigura că pachetele
 dumneavoastră ajung pe internet și rezolvarea numelor funcționează
 corect, etc.
@@ -758,7 +753,7 @@ Dacă puteți utiliza, acum, rețeaua, puteți sări peste restul acestei
 secțiuni și continua cu Pregătirea Discurilor. Dacă nu, citiți mai
 departe.
 
-==== Configurarea automată a rețelei
+=== Configurarea automată a rețelei
 
 Dacă rețeaua nu funcționează imediat,
 unele medii de instalare vă permit să folosiți net- setup (pentru
@@ -772,7 +767,7 @@ funcționează încă, continuați cu Configurarea Manuală a Rețelei.
 - Pentru conexiuni ADSL continuați cu Alternativ: Folosirea PPP
 - Pentru conexiuni PPTP continuați cu Alternativ: Folosirea PPTP
 
-Implicit: Folosirea net-setup
+*Implicit: Folosirea net-setup*
 
 Cea mai simplă cale de a configura rețeaua dacă aceasta nu s-a efectuat în
 mod automat este să rulați scriptul __net-setup__:
@@ -792,7 +787,7 @@ acestei secțiuni și continuați cu Pregătirea Discurilor.
 Dacă rețeaua dumneavoastră tot nu este funcțională, continuați cu
 Configurarea Manuală a Rețelei.
 
-Alternativ: Folosirea PPP
+*Alternativ: Folosirea PPP*
 
 Presupunând că aveți nevoie de PPPoE pentru a vă conecta la internet,
 mediul Installation CD (orice versiune) a simplificat lucrurile pentru
@@ -809,8 +804,8 @@ minim.
 ----
 
 Dacă ceva nu a funcționat, verificați din nou dacă ați introdus numele
-și parola corecte uitându-vă în __/etc/ppp/pap-secrets__ sau
-__/etc/ppp/chap-secrets__ și asigurați-vă că ați specificat corect
+și parola corecte uitându-vă în '/etc/ppp/pap-secrets' sau
+'/etc/ppp/chap-secrets' și asigurați-vă că ați specificat corect
 interfața folosită pentru conectare. Dacă interfața de rețea nu
 există, va trebui să încărcați modulul corespunzător. În acest caz ar
 trebui să continuați cu Configurarea Manuală a Rețelei unde este
@@ -822,8 +817,8 @@ Alternativ: Folosirea PPTP
 Dacă aveți nevoie de PPTP, puteți folosi scriptul __pptpclient__
 disponibil pe mediul Installation CD. Dar, mai întâi, trebuie să vă
 asigurați că aveți o configurație corectă. Editați
-__/etc/ppp/pap-secrets__ sau __/etc/ppp/chap-secrets__ astfel încât
-acestea să conțină combinația corectă nume/parolă:
+'/etc/ppp/pap-secrets' sau '/etc/ppp/chap-secrets' astfel încât
+acestea să conțină combinația corectă 'nume/parolă':
 
 [source,bash]
 .Editare /etc/ppp/chap-secrets
@@ -831,7 +826,7 @@ acestea să conțină combinația corectă nume/parolă:
 # nano -w /etc/ppp/chap-secrets
 ----
 
-Ajustăm, dacă este necesar __/etc/ppp/options.pptp__:
+Ajustăm, dacă este necesar '/etc/ppp/options.pptp':
 
 [source,bash]
 .Editare /etc/ppp/options.pptp
@@ -851,9 +846,10 @@ server:
 
 Acum continuați cu Pregătirea Discurilor.
 
-==== Configurarea manuală a rețelei
 
-Încărcarea modulelor potrivite
+=== Configurarea manuală a rețelei
+
+*Încărcarea modulelor potrivite*
 
 La încărcarea (boot-area) de pe mediul Installation CD, se încearcă
 detectarea tuturor dispozitivelor hardware și încărcarea modulelor
@@ -925,7 +921,7 @@ tipul rețelei:
 - Terminologia utilizată în rețelistică explică ceea ce trebuie să știți despre rețele;
 - Folosirea __ifconfig__ și __route__ explică cum să setați manual rețeaua.
 
-Folosirea DHCP
+*Folosirea DHCP*
 
 DHCP (Dynamic Host Configuration Protocol) face
 posibilă obținerea în mod automat a informațiilor necesare
@@ -950,7 +946,7 @@ acest caz, folosiți:
 aveți totul setat și sunteți gata pentru a continua. Săriți peste
 restul acestei secțiuni și continuați cu Pregătirea Discurilor.
 
-Pregătirea pentru acces Wireless
+*Pregătirea pentru acces Wireless*
 
 NOTE: Suportul pentru comanda __iwconfig__ este disponibil doar pentru
 mediile Installation CD pentru arhitecturile x86, amd64 și
@@ -1003,7 +999,7 @@ wireless funcțională, puteți continua cu Configurarea adresei IP așa
 cum este descrisă în următoarea secțiune (Terminologia utilizată în
 rețelistică) sau să folosiți utilitarul __net-setup__ descris anterior.
 
-Terminologia utilizată în rețelistică
+*Terminologia utilizată în rețelistică*
 
 NOTE: Dacă știți adresele dumneavoastră IP, broadcast, netmask și
 serverele de nume, atunci puteți sări peste această subsecțiune și
@@ -1027,8 +1023,8 @@ Exemplu de adresă IP
 ....
 Adresa IP (numeric): 192.168.0.2
 Adresa IP (binar)  : 11000000  10101000  00000000  00000010
---------  --------  --------  --------
-192       168       0         2
+                     --------  --------  --------  --------
+                     192       168       0         2
 ....
 
 O adresă IP identifică în mod unic o stație din punctul de vedere al
@@ -1045,11 +1041,11 @@ rețelei) se poate scrie ca o adresă IP.
 Exemplu de depanare network/host
 ....
 Adresa IP: 192 168 0 2
-11000000 10101000 00000000 00000010
+           11000000 10101000 00000000 00000010
 Netmask:   11111111 11111111 11111111 00000000
-+--------------------------+--------+
-255      255      255      0
-Network            Host
+          +--------------------------+--------+
+           255      255      255      0
+                     Network            Host
 ....
 
 Cu alte cuvinte, 192.168.0.14 este încă, în exemplu nostru, în
@@ -1061,11 +1057,11 @@ este folosită pentru transmisii de pachete broadcast.
 Adresa Broadcast
 ....
 Adresa IP: 192 168 0 2
-11000000 10101000 00000000 00000010
-11000000 10101000 00000000 11111111
+           11000000 10101000 00000000 00000010
+           11000000 10101000 00000000 11111111
 Broadcast: 192      168      0        255
-+--------------------------+--------+
-Network            Host
+          +--------------------------+--------+
+                     Network            Host
 ....
 
 Pentru a putea naviga pe internet, trebuie să cunoașteți care stație
@@ -1077,7 +1073,7 @@ Anterior am stabilit că fiecare stație are propria
 adresă IP. Pentru a putea recunoaște stațiile se asociază un nume (cum
 ar fi dev.gentoo.org) unei adrese IP (cum ar fi 64.5.62.82). Un astfel
 de serviciu este numit serviciu de nume. Pentru a folosi un astfel de
-serviciu, trebuie să definiți serverele de nume în __/etc/resolv.conf__.
+serviciu, trebuie să definiți serverele de nume în '/etc/resolv.conf'.
 
 În unele cazuri, stația gateway este de asemenea și server de
 nume. Dacă nu, va trebui să introduceți adresele serverelor de nume
@@ -1102,12 +1098,12 @@ continua:
 195.130.130.133
 |===
 
-Folosirea ifconfig și route
+*Folosirea ifconfig și route*
 
 Setarea unei rețele constă în trei pași. Întâi ne o
 să atribuim o adresă IP folosind __ifconfig__. Apoi vom seta ruta către
 gateway folosind route. Apoi vom finaliza punând adresele IP
-corespunzătoare serverelor de nume în __/etc/resolv.conf__.
+corespunzătoare serverelor de nume în '/etc/resolv.conf'.
 
 Pentru a atribui o adresă IP, va trebui să cunoașteți adresele IP,
 broadcast și netmask.  Apoi executați următoarea comandă, înlocuind
@@ -1129,9 +1125,8 @@ adresa IP a gateway-ului:
 # route add default gw ${GATEWAY}
 ----
 
-Acum deschideți
-__/etc/resolv.conf__ cu editorul favorit (în exemplu nostru, o să folosim
-__nano__):
+Acum deschideți 'etc/resolv.conf' cu editorul favorit (în exemplu
+nostru, o să folosim *nano*):
 
 [source,bash]
 .Crearea /etc/resolv.conf
@@ -1155,13 +1150,11 @@ Acum testați rețeaua folosind ping către câteva servere din Internet
 să instalați Gentoo. Continuați cu Pregătirea Discurilor.
 
 
-== Capitolul 4
+== Pregătirea discurilor
 
-=== Pregătirea discurilor
+=== Introducere în dispozitive bloc
 
-==== Introducere în dispozitive bloc
-
-===== Dispozitive bloc
+*Dispozitive bloc*
 
 O să aruncăm o privire atentă asupra aspectelor în legătură cu
 discurile din Gentoo Linux, în general, incluzând sistemele de
@@ -1174,9 +1167,9 @@ Pentru a începe, o să facem introducerea dispozitivelor bloc. Cel mai
 renumit dispozitiv bloc este probabil cel care reprezintă primul disc
 dur (hard disk) într-un sistem Linux, și anume '/dev/sda'. Dacă
 sistemul dumneavoastră. utilizează discuri SCSI sau SATA, atunci
-primul dumneavoastră disc dur (hard disk) ar trebui să fie /dev/sd*;
-chiar și discurile dure IDE sunt detectate ca /dev/sd* cu kernelurile
-recente.
+primul dumneavoastră disc dur (hard disk) ar trebui să fie '/dev/sd*';
+chiar și discurile dure IDE sunt detectate ca '/dev/sd*' cu
+kernelurile recente.
 
 Dispozitivele bloc amintite mai sus, reprezintă o interfață abstractă
 pentru disc. Programele utilizator pot folosi aceste dispozitive bloc
@@ -1198,7 +1191,7 @@ Partițiile sunt împărțite în trei tipuri: primare, extinse și logice.
 O partiție primară este o partiție ce deține informația stocată în
 zona MBR (master boot record). Cum o zonă MBR este foarte mică (512
 octeți) doar patru partiții primare pot fi definite (spre exemplu,
-/dev/sda1 până la /dev/sda4).  O partiție extinsă este o partiție
+'/dev/sda1' până la '/dev/sda4').  O partiție extinsă este o partiție
 primară specială (ceea ce înseamnă că partiția extinsă poate fi una
 din cele patru partiții primare posibile) ce conține mai multe
 partiții. O asemenea partiție nu a existat la începuturi, dar, cum
@@ -1217,7 +1210,7 @@ LVM2. LVM2 mărește flexibilitatea oferită de setarea partițiilor. Pe
 parcursul instrucțiunilor de instalare, o să ne concentrăm pe partiții
 ”obișnuite”, dar este, totuși, bine să știți că este suportat și LVM2.
 
-==== Proiectarea unei scheme de partiționare
+=== Proiectarea unei scheme de partiționare
 
 *Schema de partiționare implicită*
 
@@ -1237,6 +1230,7 @@ pe care o folosim pe tot parcursul manualului:
 |'/dev/hda3' |ext4 |Restul discului |Partiția pentru rădăcină
 |===
 
+
 Dacă vă interesează cât de mare ar trebui să fie o partiție, sau chiar
 de câte partiții aveți nevoie, citiți mai departe.  Altfel, continuați
 cu Utilizarea *fdisk* sau *parted* pentru partiționarea discului
@@ -1247,16 +1241,16 @@ stabil, parted este mai recent dar suporta partiții mai mari de 2TB).
 
 Numărul de partiții este în foarte mare măsură dependent de mediul
 dumneavoastră. Spre exemplu, dacă aveți un număr foarte mare de
-utilizatori, cel mai probabil veți dori să aveți directorul /home
+utilizatori, cel mai probabil veți dori să aveți directorul '/home'
 separat, deoarece sporește securitatea și facilitează operațiile de
 backup. Dacă instalați Gentoo ca server de mail, directorul
-dumneavoastră /var ar trebui să fie separat, pentru că toate
-mail-urile sunt stocate în /var. O bună alegere a sistemului de
+dumneavoastră '/var' ar trebui să fie separat, pentru că toate
+mail-urile sunt stocate în '/var'. O bună alegere a sistemului de
 fișiere va mări la maxim performanțele. Serverele de jocuri vor avea o
-partiție /opt separată, deoarece majoritatea aplicațiilor server
+partiție '/opt' separată, deoarece majoritatea aplicațiilor server
 pentru jocuri sunt instalate acolo. Motivul este similar cu cel pentru
-/home: securitate și backup. Veți dori în mod sigur să vă păstrați
-directorul /usr mai mare: nu numai că va conține majoritatea
+'/home': securitate și backup. Veți dori în mod sigur să vă păstrați
+directorul '/usr' mai mare: nu numai că va conține majoritatea
 aplicațiilor, dar numai structura Portage ocupă în jur de 500 MOcteți,
 excluzând sursele ce sunt stocate în acesta.
 
@@ -1283,7 +1277,7 @@ ignorați), noexec (biții pentru execuție sunt ignorați), etc.
 configurate corect, pot cauza ca un sistem să aibă foarte mult loc
 liber pe o partiție și fără loc liber pe alta. Un alt inconvenient
 este că partițiile separate (în special pentru punctele de montare
-importante, cum ar fi /usr sau /var) necesită adesea ca
+importante, cum ar fi '/usr' sau '/var') necesită adesea ca
 administratorul să încarce (boot-eze) cu un initramfs pentru a monta
 partiția înainte de a începe scripturile de inițializare să
 pornească. Nu este întotdeauna cazul, deci rezultatul poate
@@ -1294,20 +1288,22 @@ Ca un exemplu de partiționare, o să vă arătam unul pentru un disc de
 20GO, utilizat pe un laptop demonstrativ (conține aplicații server
 pentru web, aplicații server pentru mail, gnome, ...):
 
+
 [source,bash]
 .Exemplu de utilizarea sistemului de fișiere
 ----
 $ df -h
-Filesystem    Type    Size     Used    Avail    Use%              Mounted on
-/dev/sda5     ext4    509M     132M    351M     28%                    /
-/dev/sda2     ext4    5.0G     3.0G    1.8G     63%                 /home
-/dev/sda7     ext4    7.9G     6.2G    1.3G     83%                  /usr
-/dev/sda8     ext4    1011M    483M    477M     51%                  /opt
-/dev/sda9     ext4    2.0G     607M    1.3G     32%                  /var
-/dev/sda1     ext4    102M     40M      60M     40%                 /boot
+Filesystem    Type    Size     Used    Avail    Use%            Mounted on
+/dev/sda5     ext4    509M     132M    351M     28%             /
+/dev/sda2     ext4    5.0G     3.0G    1.8G     63%             /home
+/dev/sda7     ext4    7.9G     6.2G    1.3G     83%             /usr
+/dev/sda8     ext4    1011M    483M    477M     51%             /opt
+/dev/sda9     ext4    2.0G     607M    1.3G     32%             /var
+/dev/sda1     ext4    102M     40M      60M     40%             /boot
 /dev/sda6     swap    1032M    24M     1008M     2%             <not mounted>
 ----
 (Spațiu nepartiționat pentru utilizarea ulterioară: 2 GOcteți)
+
 
 '/usr' este destul de plin (83% utilizat), dar odată ce toate
 aplicațiile software sunt instalate '/usr' nu va tinde să mai crească
@@ -1318,9 +1314,9 @@ pachetelor. Dacă doriți să vă păstrați '/var' la o mărime mai
 rezonabilă, cum ar fi 1 GO, va trebui să modificați variabila
 dvs. PORTAGE_TMPDIR din '/etc/make.conf' să indice către partiția cu
 spațiu liber suficient pentru compilarea pachetelor extrem de mari,
-cum ar fi OpenOffice/Libreoffice.
+cum ar fi __OpenOffice/Libreoffice__.
 
-==== Utilizarea fdisk pentru a vă partiționa discul
+=== Utilizarea fdisk pentru a vă partiționa discul
 
 Următoarele părți explică modul de creare a exemplului de schemă
 de partiționare descris anterior, adică:
@@ -1355,18 +1351,23 @@ exemplul nostru, utilizăm '/dev/sda'):
 # fdisk /dev/sda
 ----
 
+
 Odată ce intrăm în fdisk, veți fi întâmpinați cu un prompt ce va arăta
 așa:
+
 
 ....
 Promptul fdisk
 Command (m for help):
 ....
 
+
 Tastați *p* pentru a afișa configurația curentă a partițiilor discului
 dvs.:
 
+
 (Un exemplu de configurație de partiții)
+
 ....
 Command (m for help): p
 
@@ -1397,12 +1398,14 @@ Mai întâi o să ștergem toate partițiile existente pe disc.  Tastați *d*
 pentru a șterge o partiție. Spre exemplu, pentru a șterge o partiție
 existentă '/dev/sda1':
 
+
 ....
 Ștergerea unei partiții
 
 Command (m for help): d
 Partition number (1-4): 1
 ....
+
 
 Partiția a fost programată pentru ștergere. Nu va mai fi afișată dacă
 tastați *p*, dar nu va fi ștearsă până când schimbările nu vor fi
@@ -1416,6 +1419,7 @@ se afișa tabela de partiții și apoi tastați *d* și numărul partiției
 pe care doriți să o ștergeți. În cele din urmă, veți termina având o
 tabelă de partiție ce nu va conține nimic:
 
+
 ....
 O tabelă de partiții goală
 
@@ -1426,6 +1430,7 @@ Device Boot    Start    End    Blocks    Id    System
 
 Command (m for help):
 ....
+
 
 Acum că tabela de partiții din memorie este goală, suntem gata de a
 crea partițiile. O să utilizam o schemă de partiționare implicită, așa
@@ -1441,6 +1446,7 @@ partiție primară. Când vi se va cere primul cilindru, apăsați
 enter. Când vi se va cere ultimul cilindru, tastați +32M pentru a crea
 o partiție de 32 MOcteți ca mărime:
 
+
 ....
 Crearea partiției pentru boot
 
@@ -1454,6 +1460,7 @@ First cylinder (1-3876, default 1): (Apăsați Enter)
 Using default value 1
 Last cylinder or +size or +sizeM or +sizeK (1-3876, default  3876): +32M
 ....
+
 
 Acum, când tastați *p*, ar trebui să vi se afișeze:
 
@@ -1490,6 +1497,7 @@ creat-o, și apoi tastați 82 pentru a seta tipul partiției ca "Linux
 Swap". După terminarea acestor pași, prin tastarea *p* ar trebui să se
 afișeze o tabelă de partiții similară cu aceasta:
 
+
 ....
 Afișarea partițiilor după crearea partiției pentru swap
 
@@ -1504,6 +1512,7 @@ Device Boot    Start    End    Blocks     Id    System
 /dev/sda2      15       81     506520     82    Linux swap
 ....
 
+
 *Crearea partiției rădăcină*
 
 În cele din urmă, trebuie creată partiția rădăcină. Pentru acest
@@ -1516,9 +1525,10 @@ crea o partiție ce va ocupa restul spațiului rămas disponibil pe
 discul dumneavoastră. După terminarea acestor pași, prin tastarea *p*
 ar trebui să se afișeze de tabelă de partiții similară cu aceasta:
 
-....
+
 Afișarea partițiilor după crearea partiției rădăcină
 
+....
 Command (m for help): p
 
 Disk /dev/sda: 240 heads, 63 sectors, 2184 cylinders
@@ -1535,16 +1545,19 @@ Device Boot    Start    End     Blocks      Id    System
 
 Pentru a salva schema de partiționare și a ieși din fdisk, tastați *w*.
 
+
 ....
 Salvarea și ieșirea din fdisk
 
 Command (m for help): w
 ....
 
+
 Acum că partițiile dumneavoastră sunt create, puteți continua cu
 Crearea Sistemelor de Fișiere.
 
-==== Crearea sistemelor de fișiere
+
+=== Crearea sistemelor de fișiere
 
 *Introducere*
 
@@ -1633,6 +1646,7 @@ stabilității generale a acestuia în acest moment.
 Pentru a crea un sistem de fișiere pe o partiție sau volum, există
 utilitare disponibile pentru fiecare sistem de fișiere existent:
 
+
 [width="45%",cols="2",options="header"]
 |===
 | Sistem de fișiere | Comanda pentru creare
@@ -1650,9 +1664,11 @@ utilitare disponibile pentru fiecare sistem de fișiere existent:
 | jfs | mkfs.jfs
 |===
 
+
 Spre exemplu, pentru a avea partiția de boot ('/dev/sda1' în exemplul
 nostru) ca ext2 și partiția rădăcină ('/dev/sda3' în exemplul nostru)
 ca ext4 (ca în exemplul nostru), ar trebui să utilizați:
+
 
 [source,bash]
 .Aplicarea unui sistem de fișiere pe o partiție
@@ -1660,6 +1676,7 @@ ca ext4 (ca în exemplul nostru), ar trebui să utilizați:
 # mkfs.ext2       /dev/sda1
 # mkfs.ext4       /dev/sda3
 ----
+
 
 Acum creați sistemele de fișiere pe partițiile (sau volumele
 logice) nou create.
@@ -1676,16 +1693,18 @@ logice) nou create.
 
 Pentru a activa partiția swap, utilizați *swapon*:
 
+
 [source,bash]
 .Activarea partiției swap
 ----
 # swapon /dev/sda2
 ----
 
+
 Creați și activați partiția swap utilizând comenzile menționate
 anterior.
 
-==== Montarea
+=== Montarea
 
 Acum ca partițiile dumneavoastră sunt inițializate și găzduiesc un
 sistem de fișiere, este timpul să montați (n.t.: mount în lb.
@@ -1695,6 +1714,7 @@ Utilizați comanda *mount*. Nu uitați să creați directoarele de montare
 pentru fiecare partiție creată. Ca un exemplu, o să montăm partițiile
 rădăcină și de boot:
 
+
 [source,bash]
 .Montarea partițiilor
 ----
@@ -1703,9 +1723,10 @@ rădăcină și de boot:
 # mount /dev/sda1 /mnt/gentoo/boot
 ----
 
+
 NOTE: Dacă doriți ca directorul '/tmp' să se afle pe o partiție
 separată, asigurați-vă că îi schimbați permisiunile după
-montare: chmod 1777 /mnt/gentoo/tmp. Aceasta este valabil și
+montare: chmod 1777 '/mnt/gentoo/tmp'. Aceasta este valabil și
 pentru '/var/tmp'.
 
 Trebuie, de asemenea, să utilizăm mount pentru sistemul de fișiere
@@ -1714,17 +1735,16 @@ va trebui să stocăm fișierele noastre pe partiții.
 
 Continuați cu Instalarea fișierelor Gentoo necesare instalării.
 
-== Capitolul 5
+== Instalarea fișierelor Gentoo necesare instalării
 
-=== Instalarea fișierelor Gentoo necesare instalării
-
-==== Instalarea unei arhive tar stage
+=== Instalarea unei arhive tar stage
 
 Înainte de a continua, trebuie să verificați data/ora și să o
 actualizați. Un ceas configurat greșit ar putea duce la rezultate
 ciudate pe viitor.
 
 Pentru a verifica data/ora curentă, executați date.
+
 
 [source,bash]
 .Verificarea datei/orei
@@ -1733,17 +1753,20 @@ Pentru a verifica data/ora curentă, executați date.
 Fri Mar 29 16:21:18 UTC 2005
 ----
 
+
 Dacă data/ora sunt afișate greșit, actualizați-le folosind sintaxa
 date MMDDhhmmYYYY (Month - Lună, Day - Zi, hour - Oră, minute - Minut
 și Year - An). La acest pas, trebuie să utilizați zona de fus orar
 UTC. Veți putea să vă definiți zona de fus orar, ulterior. De exemplu,
 pentru a seta data de 29 Martie, 16:21, a anului 2005:
 
+
 [source,bash]
 .Setarea datei/orei UTC
 ----
 # date 032916212005
 ----
+
 
 *Alegerea dumneavoastră*
 
@@ -1752,18 +1775,21 @@ tar stage3 pe sistemul dumneavoastră. Comanda *uname -m* poate fi
 utilizată pentru a vă ajuta să decideți ce arhivă tar stage să
 descărcați.
 
-==== Implicit: Folosirea unui stage de pe internet
+
+=== Implicit: Folosirea unui stage de pe internet
 
 *Descărcarea arhivei stage*
 
 Mergeți în directorul în care ați montat sistemul de fișiere Gentoo
 (cel mai probabil în '/mnt/gentoo'):
 
+
 [source,bash]
 .Intrăm în directorul în care am montat Gentoo
 ----
 # cd /mnt/gentoo
 ----
+
 
 În funcție de mediul de instalare, aveți câteva unelte disponibile
 pentru a descărca un stage. Dacă aveți links disponibil, atunci puteți
@@ -1775,12 +1801,14 @@ Dacă nu aveți disponibilă aplicația links, ar trebui să aveți
 aplicația lynx la dispoziție. Dacă trebuie să utilizați un server
 proxy, exportați variabilele http_proxy și ftp_proxy:
 
+
 [source,bash]
 .Setarea informațiilor despre proxy pentru lynx
 ----
 # export http_proxy="http://proxy.server.com:port"
 # export ftp_proxy="http://proxy.server.com:port"
 ----
+
 
 O să presupunem, de acum, că aveți la dispoziție links.
 
@@ -1794,6 +1822,7 @@ posibil să fie stocate în directoare având numele subarhitecturilor
 individuale). Selectați una și apăsați D pentru a o descărca. Când ați
 terminat, apăsați Q pentru a ieși din browser.
 
+
 [source,bash]
 .Navigarea cu links a listelor de mirror-uri
 ----
@@ -1802,6 +1831,7 @@ terminat, apăsați Q pentru a ieși din browser.
 # links -http-proxy proxy.server.com:8080
 http://www.gentoo.org/main/en/mirrors.xml
 ----
+
 
 Asigurați-vă că ați descărcat o arhivă tar stage3 - instalările
 utilizând un fișier stage1 sau stage2 nu mai sunt suportate.
@@ -1813,6 +1843,7 @@ având un algoritm propriu. Cele recomandate sunt SHA512 și
 Whirlpool. Spre exemplu, pentru a verifica integritatea arhivei tar
 stage pentru amd64:
 
+
 [source,bash]
 .Verificarea integrității arhivei
 ----
@@ -1823,6 +1854,7 @@ sau
 # openssl dgst -r -whirlpool stage3-amd64-<release>.tar.bz2
 ----
 
+
 Apoi comparați ceea ce au returnat comenzile de mai sus cu valorile
 din fișierul .DIGESTS pe care îl găsiți pe mirror.  Valorile trebuie
 să coincidă, altfel fișierul descărcat ar putea fi corupt.
@@ -1832,11 +1864,13 @@ să coincidă, altfel fișierul descărcat ar putea fi corupt.
 Acum despachetați arhiva descărcată pe sistemul dumneavoastră.  Noi
 utilizăm tar pentru această operație, fiind cea mai simplă metodă:
 
+
 [source,bash]
 .Despachetarea arhivei stage
 ----
 # tar xvjpf stage3-*.tar.bz2
 ----
+
 
 Asigurați-vă că folosiți aceleași opțiuni (xvjpf). Opțiunea x înseamnă
 Extract, v vine de la Verbose pentru a observa ceea ce se întâmplă în
@@ -1847,7 +1881,8 @@ standard (en: standard input).
 
 Acum că avem stage-ul instalat, continuăm cu Instalarea Portage.
 
-==== Configurarea opțiunilor de compilare
+
+=== Configurarea opțiunilor de compilare
 
 *Introducere*
 
@@ -1855,7 +1890,7 @@ Pentru optimizarea Gentoo, puteți seta unele variabile ce vor
 determina comportamentul Portage. Toate aceste variabile pot fi setate
 ca variabile de mediu (folosind export), dar acest lucru nu este
 permanent. Pentru a vă menține setările, Portage conține un fișier de
-configurare /etc/portage/make.conf. Acest fișier îl o să îl editam
+configurare '/etc/portage/make.conf'. Acest fișier îl o să îl editam
 acum.
 
 NOTE: O listă comentată a tuturor variabilelor, poate fi găsită în
@@ -1867,11 +1902,13 @@ Deschideți editorul de text favorit (în acest ghid noi folosim nano)
 astfel încât să modificăm variabilele de optimizare, pe care le vom
 explica în continuare.
 
+
 [source,bash]
 .Deschiderea /etc/portage/make.conf
 ----
 # nano -w /mnt/gentoo/etc/portage/make.conf
 ----
+
 
 Așa cum probabil ați observat, fișierul make.conf.example este
 structurat într-un mod generic: liniile comentate încep cu "#", iar
@@ -1887,7 +1924,7 @@ aici, veți obține maximul de performanță dacă optimizați flag-urile
 pentru fiecare program în parte. Motivul pentru această afirmație este
 că fiecare program este diferit.
 
-În make.conf ar trebui să definiți opțiunile de optimizare care
+În 'make.conf' ar trebui să definiți opțiunile de optimizare care
 credeți că vor face sistemul cât mai rapid în general. Nu puneți
 valori experimentale în acest fișier; o optimizare prea mare poate
 duce la un comportament ciudat al programelor (oprirea funcționării,
@@ -1931,6 +1968,7 @@ Valorile inițiale ce fac referire la CFLAGS si CXXFLAGS, conținute de
 arhiva stage3 pe care ați despachetat-o ar trebui să fie de
 ajuns. Iată un exemplu ce conține astfel de variabile.
 
+
 [source,bash]
 .Definirea variabilelor CFLAGS și CXXFLAGS
 ----
@@ -1938,6 +1976,7 @@ CFLAGS="-march=k8 -O2 -pipe" # Intel EM64T users should use -march=core2
 # Use the same settings for both variables
 CXXFLAGS="${CFLAGS}"
 ----
+
 
 NOTE: Pentru mai multe informații cu privire la diferite variabile
 pentru optimizare vizitați
@@ -1958,11 +1997,9 @@ preferințele dumneavoastră și salvați (utilizatorii nano tastează
 Ctrl-X). Acum sunteți gata să continuați cu Instalarea Sistemului de
 Bază al Gentoo.
 
-== Capitolul 6
+== Instalarea sistemului de bază al Gentoo
 
-=== Instalarea sistemului de bază al Gentoo
-
-==== Utilizarea mediului chroot
+=== Utilizarea mediului chroot
 
 *Opțional: Alegerea mirror-urilor*
 
@@ -1977,11 +2014,13 @@ acestea sunt și cele mai rapide), sau puteți utiliza utilitarul
 mirrorselect oferit de noi, cu care puteți printr-o interfață
 prietenoasă, să selectați server-ele mirror pe care le doriți.
 
+
 [source,bash]
 .Utilizarea mirrorselect pentru variabila GENTOO_MIRRORS
 ----
 # mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
 ----
+
 
 O altă setare importantă este variabila SYNC din make.conf.  Această
 variabilă conține server-ul rsync pe care doriți să-l utilizați când
@@ -1990,11 +2029,13 @@ script-urile ce conțin toate informațiile de care Portage are nevoie
 pentru a descărca și a instala aplicațiile).  Deși puteți introduce
 manual un server SYNC, mirrorselect vă poate ușura această operație:
 
+
 [source,bash]
 .Selectarea unui server mirror rsync utilizând mirrorselect
 ----
 # mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
 ----
+
 
 După rularea mirrorselect este recomandat să verificați încă o dată
 setările din /mnt/gentoo/etc/portage/make.conf!
@@ -2011,15 +2052,17 @@ află în fișierul make.conf.
 
 A rămas un singur lucru de făcut, înainte să putem intra în noul
 mediu, și anume trebuie să copiem informațiile despre DNS în
-/etc/resolv.conf. Trebuie să facem asta, pentru a fi siguri că rețeaua
-funcționează, chiar și după ce intrăm în noul mediu.  /etc/resolv.conf
+'/etc/resolv.conf'. Trebuie să facem asta, pentru a fi siguri că rețeaua
+funcționează, chiar și după ce intrăm în noul mediu.  '/etc/resolv.conf'
 conține serverele DNS pentru rețeaua noastră.
+
 
 [source,bash]
 .Copierea informațiilor despre DNS
 ----
 # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 ----
+
 
 (Opțiunea "-L" ne asigură că nu copiem un link simbolic)
 
@@ -2043,6 +2086,7 @@ sistemele de fișiere '/dev' și '/sys'.
 # mount --rbind /dev /mnt/gentoo/dev
 ----
 
+
 *Intrarea în noul mediu*
 
 Acum, că toate partițiile sunt inițializate și mediul de bază este
@@ -2054,10 +2098,11 @@ sistemul instalat (adică în partiția inițializată).
 Acțiunea de chrooting, se face în trei etape. Mai întâi, vom muta
 rădăcina, din '/' (de pe discul de instalare), către '/mnt/gentoo' (de
 pe partiția aleasa pentru instalare), folosind comanda chroot. Apoi,
-variabilele distribuite de /etc/profile le încărcăm în memorie,
+variabilele distribuite de '/etc/profile' le încărcăm în memorie,
 folosind comanda source. Iar în ultimul pas redefinim promptul pentru
 a ne ajuta să ne reamintim că suntem într-un mediu chrootat (mediul
 unde se realizează instalarea).
+
 
 [source,bash]
 .Chroot în noul mediu
@@ -2067,6 +2112,7 @@ unde se realizează instalarea).
 # export PS1="(chroot) $PS1"
 ----
 
+
 Felicitări! Sunteți acum în propriul mediu Gentoo Linux. Desigur,
 suntem departe de a fi terminat, motiv pentru care procesul de
 instalare mai are câteva secțiuni de parcurs.
@@ -2075,7 +2121,8 @@ Dacă vreodată aveți nevoie de un alt terminal sau consolă ca să
 accesați un mediu chrootat, tot ceea ce trebuie să faceți este să
 executați pașii de mai sus.
 
-==== Configurarea Portage
+
+=== Configurarea Portage
 
 *Despachetarea structurii Portage*
 
@@ -2089,12 +2136,14 @@ ultima structură Portage (pe care Gentoo o pune la dispoziție zilnic)
 de pe un mirror (oglindă) al comunității, ca apoi să vi-l instaleze în
 sistem.
 
+
 [source,bash]
 .Rularea lui emerge--webrsync pentru a instala o structură Portage
 ----
 # mkdir /usr/portage
 # emerge-webrsync
 ----
+
 
 *Opțional: Actualizarea structurii Portage*
 
@@ -2104,16 +2153,17 @@ dumneavoastră. El va folosi protocolul rsync pentru a face update (a
 aduce ultima versiune, a actualiza) structurii Portage pe care ați
 descărcat-o mai devreme folosind emerge-webrsync.
 
+
 [source,bash]
 .Actualizarea structurii Portage
 ----
 # emerge --sync
-
 (Dacă utilizați un terminal lent, cum ar fi unele terminale
 framebuffer sau console seriale, puteți adăuga opțiunea --quiet
 pentru a mări viteza acestui proces:)
 # emerge --sync --quiet
 ----
+
 
 Dacă vă aflați în spatele unui firewall ce blochează traficul rsync,
 puteți ignora această etapă din moment ce aveți deja o structură
@@ -2129,12 +2179,14 @@ noutățile/știrile ce trebuie citite (news items need reading).
 Când structura Portage este sincronizata/actualizată, Portage vă poate
 atenționa/avertiza cu următorul mesaj:
 
+
 ....
 Portage vă va informa că noi stiri sunt disponibile
 
 * IMPORTANT: 2 news items need reading for repository 'gentoo'.
 * Use eselect news to read news items.
 ....
+
 
 Știrile venite prin Portage sunt create pentru a înlesni comunicarea
 cu utilizatorii cărora le sunt trimise mesaje importante prin
@@ -2143,12 +2195,14 @@ news. Cu sub-comanda read veți putea citi toate articolele. Cu list
 veți putea vedea toate articolele cu știri disponibile, iar cu purge
 puteți șterge articolele cu știri citite de care nu mai aveți nevoie.
 
+
 [source,bash]
 .Manipularea articolelor din Portage
 ----
 # eselect news list
 # eselect news read
 ----
+
 
 Mai multe informații despre cititorul de știri sunt disponibile prin
 accesarea informațiilor din manualul comenzii: man news.eselect.
@@ -2170,6 +2224,7 @@ necesară.
 Puteți vedea ce profil utilizați în mod curent, prin execuția
 următoarei comenzi:
 
+
 [source,bash]
 .Verificarea profilului de sistem
 ----
@@ -2180,6 +2235,7 @@ Available profile symlink targets:
 [3] default/linux/amd64/13.0/server
 ----
 
+
 După cum puteți vedea, sunt disponibile atât subprofile desktop cât și
 server pentru câteva arhitecturi.
 
@@ -2189,14 +2245,17 @@ disponibile.
 După ce ați văzut profilele disponibile pentru arhitectura
 dumneavoastră, puteți folosi unul dintre cele listate dacă doriți.
 
+
 [source,bash]
 .Schimbarea profilelor
 ----
 # eselect profile set 2
 ----
 
+
 Dacă doriți un sistem pe 64 de biți pur, fără biblioteci sau aplicații
 pe 32 de biți, ar trebui sa folosiți profilul non-multilib:
+
 
 [source,bash]
 .Schimbarea profilului pe non-multilib
@@ -2217,6 +2276,7 @@ Available profile symlink targets:
 [3] default/linux/amd64/13.0/no-multilib *
 [4] default/linux/amd64/13.0/server
 ----
+
 
 NOTE: Profilul developer este specific dezvoltării de task-uri în
 Gentoo Linux. Acesta nu este conceput să ajute setarea unui
@@ -2248,19 +2308,20 @@ kde (și qt), făcându-vă sistemul, pe deplin optimizat pentru GNOME.
 
 Setările USE implicite se află în fișierele make.defaults din profilul
 dumneavoastră. Veți putea regăsi fișierele make.defaults în directorul
-spre care indică /etc/portage/make.profile și în toate directoarele
+spre care indică '/etc/portage/make.profile' și în toate directoarele
 ascendente. Setarea USE reprezintă suma tuturor setărilor USE din
 toate fișierele make.defaults. Ceea ce adăugați în
-/etc/portage/make.conf este calculat în concordanță cu aceste setări
+'/etc/portage/make.conf' este calculat în concordanță cu aceste setări
 implicite. Dacă adăugați ceva setărilor USE, este adăugat listei
 implicite. Dacă ștergeți ceva din setările USE (prin scrierea semnului
 minus în fața sa), atunci este șters din lista implicită (în cazul în
 care ar fi fost în listă).  Niciodată nu faceți schimbări în
-interiorul directorului /etc/portage/make.profile; va fi rescris când
+interiorul directorului '/etc/portage/make.profile'; va fi rescris când
 actualizați Portage!
 
 O descriere completă a variabilelor USE existente, poate fi găsită în
 '/usr/portage/profiles/use.desc'.
+
 
 [source,bash]
 .Vizualizarea indicatorilor USE existenți
@@ -2268,10 +2329,12 @@ O descriere completă a variabilelor USE existente, poate fi găsită în
 # less /usr/portage/profiles/use.desc
 ----
 
+
 (Puteți derula utilizând tastele săgeți și să ieșiți prin apăsarea 'q')
 
 Drept exemplu, vă prezentăm setările unui sistem bazat pe KDE, cu
 suport DVD, ALSA și CD-Recording:
+
 
 [source,bash]
 .Deschidem /etc/portage/make.conf
@@ -2279,20 +2342,23 @@ suport DVD, ALSA și CD-Recording:
 # nano -w /etc/portage/make.conf
 ----
 
+
 [source,bash]
 .Setările USE
 ----
 USE="-gtk -gnome qt4 kde dvd alsa cdr"
 ----
 
-==== Localizarea
+
+=== Localizarea
 
 În cele din urmă selectați-vă localizarea pentru ca sistemul
 dumneavoastră să știe unde sunteți localizat fizic. Pentru localizare
-(timezone) uitați-vă în /usr/share/zoneinfo, apoi copiați în
-/etc/localtime. Zonele de timp din /usr/share/zoneinfo/Etc/GMT* după
+(timezone) uitați-vă în '/usr/share/zoneinfo', apoi copiați în
+'/etc/localtime'. Zonele de timp din '/usr/share/zoneinfo/Etc/GMT*' după
 cum sugerează și denumirea, nu indică exact zonele așteptate. De
 exemplu, GMT-8 este de fapt GMT+8.
+
 
 [source,bash]
 .Setarea localizării
@@ -2304,11 +2370,9 @@ exemplu, GMT-8 este de fapt GMT+8.
 # echo "Europe/Brussels" > /etc/timezone
 ----
 
-== Capitolul 7
+== Configurarea Kernel-ului
 
-=== Configurarea Kernel-ului
-
-==== Instalarea surselor
+=== Instalarea surselor
 
 *Alegerea unui kernel*
 
@@ -2327,17 +2391,20 @@ de kernel ce conțin patch-uri pentru îmbunătățirea performanței).
 
 Alegeți sursele de kernel și instalați-le utilizând emerge.
 
+
 [source,bash]
 .Instalarea unor surse de kernel
 ----
 # emerge gentoo-sources
 ----
 
-Când vă veți uita în /usr/src ar trebui să vedeți un symlink
+
+Când vă veți uita în '/usr/src' ar trebui să vedeți un symlink
 numit linux, ce indică spre sursa kernel-ului dumneavoastră. În
 acest caz, sursele kernel-ului instalate indică către
 gentoo-sources-3.4.9. Versiunea dumneavoastră ar putea fi
 diferită, deci rețineți acest aspect.
+
 
 [source,bash]
 .Vizualizare symlink sursă kernel
@@ -2345,6 +2412,7 @@ diferită, deci rețineți acest aspect.
 # ls -l /usr/src/linux
 lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux -> linux-3.4.9
 ----
+
 
 Acum este timpul să configurăm și să compilăm sursa kernel. Toate
 arhitecturile pot folosi genkernel pentru asta, care va construi un
@@ -2361,7 +2429,8 @@ Dacă doriți să utilizați genkernel, ar trebui să citiți Alternativ:
 http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#genkernel[Utilizarea
 genkernel] .
 
-==== Implicit: Configurarea manuală
+
+=== Implicit: Configurarea manuală
 
 *Introducere*
 
@@ -2376,7 +2445,7 @@ informații le puteți obține prin instalarea pciutils (emerge pciutils)
 care conține utilitarul lspci. Acum veți putea să utilizați comanda
 lspci în interiorul mediului chroot. Puteți ignora cu încredere orice
 avertismente pcilib (cum ar fi: pcilib: cannot open
-/sys/bus/pci/devices) afișate de lspci. Alternativ, puteți rula lspci
+'/sys/bus/pci/devices') afișate de lspci. Alternativ, puteți rula lspci
 dintr-un mediu non-chroot. Rezultatele sunt aceleași. De asemenea,
 puteți rula lsmod pentru a vizualiza modulele kernel-ului folosit de
 mediul Installation CD (ar putea să vă formeze o idee despre ce anume
@@ -2386,12 +2455,14 @@ Acum mergeți în directorul ce conține sursa kernel-ului și executați
 make menuconfig. Aceasta va porni un meniu de configurare bazat pe
 ncurses.
 
+
 [source,bash]
 .Invocarea menuconfig
 ----
 # cd /usr/src/linux
 # make menuconfig
 ----
+
 
 Veți fi întâmpinat cu mai multe secțiuni de configurare. Mai întâi o
 să enumerăm câteva opțiuni pe care trebuie să le activați (altfel
@@ -2410,7 +2481,7 @@ instalare amd64 recomandăm utilizatorilor să activeze funcția MCE,
 astfel încât să poată fi notificați în cazul unor probleme
 hardware. Pe arhitectura amd64, aceste erori nu sunt listate de dmesg
 așa cum sunt listate pe alte arhitecturi, dar sunt listate în
-/dev/mcelog. Acesta necesită pachetul app-admin/mcelog.  Asigurați-vă
+'/dev/mcelog'. Acesta necesită pachetul 'app-admin/mcelog'.  Asigurați-vă
 că aveți selectat IA32 Emulation dacă doriți să rulați și aplicații pe
 32 de biți. Această opțiune este necesară deoarece Gentoo vă
 instalează un sistem multilib (computație mixtă pe 32 de biți si 64 de
@@ -2422,79 +2493,86 @@ Emulation. Totuși va trebui să urmați următoarele instrucțiuni
 pentru a vă comuta sistemul pe profilul non-multilib, precum și
 alegerea corectă a încărcătorului de sistem (bootloader).
 
+
 ....
 Selectarea procesorului după tip și caracteristici
 
 Processor type and features --->
-[ ] Machine Check / overheating reporting
-[ ] Intel MCE Features
-[ ] AMD MCE Features
-Processor family (AMD-Opteron/Athlon64) --->
-( ) Opteron/Athlon64/Hammer/K8
-( ) Intel P4 / older Netburst based Xeon
-( ) Core 2/newer Xeon
-( ) Intel Atom
-( ) Generic-x86-64
+    [ ] Machine Check / overheating reporting
+    [ ] Intel MCE Features
+    [ ] AMD MCE Features
+  Processor family (AMD-Opteron/Athlon64) --->
+      ( ) Opteron/Athlon64/Hammer/K8
+      ( ) Intel P4 / older Netburst based Xeon
+      ( ) Core 2/newer Xeon
+      ( ) Intel Atom
+      ( ) Generic-x86-64
 Executable file formats / Emulations --->
-[*] IA32 Emulation
+    [*] IA32 Emulation
 ....
 
+
 La pasul următor selectați fișierele de sistem maintain și devtmpfs să
-fie montate pe locația /dev pentru ca fișierele de dispozitiv critice
+fie montate pe locația '/dev' pentru ca fișierele de dispozitiv critice
 să fie disponibile în modul de boot inițial.
+
 
 ....
 Activare suport devtmpfs
 
 Device Drivers --->
-Generic Driver Options --->
-[*] Maintain a devtmpfs filesystem to mount at /dev
-[ ] Automount devtmpfs at /dev, after the kernel mounted the rootfs
+  Generic Driver Options --->
+    [*] Maintain a devtmpfs filesystem to mount at /dev
+    [ ] Automount devtmpfs at /dev, after the kernel mounted the rootfs
 ....
+
 
 Acum duceți-vă la File Systems și selectați sistemul de fișiere
 folosit. Nu compilați sistemul de fișiere folosit pentru partiția root
 ca modul, altfel sistemul nu va putea să vă monteze partiția. De
-asemenea selectați memoria virtuala și /proc.
+asemenea selectați memoria virtuala și '/proc'.
+
 
 ....
 Selectarea sistemului de fișiere necesar
 
 File systems --->
-(Select one or more of the following options as needed by your
-stem)  |
-<*> Second extended fs support
-<*> Ext3 journalling file system support
-<*> The Extended 4 (ext4) filesystem
-<*> Reiserfs support
-<*> JFS filesystem support
-<*> XFS filesystem support
-...
-Pseudo Filesystems --->
-[*] /proc file system support
-[*] Virtual memory file system support (former shm fs)
+(Select one or more of the following options as needed by your system)
+  <*> Second extended fs support
+  <*> Ext3 journalling file system support
+  <*> The Extended 4 (ext4) filesystem
+  <*> Reiserfs support
+  <*> JFS filesystem support
+  <*> XFS filesystem support
+      ...
+  Pseudo Filesystems --->
+    [*] /proc file system support
+    [*] Virtual memory file system support (former shm fs)
 
 (Enable GPT partition label support if you used that previously)
 -*- Enable the block layer --->
-...
-Partition Types --->
-[*] Advanced partition selection
-...
-[*] EFI GUID Partition support
+    ...
+    Partition Types --->
+    [*] Advanced partition selection
+        ...
+        [*] EFI GUID Partition support
 ....
+
 
 Dacă folosiți PPPoE ca să va conectați la internet sau folosiți un
 modem dial-up, va trebui să activați următoarele opțiuni în kernel.
+
 
 ....
 Selectarea driverelor necesare pentru PPPoE
 
 Device Drivers --->
-Network device support --->
-<*> PPP (point-to-point protocol) support
-<*> PPP support for async serial ports
-<*> PPP support for sync tty ports
+  Network device support --->
+    <*> PPP (point-to-point protocol) support
+    <*> PPP support for async serial ports
+    <*> PPP support for sync tty ports
 ....
+
 
 Cele două forme de compresie sunt bune dar nu sunt neapărat necesare,
 la fel cum și opțiunea PPP peste Ethernet, care poate fi folosită de
@@ -2506,12 +2584,14 @@ kernel pentru placa de rețea.
 Dacă aveți un sistem multi-CPU Opteron sau unul multi-core (e.g.
 AMD64 X2), va trebui să activați "Symmetric multi-processing support":
 
+
 ....
 Activare suport SMP
 
 Processor type and features --->
-[*] Symmetric multi-processing support
+  [*] Symmetric multi-processing support
 ....
+
 
 NOTE: În sistemele multi-core fiecare nucleu este interpretat ca un
 procesor.
@@ -2519,13 +2599,15 @@ procesor.
 Dacă folosiți dispozitive USB (precum tastatura sau/și mouse) nu
 uitați să activați și aceste opțiuni:
 
+
 ....
 Activare suport USB
 
 Device Drivers --->
-[*] HID Devices --->
-<*> USB Human Interface Device (full HID) support
+  [*] HID Devices --->
+    <*> USB Human Interface Device (full HID) support
 ....
+
 
 *Compilarea și Instalarea*
 
@@ -2533,18 +2615,21 @@ Acum, că kernel-ul este configurat, este timpul să îl compilați și
 să-l instalați. Ieșiți din meniul de configurare și începeți procesul
 de compilare:
 
+
 [source,bash]
 .Compilarea kernel-ului
 ----
 # make && make modules_install
 ----
 
+
 Când compilarea s-a terminat, copiați imaginea de kernel în directorul
-/boot. Utilizați orice nume considerați că este potrivit pentru
+'/boot'. Utilizați orice nume considerați că este potrivit pentru
 kernel-ul dumneavoastră și amintiți-vă acest nume deoarece veți avea
 nevoie de el ulterior când veți configura aplicația încărcătorul de
 sistem (bootloader). Amintiți-vă să înlocuiți kernel-3.4.9-gentoo cu
 numele și versiunea kernel-ului dumneavoastră.
+
 
 [source,bash]
 .Instalarea kernel-ului
@@ -2552,9 +2637,10 @@ numele și versiunea kernel-ului dumneavoastră.
 # cp arch/x86_64/boot/bzImage /boot/kernel-3.4.9-gentoo
 ----
 
+
 *(Opțional) Construirea initramfs*
 
-Dacă folosiți o schemă de partiționare unde /usr și/sau /var sunt
+Dacă folosiți o schemă de partiționare unde '/usr' și/sau '/var' sunt
 partiții separate, atunci aveți nevoie să setați initramfs pentru ca
 partițiile să fie montate înainte de a fi folosite.
 
@@ -2571,6 +2657,7 @@ sistemul să își continue bootarea.
 Pentru a instala initramfs mai întâi aveți nevoie de genkernel, acesta
 vă va genera un initramfs pentru dumneavoastră.
 
+
 [source,bash]
 .Generare initramfs
 ----
@@ -2578,10 +2665,12 @@ vă va genera un initramfs pentru dumneavoastră.
 # genkernel --install initramfs
 ----
 
+
 Dacă aveți nevoie de suport specific în initramfs, ca LVM sau raid,
 adăugați aceste opțiuni genkernel-ului. Pentru mai multe informații
 genkernel --help, în următorul exemplu o să activăm suportul pentru
 LVM și raid (mdadm):
+
 
 [source,bash]
 .Crearea lui initramfs cu suport LVM și raid
@@ -2589,8 +2678,10 @@ LVM și raid (mdadm):
 # genkernel --lvm --mdadm --install initramfs
 ----
 
-Fișierul initramfs va fii stocat în directorul /boot. Veți găsi
+
+Fișierul initramfs va fii stocat în directorul '/boot'. Veți găsi
 fișierul cu un simplu listing ce conține cuvântul initramfs.
+
 
 [source,bash]
 .Listarea fisierului initramfs
@@ -2598,11 +2689,12 @@ fișierul cu un simplu listing ce conține cuvântul initramfs.
 # ls /boot/initramfs*
 ----
 
+
 Acum, continuați cu
 http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#kernel_modules[Module
 de Kernel] .
 
-==== Alternativ: Utilizarea genkernel
+=== Alternativ: Utilizarea genkernel
 
 Dacă citiți această secțiune, înseamnă că ați ales script-ul nostru
 genkernel pentru a vă configura kernel-ul.
@@ -2619,11 +2711,13 @@ kernel-ului, este ideal pentru cei cărora nu le este la îndemână să-și
 compileze propriile kernel-uri. Acum să vedem cum se folosește
 genkernel. Mai întâi, instalați pachetul genkernel:
 
+
 [source,bash]
 .Instalarea genkernel
 ----
 # emerge genkernel
 ----
+
 
 Acum, compilați sursa kernel-ului rulând genkernel all. Fiți atenți,
 totuși, că genkernel compilează un kernel care suportă aproape toate
@@ -2636,11 +2730,13 @@ folosind genkernel --menuconfig all și să adăugați suport pentru
 sistemul respectiv de fișiere în kernel (nu ca modul). Utilizatorii de
 LVM2 vor trebui probabil să adauge --lvm2 ca argumente.
 
+
 [source,bash]
 .Rularea genkernel
 ----
 # genkernel all
 ----
+
 
 Odată ce genkernel își încheie execuția, vor fi create un set întreg
 de module și initramfs.
@@ -2652,23 +2748,26 @@ fișierului initrd pentru că vă va trebui când veți configura aplicația
 boot, pentru a iniția autodetecția hardware (la fel ca și la mediul
 Installation CD) înainte ca "adevăratul" sistem să pornească.
 
+
 [source,bash]
 .Verificarea numelor imaginii de kernel creată și a initrd-ului
 ----
 # ls /boot/kernel* /boot/initramfs*
 ----
 
-==== Module de Kernel
+
+=== Module de Kernel
 
 *Configurarea Modulelor*
 
 Va trebui să enumerați toate modulele, pe care vreți să le încărcați
-automat, în /etc/conf.d/modules. Puteți, de asemenea, să adaugați
+automat, în '/etc/conf.d/modules'. Puteți, de asemenea, să adaugați
 extra opțiuni modulelor dacă doriți.
 
 Pentru a vizualiza toate modulele disponibile, folosiți următoarea
 comandă find. Nu uitați să înlocuiți "<versiune kernel>" cu versiunea
 efectivă de kernel pe care tocmai ați compilat-o:
+
 
 [source,bash]
 .Vizualizarea tuturor modulelor disponibile
@@ -2676,9 +2775,11 @@ efectivă de kernel pe care tocmai ați compilat-o:
 # find /lib/modules/<kernel version>/ -type f -iname '*.o' -or -iname '*.ko'  less
 ----
 
+
 De exemplu, pentru încărcarea automata a modulului 3c59x.ko (un driver
-pentru plăcile de rețea 3Com), editați fișierul /etc/conf.d/modules și
-scrieți numele modulului în el.
+pentru plăcile de rețea 3Com), editați fișierul '/etc/conf.d/modules'
+și scrieți numele modulului în el.
+
 
 [source,bash]
 .Inserare module in /etc/conf.d/modules
@@ -2687,22 +2788,21 @@ scrieți numele modulului în el.
 modules_3_4="3c59x"
 ----
 
+
 (unde 3_4 este versiunea majora a kernelului instalat)
 
 Continuați instalarea cu
 http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#book_part1_chap8[Configurarea
 Sistemului].
 
-== Capitolul 8
+== Configurarea Sistemului
 
-=== Configurarea Sistemului
-
-==== Informații despre sistemul de fișiere
+=== Informații despre sistemul de fișiere
 
 *Ce este fstab?*
 
 Sub Linux, toate partițiile folosite de sistem trebuie scrise în
-/etc/fstab. Fișierul conține punctele de montare a partițiilor (unde
+'/etc/fstab'. Fișierul conține punctele de montare a partițiilor (unde
 apar în structura sistemului de fișiere), cum trebuie montate și cu ce
 opțiuni speciale pot fi montate (montare automată sau nu, dacă
 utilizatorii normali (non-root) pot monta sau nu partiția, etc.).
@@ -2737,9 +2837,10 @@ nu a fost oprit în mod normal. Sistemul de fișiere root ar trebui să
 aibă valoarea 1, în timp ce restul partițiilor ar trebui să aibă 2
 (sau 0, dacă verificarea nu este necesară).
 
-Atenție: Fișierul /etc/fstab implicit prezent în Gentoo nu este un
-fișier valid, așadar, porniți nano (sau editorul favorit) pentru a
-crea /etc/fstab:
+WARNING: Fișierul '/etc/fstab' implicit prezent în Gentoo nu este un
+         fișier valid, așadar, porniți nano (sau editorul favorit)
+         pentru a crea '/etc/fstab':
+
 
 [source,bash]
 .Deschiderea /etc/fstab
@@ -2747,19 +2848,22 @@ crea /etc/fstab:
 # nano -w /etc/fstab
 ----
 
-Să vedem cum scriem opțiunile pentru partiția /boot. Acesta este doar
-un exemplu, astfel, dacă arhitectura folosită nu necesită /boot (cum
-sunt mașinile PPC de la Apple), nu o copiați.
 
-În exemplul nostru implicită pentru AMD64, /boot este partiția
-/dev/sda1, cu ext2 ca sistem de fișiere. Trebuie verificat în timpul
+Să vedem cum scriem opțiunile pentru partiția '/boot'. Acesta este
+doar un exemplu, astfel, dacă arhitectura folosită nu necesită '/boot'
+(cum sunt mașinile PPC de la Apple), nu o copiați.
+
+În exemplul nostru implicită pentru AMD64, '/boot' este partiția
+'/dev/sda1', cu ext2 ca sistem de fișiere. Trebuie verificat în timpul
 procesului de încărcare (boot), așadar o să scriem:
+
 
 ....
 Un exemplu de linie /boot pentru /etc/fstab
 
 /dev/sda1        /boot        ext2        defaults        0 2
 ....
+
 
 Unii utilizatori nu doresc ca partiția lor '/boot' să fie montată
 automat, pentru a îmbunătăți securitatea sistemului. Aceștia trebuie
@@ -2773,14 +2877,16 @@ alte partiții și dispozitive aferente.
 Acum folosiți exemplul de mai jos pentru a vă crea fișierul
 '/etc/fstab':
 
+
 ....
 Un exemplu de fișier /etc/fstab complet
 
-/dev/sda1      /boot      ext2      defaults,noatime      0 2
-/dev/sda2      none      swap     sw      0 0
-/dev/sda3      /      ext4      noatime      0 1
-/dev/cdrom      /mnt/cdrom      auto      noauto,user      0 0
+/dev/sda1      /boot      ext2      defaults,noatime  0 2
+/dev/sda2      none       swap      sw                0 0
+/dev/sda3      /          ext4      noatime           0 1
+/dev/cdrom     /mnt/cdrom auto      noauto,user       0 0
 ....
+
 
 Pentru a îmbunătăți performanța, cei mai mulți utilizatori ar trebui
 să adauge opțiunea noatime, opțiune ce va duce la o mărire a vitezei
@@ -2792,10 +2898,11 @@ Opțiunea auto face ca mount să ghicească ce sistem de fișiere
 user oferă posibilitatea ca utilizatorii obișnuiți să poată monta
 unitatea optică (CD/DVD-ROM).
 
-Verificați de două ori fișierul /etc/fstab, apoi salvați și ieșiți
+Verificați de două ori fișierul '/etc/fstab', apoi salvați și ieșiți
 înainte de a continua.
 
-==== Informații rețea
+
+=== Informații rețea
 
 *Hostname, Domainname etc.*
 
@@ -2806,6 +2913,7 @@ lucrurile, trebuie să știți că orice nume alegeți, acesta poate fi
 modificat ulterior. Puteți pur și simplu să vă numiți sistemul tux și
 domeniul homenetwork.
 
+
 [source,bash]
 .Setarea numelui
 ----
@@ -2813,14 +2921,16 @@ domeniul homenetwork.
 hostname="tux"
 ----
 
+
 (Setați variabila HOSTNAME pentru numele sistemului)
 
-A doua decizie este legată de domainname, dacă aveți nevoie de
-domaninname setați-l prin editarea fișierului /etc/conf.d/net.  Aveți
-nevoie de domeniu doar dacă ISP-ul sau administratorul dumneavoastră
-de rețea o cere, sau dacă aveți un server DNS dar nu și unul de
-DHCP. Dacă folosiți DHCP nu aveți de ce să vă îngrijorați cu privire
-la domainnames sau DNS.
+A doua decizie este legată de numele de domeniu, dacă aveți nevoie de
+*domanin-name* setați-l prin editarea fișierului '/etc/conf.d/net'.
+Aveți nevoie de domeniu doar dacă ISP-ul sau administratorul
+dumneavoastră de rețea o cere, sau dacă aveți un server DNS dar nu și
+unul de DHCP. Dacă folosiți DHCP nu aveți de ce să vă îngrijorați cu
+privire la *domainnames* sau DNS.
+
 
 [source,bash]
 .Setarea numelui domeniului
@@ -2829,10 +2939,12 @@ la domainnames sau DNS.
 dns_domain_lo="homenetwork"
 ----
 
+
 (Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 
 Dacă aveți un domeniu NIS (dacă nu știți ce este acesta, sigur nu
 utilizați așa ceva), aveți nevoie să-l definiți și pe acesta:
+
 
 [source,bash]
 .Setarea numelui de domeniu NIS
@@ -2841,11 +2953,12 @@ utilizați așa ceva), aveți nevoie să-l definiți și pe acesta:
 nis_domain_lo="my-nisdomain"
 ----
 
+
 (Setați variabila DNSDOMAIN cu numele domeniului dvs.)
 
 NOTE: Dacă doriți mai multe informații despre DNS și NIS vă rugam să
       citiți exemplele aflate în
-      /usr/share/doc/openrc-*/net.example.bz2 ce pot fi citite
+      '/usr/share/doc/openrc-*/net.example.bz2' ce pot fi citite
       folosind bzless. De asemenea poate doriți să vă instalați
       openresolv (emerge openresolv) pentru a vă ajuta la
       administrarea DNS/NIS.
@@ -2881,13 +2994,16 @@ aveți nevoie să specificați anumite opțiuni DHCP sau pentru că nu
 utilizați deloc DHCP, deschideți '/etc/conf.d/net' cu editorul favorit
 (în acest exemplu este folosit nano):
 
+
 [source,bash]
 .Deschiderea /etc/conf.d/net pentru editare
 ----
 # nano -w /etc/conf.d/net
 ----
 
+
 Veți observa următorul fișier:
+
 
 ....
 Fișierul implicit /etc/conf.d/net
@@ -2898,6 +3014,7 @@ Fișierul implicit /etc/conf.d/net
 # configuration in /etc/conf.d/net (this file :]!).
 ....
 
+
 Pentru a introduce propriile dumneavoastră. adrese IP, netmask și
 gateway, trebuie să setați atât config_eth0 cât și routes_eth0:
 
@@ -2907,6 +3024,7 @@ NOTE: Asta presupune ca interfața rețelei dumneavoastră să fie
       sistemul (boot) presupunem că interfața de rețea are același
       nume ca și înainte de boot.
 
+
 ....
 Setarea manuală a informațiilor despre IP pentru eth0
 
@@ -2914,13 +3032,16 @@ config_eth0="192.168.0.2 netmask 255.255.255.0 brd 192.168.0.255"
 routes_eth0="default via 192.168.0.1"
 ....
 
+
 Pentru a utiliza DHCP, definiți config_eth0:
+
 
 ....
 Obținerea unei adrese IP pentru eth0 în mod automat
 
 config_eth0="dhcp"
 ....
+
 
 Vă rugăm să consultați fișierul
 '/usr/share/doc/openrc-*/net.example.bz2' pentru o listă cu toate
@@ -2937,6 +3058,7 @@ Salvați configurația și ieșiți pentru a continua.
 Pentru a activa interfețele de rețea la boot, acestea trebuie adăugate
 la nivelul de execuție default.
 
+
 [source,bash]
 .Adăugarea net.eth0 la nivelul de execuție default
 ----
@@ -2944,6 +3066,7 @@ la nivelul de execuție default.
 # ln -s net.lo net.eth0
 # rc-update add net.eth0 default
 ----
+
 
 Dacă aveți mai multe interfețe de rețea, trebuie să creați scripturi
 apropiate de genul net.*, exact cum ați făcut cu net.eth0.
@@ -2954,9 +3077,9 @@ greșite (pe care momentan le-am numit eth0 ... ), atunci:
 1. modificați fișierul '/etc/conf.d/net' cu numele interfeței corecte
 (ca enp3s0 în loc de eth0),
 
-2. creați noi link-uri simbolice (ca /etc/init.d/net.enp3s0),
+2. creați noi link-uri simbolice (ca '/etc/init.d/net.enp3s0'),
 
-3. ștergeți vechile link-uri simbolice (rm /etc/init.d/net.eth0),
+3. ștergeți vechile link-uri simbolice (rm '/etc/init.d/net.eth0'),
 
 4. adăugați-le pe cele noi în nivelul de execuție inițial, și
 
@@ -2972,11 +3095,13 @@ definiți sistemul. De asemenea, ați putea să definiți și alte sisteme
 din rețeaua dumneavoastră dacă nu doriți să vă setați propriul server
 intern de DNS.
 
+
 [source,bash]
 .Deschiderea /etc/hosts
 ----
 # nano -w /etc/hosts
 ----
+
 
 ....
 Completarea cu informații privind rețeaua
@@ -2992,6 +3117,7 @@ resă IP statică pentru a fi definite în acest mod.)
 192.168.0.6 benny.homenetwork benny
 ....
 
+
 Salvați și ieșiți din editor pentru a continua.
 
 Dacă nu aveți PCMCIA, puteți continua cu
@@ -3004,17 +3130,20 @@ parte despre PCMCIA.
 Utilizatorii PCMCIA ar trebui să instaleze mai întâi pachetul
 pcmciautils.
 
+
 [source,bash]
 .Instalarea pcmciautils
 ----
 # emerge pcmciautils
 ----
 
-==== Informații Despre Sistem
+
+=== Informații Despre Sistem
 
 *Parola pentru Root*
 
 Mai întâi setăm parola pentru root, tastând:
+
 
 [source,bash]
 .Setarea parolei pentru root
@@ -3022,11 +3151,13 @@ Mai întâi setăm parola pentru root, tastând:
 # passwd
 ----
 
+
 *Informații despre sistem*
 
 Gentoo folosește '/etc/rc.conf' pentru configurații generale, care
 afectează tot sistemul. Deschideți '/etc/rc.conf' și savurați toate
 comentariile din acest fișier.
+
 
 [source,bash]
 .Deschiderea /etc/rc.conf
@@ -3034,7 +3165,8 @@ comentariile din acest fișier.
 # nano -w /etc/rc.conf
 ----
 
-Când ați terminat configurarea în fișierul /etc/rc.conf, salvați și
+
+Când ați terminat configurarea în fișierul '/etc/rc.conf', salvați și
 ieșiți.
 
 După cum se poate observa, fișierul are multe comentarii pentru a vă
@@ -3045,11 +3177,13 @@ managerul de login (ca gdm sau kdm).
 Gentoo utilizează '/etc/conf.d/keymaps' pentru a manipula configurarea
 tastaturii. Editați-l pentru a vă configura tastatura.
 
+
 [source,bash]
 .Deschiderea fișierului /etc/conf.d/keymaps
 ----
 # nano -w /etc/conf.d/keymaps
 ----
+
 
 Acordați mai multă atenție variabilei KEYMAP. Dacă selectați în mod
 greșit KEYMAP, veți obține rezultate ciudate când tastați.
@@ -3060,11 +3194,13 @@ ieșiți.
 Gentoo utilizează '/etc/conf.d/hwclock' pentru a seta opțiunile de
 ceas. Editați-l conform nevoilor dumneavoastră.
 
+
 [source,bash]
 .Deschiderea fișierului /etc/conf.d/hwclock
 ----
 # nano -w /etc/conf.d/hwclock
 ----
+
 
 Dacă ceasul hardware nu este setat la UTC, trebuie sa adăugați
 CLOCK="local" în acest fișier. Altfel, veți observa mesaje despre
@@ -3082,15 +3218,18 @@ Probabil pe sistemul dumneavoastră folosiți doar una sau două
 localizări. Va trebui să specificați localizările dorite în
 '/etc/locale.gen'.
 
+
 [source,bash]
 .Deschiderea fișierului /etc/locale.gen
 ----
 # nano -w /etc/locale.gen
 ----
 
+
 Următoarele localizări sunt specifice pentru limba engleză (Statele
 Unite) și romană (Romania), localizări ce sunt acompaniate și de
 suportul UTF-8.
+
 
 ....
 Specificarea localizărilor
@@ -3101,14 +3240,16 @@ ro_RO ISO-8859-2
 ro_RO.UTF-8 UTF-8
 ....
 
+
 NOTE: Puteți să vă selectați localizările dorite dintr-o lista rulând
 comanda locale -a.
 
-ATENȚIE: Unele aplicații au nevoie de UTF-8 de aceea vă recomandam să
-folosiți cel puțin o localizare cu suport UTF-8.
+WARNING: Unele aplicații au nevoie de UTF-8 de aceea vă recomandam să
+         folosiți cel puțin o localizare cu suport UTF-8.
 
 După rulați locale-gen. Acesta vă va genera toate localizările pe care
-le-ați specificat în /etc/locale.gen.
+le-ați specificat în '/etc/locale.gen'.
+
 
 [source,bash]
 .Generarea localizărilor
@@ -3116,8 +3257,10 @@ le-ați specificat în /etc/locale.gen.
 # locale-gen
 ----
 
+
 Imediat după ce ați setat localizarea aveți posibilitatea să setați
 localizări la nivel de sistem în fișierul '/etc/env.d/02locale'.
+
 
 ....
 Setarea localizării implicite în /etc/env.d/02locale
@@ -3126,13 +3269,16 @@ LANG="ro_RO.UTF-8"
 LC_COLLATE="C"
 ....
 
+
 și reîncărcați mediul:
+
 
 [source,bash]
 .Reîncărcarea shelului
 ----
 # env-update && source /etc/profile
 ----
+
 
 Pentru a vă ajuta cu localizarea am creat un
 http://www.gentoo.org/doc/en/guide-localization.xml?style=printable#doc_chap3[ghid]
@@ -3143,11 +3289,10 @@ UTF-8].
 
 Vă rugam să continuați cu Instalarea Utilitarelor de Sistem Necesare.
 
-== Capitolul 9
 
-=== Instalarea utilitarelor de sistem necesare
+== Instalarea utilitarelor de sistem necesare
 
-==== Sistemul de log
+=== Sistemul de log
 
 Unele utilitare lipsesc din arhiva stage3 pentru că există mai multe
 pachete care oferă aceeași funcționalitate. Depinde de dumneavoastră,
@@ -3176,6 +3321,7 @@ utilizând rc-update. Următorul exemplu instalează syslog-ng.
 
 Bineînțeles, înlocuiți cu sistemul dumneavoastră de log:
 
+
 [source,bash]
 .Instalarea unui sistem de log
 ----
@@ -3183,7 +3329,8 @@ Bineînțeles, înlocuiți cu sistemul dumneavoastră de log:
 # rc-update add syslog-ng default
 ----
 
-==== Opțional: Cron daemon
+
+=== Opțional: Cron daemon
 
 Următorul este cron daemon. Este opțional și nu este cerut de sistem,
 dar este înțelept să instalați unul. Ce este un cron daemon? Un cron
@@ -3194,11 +3341,12 @@ săptămânal sau lunar).
 Gentoo oferă trei posibili cron daemons: dcron, fcron și
 vixie-cron. Instalarea unuia dintre ei este identică cu instalarea
 sistemului de logare. Totuși, dcron și fcron cer o configurare
-specială, numită crontab /etc/crontab. Dacă nu știți ce să alegeți
+specială, numită crontab '/etc/crontab'. Dacă nu știți ce să alegeți
 folosiți vixie-cron.
 
 Noi vă oferim vixie-cron pentru instalările fără rețea. Dacă doriți
 altă aplicație cron puteți aștepta și îl puteți instala ulterior.
+
 
 [source,bash]
 .Instalare cron daemon
@@ -3208,11 +3356,13 @@ altă aplicație cron puteți aștepta și îl puteți instala ulterior.
 (Numai dacă ai ales dcron sau fcron) # crontab /etc/crontab
 ----
 
-==== Opțional: Indexare de fișiere
+
+=== Opțional: Indexare de fișiere
 
 Dacă doriți să vă indexați fișierele din sistemul dumneavoastră pentru
 a le localiza rapid folosiți utilitarul locate, pentru a putea folosi
-acest utilitar trebuie să instalați sys-apps/mlocate.
+acest utilitar trebuie să instalați 'sys-apps/mlocate'.
+
 
 [source,bash]
 .Instalarea mlocate
@@ -3220,11 +3370,13 @@ acest utilitar trebuie să instalați sys-apps/mlocate.
 # emerge mlocate
 ----
 
-==== Opțional: Accesul de la distanță
+
+=== Opțional: Accesul de la distanță
 
 Dacă aveți nevoie să vă accesați sistemul de la distanță după
 instalare nu uitați să adaugați și sshd la sistemul de execuție
 inițial:
+
 
 [source,bash]
 .Adaugarea lui sshd la sistemul de initializare initial
@@ -3232,10 +3384,12 @@ inițial:
 # rc-update add sshd default
 ----
 
+
 Dacă aveți nevoie de consola serială (ce poate fi folosită în caz de
 acces de la distanță), va trebui să decomentați secțiunea ce face
 referire la consola serială, puteți face asta deschizând fișierul
 '/etc/inittab'.
+
 
 [source,bash]
 .Deschidere pentru editare /etc/inittab
@@ -3243,9 +3397,11 @@ referire la consola serială, puteți face asta deschizând fișierul
 # nano -w /etc/inittab
 ----
 
+
 Ce ar trebui decomentat pentru consola serială.
 
 Decomentarea consolei seriale din '/etc/inittab':
+
 
 ....
 # CONSOLA SERIALĂ
@@ -3253,7 +3409,8 @@ s0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100
 s1:12345:respawn:/sbin/agetty 9600 ttyS1 vt100
 ....
 
-==== Utilitare pentru sistemul de fișiere
+
+=== Utilitare pentru sistemul de fișiere
 
 În funcție de ce sistem de fișiere folosiți, trebuie să instalați
 utilitarele necesare sistemului dumneavoastră (pentru a verifica
@@ -3264,6 +3421,7 @@ sistem.
 
 Următorul tabel afișează instrumentele pe care trebuie să le instalați
 dacă folosiți un anumit tip de sistem de fișiere:
+
 
 [width="60%",cols="2,2,3",options="header"]
 |===
@@ -3276,7 +3434,8 @@ dacă folosiți un anumit tip de sistem de fișiere:
 | JFS                |    jfsutils     | emerge jfsutils
 |===
 
-==== Utilitare pentru rețea
+
+=== Utilitare pentru rețea
 
 Dacă nu aveți nevoie de alte utilitare pentru rețea adiționale (cum ar
 fi ppp sau un client dhcp), continuați cu Configurarea
@@ -3291,6 +3450,7 @@ http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?style=printable&full=1#
 Modulară] ) pe sistemul dvs. Dacă nu faceți acest lucru acum, este
 posibil să nu vă mai puteți conecta la internet după instalare!
 
+
 [source,bash]
 .Instalarea dhcpcd
 ----
@@ -3302,19 +3462,19 @@ posibil să nu vă mai puteți conecta la internet după instalare!
 Dacă aveți nevoie de ppp pentru a vă conecta la rețea, trebuie să-l
 instalați.
 
+
 [source,bash]
 .Instalarea ppp
 ----
 # emerge ppp
 ----
 
+
 Acum continuați cu Configurarea aplicației bootloader.
 
-== Capitolul 10
+== Configurarea aplicației bootloader
 
-=== Configurarea aplicației bootloader
-
-==== Alegerea
+=== Alegerea
 
 *Introducere*
 
@@ -3367,13 +3527,15 @@ de 1024x768, 32 biți adâncimea de culoare și o rata de
 reîmprospătare de 85 Hz.
 |===
 
+
 Rezultatul poate fi ceva de genul
 video=uvesafb:mtrr:3,ywrap,1024x768-32@85. Rețineți (sau notați-vă)
 aceste setări; veți avea nevoie de ele în scurt timp.
 
 Acum, continuați cu instalarea GRUB Legacy sau GRUB2.
 
-==== Implicit: Utilizarea GRUB Legacy
+
+=== Implicit: Utilizarea GRUB Legacy
 
 *Înțelegerea terminologiei implementată în GRUB Legacy*
 
@@ -3409,22 +3571,26 @@ Obișnuindu-ne cu ideea, este timpul să începem instalarea GRUB-ului.
 
 Pentru a instala GRUB-ul, trebuie mai întâi să dați comanda emerge.
 
+
 [source,bash]
 .Instalarea GRUB
 ----
 # emerge grub
 ----
 
+
 Deși GRUB este acum instalat, tot mai trebuie să îi scriem un fișier
 de configurare și să-l instalăm în zona MBR pentru ca GRUB să încarce
-(boot-eze) automat noul kernel creat. Creați /boot/grub/grub.conf cu
+(boot-eze) automat noul kernel creat. Creați '/boot/grub/grub.conf' cu
 nano (sau, dacă este cazul, cu alt editor):
+
 
 [source,bash]
 .Crearea /boot/grub/grub.conf
 ----
 # nano -w /boot/grub/grub.conf
 ----
+
 
 Acum o să scriem un fișier 'grub.conf'. Aveți grijă să utilizați
 imaginea dumneavoastră de kernel și dacă este cazul, imaginea
@@ -3443,9 +3609,9 @@ montarea în modul read-write (citire-scriere).
 
 Exemplu de 'grub.conf':
 
+
 ....
-# Which listing to boot as default. 0 is the first, 1 the second
-etc.
+# Which listing to boot as default. 0 is the first, 1 the second etc.
 default 0
 # How many seconds to wait before the default listing is booted.
 timeout 30
@@ -3454,19 +3620,16 @@ timeout 30
 splashimage=(hd0,0)/boot/grub/splash.xpm.gz
 
 title Gentoo Linux 3.4.9
-# Partition where the kernel image (or operating system) is
-located
+# Partition where the kernel image (or operating system) is located
 root (hd0,0)
 kernel /boot/kernel-3.4.9-gentoo root=/dev/sda3
 
 title Gentoo Linux 3.4.9 (rescue)
-# Partition where the kernel image (or operating system) is
-located
+# Partition where the kernel image (or operating system) is located
 root (hd0,0) kernel /boot/kernel-3.4.9-gentoo root=/dev/sda3
 init=/bin/bb
 
-# The next four lines are only if you dualboot with a Windows
-system.
+# The next four lines are only if you dualboot with a Windows system.
 # In this case, Windows is hosted on /dev/sda6.
 title Windows XP
 rootnoverify (hd0,5)
@@ -3474,11 +3637,13 @@ makeactive
 chainloader +1
 ....
 
+
 În cazul în care ați optat pentru initramfs la compilarea kernelului
 Linux, atunci trebuie să specificați prin initramfs rădăcina reală a
 dispozitivului dumneavoastră.
 
 Exemplu 'grub.conf' cu *initramfs* activat:
+
 
 ....
 title Gentoo Linux 3.4.9
@@ -3487,11 +3652,12 @@ kernel /boot/3.4.9 real_root=/dev/sda3
 initrd /boot/initramfs-genkernel-amd64-3.4.9-gentoo
 ....
 
+
 Dacă utilizați o schemă de partiționare și/sau imagine de kernel
 diferită, modificați în consecință. Oricum, asigurați-vă că orice
 precedă un device GRUB (cum ar fi (hd0,0)) este relativ la mount point
-nu la rădăcină. Cu alte cuvinte, (hd0,0)/grub/splash.xpm.gz este în
-realitate '/boot/grub/splash.xpm.gz' deoarece (hd0,0) este /boot.
+nu la rădăcină. Cu alte cuvinte, '(hd0,0)/grub/splash.xpm.gz' este în
+realitate '/boot/grub/splash.xpm.gz' deoarece (hd0,0) este '/boot'.
 
 În plus, dacă alegeți să utilizați o altă schemă de partiționare și nu
 ați pus '/boot' pe o partiție separată, prefixul '/boot' utilizat în
@@ -3503,7 +3669,7 @@ partiție separată pentru '/boot' sau nu.
 
 Dacă doriți să introduceți opțiuni adiționale pentru kernel,
 adăugați-le la sfârșitul comenzii kernel. Deja avem o opțiune
-(root=/dev/sda3 sau real_root=/dev/sda3), dar puteți introduce și
+('root=/dev/sda3' sau 'real_root=/dev/sda3'), dar puteți introduce și
 altele, cum ar fi parametrii video și/sau video pentru framebuffer,
 așa cum am specificat anterior.
 
@@ -3533,11 +3699,12 @@ Alternativ: Setarea GRUB Utilizând Instrucțiuni Manuale.
 
 Pentru a instala GRUB trebuie să rulați comanda grub-install.  Totuși,
 grub-install nu va funcționa ca la carte pentru că ne aflăm într-un
-mediu chroot. Trebuie să creăm /etc/mtab ce conține toate sistemele de
+mediu chroot. Trebuie să creăm '/etc/mtab' ce conține toate sistemele de
 fișiere montate. Din fericire, există o soluție simplă pentru a
-realiza acest pas, trebuie doar să copiați /proc/mounts ca /etc/mtab,
+realiza acest pas, trebuie doar să copiați '/proc/mounts' ca '/etc/mtab',
 excluzând linia rootfs, în cazul în care nu ați creat o partiție
 separată de boot.  Următoarea comandă va funcționa în ambele cazuri:
+
 
 [source,bash]
 .Crearea /etc/mtab
@@ -3545,13 +3712,16 @@ separată de boot.  Următoarea comandă va funcționa în ambele cazuri:
 # grep -v rootfs /proc/mounts > /etc/mtab
 ----
 
+
 Acum, puteți instala grub, utilizând grub-install:
+
 
 [source,bash]
 .Rularea grub-install
 ----
 # grub-install --no-floppy /dev/sda
 ----
+
 
 Dacă aveți mai multe întrebări cu privire la GRUB, vă rugăm să
 consultați documentul despre
@@ -3567,11 +3737,13 @@ Pentru a începe configurarea GRUB, tastați grub. Vi se va afișa grub>,
 linia de comandă a grub. Acum, trebuie să tastați comenzile potrivite
 pentru a instala GRUB pe disc.
 
+
 [source,bash]
 .Rularea GRUB shell
 ----
 # grub --no-floppy
 ----
+
 
 NOTE: Dacă sistemul dvs. nu are dispozitive floppy, adăugați opțiunea
 --no-floppy comenzii de mai sus pentru a preveni grub să probeze
@@ -3588,6 +3760,7 @@ instalării, schimbați comenzile în concordanță. Mecanismul de
 completare prin tab a aplicației GRUB poate fi utilizat pentru a-l
 instala.
 
+
 Spre exemplu, dacă tastați "root (" urmat de un TAB, vi se va afișa o
 listă de dispozitive (cum ar fi hd0). Dacă tastați "root (hd0," urmat
 de un TAB, vi se va afișa o listă cu partițiile disponibile din care
@@ -3595,6 +3768,7 @@ să alegeți (cum ar fi hd0,0). Prin utilizarea completării cu tab,
 setarea GRUB nu ar trebui să fie așa de complicată.
 
 Acum, haideți, configurați GRUB, da? :-)
+
 
 [source,bash]
 .Instalarea GRUB în zona MBR
@@ -3604,11 +3778,12 @@ grub> setup (hd0) #Instalați GRUB în zona MBR
 grub> quit #Ieșiți din GRUB shell
 ----
 
+
 NOTE: Dacă doriți să instalați GRUB într-o anumită zonă în loc de MBR,
-va trebui să modificați comanda setup pentru a indica partiția
-corespunzătoare. Spre exemplu, dacă doriți să instalați GRUB în
-/dev/sda3, atunci comanda devine setup (hd0,2). Totuși, puțini
-utilizatori doresc acest lucru.
+      va trebui să modificați comanda setup pentru a indica partiția
+      corespunzătoare. Spre exemplu, dacă doriți să instalați GRUB în
+      '/dev/sda3', atunci comanda devine setup (hd0,2). Totuși, puțini
+      utilizatori doresc acest lucru.
 
 Dacă aveți mai multe întrebări cu privire la GRUB, vă rugăm să
 consultați documentul despre
@@ -3618,7 +3793,8 @@ citiți informații despre grub în terminalul dumneavoastră.
 
 Continuați cu Repornirea Sistemului.
 
-==== Instalare GRUB2
+
+=== Instalare GRUB2
 
 *Despre GRUB2*
 
@@ -3657,16 +3833,19 @@ instalat.
 
 Editarea fișierului '/etc/portage/package.keywords':
 
+
 ....
 sys-boot/grub:2 #aceasta linie trebuie adăugată în fișier pentru
 a putea instala GRUB2
 ....
+
 
 În mod implicit, GRUB2 va ghicii platforma folosita implicit, dar dacă
 doriți setarea manuala sau explicita a platformei o puteți face setând
 GRUB_PLATFORMS în make.conf.
 
 Setarea variabilei GRUB_PLATFORMS în '/etc/portage/make.conf':
+
 
 ....
 # Standard PC (BIOS)
@@ -3679,33 +3858,40 @@ GRUB_PLATFORMS="efi-64"
 GRUB_PLATFORMS="efi-64 pc"
 ....
 
+
 Instalarea cu ajutorul lui emerge.
+
 
 [source,bash]
 ----
 root # emerge --ask sys-boot/grub:2
 ----
 
+
 *Instalarea unei imagini de boot*
 
 În cazul în care aveți o partiție de /boot, montați-o.
+
 
 [source,bash]
 ----
 root # mount /boot
 ----
 
+
 Dacă folosiți platforma EFI, montați-vă sistemul de volum (partiția)
-în /boot/efi. Aceasta trebuie sa fie un volum (o partiție) de tip FAT
-ce va conține un subdirector EFI.
+în '/boot/efi'. Aceasta trebuie sa fie un volum (o partiție) de tip
+FAT ce va conține un subdirector EFI.
+
 
 [source,bash]
 ----
 root # mount /boot/efi
 ----
 
+
 Rulați utilitarul grub2-install pentru a copia fișierele relevante în
-/boot/grub2. Pentru platforma PC, de asemenea acesta instalează o
+'/boot/grub2'. Pentru platforma PC, de asemenea acesta instalează o
 imagine boot în master boot record (MBR) sau sectorul unei partiții.
 
 grub2-install acceptă o opțiune de tip --target pentru a putea
@@ -3721,12 +3907,14 @@ root # grub2-install /dev/sda
 Installation finished. No error reported.
 ----
 
+
 [source,bash]
 .Instalarea pe o partitie (nerecomandat)
 ----
 root # grub2-install /dev/sda1
 Installation finished. No error reported.
 ----
+
 
 [source,bash]
 .Instalarea pe EFI
@@ -3735,14 +3923,16 @@ root # grub2-install --target=x86_64-efi
 Installation finished. No error reported.
 ----
 
+
 *Configurarea automată*
 
 GRUB2 permite configurarea automată prin folosirea programului
 grub2-mkconfig care va genera un fișier de configurare.
 
 grub2-mkconfig va genera fișierul de configurare bazat pe secțiuni de
-șabloane aflate în /etc/grub.d. Iar șabloanele implicite ar trebui să
-acopere cele mai frecvente setări de boot.
+șabloane aflate în '/etc/grub.d'. Iar șabloanele implicite ar trebui
+să acopere cele mai frecvente setări de boot.
+
 
 [source,bash]
 ----
@@ -3750,8 +3940,9 @@ user $ ls /etc/grub.d
 00_header 10_linux 20_linux_xen 30_os-prober 40_custom 41_custom README
 ----
 
+
 Comportamentul șabloanelor poate fi controlat prin stabilirea
-variabilelor în /etc/default/grub. Pentru referințe consultați
+variabilelor în '/etc/default/grub'. Pentru referințe consultați
 http://www.gnu.org/software/grub/manual/html_node/Simple-configuration.html[manualul
 GRUB-ului] .
 
@@ -3762,19 +3953,23 @@ vmlinuz-version sau kernel-version.
 
 De exemplu:
 
+
 ....
 ./boot/vmlinuz-3.4.3
 /boot/kernel-2.6.39-gentoo
 ....
 
+
 Dacă folosiți initramfs, el ar trebui numit astfel:
 initramfs-version.img sau initrd-version.img. Denumirile fișierelor
 generate de genkernel, de asemenea vor fi funcționale.
+
 
 ....
 ./boot/initramfs-3.4.3.img
 /boot/initramfs-genkernel-x86_64-2.6.39-gentoo
 ....
+
 
 [source,bash]
 .Generarea fișierului de configurarea grub.cfg
@@ -3786,16 +3981,19 @@ Found linux image: /boot/vmlinuz-3.2.9
 done
 ----
 
+
 *Decompresia kernelului în mod discret*
 
 Pentru a decompresa kernelul Linux în mod discret trebuie să aveți în
-fișierul /etc/default/grub următoarea linie.
+fișierul '/etc/default/grub' următoarea linie.
 
 Fișierul '/etc/default/grub':
+
 
 ....
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 ....
+
 
 *systemd*
 
@@ -3804,18 +4002,22 @@ următoarea linie va arăta ca mai jos.
 
 Fișierul '/etc/default/grub':
 
+
 ....
 GRUB_CMDLINE_LINUX_DEFAULT="init=/usr/lib/systemd/systemd"
 ....
 
+
 *Încărcarea Windows 7*
+
 
 [source,bash]
 ----
 root # emerge os-prober ntfs3g
 ----
 
-După rulați comanda grub2-mkconfig -o /boot/grub2/grub.cfg. Dacă ați
+
+După rulați comanda grub2-mkconfig -o '/boot/grub2/grub.cfg'. Dacă ați
 compilat kernelul linux cu suport fuse, reporniți sistemul apoi
 rerulați grub2-mkconfig.
 
@@ -3823,6 +4025,7 @@ rerulați grub2-mkconfig.
 
 În loc să rulați grub2-mkconfig, un grub.conf simplu poate fi
 convertit ușor să se potrivească pentru utilizarea în grub.cfg.
+
 
 [width="60%",cols="2",options="header"]
 |===
@@ -3842,16 +4045,15 @@ root=/dev/sda3 +
 }
 |===
 
+
 Pentru mai multe informații privitoare la instalarea lui GRUB2
 consultați wiki https://wiki.gentoo.org/wiki/GRUB2[GRUB2].
 
 Continuați cu Finalizarea Instalării Gentoo.
 
-== Capitolul 11
+== Finalizarea instalării Gentoo
 
-=== Finalizarea instalării Gentoo
-
-==== Administrarea utilizatorilor de sistem
+=== Administrarea utilizatorilor de sistem
 
 *Adăugarea unui utilizator pentru întrebuințarea zilnică*
 
@@ -3886,9 +4088,11 @@ care le puteți utiliza:
 |wheel    |pentru a putea utiliza su
 |===
 
+
 De exemplu, pentru a crea un utilizator john care este membru al
 grupurilor wheel, users și audio trebuie să efectuați login ca root
 (numai utilizatorul root pot crea utilizatori) și să rulați *useradd*:
+
 
 [source,bash]
 .Adăugarea unui user pentru întrebuințarea zilnică
@@ -3902,23 +4106,27 @@ Password: (Introduceți parola pentru john)
 Re-enter password: (Reintroduceți parola pentru verificare)
 ----
 
+
 Dacă acest utilizator are nevoie să facă anumite operații ca root, se
 poate utiliza comanda su - pentru a primi privilegii de root, doar
 temporar. O altă metodă este pachetul sudo care, dacă este configurat
 bine, este foarte sigur.
 
-==== Ștergerea arhivei stage3 din sistem
+
+=== Ștergerea arhivei stage3 din sistem
 
 Acum că ați finalizat instalarea Gentoo-lui, dacă totul a decurs
 normal după repornirea sistemului, puteți șterge arhiva stage3
 descărcată pe discul dumneavoastră. Țineți minte, ea a fost descărcată
 în directorul '/' (rădăcina).
 
+
 [source,bash]
 .Ștergerea arhivei stage3 din sistem
 ----
 # rm /stage3-*.tar.bz2*
 ----
+
 
 Felicitări aveți un sistem Gentoo Linux funcțional. Dar ce o să facem
 de aici înainte?
@@ -3927,11 +4135,9 @@ Urmează instalarea unui mediu Desktop.
 
 Continuați cu Ghid de configurare pentru Xorg.
 
-== Capitolul 12
+== Ghid de instalare și configurare pentru Xorg
 
-=== Ghid de instalare și configurare pentru Xorg
-
-==== Ce este serverul X Window
+=== Ce este serverul X Window
 
 *Modul grafic vs. Modul text*
 
@@ -3975,7 +4181,7 @@ software care rulează în mod grafic. În plus, Xorg mai are capacități
 de lucru în rețea, adică permite rularea unei aplicații pe un sistem
 și vizualizarea sa pe un altul.
 
-==== Instalare Xorg
+=== Instalare Xorg
 
 *Utilizarea emerge*
 
@@ -3984,16 +4190,19 @@ Gentoo este suficientă comanda emerge xorg-x11. Instalarea Xorg
 durează destul de mult, deci puteți între timp sa vă găsiți altceva de
 făcut.
 
+
 [source,bash]
 .Instalarea Xorg
 ----
 # emerge xorg-x11
 ----
 
+
 După ce instalarea s-a terminat, s-ar putea să fie nevoie să
 reinițializați unele variabile de mediu, înainte de a trece mai
 departe. Este suficientă rularea comenzii env-update urmată de source
 '/etc/profile'. Aceasta nu deteriorează sistemul în nici un fel.
+
 
 [source,bash]
 .Reinițializarea variabilelor de mediu
@@ -4002,21 +4211,24 @@ departe. Este suficientă rularea comenzii env-update urmată de source
 # source /etc/profile
 ----
 
-==== Configurare Xorg
+
+=== Configurare Xorg
 
 *Fișierul xorg.conf*
 
 Fișierul de configurare al Xorg este numit xorg.conf și se află în
 directorul '/etc/X11'.  Xorg oferă un exemplu de fișier de configurare
-aflat în /etc/X11/xorg.conf.example. Acesta este comentat foarte
+aflat în '/etc/X11/xorg.conf.example'. Acesta este comentat foarte
 intens, dar dacă este nevoie de mai multe informații privind sintaxa
 nu ezitați să citiți pagina de manual:
+
 
 [source,bash]
 .Pagina de manual a xorg.conf
 ----
 # man 5 xorg.conf
 ----
+
 
 Lectură plăcută pentru cei care doresc acest lucru, însă noi o să
 continuăm configurarea folosind unelte care vor modifica automat
@@ -4032,24 +4244,28 @@ verificați resursele oferite la sfârșitul acestui capitol. Să încercăm
 să generăm mai întâi un fișier de configurare Xorg (sperăm,
 funcțional).
 
+
 [source,bash]
 .Generarea fișierului xorg.conf
 ----
 # Xorg -configure
 ----
 
+
 Citiți ultimele linii afișate pe ecran după ce Xorg a terminat de
 analizat componentele hardware. Dacă acolo scrie că Xorg a eșuat în
 timpul verificării, veți fi forțat să editați în mod manual fișierul
 xorg.conf. În caz contrar, se va afișa un mesaj care vă spune că
-fișierul /root/xorg.conf.new a fost scris și este gata pentru a fi
+fișierul '/root/xorg.conf.new' a fost scris și este gata pentru a fi
 testat. Așa că haideți să îl testăm.
+
 
 [source,bash]
 .Testarea fișierului xorg.conf.new
 ----
 # X -config /root/xorg.conf.new
 ----
+
 
 Dacă totul merge bine, ar trebui să vedeți un model cu alb și
 negru. Verificați dacă vă funcționează dispozitivul mouse și dacă
@@ -4064,15 +4280,18 @@ informații privitoare la hardware-ul dumneavoastră. (placa grafică,
 tastatura, ...) și creează un fișier xorg.conf pe baza acestor
 informații.
 
+
 [source,bash]
 .Generarea semi-automată a fișierului xorg.conf
 ----
 # xorgconfig
 ----
 
+
 Un alt utilitar, de asemenea oferit de Xorg, este xorgcfg, ce va
 încerca, mai întâi, să ruleze Xorg -configure și apoi să pornească
 aplicația server X pentru mai multe optimizări finale.
+
 
 [source,bash]
 .Utilizare xorgcfg
@@ -4083,17 +4302,20 @@ eroare, încercați
 # xorgcfg -textmode
 ----
 
+
 *Suprascriere xorg.conf*
 
 Mai întâi copiem fișierul xorg.conf.new peste fișierul
 '/etc/X11/xorg.conf' pentru a nu fi nevoiți să rulăm tot timpul
 comanda X -config. Lansarea cu startx este mult mai ușoară.
 
+
 [source,bash]
 .Suprascriere xorg.conf
 ----
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ----
+
 
 *Utilizare startx*
 
@@ -4107,18 +4329,20 @@ următoarea logică:
 executa comenzile conținute în acesta.
 
 - Altfel, va citi valoarea variabilei XSESSION și va executa una din
-sesiunile disponibile în /etc/X11/Sessions/, corespunzător (puteți
-seta valoarea variabilei XSESSION în /etc/rc.conf pentru a o face
+sesiunile disponibile în '/etc/X11/Sessions/', corespunzător (puteți
+seta valoarea variabilei XSESSION în '/etc/rc.conf' pentru a o face
 implicită pentru toți utilizatorii din sistem).
 
 - Dacă toate acțiunile de mai sus returnează eroare, va executa un
 mediu grafic simplu, de obicei twm.
+
 
 [source,bash]
 .Pornire Xorg
 ----
 # startx
 ----
+
 
 Dacă se încarcă un mediu grafic urât, repulsiv, deformat, acela este
 twm. Pentru a încheia sesiunea twm, tastați exit sau Ctrl-D în
@@ -4127,7 +4351,8 @@ combinația Ctrl-Alt-Backspace. Oricum, aceasta va determina ieșirea
 din mediul X într-un mod necorespunzător, ceva ce nu veți dori
 întotdeauna. Totuși, nu este chiar atât de rău.
 
-==== Optimizare xorg.conf
+
+=== Optimizare xorg.conf
 
 *Setarea rezoluției*
 
@@ -4146,10 +4371,10 @@ luați specificațiile monitorului din cartea tehnică și să le scrieți
 în fișier. Puteți însă să folosiți un program care le determină în mod
 automat, cum ar fi 'sys-apps/ddcxinfo-knoppix'.
 
-ATENTION: Nu schimbați valorile acestor variabile fără a ști
-specificațiile monitorului. Aceasta poate duce în cel mai
-fericit caz la erori de sincronizare, dacă nu cumva chiar și
-la arderea monitorului.
+WARNING: Nu schimbați valorile acestor variabile fără a ști
+         specificațiile monitorului. Aceasta poate duce în cel mai
+         fericit caz la erori de sincronizare, dacă nu cumva chiar și
+         la arderea monitorului.
 
 Acum, să schimbăm rezoluțiile. În exemplul următor în
 '/etc/X11/xorg.conf' adăugăm liniile Modes și respectiv DefaultDepth
@@ -4160,19 +4385,21 @@ valori să difere de cele setate în sistemul dumneavoastră.
 
 Schimbarea secțiunii Screen din '/etc/X11/xorg.conf':
 
+
 ....
 Section "Screen"
-Identifier "Default Screen"
-Device "S3 Inc. ProSavage KN133 [Twister K]"
-Monitor "Generic Monitor"
-DefaultDepth 24
-# Am eliminat din text pentru a-l face mai lizibil
-SubSection "Display"
-    Depth 24
-    Modes "1024x768"
-    EndSubSection
+    Identifier "Default Screen"
+    Device "S3 Inc. ProSavage KN133 [Twister K]"
+    Monitor "Generic Monitor"
+    DefaultDepth 24
+    # Am eliminat din text pentru a-l face mai lizibil
+    SubSection "Display"
+       Depth 24
+       Modes "1024x768"
+       EndSubSection
 EndSection
 ....
+
 
 Rulați serverul X (startx) pentru a vedea dacă acesta folosește
 rezoluția dorită.
@@ -4187,6 +4414,7 @@ cel dorit de dumneavoastră:
 
 Schimbarea schemei de tastatură:
 
+
 ....
 Section "InputDevice"
     Identifier "Generic Keyboard"
@@ -4197,6 +4425,7 @@ Section "InputDevice"
     Option "XkbLayout" "ro"
 EndSection
 ....
+
 
 *Configurarea mouse-ului*
 
@@ -4210,12 +4439,15 @@ mouse-ul citind valorile aflate în acestea în timp ce mișcați
 mouse-ul. De obicei, veți observa niște caractere ciudate pe
 ecran. Pentru a ieși din test apăsați Ctrl-C.
 
+
 [source,bash]
 .Verificarea fișierelor de tip device
 ----
 # cat /dev/input/mouse0
-(Apăsați Ctrl-C pentru a termina)
 ----
+
+(Apăsați Ctrl-C pentru a termina)
+
 
 Dacă mouse-ul nu este detectat verificați dacă toate modulele necesare
 sunt încărcate în kernel.
@@ -4229,6 +4461,7 @@ dacă există):
 
 Schimbarea setărilor mouse-ului în Xorg:
 
+
 ....
 Section "InputDevice"
     Identifier "TouchPad Mouse"
@@ -4240,6 +4473,7 @@ Section "InputDevice"
 EndSection
 ....
 
+
 Rulați *startx* și bucurați-vă de rezultat. Felicitări, acum (sperăm
 să) aveți în sistem un server Xorg funcțional. Următorul pas este
 înlăturarea twm, managerul de ferestre urât amintit la început și
@@ -4247,7 +4481,8 @@ să) aveți în sistem un server Xorg funcțional. Următorul pas este
 chiar cu un mediu desktop complet cum ar fi KDE sau GNOME, care însă
 nu va fi detaliată în acest ghid de instalare.
 
-==== Resurse
+
+=== Resurse
 
 *Crearea și editarea fișierului xorg.conf*
 
@@ -4256,8 +4491,9 @@ complet al sintaxei fișierului de configurare. Este bine ca acesta să
 fie deschis într-un terminal în timp ce editați fișierul de
 configurare.
 
-O altă sursă de informații este directorul /usr/X11R6/lib/X11/doc unde
-se pot găsi diferite fișiere README pentru unele cipseturi grafice.
+O altă sursă de informații este directorul '/usr/X11R6/lib/X11/doc'
+unde se pot găsi diferite fișiere README pentru unele cipseturi
+grafice.
 
 Internetul constituie o sursă imensă de documentații privitoare la
 editarea fișierului xorg.conf. O să vă oferim aici doar câteva dintre
@@ -4275,9 +4511,7 @@ Medii Grafice
 
 3. Xfce
 
-== Capitolul 13
-
-=== Mediile grafice expuse în manual pentru instalare
+== Mediile grafice expuse în manual pentru instalare
 
 Acest ghid vă va explica cum să instalați un mediu grafic (KDE, Gnome,
 XFCE) pe un sistem stabil Gentoo amd64.
@@ -4286,6 +4520,7 @@ XFCE) pe un sistem stabil Gentoo amd64.
 
 Puteți efectua rapid setările necesare USE flags activând profilul
 necesar în Portage:
+
 
 [source,bash]
 ----
@@ -4304,13 +4539,16 @@ necesar în Portage:
 [12] hardened/linux/amd64/no-multilib/selinux
 ----
 
+
 În acest exemplu, profilul #4 este profilul gnome, așadar îl putem
 activa prin comanda:
+
 
 [source,bash]
 ----
 # eselect profile set 4
 ----
+
 
 Dacă se dorește instalarea KDE-ului se setează profilul #5, iar pentru
 XFCE sau alt mediu de lucru se folosește profilul #3. Iată câteva
@@ -4318,24 +4556,29 @@ exemple:
 
 - pentru KDE
 
+
 [source,bash]
 ----
 eselect profile set 5
 ----
 
+
 - pentru XFCE
+
 
 [source,bash]
 ----
 eselect profile set 3
 ----
 
+
 Gentoo are trei profile pentru mediile grafice: unul pentru KDE, unul
 pentru Gnome și un profil generalist pentru restul mediilor
 grafice. Pentru mediile grafice ce nu au un profil personal se
 folosește profilul desktop.
 
-==== Mediul grafic Gnome
+
+=== Mediul grafic Gnome
 
 GNOME este un mediu desktop gratuit pentru sisteme compatibile
 UNIX. Este software (open source), sub licența liberă GPL (anumite
@@ -4356,16 +4599,18 @@ standardizarea în sisteme Unix/Linux.
 
 Pe un sistem cu depozitul stabil activ, emerge gnome va instala Gnome
 2, versiunea stabilă. Pentru a instala Gnome 3 trebuie să editați
-fișierul /etc/portage/packages.keywords și să adăugați următoarea
-linie gnome-base/gnome ~amd64, apoi salvați fișierul.  După ce ați
-terminat de editat fișierul /etc/portage/packages.keywords puteți rula
+fișierul '/etc/portage/packages.keywords' și să adăugați următoarea
+linie 'gnome-base/gnome ~amd64', apoi salvați fișierul.  După ce ați
+terminat de editat fișierul '/etc/portage/packages.keywords' puteți rula
 comanda emerge gnome care vă va instala Gnome 3.
+
 
 [source,bash]
 .Instalare Gnome 2
 ----
 # emerge gnome
 ----
+
 
 [source,bash]
 .Instalare Gnome 3
@@ -4378,6 +4623,7 @@ gnome-base/gnome ~amd64
 # emerge gnome
 ----
 
+
 Vreți să instalați un Gnome minimal?
 
 Înlocuiți comanda emerge gnome cu emerge gnome-light.
@@ -4388,15 +4634,18 @@ Gnome 2.
 Următoarea operațiune imediat după instalarea mediului grafic
 Gnome este actualizarea variabilelor de mediu.
 
+
 [source,bash]
 .Actualizarea variabilelor de mediu
 ----
 # env-update && source /etc/profile
 ----
 
+
 Pentru funcționare, Gnome are nevoie ca serviciul dbus să fie
 pornit. Iată cum pornim serviciul dbus și îl adăugăm la procesele de
 pornire ale sistemului.
+
 
 [source,bash]
 ----
@@ -4405,15 +4654,18 @@ dbus - pornirea și adăugarea la procesele de pornire a sistemului
 # rc-update add dbus default
 ----
 
+
 Verificați dacă există grupul plugdev. Dacă există asigurați-vă că
 faceți parte din acest grup, deși acest lucru nu e obligatoriu. Puteți
 sări peste pasul acesta dacă doriți.
+
 
 [source,bash]
 .Adăugarea utilizatorului la grupul plugdev
 ----
 # gpasswd -a utilizatorul-dvs plugdev
 ----
+
 
 Unde utilizatorul-dvs este utilizatorul creat de dumneavoastră pentru
 activitățile zilnice.
@@ -4425,11 +4677,13 @@ mediul grafic ce poartă numele de Display Manager (DM).
 În cazul mediului grafic Gnome recomandăm instalarea lui GDM ca
 manager al mediului grafic.
 
+
 [source,bash]
 .Instalare GDM
 ----
 # emerge gdm
 ----
+
 
 Dacă vreți ca display manager-ul să pornească imediat după
 inițializarea sistemului de operare Gentoo trebuie să adăugați
@@ -4438,11 +4692,13 @@ implicit. Ca să faceți lucrul acesta xdm trebuie să fie instalat în
 sistem. În cazul în care xdm nu este instalat vă rugăm să folosiți
 emerge pentru a-l instala.
 
+
 [source,bash]
 .Instalare XDM
 ----
 # emerge xdm
 ----
+
 
 [source,bash]
 .Adăugare XDM la procesul de inițializare
@@ -4450,10 +4706,12 @@ emerge pentru a-l instala.
 # rc-update add xdm default
 ----
 
-Acum, editați fișierul /etc/conf.d/xdm în care modificați variabila
+
+Acum, editați fișierul '/etc/conf.d/xdm' în care modificați variabila
 DISPLAYMANAGER în modul următor: DISPLAYMANAGER="gdm" .
 
-==== Mediul grafic KDE
+
+=== Mediul grafic KDE
 
 KDE este un mediu grafic foarte puternic și util pentru calculatoarele
 care au la bază Unix.
@@ -4472,6 +4730,7 @@ overlay].
 
 Alegeți versiunea KDE SC care vi se potrivește:
 
+
 [width="80%",cols="4,2,6",options="header"]
 |===
 |KDE SC versiune |Depozit |Status
@@ -4484,6 +4743,7 @@ Alegeți versiunea KDE SC care vi se potrivește:
 
 |KDE SC master |kde overlay |Versiune Live.
 |===
+
 
 NOTE: Dacă rulați KDE PIM și vreți să faceți upgrade de la versiunea
 4.4 la 4.10, vă rugăm să vă uitați pe
@@ -4503,17 +4763,21 @@ baza desktop și punerea lor în subprofiluri. Alegerea unui profil nu
 vă limitează la folosirea doar a unui mediu grafic. Pentru a alege
 profilul care vi se potrivește, rulați
 
+
 [source,bash]
 ----
 root # eselect profile list
 ----
 
+
 pentru a vizualiza lista de profiluri, și
+
 
 [source,bash]
 ----
 root # eselect profile set X
 ----
+
 
 unde X este numărul profilului pe care doriți să îl selectați.  Pentru
 un mediu grafic complet KDE, este recomandat să alegeți desktop/kde ,
@@ -4557,6 +4821,7 @@ http://wiki.gentoo.org/wiki/KDE/Overlay[kde overlay].
 
 - http://packages.gentoo.org/package/kde-base/kdebase-startkde[kde-base/kdebase-startkde], un mediu minimal, nesuportat oficial pentru KDE (fără KDE plasma și
 alte creații).
+
 
 [source,bash]
 ----
@@ -4609,6 +4874,7 @@ română:
 
 Editare fișier '/etc/portage/make.conf':
 
+
 ....
 LINGUAS="ro"
 ....
@@ -4617,6 +4883,7 @@ LINGUAS="ro"
 ----
 root # emerge --ask kde-l10n
 ----
+
 
 Pentru pachetele de localizare în
 http://packages.gentoo.org/package/kde-base/kdepim-meta[kde-base/kdepim-meta]
@@ -4642,38 +4909,46 @@ Setați KDM ca manager de afișare inițial:
 
 Editare fișier '/etc/conf.d/xdm:'
 
+
 ....
 DISPLAYMANAGER="kdm"
 ....
 
+
 Pentru a porni KDE automat la încărcarea sistemului, adăugați xdm la
 privilegiul de rulare:
+
 
 [source,bash]
 ----
 root # rc-update add xdm default
 ----
 
+
 Pentru a porni KDE acum rulați:
+
 
 [source,bash]
 ----
 root # /etc/init.d/xdm start
 ----
 
+
 *Software adițional*
 
 *Widgeturi*
 
 Multe widget-uri folositoare le puteți găsii în pachetul
-kde-base/kdeplasma-addons:
+'kde-base/kdeplasma-addons':
+
 
 [source,bash]
 ----
 root # emerge --ask kdeplasma-addons
 ----
 
-==== Mediul grafic XFCE
+
+=== Mediul grafic XFCE
 
 *Introducere*
 
@@ -4703,13 +4978,14 @@ la cea curentă.
 Asigurați-vă că aveți configurat xorg corect conform documentației:
 [chap:Ghid-de-configurare].
 
-Apoi verificați USE flags în /etc/portage/make.conf; probabil va
+Apoi verificați USE flags în '/etc/portage/make.conf'; probabil va
 trebui să aveți setate cel puțin următoarele: USE="-gnome -kde
 -minimal -qt4 dbus jpeg lock session startup-notification thunar udev
 X".
 
-qAcum că am setat variabilele în /etc/portage/make.conf, este
-timpul să instalăm Xfce.
+Acum că am setat variabilele în '/etc/portage/make.conf', este timpul
+să instalăm Xfce.
+
 
 [source,bash]
 .Instalare Xfce
@@ -4717,9 +4993,11 @@ timpul să instalăm Xfce.
 # emerge -av xfce4-meta
 ----
 
+
 Următorul pas, adăugați numele de utilizator la grupurile cdrom, cdrw,
 și usb, ca să monteze dispozitive precum camera, dispozitive virtuale
 și dispozitive USB.
+
 
 [source,bash]
 .Atribuirea utilizatorului unui grup hardware
@@ -4728,7 +5006,9 @@ Următorul pas, adăugați numele de utilizator la grupurile cdrom, cdrw,
 # for x in cdrom cdrw usb ; do gpasswd -a username $x ; done
 ----
 
+
 Apoi actualizați variabilele de mediu:
+
 
 [source,bash]
 .Actualizarea variabilelor de mediu
@@ -4736,11 +5016,13 @@ Apoi actualizați variabilele de mediu:
 # env-update && source /etc/profile
 ----
 
+
 Veți avea de asemenea nevoie de un terminal grafic ca să lucrați în
 noul dumneavoastră mediu grafic.
 
-x11-terms/xfce4-terminal este o alegere bună, și este conceput special
-pentru mediul Xfce. Instalați terminalul folosind comanda:
+'x11-terms/xfce4-terminal' este o alegere bună, și este conceput
+special pentru mediul Xfce. Instalați terminalul folosind comanda:
+
 
 [source,bash]
 .Instalare terminal
@@ -4748,11 +5030,13 @@ pentru mediul Xfce. Instalați terminalul folosind comanda:
 # emerge x11-terms/xfce4-terminal
 ----
 
+
 *Configurare Xfce*
 
 Acum că Xfce este instalat, va trebui să îl setăm ca sistem grafic
 primar pentru a porni când dăm comanda startx. Ieșiți din root shell
 și logați-vă ca utilizator.
+
 
 [source,bash]
 .Setare Xfce ca sistem grafic implicit
@@ -4760,19 +5044,21 @@ primar pentru a porni când dăm comanda startx. Ieșiți din root shell
 $ echo "exec startxfce4" > ~/.xinitrc
 ----
 
-NOTE: Dacă aveți ConsoleKit instalat, ~/.xinitrc ar trebui să conțină
-exec startxfce4 --with-ck-launch. În mod contrar, anumite
+NOTE: Dacă aveți ConsoleKit instalat, '~/.xinitrc' ar trebui să
+conțină exec startxfce4 --with-ck-launch. În mod contrar, anumite
 aplicații ar putea să nu funcționeze. Posibil să trebuiască să
 adăugați consolekit la nivelul de rulare implicit prin rularea
 următoarei comenzi ca root: rc-update add consolekit default.
 
 Acum puteți intra în noul mediu grafic prin comanda startx.
 
+
 [source,bash]
 .Pornire Xfce
 ----
 $ startx
 ----
+
 
 Felicitări, bine ați venit în noul dvs mediu grafic XFCE.
 
@@ -4808,15 +5094,18 @@ grafic care să încarce în mod automat Xfce la încărcarea sistemului
 
 Mai întâi, haideți să ne asigurăm că Xfce se încarcă la boot.
 
+
 [source,bash]
 .Adăugare xdm la nivelul de execuție implicit
 ----
 # rc-update add xdm default
 ----
 
+
 Nu am terminat încă. Trebuie să alegem un manager pentru mediul grafic
 (Display Manager) și să setăm variabilele corespunzătoare.  Deși sunt
 câteva opțiuni în Portage, pentru acest ghid, folosim LXDM.
+
 
 [source,bash]
 .Instalare LXDM
@@ -4824,16 +5113,20 @@ câteva opțiuni în Portage, pentru acest ghid, folosim LXDM.
 # emerge –av lxdm
 ----
 
+
 Pentru a edita variabila DISPLAYMANAGER mergem în '/etc/conf.d/xdm'.
 
 Editare '/etc/conf.d/xdm'
+
 
 ....
 DISPLAYMANAGER="lxdm"
 ....
 
+
 LXDM poate porni automat sesiune XFCE dacă adăugați XSESSION="Xfce4"
-la /etc/env.d/90xsession.
+la '/etc/env.d/90xsession'.
+
 
 [source,bash]
 .Setări XSESSION
@@ -4842,12 +5135,14 @@ la /etc/env.d/90xsession.
 # env-update && source /etc/profile
 ----
 
+
 *Upgrade XFCE*
 
 Dacă faceți upgrade la XFCE de la o versiune anterioară versiunii 4.x,
 va trebui să ștergeți cache-ul sesiuni și profiles, deoarece sunt
 incompatibile cu noile versiuni care apar. Pentru fiecare utilizator
 (dacă aveți mai mulți), rulați următoarele comenzi.
+
 
 [source,bash]
 .Ștergerea sesiunii vechi și cache
@@ -4856,6 +5151,7 @@ $ rm -r ~/.cache/sessions
 $ rm -r ~/.config/xfce*
 $ rm -r ~/.config/Thunar
 ----
+
 
 Utilizatorii vor avea o nouă interfață, dar vor pierde vechile setări
 personalizate. Din păcate momentan nu există o metodă de a migra
