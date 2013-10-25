@@ -2964,7 +2964,7 @@ Dacă sistemul dumneavoastră este conectat la o rețea deservită de un server
 \color black
 Dacă rețeaua a fost configurată automat, comanda
 \color blue
- /sbin/ifconfig
+ /bin/ifconfig
 \color black
  ar trebui să afișeze informații despre alte câteva interfețe în afara lo,
  cum ar fi eth0: 
@@ -2990,7 +2990,7 @@ Dacă rețeaua a fost configurată automat, comanda
 \begin_layout Plain Layout
 
 \color magenta
-/sbin/ifconfig pentru o rețea configurată
+/bin/ifconfig pentru o rețea configurată
 \end_layout
 
 \end_inset
@@ -3010,7 +3010,7 @@ Dacă rețeaua a fost configurată automat, comanda
 \begin_inset Text
 
 \begin_layout Plain Layout
-# /sbin/ifconfig
+# /bin/ifconfig
 \end_layout
 
 \end_inset
@@ -15493,7 +15493,7 @@ Setarea localizării
 \begin_layout Plain Layout
 
 \color blue
-# echo "Europe/Brussels" > /etc/timezone
+# echo "Europe/Bucharest" > /etc/timezone
 \end_layout
 
 \end_inset
