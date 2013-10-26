@@ -658,13 +658,14 @@ configurat automat. Dacă este așa, puteți beneficia de avantajul
 comenzilor incluse pe mediul Installation CD cum ar fi ssh, scp, ping,
 irssi, wget și links, alături de altele.
 
-Dacă rețeaua a fost configurată automat, comanda '/sbin/ifconfig' ar
+Dacă rețeaua a fost configurată automat, comanda '/bin/ifconfig' ar
 trebui să afișeze informații despre alte câteva interfețe în afara
 lo, cum ar fi eth0:
 
 [source,bash]
+./bin/ifconfig pentru o rețea configurată
 ----
-# /sbin/ifconfig
+# /bin/ifconfig
 eth0  Link encap:Ethernet HWaddr 00:50:BA:8F:61:7A
 inet addr:192.168.0.2 Bcast:192.168.0.255 Mask:255.255.255.0
 inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
@@ -2367,7 +2368,7 @@ exemplu, GMT-8 este de fapt GMT+8.
 (Suppose you want to use Europe/Bucharest)
 # cp /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 (Next set the timezone)
-# echo "Europe/Brussels" > /etc/timezone
+# echo "Europe/Bucharest" > /etc/timezone
 ----
 
 == Configurarea Kernel-ului
@@ -2772,7 +2773,7 @@ efectivă de kernel pe care tocmai ați compilat-o:
 [source,bash]
 .Vizualizarea tuturor modulelor disponibile
 ----
-# find /lib/modules/<kernel version>/ -type f -iname '*.o' -or -iname '*.ko'  less
+# find /lib/modules/<kernel version>/ -type f -iname '*.o' -or -iname '*.ko' | less
 ----
 
 
